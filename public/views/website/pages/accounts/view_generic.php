@@ -3684,6 +3684,12 @@ $_accountViewTitle = account_view_compact_title($account, $_gameData, $_gRaw, $_
 $_accountViewTitleFull = trim((string)($account['title'] ?? $_accountViewTitle));
 ?>
 <div class="container" id="account-page-container">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'accounts',
+        'gameSlug' => (string)($_gRaw ?? $game ?? ''),
+        'gameName' => (string)($_gameName ?? ''),
+        'currentTitle' => $_accountViewTitleFull,
+    ]) ?>
     <h3 class="title" id="account-page-title">
         <?= account_view_header_icon_html($_gRaw, $_gameShort, $account, $_gameData) ?>
         <span class="account-view-title-text" title="<?= htmlspecialchars($_accountViewTitleFull, ENT_QUOTES) ?>"><?= htmlspecialchars($_accountViewTitle) ?></span>

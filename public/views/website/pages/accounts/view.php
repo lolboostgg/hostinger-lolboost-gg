@@ -1151,6 +1151,12 @@ $sellerTotalSoldDisplay = lb_db_seller_total_sales(
     </div>
 </header>
 <div class="container">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'accounts',
+        'gameSlug' => 'league-of-legends',
+        'gameName' => 'League of Legends',
+        'currentTitle' => (string)($account['title'] ?? ''),
+    ]) ?>
     <h3 class="title">
         <div class="rank-icon">
             <img src="<?= util_rank_img('lol', 'mini', $account['current_rank']) ?>">

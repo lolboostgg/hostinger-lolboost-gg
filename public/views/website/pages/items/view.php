@@ -1251,6 +1251,12 @@ body.view-item-page .item-feature__value i{color:#8ea5ff!important;}
 <?= $this->stop() ?>
 
 <div class="container">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'items',
+        'gameSlug' => 'league-of-legends',
+        'gameName' => 'League of Legends',
+        'currentTitle' => (string)($item['title'] ?? ''),
+    ]) ?>
     <h3 class="title">
         <div class="rank-icon">
             <?php if ($typeImg): ?>

@@ -3365,6 +3365,12 @@ body.view-account-page #account-page-title {
 <?= $this->stop() ?>
 
 <div class="container" id="account-page-container">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'accounts',
+        'gameSlug' => 'league-of-legends',
+        'gameName' => 'League of Legends',
+        'currentTitle' => (string)($account['title'] ?? ''),
+    ]) ?>
     <h3 class="title" id="account-page-title">
         <div class="rank-icon">
             <img src="<?= util_rank_img('lol', 'mini', $account['current_rank']) ?>">

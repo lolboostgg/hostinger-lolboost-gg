@@ -1346,6 +1346,12 @@ body.view-item-page .item-feature__value i{color:#8ea5ff!important;}
 <?= $this->stop() ?>
 
 <div class="container">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'items',
+        'gameSlug' => (string)($game ?? $item['game'] ?? ''),
+        'gameName' => (string)($itemGameName ?? ''),
+        'currentTitle' => (string)($item['title'] ?? ''),
+    ]) ?>
     <h3 class="title">
         <div class="rank-icon">
             <?php if (!empty($displayIconImg)): ?>

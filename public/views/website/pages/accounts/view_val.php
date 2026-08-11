@@ -3407,6 +3407,12 @@ body.view-account-page #account-page-title {
 <?= $this->stop() ?>
 
 <div class="container" id="account-page-container">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'accounts',
+        'gameSlug' => 'valorant',
+        'gameName' => 'Valorant',
+        'currentTitle' => (string)($account['title'] ?? ''),
+    ]) ?>
     <h3 class="title" id="account-page-title">
         <div class="rank-icon">
             <img src="<?= htmlspecialchars(view_val_rank_img($valRank)) ?>" alt="<?= htmlspecialchars($valRankLabel) ?>">
