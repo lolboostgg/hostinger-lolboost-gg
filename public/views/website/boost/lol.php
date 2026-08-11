@@ -142,6 +142,14 @@ $roles = [
 ?>
 
 <div id="lolPageTop" style="height:1px;position:relative;"></div>
+<div class="lb-boost-breadcrumbs-wrap">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'boosting',
+        'gameSlug' => 'lol',
+        'gameName' => 'League of Legends',
+        'currentTitle' => (string)($data['name_long'] ?? $data['name'] ?? ''),
+    ]) ?>
+</div>
 <div class="rank-types-nav">
     <a href="/lol/rank-boost" class="nav-item <?= $data['id'] == 1 ? 'active' : '' ?>" data-tooltip="<?= t('Our pro booster climbs from your current rank to your desired rank.') ?>">
         <img src="<?= ASSET_URL ?>/website/images/boost-forms/boost-type-icons/rank-boost.svg" alt="rank-boost-icon">

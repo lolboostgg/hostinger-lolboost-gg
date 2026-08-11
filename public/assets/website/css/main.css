@@ -3022,6 +3022,18 @@ footer .footer-bottom .social-icons a:hover {
   justify-content: center;
 }
 
+.lol-boost .lb-boost-breadcrumbs-wrap {
+  margin: 2.2vw 4.167vw 0;
+}
+
+.lol-boost .lb-boost-breadcrumbs-wrap .lb-market-breadcrumbs {
+  margin-bottom: 0;
+}
+
+.lol-boost .lb-boost-breadcrumbs-wrap ~ .rank-types-nav {
+  margin-top: 1.5vw;
+}
+
 .lol-boost .rank-types-nav .nav-item {
   display: flex;
   flex-direction: column;
@@ -3131,6 +3143,13 @@ footer .footer-bottom .social-icons a:hover {
 }
 
 @media (max-width: 1024px) {
+  .lol-boost .lb-boost-breadcrumbs-wrap {
+    margin: 18px 16px 0;
+  }
+
+  .lol-boost .lb-boost-breadcrumbs-wrap ~ .rank-types-nav {
+    margin-top: 18px;
+  }
   .lb-boost-zoom {
     zoom: 1;
   }

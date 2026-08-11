@@ -714,6 +714,14 @@ $roles = [
 </script>
 
 <div id="lolPageTop" style="height:1px;position:relative;"></div>
+<div class="lb-boost-breadcrumbs-wrap">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'boosting',
+        'gameSlug' => 'lol-classic',
+        'gameName' => 'League of Legends Classic',
+        'currentTitle' => (string)($data['name_long'] ?? $data['name'] ?? ''),
+    ]) ?>
+</div>
 <div class="rank-types-nav">
     <a href="/lol-classic/level-boost" class="nav-item <?= $data['id'] == 34 ? 'active' : '' ?>" data-tooltip="<?= t('Level up your LoL Classic account quickly.') ?>">
         <img src="<?= ASSET_URL ?>/website/images/boost-forms/boost-type-icons/level-up-boost.svg" alt="level-up-boost-icon">

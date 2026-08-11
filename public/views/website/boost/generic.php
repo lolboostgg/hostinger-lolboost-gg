@@ -471,6 +471,19 @@ foreach ($_faqCandidates as $_faqCand) {
 
 <div id="genericPageTop" style="height:1px;position:relative;"></div>
 
+<?php
+$_breadcrumbGame = function_exists('util_get_game_by_slug') ? (array)util_get_game_by_slug($_gameSlug) : [];
+$_breadcrumbGameName = (string)($_breadcrumbGame['name'] ?? ucwords(str_replace('-', ' ', $_gameSlug)));
+?>
+<div class="lb-boost-breadcrumbs-wrap">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'boosting',
+        'gameSlug' => $_gameSlug,
+        'gameName' => $_breadcrumbGameName,
+        'currentTitle' => (string)($data['name_long'] ?? $data['name'] ?? ''),
+    ]) ?>
+</div>
+
 <?php if (count($_navForms) > 1 || $_cs2NavGroups !== null): ?>
 <div class="rank-types-nav<?= $_cs2NavGroups !== null ? ' rank-types-nav--grouped' : '' ?>">
     <?php if ($_cs2NavGroups !== null): ?>

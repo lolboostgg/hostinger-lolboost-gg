@@ -49,6 +49,14 @@ $ranks = [
 <?= $this->end('styles') ?>
 
 <div id="valPageTop" style="height:1px;position:relative;"></div>
+<div class="lb-boost-breadcrumbs-wrap">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'boosting',
+        'gameSlug' => 'val',
+        'gameName' => 'Valorant',
+        'currentTitle' => (string)($data['name_long'] ?? $data['name'] ?? ''),
+    ]) ?>
+</div>
 <div class="rank-types-nav">
     <a href="/val/rank-boost" class="nav-item <?= ($data['id'] ?? null) == 5 ? 'active' : '' ?>">
         <img src="<?= ASSET_URL ?>/website/images/boost-forms/boost-type-icons/rank-boost.svg" alt="rank-boost-icon">

@@ -75,6 +75,14 @@ if ((int)($data['id'] ?? 0) === 24) {
 ?>
 
 <div id="tftPageTop" style="height:1px;position:relative;"></div>
+<div class="lb-boost-breadcrumbs-wrap">
+    <?= $this->insert('website/components/marketplace-breadcrumbs', [
+        'type' => 'boosting',
+        'gameSlug' => 'tft',
+        'gameName' => 'Teamfight Tactics',
+        'currentTitle' => (string)($data['name_long'] ?? $data['name'] ?? ''),
+    ]) ?>
+</div>
 <div class="rank-types-nav">
     <a href="/tft/rank-boost" class="nav-item <?= $data['id'] == 21 ? 'active' : '' ?>">
         <img src="<?= ASSET_URL ?>/website/images/boost-forms/boost-type-icons/rank-boost.svg" alt="rank-boost-icon">

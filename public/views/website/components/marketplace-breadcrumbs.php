@@ -1,5 +1,8 @@
 <?php
-$breadcrumbType = strtolower(trim((string)($type ?? 'accounts'))) === 'items' ? 'items' : 'accounts';
+$breadcrumbType = strtolower(trim((string)($type ?? 'accounts')));
+if (!in_array($breadcrumbType, ['accounts', 'items', 'boosting'], true)) {
+    $breadcrumbType = 'accounts';
+}
 $breadcrumbGameSlug = trim((string)($gameSlug ?? ''), '/');
 $breadcrumbGameName = trim((string)($gameName ?? ''));
 $breadcrumbCurrent = trim((string)($currentTitle ?? ''));
@@ -11,7 +14,7 @@ if ($breadcrumbGameName === '') {
     $breadcrumbGameName = ucwords(str_replace('-', ' ', $breadcrumbGameSlug));
 }
 
-$breadcrumbSectionLabel = $breadcrumbType === 'items' ? 'Items' : 'Accounts';
+$breadcrumbSectionLabel = $breadcrumbType === 'items' ? 'Items' : ($breadcrumbType === 'boosting' ? 'Boosting' : 'Accounts');
 $breadcrumbSectionHref = '/services/' . $breadcrumbType;
 $breadcrumbGameHref = '/' . rawurlencode($breadcrumbGameSlug);
 $breadcrumbListingHref = $breadcrumbGameHref . '/' . $breadcrumbType;
@@ -69,8 +72,10 @@ a.lb-market-breadcrumbs__item:hover { color: #fff; }
     <a class="lb-market-breadcrumbs__item" href="<?= htmlspecialchars($breadcrumbSectionHref, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($breadcrumbSectionLabel, ENT_QUOTES, 'UTF-8') ?></a>
     <span class="lb-market-breadcrumbs__separator" aria-hidden="true">/</span>
     <a class="lb-market-breadcrumbs__item" href="<?= htmlspecialchars($breadcrumbGameHref, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($breadcrumbGameName, ENT_QUOTES, 'UTF-8') ?></a>
-    <span class="lb-market-breadcrumbs__separator" aria-hidden="true">/</span>
-    <a class="lb-market-breadcrumbs__item" href="<?= htmlspecialchars($breadcrumbListingHref, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($breadcrumbListingLabel, ENT_QUOTES, 'UTF-8') ?></a>
+    <?php if ($breadcrumbType !== 'boosting'): ?>
+        <span class="lb-market-breadcrumbs__separator" aria-hidden="true">/</span>
+        <a class="lb-market-breadcrumbs__item" href="<?= htmlspecialchars($breadcrumbListingHref, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($breadcrumbListingLabel, ENT_QUOTES, 'UTF-8') ?></a>
+    <?php endif; ?>
     <?php if ($breadcrumbCurrent !== ''): ?>
         <span class="lb-market-breadcrumbs__separator" aria-hidden="true">/</span>
         <span class="lb-market-breadcrumbs__item lb-market-breadcrumbs__item--current" aria-current="page" title="<?= htmlspecialchars($breadcrumbCurrent, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($breadcrumbCurrent, ENT_QUOTES, 'UTF-8') ?></span>
