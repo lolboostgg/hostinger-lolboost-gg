@@ -3231,6 +3231,11 @@ $lbHeaderAmount = static function ($value): string {
                data-offers-topups="<?= (int)($lbmsItem['service_offers']['topups'] ?? 0) ?>"
                data-offers-items="<?= (int)($lbmsItem['service_offers']['items'] ?? 0) ?>"
                data-order="<?= (int)$lbmsIdx ?>"
+               data-href-default="<?= htmlspecialchars($lbmsItem['href'], ENT_QUOTES, 'UTF-8') ?>"
+               data-href-boosting="<?= htmlspecialchars('/' . $lbmsItem['slug'] . '/rank-boost', ENT_QUOTES, 'UTF-8') ?>"
+               data-href-accounts="<?= htmlspecialchars('/' . $lbmsItem['slug'] . '/accounts', ENT_QUOTES, 'UTF-8') ?>"
+               data-href-topups="<?= htmlspecialchars('/' . $lbmsItem['slug'] . '/top-ups', ENT_QUOTES, 'UTF-8') ?>"
+               data-href-items="<?= htmlspecialchars('/' . $lbmsItem['slug'] . '/items', ENT_QUOTES, 'UTF-8') ?>"
                data-href="<?= htmlspecialchars($lbmsItem['href'], ENT_QUOTES, 'UTF-8') ?>">
             <a class="lbms__cardMain" href="<?= htmlspecialchars($lbmsItem['href'], ENT_QUOTES, 'UTF-8') ?>" role="option" tabindex="-1">
               <span class="lbms__cardIcon">
@@ -6032,6 +6037,18 @@ html body .gmHeaderResult.gmHeaderCommandGame.is-coming-soon{padding-right:12px!
     if (soon) soon.hidden = !isSoon;
   }
 
+  function updateCardDestination(card) {
+    if (card.getAttribute('data-lbms-item') !== 'game') return;
+
+    var defaultHref = card.getAttribute('data-href-default') || card.getAttribute('data-href') || '/';
+    var categoryHref = state.tab === 'all' ? '' : card.getAttribute('data-href-' + state.tab);
+    var href = categoryHref || defaultHref;
+    var link = card.querySelector('.lbms__cardMain');
+
+    card.setAttribute('data-href', href);
+    if (link) link.setAttribute('href', href);
+  }
+
   function sortValue(card) {
     return state.sort === 'az'
       ? (card.getAttribute('data-name') || '')
@@ -6044,6 +6061,7 @@ html body .gmHeaderResult.gmHeaderCommandGame.is-coming-soon{padding-right:12px!
 
     cards.forEach(function (card) {
       updateCardOfferDisplay(card);
+      updateCardDestination(card);
       var searchOnly = card.getAttribute('data-search-only') === '1';
       var ok = (!searchOnly || state.q.length > 0) && matchesTab(card) && matchesQuery(card, list);
       card.hidden = !ok;
