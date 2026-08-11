@@ -15747,7 +15747,13 @@ function riot_sync_order_progress(int $orderId, array $order, array $order_optio
     // progress still uses the client account below.
     $tracking_puuid = ($isDuo && $booster_puuid !== '') ? $booster_puuid : $client_puuid;
 
-    $rank = riot_get_rank($client_puuid, $server);
+    // Track the ladder selected on the order. Without the queue type this
+    // defaults to Solo/Duo, which displays the wrong rank for Flex orders.
+    $rank = riot_get_rank(
+        $client_puuid,
+        $server,
+        $order_options['queue_type'] ?? 'solo/duo'
+    );
 
     // For Duo orders: use booster_ign_set_at as tracking start time if available.
     // Games played before the duo account was linked are excluded.
