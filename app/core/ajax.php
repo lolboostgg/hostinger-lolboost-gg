@@ -8995,6 +8995,13 @@ public function admin_set_order_paid()
                     }
                 }
 
+                $fixedBoosterCut = function_exists('lb_fixed_booster_cut_percent')
+                    ? lb_fixed_booster_cut_percent($order, $booster_id)
+                    : null;
+                if (!$isMultiBoosterOrder && $fixedBoosterCut !== null) {
+                    $booster_price = (float)$fixedBoosterCut;
+                }
+
                 $booster = db_get_row('boosters', ['id' => $booster_id]);
                 if ($booster == false) {
                     echo json_encode(['sendToast' => ['type' => 'danger', 'title' => 'Error', 'message' => 'Booster not found.'], 'playSound' => 'error']);
@@ -9555,6 +9562,15 @@ public function admin_set_order_paid()
                 'playSound' => 'error',
             ]);
             return;
+        }
+
+
+        $fixedBoosterCut = function_exists('lb_fixed_booster_cut_percent')
+            ? lb_fixed_booster_cut_percent($order, $booster_id)
+            : null;
+        if ($fixedBoosterCut !== null) {
+            $is_fixed = 0;
+            $cut_raw = (string)$fixedBoosterCut;
         }
 
 
@@ -16106,7 +16122,12 @@ if (isset($ai['price_eur'])) {
                 // ── AUTO-COMPLETE: goal verified by Riot tracking ──
                 $booster_id   = (int) BOOSTER_ID;
                 $booster      = db_get_row('boosters', ['id' => $booster_id]);
-                $cut_percent  = (int)($order['booster_cut'] ?? 0);
+                $fixedBoosterCut = function_exists('lb_fixed_booster_cut_percent')
+                    ? lb_fixed_booster_cut_percent($order, $booster_id)
+                    : null;
+                $cut_percent  = $fixedBoosterCut !== null
+                    ? (int)$fixedBoosterCut
+                    : (int)($order['booster_cut'] ?? 0);
                 $price_eur    = (int)($order['price_eur']   ?? 0);
                 $payout_base  = (int) round($price_eur * $cut_percent / 100);
                 $now          = date('Y-m-d H:i:s');
@@ -16845,7 +16866,12 @@ if (isset($ai['price_eur'])) {
             return;
         }
 
-        $booster_price = calculate_booster_cut($order, 'percent');
+        $fixedBoosterCut = function_exists('lb_fixed_booster_cut_percent')
+            ? lb_fixed_booster_cut_percent($order, (int)BOOSTER_ID)
+            : null;
+        $booster_price = $fixedBoosterCut !== null
+            ? $fixedBoosterCut
+            : calculate_booster_cut($order, 'percent');
         $duo_now = date('Y-m-d H:i:s');
         $claim_update = ['booster_id' => BOOSTER_ID, 'status' => 'IN_PROGRESS', 'claimed_at' => $duo_now, 'booster_cut' => $booster_price];
 
