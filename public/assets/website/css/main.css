@@ -3023,15 +3023,39 @@ footer .footer-bottom .social-icons a:hover {
 }
 
 .lol-boost .lb-boost-breadcrumbs-wrap {
-  margin: 2.2vw 4.167vw 0;
+  /* The desktop boost workspace is rendered inside the legacy .82 zoom layer. */
+  width: min(96.5vw, 1854px);
+  margin: 2.2vw auto 0;
 }
 
 .lol-boost .lb-boost-breadcrumbs-wrap .lb-market-breadcrumbs {
   margin-bottom: 0;
+  padding: 12px 16px;
+  border: 1px solid rgba(124, 135, 175, 0.14);
+  border-radius: 12px;
+  background: rgba(13, 16, 31, 0.72);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  font-size: 15px;
+}
+
+.lol-boost .lb-boost-breadcrumbs-wrap .lb-market-breadcrumbs__item {
+  color: #aeb8d1;
+}
+
+.lol-boost .lb-boost-breadcrumbs-wrap a.lb-market-breadcrumbs__item:hover {
+  color: #ffffff;
+}
+
+.lol-boost .lb-boost-breadcrumbs-wrap .lb-market-breadcrumbs__item--current {
+  color: #ffffff;
+}
+
+.lol-boost .lb-boost-breadcrumbs-wrap .lb-market-breadcrumbs__separator {
+  color: rgba(155, 165, 188, 0.48);
 }
 
 .lol-boost .lb-boost-breadcrumbs-wrap ~ .rank-types-nav {
-  margin-top: 1.5vw;
+  margin-top: 1.15vw;
 }
 
 .lol-boost .rank-types-nav .nav-item {
@@ -3144,11 +3168,18 @@ footer .footer-bottom .social-icons a:hover {
 
 @media (max-width: 1024px) {
   .lol-boost .lb-boost-breadcrumbs-wrap {
-    margin: 18px 16px 0;
+    width: auto;
+    margin: 16px 16px 0;
+  }
+
+  .lol-boost .lb-boost-breadcrumbs-wrap .lb-market-breadcrumbs {
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 13px;
   }
 
   .lol-boost .lb-boost-breadcrumbs-wrap ~ .rank-types-nav {
-    margin-top: 18px;
+    margin-top: 14px;
   }
   .lb-boost-zoom {
     zoom: 1;
