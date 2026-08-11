@@ -1,0 +1,97 @@
+<div class="card mb-5">
+    <div class="card-header">
+        <h5 class="card-header-title">Boost Form Pricing <span class="text-muted ms-1">EUR</span></h5>
+    </div>
+    <div class="card-body">
+        <div class="js-sticky-header">
+            <!-- Table -->
+
+            <div class="table-responsive">
+                <table class="table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle">
+                    <thead class="thead-light rounded">
+                        <tr>
+                            <th scope="col">Rank</th>
+                            <th scope="col" class="text-end">EU Price</th>
+                            <th scope="col" class="text-end">NA Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?php
+                        $arenas = [
+                            1 => "Wood",
+                            2 => "Bronze",
+                            3 => "Silver",
+                            4 => "Gold",
+                            5 => "Gladiator",
+                        ];
+                        ?>
+                        <?php foreach ($data['main'] as $tier => $values): ?>
+                            <tr class="align-middle">
+                                <td class="border-<?= $tier == 5 ? 'master' : util_format_tier($tier, "lol", 1) ?>">
+                                    <img src="<?= ASSET_URL ?>/core/main/img/lol/arenas/<?= $tier ?>.webp" class="me-2 pb-1"
+                                        width="35px">
+
+                                    <?= $arenas[$tier] ?>
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control ms-auto text-end" style="width:100px"
+                                        name="eu-<?= $tier ?>" value="<?= util_format_price_input($values['eu']) ?>"
+                                        placeholder="5.5" step="0.01">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control ms-auto text-end" style="width:100px"
+                                        name="na-<?= $tier ?>" value="<?= util_format_price_input($values['na']) ?>"
+                                        placeholder="5.5" step="0.01">
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End Table -->
+        </div>
+    </div>
+</div>
+
+<div class="card mb-5">
+    <div class="card-header">
+        <h5 class="card-header-title">Extra Options <span class="text-muted ms-1">%</span></h5>
+    </div>
+    <div class="card-body">
+        <div class="js-sticky-header">
+            <!-- Table -->
+
+            <div class="table-responsive">
+                <table class="table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle">
+                    <thead class="thead-light rounded">
+                        <tr>
+                            <th scope="col">Option Name</th>
+                            <th scope="col" class="text-end">Price (%)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <?php foreach ($data['extra'] as $opt => $price): ?>
+                            <tr class="align-middle">
+                                <td>
+                                    <?= util_format_replace_opt($opt) ?>
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control ms-auto text-end" style="width:100px;"
+                                        name="extra-<?= $opt ?>" value="<?= $price * 100 ?>" placeholder="5.5" max="100"
+                                        step="0.01">
+                                </td>
+                            </tr>
+
+                        <?php endforeach; ?>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- End Table -->
+
+        </div>
+    </div>
+</div>

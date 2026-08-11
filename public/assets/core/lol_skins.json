@@ -1,0 +1,7962 @@
+[
+    {
+        "value": "Aatrox_0",
+        "label": "Aatrox"
+    },
+    {
+        "value": "Aatrox_1",
+        "label": "Justicar Aatrox"
+    },
+    {
+        "value": "Aatrox_2",
+        "label": "Mecha Aatrox"
+    },
+    {
+        "value": "Aatrox_3",
+        "label": "Sea Hunter Aatrox"
+    },
+    {
+        "value": "Aatrox_7",
+        "label": "Blood Moon Aatrox"
+    },
+    {
+        "value": "Aatrox_8",
+        "label": "Prestige Blood Moon Aatrox"
+    },
+    {
+        "value": "Aatrox_9",
+        "label": "Victorious Aatrox"
+    },
+    {
+        "value": "Aatrox_11",
+        "label": "Odyssey Aatrox"
+    },
+    {
+        "value": "Aatrox_20",
+        "label": "Prestige Blood Moon Aatrox (2022)"
+    },
+    {
+        "value": "Aatrox_21",
+        "label": "Lunar Eclipse Aatrox"
+    },
+    {
+        "value": "Aatrox_30",
+        "label": "DRX Aatrox"
+    },
+    {
+        "value": "Aatrox_31",
+        "label": "Prestige DRX Aatrox"
+    },
+    {
+        "value": "Aatrox_33",
+        "label": "Primordian Aatrox"
+    },
+    {
+        "value": "Ahri_0",
+        "label": "Ahri"
+    },
+    {
+        "value": "Ahri_1",
+        "label": "Dynasty Ahri"
+    },
+    {
+        "value": "Ahri_2",
+        "label": "Midnight Ahri"
+    },
+    {
+        "value": "Ahri_3",
+        "label": "Foxfire Ahri"
+    },
+    {
+        "value": "Ahri_4",
+        "label": "Popstar Ahri"
+    },
+    {
+        "value": "Ahri_5",
+        "label": "Challenger Ahri"
+    },
+    {
+        "value": "Ahri_6",
+        "label": "Academy Ahri"
+    },
+    {
+        "value": "Ahri_7",
+        "label": "Arcade Ahri"
+    },
+    {
+        "value": "Ahri_14",
+        "label": "Star Guardian Ahri"
+    },
+    {
+        "value": "Ahri_15",
+        "label": "K\/DA Ahri"
+    },
+    {
+        "value": "Ahri_16",
+        "label": "Prestige K\/DA Ahri"
+    },
+    {
+        "value": "Ahri_17",
+        "label": "Elderwood Ahri"
+    },
+    {
+        "value": "Ahri_27",
+        "label": "Spirit Blossom Ahri"
+    },
+    {
+        "value": "Ahri_28",
+        "label": "K\/DA ALL OUT Ahri"
+    },
+    {
+        "value": "Ahri_42",
+        "label": "Coven Ahri"
+    },
+    {
+        "value": "Ahri_65",
+        "label": "Prestige K\/DA Ahri (2022)"
+    },
+    {
+        "value": "Ahri_66",
+        "label": "Arcana Ahri"
+    },
+    {
+        "value": "Ahri_76",
+        "label": "Snow Moon Ahri"
+    },
+    {
+        "value": "Ahri_85",
+        "label": "Risen Legend Ahri"
+    },
+    {
+        "value": "Ahri_86",
+        "label": "Immortalized Legend Ahri"
+    },
+    {
+        "value": "Akali_0",
+        "label": "Akali"
+    },
+    {
+        "value": "Akali_1",
+        "label": "Stinger Akali"
+    },
+    {
+        "value": "Akali_2",
+        "label": "Infernal Akali"
+    },
+    {
+        "value": "Akali_3",
+        "label": "All-star Akali"
+    },
+    {
+        "value": "Akali_4",
+        "label": "Nurse Akali"
+    },
+    {
+        "value": "Akali_5",
+        "label": "Blood Moon Akali"
+    },
+    {
+        "value": "Akali_6",
+        "label": "Silverfang Akali"
+    },
+    {
+        "value": "Akali_7",
+        "label": "Headhunter Akali"
+    },
+    {
+        "value": "Akali_8",
+        "label": "Sashimi Akali"
+    },
+    {
+        "value": "Akali_9",
+        "label": "K\/DA Akali"
+    },
+    {
+        "value": "Akali_13",
+        "label": "Prestige K\/DA Akali"
+    },
+    {
+        "value": "Akali_14",
+        "label": "PROJECT: Akali"
+    },
+    {
+        "value": "Akali_15",
+        "label": "True Damage Akali"
+    },
+    {
+        "value": "Akali_32",
+        "label": "K\/DA ALL OUT Akali"
+    },
+    {
+        "value": "Akali_50",
+        "label": "Crime City Nightmare Akali"
+    },
+    {
+        "value": "Akali_60",
+        "label": "Prestige K\/DA Akali (2022)"
+    },
+    {
+        "value": "Akali_61",
+        "label": "Star Guardian Akali"
+    },
+    {
+        "value": "Akali_68",
+        "label": "DRX Akali"
+    },
+    {
+        "value": "Akali_70",
+        "label": "Coven Akali"
+    },
+    {
+        "value": "Akali_71",
+        "label": "Prestige Coven Akali"
+    },
+    {
+        "value": "Akali_82",
+        "label": "Empyrean Akali"
+    },
+    {
+        "value": "Akali_92",
+        "label": "Spirit Blossom Akali"
+    },
+    {
+        "value": "Akshan_0",
+        "label": "Akshan"
+    },
+    {
+        "value": "Akshan_1",
+        "label": "Cyber Pop Akshan"
+    },
+    {
+        "value": "Akshan_10",
+        "label": "Crystal Rose Akshan"
+    },
+    {
+        "value": "Akshan_20",
+        "label": "Three Honors Akshan"
+    },
+    {
+        "value": "Alistar_0",
+        "label": "Alistar"
+    },
+    {
+        "value": "Alistar_1",
+        "label": "Black Alistar"
+    },
+    {
+        "value": "Alistar_2",
+        "label": "Golden Alistar"
+    },
+    {
+        "value": "Alistar_3",
+        "label": "Matador Alistar"
+    },
+    {
+        "value": "Alistar_4",
+        "label": "Longhorn Alistar"
+    },
+    {
+        "value": "Alistar_5",
+        "label": "Unchained Alistar"
+    },
+    {
+        "value": "Alistar_6",
+        "label": "Infernal Alistar"
+    },
+    {
+        "value": "Alistar_7",
+        "label": "Sweeper Alistar"
+    },
+    {
+        "value": "Alistar_8",
+        "label": "Marauder Alistar"
+    },
+    {
+        "value": "Alistar_9",
+        "label": "SKT T1 Alistar"
+    },
+    {
+        "value": "Alistar_10",
+        "label": "Moo Cow Alistar"
+    },
+    {
+        "value": "Alistar_19",
+        "label": "Hextech Alistar"
+    },
+    {
+        "value": "Alistar_20",
+        "label": "Conqueror Alistar"
+    },
+    {
+        "value": "Alistar_22",
+        "label": "Blackfrost Alistar"
+    },
+    {
+        "value": "Alistar_29",
+        "label": "Lunar Beast Alistar"
+    },
+    {
+        "value": "Ambessa_0",
+        "label": "Ambessa"
+    },
+    {
+        "value": "Ambessa_1",
+        "label": "Chosen of the Wolf Ambessa"
+    },
+    {
+        "value": "Amumu_0",
+        "label": "Amumu"
+    },
+    {
+        "value": "Amumu_1",
+        "label": "Pharaoh Amumu"
+    },
+    {
+        "value": "Amumu_2",
+        "label": "Vancouver Amumu"
+    },
+    {
+        "value": "Amumu_3",
+        "label": "Emumu"
+    },
+    {
+        "value": "Amumu_4",
+        "label": "Re-Gifted Amumu"
+    },
+    {
+        "value": "Amumu_5",
+        "label": "Almost-Prom King Amumu"
+    },
+    {
+        "value": "Amumu_6",
+        "label": "Little Knight Amumu"
+    },
+    {
+        "value": "Amumu_7",
+        "label": "Sad Robot Amumu"
+    },
+    {
+        "value": "Amumu_8",
+        "label": "Surprise Party Amumu"
+    },
+    {
+        "value": "Amumu_17",
+        "label": "Infernal Amumu"
+    },
+    {
+        "value": "Amumu_23",
+        "label": "Hextech Amumu"
+    },
+    {
+        "value": "Amumu_24",
+        "label": "Pumpkin Prince Amumu"
+    },
+    {
+        "value": "Amumu_34",
+        "label": "Porcelain Amumu"
+    },
+    {
+        "value": "Amumu_44",
+        "label": "Heartache Amumu"
+    },
+    {
+        "value": "Amumu_53",
+        "label": "Dumpling Darlings Amumu"
+    },
+    {
+        "value": "Anivia_0",
+        "label": "Anivia"
+    },
+    {
+        "value": "Anivia_1",
+        "label": "Team Spirit Anivia"
+    },
+    {
+        "value": "Anivia_2",
+        "label": "Bird of Prey Anivia"
+    },
+    {
+        "value": "Anivia_3",
+        "label": "Noxus Hunter Anivia"
+    },
+    {
+        "value": "Anivia_4",
+        "label": "Hextech Anivia"
+    },
+    {
+        "value": "Anivia_5",
+        "label": "Blackfrost Anivia"
+    },
+    {
+        "value": "Anivia_6",
+        "label": "Prehistoric Anivia"
+    },
+    {
+        "value": "Anivia_7",
+        "label": "Festival Queen Anivia"
+    },
+    {
+        "value": "Anivia_8",
+        "label": "Papercraft Anivia"
+    },
+    {
+        "value": "Anivia_17",
+        "label": "Cosmic Flight Anivia"
+    },
+    {
+        "value": "Anivia_27",
+        "label": "Divine Phoenix Anivia"
+    },
+    {
+        "value": "Anivia_37",
+        "label": "Bewitching Batnivia"
+    },
+    {
+        "value": "Anivia_46",
+        "label": "Victorious Anivia"
+    },
+    {
+        "value": "Annie_0",
+        "label": "Annie"
+    },
+    {
+        "value": "Annie_1",
+        "label": "Goth Annie"
+    },
+    {
+        "value": "Annie_2",
+        "label": "Red Riding Annie"
+    },
+    {
+        "value": "Annie_3",
+        "label": "Annie in Wonderland"
+    },
+    {
+        "value": "Annie_4",
+        "label": "Prom Queen Annie"
+    },
+    {
+        "value": "Annie_5",
+        "label": "Frostfire Annie"
+    },
+    {
+        "value": "Annie_6",
+        "label": "Reverse Annie"
+    },
+    {
+        "value": "Annie_7",
+        "label": "FrankenTibbers Annie"
+    },
+    {
+        "value": "Annie_8",
+        "label": "Panda Annie"
+    },
+    {
+        "value": "Annie_9",
+        "label": "Sweetheart Annie"
+    },
+    {
+        "value": "Annie_10",
+        "label": "Hextech Annie"
+    },
+    {
+        "value": "Annie_11",
+        "label": "Super Galaxy Annie"
+    },
+    {
+        "value": "Annie_12",
+        "label": "Annie-Versary"
+    },
+    {
+        "value": "Annie_13",
+        "label": "Lunar Beast Annie"
+    },
+    {
+        "value": "Annie_22",
+        "label": "Cafe Cuties Annie"
+    },
+    {
+        "value": "Annie_31",
+        "label": "Fright Night Annie"
+    },
+    {
+        "value": "Annie_40",
+        "label": "Winterblessed Annie"
+    },
+    {
+        "value": "Annie_50",
+        "label": "Battle Princess Annie"
+    },
+    {
+        "value": "Aphelios_0",
+        "label": "Aphelios"
+    },
+    {
+        "value": "Aphelios_1",
+        "label": "Nightbringer Aphelios"
+    },
+    {
+        "value": "Aphelios_9",
+        "label": "Lunar Beast Aphelios"
+    },
+    {
+        "value": "Aphelios_18",
+        "label": "EDG Aphelios"
+    },
+    {
+        "value": "Aphelios_20",
+        "label": "Spirit Blossom Aphelios"
+    },
+    {
+        "value": "Aphelios_30",
+        "label": "HEARTSTEEL Aphelios"
+    },
+    {
+        "value": "Ashe_0",
+        "label": "Ashe"
+    },
+    {
+        "value": "Ashe_1",
+        "label": "Freljord Ashe"
+    },
+    {
+        "value": "Ashe_2",
+        "label": "Sherwood Forest Ashe"
+    },
+    {
+        "value": "Ashe_3",
+        "label": "Woad Ashe"
+    },
+    {
+        "value": "Ashe_4",
+        "label": "Queen Ashe"
+    },
+    {
+        "value": "Ashe_5",
+        "label": "Amethyst Ashe"
+    },
+    {
+        "value": "Ashe_6",
+        "label": "Heartseeker Ashe"
+    },
+    {
+        "value": "Ashe_7",
+        "label": "Marauder Ashe"
+    },
+    {
+        "value": "Ashe_8",
+        "label": "PROJECT: Ashe"
+    },
+    {
+        "value": "Ashe_9",
+        "label": "Worlds 2017 Ashe"
+    },
+    {
+        "value": "Ashe_11",
+        "label": "Cosmic Queen Ashe"
+    },
+    {
+        "value": "Ashe_17",
+        "label": "High Noon Ashe"
+    },
+    {
+        "value": "Ashe_23",
+        "label": "Fae Dragon Ashe"
+    },
+    {
+        "value": "Ashe_32",
+        "label": "Coven Ashe"
+    },
+    {
+        "value": "Ashe_43",
+        "label": "Ocean Song Ashe"
+    },
+    {
+        "value": "Ashe_52",
+        "label": "Lunar Empress Ashe"
+    },
+    {
+        "value": "Ashe_63",
+        "label": "DRX Ashe"
+    },
+    {
+        "value": "Ashe_65",
+        "label": "Crystalis Motus Ashe"
+    },
+    {
+        "value": "Ashe_67",
+        "label": "Infernal Ashe"
+    },
+    {
+        "value": "Ashe_76",
+        "label": "Spirit Blossom Ashe"
+    },
+    {
+        "value": "AurelionSol_0",
+        "label": "AurelionSol"
+    },
+    {
+        "value": "AurelionSol_1",
+        "label": "Ashen Lord Aurelion Sol"
+    },
+    {
+        "value": "AurelionSol_2",
+        "label": "Mecha Aurelion Sol"
+    },
+    {
+        "value": "AurelionSol_11",
+        "label": "Storm Dragon Aurelion Sol"
+    },
+    {
+        "value": "AurelionSol_21",
+        "label": "Inkshadow Aurelion Sol"
+    },
+    {
+        "value": "AurelionSol_31",
+        "label": "Porcelain Protector Aurelion Sol"
+    },
+    {
+        "value": "Aurora_0",
+        "label": "Aurora"
+    },
+    {
+        "value": "Aurora_1",
+        "label": "Battle Bunny Aurora"
+    },
+    {
+        "value": "Azir_0",
+        "label": "Azir"
+    },
+    {
+        "value": "Azir_1",
+        "label": "Galactic Azir"
+    },
+    {
+        "value": "Azir_2",
+        "label": "Gravelord Azir"
+    },
+    {
+        "value": "Azir_3",
+        "label": "SKT T1 Azir"
+    },
+    {
+        "value": "Azir_4",
+        "label": "Warring Kingdoms Azir"
+    },
+    {
+        "value": "Azir_5",
+        "label": "Elderwood Azir"
+    },
+    {
+        "value": "Azir_14",
+        "label": "Worlds 2022 Azir"
+    },
+    {
+        "value": "Azir_19",
+        "label": "Attorney Azir"
+    },
+    {
+        "value": "Bard_0",
+        "label": "Bard"
+    },
+    {
+        "value": "Bard_1",
+        "label": "Elderwood Bard"
+    },
+    {
+        "value": "Bard_5",
+        "label": "Snow Day Bard"
+    },
+    {
+        "value": "Bard_6",
+        "label": "Bard Bard"
+    },
+    {
+        "value": "Bard_8",
+        "label": "Astronaut Bard"
+    },
+    {
+        "value": "Bard_17",
+        "label": "Cafe Cuties Bard"
+    },
+    {
+        "value": "Bard_26",
+        "label": "Shan Hai Scrolls Bard"
+    },
+    {
+        "value": "Bard_35",
+        "label": "T1 Bard"
+    },
+    {
+        "value": "Bard_37",
+        "label": "Spirit Blossom Bard"
+    },
+    {
+        "value": "Belveth_0",
+        "label": "Belveth"
+    },
+    {
+        "value": "Belveth_1",
+        "label": "Battle Boss Bel'Veth"
+    },
+    {
+        "value": "Belveth_10",
+        "label": "Cosmic Matriarch Bel'Veth"
+    },
+    {
+        "value": "Belveth_19",
+        "label": "Primordian Bel'Veth"
+    },
+    {
+        "value": "Blitzcrank_0",
+        "label": "Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_1",
+        "label": "Rusty Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_2",
+        "label": "Goalkeeper Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_3",
+        "label": "Boom Boom Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_4",
+        "label": "Piltover Customs Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_5",
+        "label": "Definitely Not Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_6",
+        "label": "iBlitzcrank"
+    },
+    {
+        "value": "Blitzcrank_7",
+        "label": "Riot Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_11",
+        "label": "Battle Boss Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_20",
+        "label": "Lancer Rogue Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_21",
+        "label": "Lancer Paragon Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_22",
+        "label": "Witch's Brew Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_29",
+        "label": "Space Groove Blitz & Crank"
+    },
+    {
+        "value": "Blitzcrank_36",
+        "label": "Victorious Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_47",
+        "label": "Zenith Games Blitzcrank"
+    },
+    {
+        "value": "Blitzcrank_56",
+        "label": "Beezcrank"
+    },
+    {
+        "value": "Brand_0",
+        "label": "Brand"
+    },
+    {
+        "value": "Brand_1",
+        "label": "Apocalyptic Brand"
+    },
+    {
+        "value": "Brand_2",
+        "label": "Vandal Brand"
+    },
+    {
+        "value": "Brand_3",
+        "label": "Cryocore Brand"
+    },
+    {
+        "value": "Brand_4",
+        "label": "Zombie Brand"
+    },
+    {
+        "value": "Brand_5",
+        "label": "Spirit Fire Brand"
+    },
+    {
+        "value": "Brand_6",
+        "label": "Battle Boss Brand"
+    },
+    {
+        "value": "Brand_7",
+        "label": "Arclight Brand"
+    },
+    {
+        "value": "Brand_8",
+        "label": "Eternal Dragon Brand"
+    },
+    {
+        "value": "Brand_21",
+        "label": "Debonair Brand"
+    },
+    {
+        "value": "Brand_22",
+        "label": "Prestige Debonair Brand"
+    },
+    {
+        "value": "Brand_33",
+        "label": "Street Demons Brand"
+    },
+    {
+        "value": "Brand_42",
+        "label": "Empyrean Brand"
+    },
+    {
+        "value": "Braum_0",
+        "label": "Braum"
+    },
+    {
+        "value": "Braum_1",
+        "label": "Dragonslayer Braum"
+    },
+    {
+        "value": "Braum_2",
+        "label": "El Tigre Braum"
+    },
+    {
+        "value": "Braum_3",
+        "label": "Braum Lionheart"
+    },
+    {
+        "value": "Braum_10",
+        "label": "Santa Braum"
+    },
+    {
+        "value": "Braum_11",
+        "label": "Crime City Braum"
+    },
+    {
+        "value": "Braum_24",
+        "label": "Sugar Rush Braum"
+    },
+    {
+        "value": "Braum_33",
+        "label": "Pool Party Braum"
+    },
+    {
+        "value": "Braum_42",
+        "label": "Grill Master Braum"
+    },
+    {
+        "value": "Briar_0",
+        "label": "Briar"
+    },
+    {
+        "value": "Briar_1",
+        "label": "Street Demons Briar"
+    },
+    {
+        "value": "Briar_10",
+        "label": "Primordian Briar"
+    },
+    {
+        "value": "Caitlyn_0",
+        "label": "Caitlyn"
+    },
+    {
+        "value": "Caitlyn_1",
+        "label": "Resistance Caitlyn"
+    },
+    {
+        "value": "Caitlyn_2",
+        "label": "Sheriff Caitlyn"
+    },
+    {
+        "value": "Caitlyn_3",
+        "label": "Safari Caitlyn"
+    },
+    {
+        "value": "Caitlyn_4",
+        "label": "Arctic Warfare Caitlyn"
+    },
+    {
+        "value": "Caitlyn_5",
+        "label": "Officer Caitlyn"
+    },
+    {
+        "value": "Caitlyn_6",
+        "label": "Headhunter Caitlyn"
+    },
+    {
+        "value": "Caitlyn_10",
+        "label": "Lunar Wraith Caitlyn"
+    },
+    {
+        "value": "Caitlyn_11",
+        "label": "Pulsefire Caitlyn"
+    },
+    {
+        "value": "Caitlyn_13",
+        "label": "Pool Party Caitlyn"
+    },
+    {
+        "value": "Caitlyn_19",
+        "label": "Arcade Caitlyn"
+    },
+    {
+        "value": "Caitlyn_20",
+        "label": "Prestige Arcade Caitlyn"
+    },
+    {
+        "value": "Caitlyn_22",
+        "label": "Battle Academia Caitlyn"
+    },
+    {
+        "value": "Caitlyn_28",
+        "label": "Arcane Enforcer Caitlyn"
+    },
+    {
+        "value": "Caitlyn_29",
+        "label": "Prestige Arcade Caitlyn (2022)"
+    },
+    {
+        "value": "Caitlyn_30",
+        "label": "Snow Moon Caitlyn"
+    },
+    {
+        "value": "Caitlyn_39",
+        "label": "Heartthrob Caitlyn"
+    },
+    {
+        "value": "Caitlyn_48",
+        "label": "DRX Caitlyn"
+    },
+    {
+        "value": "Caitlyn_50",
+        "label": "Arcane Commander Caitlyn"
+    },
+    {
+        "value": "Caitlyn_51",
+        "label": "Prestige Arcane Commander Caitlyn"
+    },
+    {
+        "value": "Camille_0",
+        "label": "Camille"
+    },
+    {
+        "value": "Camille_1",
+        "label": "Program Camille"
+    },
+    {
+        "value": "Camille_2",
+        "label": "Coven Camille"
+    },
+    {
+        "value": "Camille_10",
+        "label": "iG Camille"
+    },
+    {
+        "value": "Camille_11",
+        "label": "Arcana Camille"
+    },
+    {
+        "value": "Camille_21",
+        "label": "Strike Commander Camille"
+    },
+    {
+        "value": "Camille_31",
+        "label": "Winterblessed Camille"
+    },
+    {
+        "value": "Camille_32",
+        "label": "Prestige Winterblessed Camille"
+    },
+    {
+        "value": "Cassiopeia_0",
+        "label": "Cassiopeia"
+    },
+    {
+        "value": "Cassiopeia_1",
+        "label": "Desperada Cassiopeia"
+    },
+    {
+        "value": "Cassiopeia_2",
+        "label": "Siren Cassiopeia"
+    },
+    {
+        "value": "Cassiopeia_3",
+        "label": "Mythic Cassiopeia"
+    },
+    {
+        "value": "Cassiopeia_4",
+        "label": "Jade Fang Cassiopeia"
+    },
+    {
+        "value": "Cassiopeia_8",
+        "label": "Eternum Cassiopeia"
+    },
+    {
+        "value": "Cassiopeia_9",
+        "label": "Spirit Blossom Cassiopeia"
+    },
+    {
+        "value": "Cassiopeia_18",
+        "label": "Coven Cassiopeia"
+    },
+    {
+        "value": "Cassiopeia_28",
+        "label": "Bewitching Cassiopeia"
+    },
+    {
+        "value": "Cassiopeia_38",
+        "label": "Prestige Mythmaker Cassiopeia"
+    },
+    {
+        "value": "Chogath_0",
+        "label": "Chogath"
+    },
+    {
+        "value": "Chogath_1",
+        "label": "Nightmare Cho'Gath"
+    },
+    {
+        "value": "Chogath_2",
+        "label": "Gentleman Cho'Gath"
+    },
+    {
+        "value": "Chogath_3",
+        "label": "Loch Ness Cho'Gath"
+    },
+    {
+        "value": "Chogath_4",
+        "label": "Jurassic Cho'Gath"
+    },
+    {
+        "value": "Chogath_5",
+        "label": "Battlecast Prime Cho'Gath"
+    },
+    {
+        "value": "Chogath_6",
+        "label": "Prehistoric Cho'Gath"
+    },
+    {
+        "value": "Chogath_7",
+        "label": "Dark Star Cho'Gath"
+    },
+    {
+        "value": "Chogath_14",
+        "label": "Shan Hai Scrolls Cho'Gath"
+    },
+    {
+        "value": "Chogath_23",
+        "label": "Broken Covenant Cho'Gath"
+    },
+    {
+        "value": "Chogath_32",
+        "label": "Toy Terror Cho'Gath"
+    },
+    {
+        "value": "Corki_0",
+        "label": "Corki"
+    },
+    {
+        "value": "Corki_1",
+        "label": "UFO Corki"
+    },
+    {
+        "value": "Corki_2",
+        "label": "Ice Toboggan Corki"
+    },
+    {
+        "value": "Corki_3",
+        "label": "Red Baron Corki"
+    },
+    {
+        "value": "Corki_4",
+        "label": "Hot Rod Corki"
+    },
+    {
+        "value": "Corki_5",
+        "label": "Urfrider Corki"
+    },
+    {
+        "value": "Corki_6",
+        "label": "Dragonwing Corki"
+    },
+    {
+        "value": "Corki_7",
+        "label": "Fnatic Corki"
+    },
+    {
+        "value": "Corki_8",
+        "label": "Arcade Corki"
+    },
+    {
+        "value": "Corki_18",
+        "label": "Corgi Corki"
+    },
+    {
+        "value": "Corki_26",
+        "label": "Astronaut Corki"
+    },
+    {
+        "value": "Darius_0",
+        "label": "Darius"
+    },
+    {
+        "value": "Darius_1",
+        "label": "Lord Darius"
+    },
+    {
+        "value": "Darius_2",
+        "label": "Bioforge Darius"
+    },
+    {
+        "value": "Darius_3",
+        "label": "Woad King Darius"
+    },
+    {
+        "value": "Darius_4",
+        "label": "Dunkmaster Darius"
+    },
+    {
+        "value": "Darius_8",
+        "label": "Academy Darius"
+    },
+    {
+        "value": "Darius_14",
+        "label": "Dreadnova Darius"
+    },
+    {
+        "value": "Darius_15",
+        "label": "God-King Darius"
+    },
+    {
+        "value": "Darius_16",
+        "label": "High Noon Darius"
+    },
+    {
+        "value": "Darius_24",
+        "label": "Lunar Beast Darius"
+    },
+    {
+        "value": "Darius_33",
+        "label": "Crime City Nightmare Darius"
+    },
+    {
+        "value": "Darius_43",
+        "label": "Spirit Blossom Darius"
+    },
+    {
+        "value": "Darius_54",
+        "label": "Porcelain Darius"
+    },
+    {
+        "value": "Darius_64",
+        "label": "Divine God-King Darius"
+    },
+    {
+        "value": "Darius_65",
+        "label": "Prestige Triumphant General Darius"
+    },
+    {
+        "value": "Diana_0",
+        "label": "Diana"
+    },
+    {
+        "value": "Diana_1",
+        "label": "Dark Valkyrie Diana"
+    },
+    {
+        "value": "Diana_2",
+        "label": "Lunar Goddess Diana"
+    },
+    {
+        "value": "Diana_3",
+        "label": "Infernal Diana"
+    },
+    {
+        "value": "Diana_11",
+        "label": "Blood Moon Diana"
+    },
+    {
+        "value": "Diana_12",
+        "label": "Dark Waters Diana"
+    },
+    {
+        "value": "Diana_18",
+        "label": "Dragonslayer Diana"
+    },
+    {
+        "value": "Diana_25",
+        "label": "Battle Queen Diana"
+    },
+    {
+        "value": "Diana_26",
+        "label": "Prestige Battle Queen Diana"
+    },
+    {
+        "value": "Diana_27",
+        "label": "Sentinel Diana"
+    },
+    {
+        "value": "Diana_37",
+        "label": "Firecracker Diana"
+    },
+    {
+        "value": "Diana_47",
+        "label": "Winterblessed Diana"
+    },
+    {
+        "value": "Diana_54",
+        "label": "Heavenscale Diana"
+    },
+    {
+        "value": "Diana_64",
+        "label": "Dark Cosmic Diana"
+    },
+    {
+        "value": "Diana_65",
+        "label": "Prestige Dark Cosmic Diana"
+    },
+    {
+        "value": "Draven_0",
+        "label": "Draven"
+    },
+    {
+        "value": "Draven_1",
+        "label": "Soul Reaver Draven"
+    },
+    {
+        "value": "Draven_2",
+        "label": "Gladiator Draven"
+    },
+    {
+        "value": "Draven_3",
+        "label": "Primetime Draven"
+    },
+    {
+        "value": "Draven_4",
+        "label": "Pool Party Draven"
+    },
+    {
+        "value": "Draven_5",
+        "label": "Beast Hunter Draven"
+    },
+    {
+        "value": "Draven_6",
+        "label": "Draven Draven"
+    },
+    {
+        "value": "Draven_12",
+        "label": "Santa Draven"
+    },
+    {
+        "value": "Draven_13",
+        "label": "Mecha Kingdoms Draven"
+    },
+    {
+        "value": "Draven_20",
+        "label": "Ruined Draven"
+    },
+    {
+        "value": "Draven_29",
+        "label": "Debonair Draven"
+    },
+    {
+        "value": "Draven_39",
+        "label": "Fright Night Draven"
+    },
+    {
+        "value": "Draven_48",
+        "label": "La Ilusión Draven"
+    },
+    {
+        "value": "Draven_58",
+        "label": "Grand Reckoning Draven"
+    },
+    {
+        "value": "DrMundo_0",
+        "label": "DrMundo"
+    },
+    {
+        "value": "DrMundo_1",
+        "label": "Toxic Dr. Mundo"
+    },
+    {
+        "value": "DrMundo_2",
+        "label": "Mr. Mundoverse"
+    },
+    {
+        "value": "DrMundo_3",
+        "label": "Corporate Mundo"
+    },
+    {
+        "value": "DrMundo_4",
+        "label": "Mundo Mundo"
+    },
+    {
+        "value": "DrMundo_5",
+        "label": "Executioner Mundo"
+    },
+    {
+        "value": "DrMundo_6",
+        "label": "Rageborn Mundo"
+    },
+    {
+        "value": "DrMundo_7",
+        "label": "TPA Mundo"
+    },
+    {
+        "value": "DrMundo_8",
+        "label": "Pool Party Mundo"
+    },
+    {
+        "value": "DrMundo_9",
+        "label": "El Macho Mundo"
+    },
+    {
+        "value": "DrMundo_10",
+        "label": "Frozen Prince Mundo"
+    },
+    {
+        "value": "DrMundo_21",
+        "label": "Street Demons Dr. Mundo"
+    },
+    {
+        "value": "Ekko_0",
+        "label": "Ekko"
+    },
+    {
+        "value": "Ekko_1",
+        "label": "Sandstorm Ekko"
+    },
+    {
+        "value": "Ekko_2",
+        "label": "Academy Ekko"
+    },
+    {
+        "value": "Ekko_3",
+        "label": "PROJECT: Ekko"
+    },
+    {
+        "value": "Ekko_11",
+        "label": "SKT T1 Ekko"
+    },
+    {
+        "value": "Ekko_12",
+        "label": "Trick or Treat Ekko"
+    },
+    {
+        "value": "Ekko_19",
+        "label": "True Damage Ekko"
+    },
+    {
+        "value": "Ekko_28",
+        "label": "Pulsefire Ekko"
+    },
+    {
+        "value": "Ekko_36",
+        "label": "Arcane Firelight Ekko"
+    },
+    {
+        "value": "Ekko_45",
+        "label": "Star Guardian Ekko"
+    },
+    {
+        "value": "Ekko_46",
+        "label": "Prestige Star Guardian Ekko"
+    },
+    {
+        "value": "Ekko_56",
+        "label": "Breakout True Damage Ekko"
+    },
+    {
+        "value": "Ekko_57",
+        "label": "Arcane Last Stand Ekko"
+    },
+    {
+        "value": "Elise_0",
+        "label": "Elise"
+    },
+    {
+        "value": "Elise_1",
+        "label": "Death Blossom Elise"
+    },
+    {
+        "value": "Elise_2",
+        "label": "Victorious Elise"
+    },
+    {
+        "value": "Elise_3",
+        "label": "Blood Moon Elise"
+    },
+    {
+        "value": "Elise_4",
+        "label": "SKT T1 Elise"
+    },
+    {
+        "value": "Elise_5",
+        "label": "Super Galaxy Elise"
+    },
+    {
+        "value": "Elise_6",
+        "label": "Bewitching Elise"
+    },
+    {
+        "value": "Elise_15",
+        "label": "Withered Rose Elise"
+    },
+    {
+        "value": "Elise_24",
+        "label": "Coven Elise"
+    },
+    {
+        "value": "Elise_34",
+        "label": "Masque of the Black Rose Elise"
+    },
+    {
+        "value": "Evelynn_0",
+        "label": "Evelynn"
+    },
+    {
+        "value": "Evelynn_1",
+        "label": "Shadow Evelynn"
+    },
+    {
+        "value": "Evelynn_2",
+        "label": "Masquerade Evelynn"
+    },
+    {
+        "value": "Evelynn_3",
+        "label": "Tango Evelynn"
+    },
+    {
+        "value": "Evelynn_4",
+        "label": "Safecracker Evelynn"
+    },
+    {
+        "value": "Evelynn_5",
+        "label": "Blood Moon Evelynn"
+    },
+    {
+        "value": "Evelynn_6",
+        "label": "K\/DA Evelynn"
+    },
+    {
+        "value": "Evelynn_7",
+        "label": "Prestige K\/DA Evelynn"
+    },
+    {
+        "value": "Evelynn_8",
+        "label": "Sugar Rush Evelynn"
+    },
+    {
+        "value": "Evelynn_15",
+        "label": "K\/DA ALL OUT Evelynn"
+    },
+    {
+        "value": "Evelynn_24",
+        "label": "Coven Evelynn"
+    },
+    {
+        "value": "Evelynn_31",
+        "label": "Prestige K\/DA Evelynn (2022)"
+    },
+    {
+        "value": "Evelynn_32",
+        "label": "Spirit Blossom Evelynn"
+    },
+    {
+        "value": "Evelynn_42",
+        "label": "Soul Fighter Evelynn"
+    },
+    {
+        "value": "Evelynn_52",
+        "label": "High Noon Evelynn"
+    },
+    {
+        "value": "Evelynn_53",
+        "label": "Prestige High Noon Evelynn"
+    },
+    {
+        "value": "Evelynn_64",
+        "label": "Nightbringer Evelynn"
+    },
+    {
+        "value": "Ezreal_0",
+        "label": "Ezreal"
+    },
+    {
+        "value": "Ezreal_1",
+        "label": "Nottingham Ezreal"
+    },
+    {
+        "value": "Ezreal_2",
+        "label": "Striker Ezreal"
+    },
+    {
+        "value": "Ezreal_3",
+        "label": "Frosted Ezreal"
+    },
+    {
+        "value": "Ezreal_4",
+        "label": "Explorer Ezreal"
+    },
+    {
+        "value": "Ezreal_5",
+        "label": "Pulsefire Ezreal"
+    },
+    {
+        "value": "Ezreal_6",
+        "label": "TPA Ezreal"
+    },
+    {
+        "value": "Ezreal_7",
+        "label": "Debonair Ezreal"
+    },
+    {
+        "value": "Ezreal_8",
+        "label": "Ace of Spades Ezreal"
+    },
+    {
+        "value": "Ezreal_9",
+        "label": "Arcade Ezreal"
+    },
+    {
+        "value": "Ezreal_18",
+        "label": "Star Guardian Ezreal"
+    },
+    {
+        "value": "Ezreal_19",
+        "label": "SSG Ezreal"
+    },
+    {
+        "value": "Ezreal_20",
+        "label": "Pajama Guardian Ezreal"
+    },
+    {
+        "value": "Ezreal_21",
+        "label": "Battle Academia Ezreal"
+    },
+    {
+        "value": "Ezreal_22",
+        "label": "PsyOps Ezreal"
+    },
+    {
+        "value": "Ezreal_23",
+        "label": "Prestige PsyOps Ezreal"
+    },
+    {
+        "value": "Ezreal_25",
+        "label": "Porcelain Protector Ezreal"
+    },
+    {
+        "value": "Ezreal_33",
+        "label": "Faerie Court Ezreal"
+    },
+    {
+        "value": "Ezreal_43",
+        "label": "HEARTSTEEL Ezreal"
+    },
+    {
+        "value": "Ezreal_44",
+        "label": "Heavenscale Ezreal"
+    },
+    {
+        "value": "Ezreal_54",
+        "label": "Prestige Heavenscale Ezreal"
+    },
+    {
+        "value": "Ezreal_65",
+        "label": "Masque of the Black Rose Ezreal"
+    },
+    {
+        "value": "Fiddlesticks_0",
+        "label": "Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_1",
+        "label": "Spectral Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_2",
+        "label": "Union Jack Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_3",
+        "label": "Bandito Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_4",
+        "label": "Pumpkinhead Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_5",
+        "label": "Fiddle Me Timbers"
+    },
+    {
+        "value": "Fiddlesticks_6",
+        "label": "Surprise Party Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_7",
+        "label": "Dark Candy Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_8",
+        "label": "Risen Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_9",
+        "label": "Praetorian Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_27",
+        "label": "Star Nemesis Fiddlesticks"
+    },
+    {
+        "value": "Fiddlesticks_37",
+        "label": "Blood Moon Fiddlesticks"
+    },
+    {
+        "value": "Fiora_0",
+        "label": "Fiora"
+    },
+    {
+        "value": "Fiora_1",
+        "label": "Royal Guard Fiora"
+    },
+    {
+        "value": "Fiora_2",
+        "label": "Nightraven Fiora"
+    },
+    {
+        "value": "Fiora_3",
+        "label": "Headmistress Fiora"
+    },
+    {
+        "value": "Fiora_4",
+        "label": "PROJECT: Fiora"
+    },
+    {
+        "value": "Fiora_5",
+        "label": "Pool Party Fiora"
+    },
+    {
+        "value": "Fiora_22",
+        "label": "Soaring Sword Fiora"
+    },
+    {
+        "value": "Fiora_23",
+        "label": "Heartpiercer Fiora"
+    },
+    {
+        "value": "Fiora_31",
+        "label": "iG Fiora"
+    },
+    {
+        "value": "Fiora_41",
+        "label": "Pulsefire Fiora"
+    },
+    {
+        "value": "Fiora_50",
+        "label": "Lunar Beast Fiora"
+    },
+    {
+        "value": "Fiora_51",
+        "label": "Prestige Lunar Beast Fiora"
+    },
+    {
+        "value": "Fiora_60",
+        "label": "Bewitching Fiora"
+    },
+    {
+        "value": "Fiora_69",
+        "label": "Faerie Court Fiora"
+    },
+    {
+        "value": "Fiora_80",
+        "label": "Dragonmancer Fiora"
+    },
+    {
+        "value": "Fiora_89",
+        "label": "Battle Queen Fiora"
+    },
+    {
+        "value": "Fizz_0",
+        "label": "Fizz"
+    },
+    {
+        "value": "Fizz_1",
+        "label": "Atlantean Fizz"
+    },
+    {
+        "value": "Fizz_2",
+        "label": "Tundra Fizz"
+    },
+    {
+        "value": "Fizz_3",
+        "label": "Fisherman Fizz"
+    },
+    {
+        "value": "Fizz_4",
+        "label": "Void Fizz"
+    },
+    {
+        "value": "Fizz_8",
+        "label": "Cottontail Fizz"
+    },
+    {
+        "value": "Fizz_9",
+        "label": "Super Galaxy Fizz"
+    },
+    {
+        "value": "Fizz_10",
+        "label": "Omega Squad Fizz"
+    },
+    {
+        "value": "Fizz_14",
+        "label": "Fuzz Fizz"
+    },
+    {
+        "value": "Fizz_15",
+        "label": "Prestige Fuzz Fizz"
+    },
+    {
+        "value": "Fizz_16",
+        "label": "Little Devil Fizz"
+    },
+    {
+        "value": "Fizz_25",
+        "label": "Prestige Fuzz Fizz (2022)"
+    },
+    {
+        "value": "Fizz_26",
+        "label": "Astronaut Fizz"
+    },
+    {
+        "value": "Fizz_35",
+        "label": "Rain Shepherd Fizz"
+    },
+    {
+        "value": "Galio_0",
+        "label": "Galio"
+    },
+    {
+        "value": "Galio_1",
+        "label": "Enchanted Galio"
+    },
+    {
+        "value": "Galio_2",
+        "label": "Hextech Galio"
+    },
+    {
+        "value": "Galio_3",
+        "label": "Commando Galio"
+    },
+    {
+        "value": "Galio_4",
+        "label": "Gatekeeper Galio"
+    },
+    {
+        "value": "Galio_5",
+        "label": "Debonair Galio"
+    },
+    {
+        "value": "Galio_6",
+        "label": "Birdio"
+    },
+    {
+        "value": "Galio_13",
+        "label": "Infernal Galio"
+    },
+    {
+        "value": "Galio_19",
+        "label": "Dragon Guardian Galio"
+    },
+    {
+        "value": "Galio_28",
+        "label": "Mythmaker Galio"
+    },
+    {
+        "value": "Gangplank_0",
+        "label": "Gangplank"
+    },
+    {
+        "value": "Gangplank_1",
+        "label": "Spooky Gangplank"
+    },
+    {
+        "value": "Gangplank_2",
+        "label": "Minuteman Gangplank"
+    },
+    {
+        "value": "Gangplank_3",
+        "label": "Sailor Gangplank"
+    },
+    {
+        "value": "Gangplank_4",
+        "label": "Toy Soldier Gangplank"
+    },
+    {
+        "value": "Gangplank_5",
+        "label": "Special Forces Gangplank"
+    },
+    {
+        "value": "Gangplank_6",
+        "label": "Sultan Gangplank"
+    },
+    {
+        "value": "Gangplank_7",
+        "label": "Captain Gangplank"
+    },
+    {
+        "value": "Gangplank_8",
+        "label": "Dreadnova Gangplank"
+    },
+    {
+        "value": "Gangplank_14",
+        "label": "Pool Party Gangplank"
+    },
+    {
+        "value": "Gangplank_21",
+        "label": "FPX Gangplank"
+    },
+    {
+        "value": "Gangplank_23",
+        "label": "Gangplank the Betrayer"
+    },
+    {
+        "value": "Gangplank_33",
+        "label": "PROJECT: Gangplank"
+    },
+    {
+        "value": "Garen_0",
+        "label": "Garen"
+    },
+    {
+        "value": "Garen_1",
+        "label": "Sanguine Garen"
+    },
+    {
+        "value": "Garen_2",
+        "label": "Desert Trooper Garen"
+    },
+    {
+        "value": "Garen_3",
+        "label": "Commando Garen"
+    },
+    {
+        "value": "Garen_4",
+        "label": "Dreadknight Garen"
+    },
+    {
+        "value": "Garen_5",
+        "label": "Rugged Garen"
+    },
+    {
+        "value": "Garen_6",
+        "label": "Steel Legion Garen"
+    },
+    {
+        "value": "Garen_10",
+        "label": "Rogue Admiral Garen"
+    },
+    {
+        "value": "Garen_11",
+        "label": "Warring Kingdoms Garen"
+    },
+    {
+        "value": "Garen_13",
+        "label": "God-King Garen"
+    },
+    {
+        "value": "Garen_14",
+        "label": "Demacia Vice Garen"
+    },
+    {
+        "value": "Garen_22",
+        "label": "Mecha Kingdoms Garen"
+    },
+    {
+        "value": "Garen_23",
+        "label": "Prestige Mecha Kingdoms Garen"
+    },
+    {
+        "value": "Garen_24",
+        "label": "Battle Academia Garen"
+    },
+    {
+        "value": "Garen_33",
+        "label": "Mythmaker Garen"
+    },
+    {
+        "value": "Garen_44",
+        "label": "Fallen God-King Garen"
+    },
+    {
+        "value": "Gnar_0",
+        "label": "Gnar"
+    },
+    {
+        "value": "Gnar_1",
+        "label": "Dino Gnar"
+    },
+    {
+        "value": "Gnar_2",
+        "label": "Gentleman Gnar"
+    },
+    {
+        "value": "Gnar_3",
+        "label": "Snow Day Gnar"
+    },
+    {
+        "value": "Gnar_4",
+        "label": "El León Gnar"
+    },
+    {
+        "value": "Gnar_13",
+        "label": "Super Galaxy Gnar"
+    },
+    {
+        "value": "Gnar_14",
+        "label": "SSG Gnar"
+    },
+    {
+        "value": "Gnar_15",
+        "label": "Astronaut Gnar"
+    },
+    {
+        "value": "Gnar_22",
+        "label": "Elderwood Gnar"
+    },
+    {
+        "value": "Gnar_31",
+        "label": "La Ilusión Gnar"
+    },
+    {
+        "value": "Gragas_0",
+        "label": "Gragas"
+    },
+    {
+        "value": "Gragas_1",
+        "label": "Scuba Gragas"
+    },
+    {
+        "value": "Gragas_2",
+        "label": "Hillbilly Gragas"
+    },
+    {
+        "value": "Gragas_3",
+        "label": "Santa Gragas"
+    },
+    {
+        "value": "Gragas_4",
+        "label": "Gragas, Esq."
+    },
+    {
+        "value": "Gragas_5",
+        "label": "Vandal Gragas"
+    },
+    {
+        "value": "Gragas_6",
+        "label": "Oktoberfest Gragas"
+    },
+    {
+        "value": "Gragas_7",
+        "label": "Superfan Gragas"
+    },
+    {
+        "value": "Gragas_8",
+        "label": "Fnatic Gragas"
+    },
+    {
+        "value": "Gragas_9",
+        "label": "Gragas Caskbreaker"
+    },
+    {
+        "value": "Gragas_10",
+        "label": "Arctic Ops Gragas"
+    },
+    {
+        "value": "Gragas_11",
+        "label": "Warden Gragas"
+    },
+    {
+        "value": "Gragas_20",
+        "label": "Space Groove Gragas"
+    },
+    {
+        "value": "Gragas_29",
+        "label": "High Noon Gragas"
+    },
+    {
+        "value": "Gragas_39",
+        "label": "Music Fan Gragas"
+    },
+    {
+        "value": "Graves_0",
+        "label": "Graves"
+    },
+    {
+        "value": "Graves_1",
+        "label": "Hired Gun Graves"
+    },
+    {
+        "value": "Graves_2",
+        "label": "Jailbreak Graves"
+    },
+    {
+        "value": "Graves_3",
+        "label": "Crime City Graves"
+    },
+    {
+        "value": "Graves_4",
+        "label": "Riot Graves"
+    },
+    {
+        "value": "Graves_5",
+        "label": "Pool Party Graves"
+    },
+    {
+        "value": "Graves_6",
+        "label": "Cutthroat Graves"
+    },
+    {
+        "value": "Graves_7",
+        "label": "Snow Day Graves"
+    },
+    {
+        "value": "Graves_14",
+        "label": "Victorious Graves"
+    },
+    {
+        "value": "Graves_18",
+        "label": "Praetorian Graves"
+    },
+    {
+        "value": "Graves_25",
+        "label": "Battle Professor Graves"
+    },
+    {
+        "value": "Graves_35",
+        "label": "Sentinel Graves"
+    },
+    {
+        "value": "Graves_42",
+        "label": "EDG Graves"
+    },
+    {
+        "value": "Graves_45",
+        "label": "Porcelain Graves"
+    },
+    {
+        "value": "Gwen_0",
+        "label": "Gwen"
+    },
+    {
+        "value": "Gwen_1",
+        "label": "Space Groove Gwen"
+    },
+    {
+        "value": "Gwen_11",
+        "label": "Cafe Cuties Gwen"
+    },
+    {
+        "value": "Gwen_20",
+        "label": "Soul Fighter Gwen"
+    },
+    {
+        "value": "Gwen_30",
+        "label": "Battle Queen Gwen"
+    },
+    {
+        "value": "Hecarim_0",
+        "label": "Hecarim"
+    },
+    {
+        "value": "Hecarim_1",
+        "label": "Blood Knight Hecarim"
+    },
+    {
+        "value": "Hecarim_2",
+        "label": "Reaper Hecarim"
+    },
+    {
+        "value": "Hecarim_3",
+        "label": "Headless Hecarim"
+    },
+    {
+        "value": "Hecarim_4",
+        "label": "Arcade Hecarim"
+    },
+    {
+        "value": "Hecarim_5",
+        "label": "Elderwood Hecarim"
+    },
+    {
+        "value": "Hecarim_6",
+        "label": "Worldbreaker Hecarim"
+    },
+    {
+        "value": "Hecarim_7",
+        "label": "Lancer Zero Hecarim"
+    },
+    {
+        "value": "Hecarim_8",
+        "label": "High Noon Hecarim"
+    },
+    {
+        "value": "Hecarim_14",
+        "label": "Cosmic Charger Hecarim"
+    },
+    {
+        "value": "Hecarim_22",
+        "label": "Arcana Hecarim"
+    },
+    {
+        "value": "Hecarim_31",
+        "label": "Winterblessed Hecarim"
+    },
+    {
+        "value": "Hecarim_41",
+        "label": "Nightbringer Hecarim"
+    },
+    {
+        "value": "Heimerdinger_0",
+        "label": "Heimerdinger"
+    },
+    {
+        "value": "Heimerdinger_1",
+        "label": "Alien Invader Heimerdinger"
+    },
+    {
+        "value": "Heimerdinger_2",
+        "label": "Blast Zone Heimerdinger"
+    },
+    {
+        "value": "Heimerdinger_3",
+        "label": "Piltover Customs Heimerdinger"
+    },
+    {
+        "value": "Heimerdinger_4",
+        "label": "Snowmerdinger"
+    },
+    {
+        "value": "Heimerdinger_5",
+        "label": "Hazmat Heimerdinger"
+    },
+    {
+        "value": "Heimerdinger_6",
+        "label": "Dragon Trainer Heimerdinger"
+    },
+    {
+        "value": "Heimerdinger_15",
+        "label": "Pool Party Heimerdinger"
+    },
+    {
+        "value": "Heimerdinger_24",
+        "label": "Heimerstinger"
+    },
+    {
+        "value": "Heimerdinger_33",
+        "label": "Arcane Professor Heimerdinger"
+    },
+    {
+        "value": "Hwei_0",
+        "label": "Hwei"
+    },
+    {
+        "value": "Hwei_1",
+        "label": "Winterblessed Hwei"
+    },
+    {
+        "value": "Hwei_11",
+        "label": "Spirit Blossom Hwei"
+    },
+    {
+        "value": "Illaoi_0",
+        "label": "Illaoi"
+    },
+    {
+        "value": "Illaoi_1",
+        "label": "Void Bringer Illaoi"
+    },
+    {
+        "value": "Illaoi_2",
+        "label": "Resistance Illaoi"
+    },
+    {
+        "value": "Illaoi_10",
+        "label": "Cosmic Invoker Illaoi"
+    },
+    {
+        "value": "Illaoi_18",
+        "label": "Snow Moon Illaoi"
+    },
+    {
+        "value": "Illaoi_27",
+        "label": "Battle Bear Illaoi"
+    },
+    {
+        "value": "Irelia_0",
+        "label": "Irelia"
+    },
+    {
+        "value": "Irelia_1",
+        "label": "Nightblade Irelia"
+    },
+    {
+        "value": "Irelia_2",
+        "label": "Aviator Irelia"
+    },
+    {
+        "value": "Irelia_3",
+        "label": "Infiltrator Irelia"
+    },
+    {
+        "value": "Irelia_4",
+        "label": "Frostblade Irelia"
+    },
+    {
+        "value": "Irelia_5",
+        "label": "Order of the Lotus Irelia"
+    },
+    {
+        "value": "Irelia_6",
+        "label": "Divine Sword Irelia"
+    },
+    {
+        "value": "Irelia_15",
+        "label": "iG Irelia"
+    },
+    {
+        "value": "Irelia_16",
+        "label": "PROJECT: Irelia"
+    },
+    {
+        "value": "Irelia_17",
+        "label": "Prestige PROJECT: Irelia"
+    },
+    {
+        "value": "Irelia_18",
+        "label": "High Noon Irelia"
+    },
+    {
+        "value": "Irelia_26",
+        "label": "Sentinel Irelia"
+    },
+    {
+        "value": "Irelia_36",
+        "label": "Prestige PROJECT: Irelia (2022)"
+    },
+    {
+        "value": "Irelia_37",
+        "label": "Mythmaker Irelia"
+    },
+    {
+        "value": "Irelia_45",
+        "label": "Porcelain Irelia"
+    },
+    {
+        "value": "Irelia_55",
+        "label": "Spirit Blossom Irelia"
+    },
+    {
+        "value": "Ivern_0",
+        "label": "Ivern"
+    },
+    {
+        "value": "Ivern_1",
+        "label": "Candy King Ivern"
+    },
+    {
+        "value": "Ivern_2",
+        "label": "Dunkmaster Ivern"
+    },
+    {
+        "value": "Ivern_11",
+        "label": "Old God Ivern"
+    },
+    {
+        "value": "Ivern_20",
+        "label": "Astronaut Ivern"
+    },
+    {
+        "value": "Ivern_30",
+        "label": "Spirit Blossom Ivern"
+    },
+    {
+        "value": "Janna_0",
+        "label": "Janna"
+    },
+    {
+        "value": "Janna_1",
+        "label": "Tempest Janna"
+    },
+    {
+        "value": "Janna_2",
+        "label": "Hextech Janna"
+    },
+    {
+        "value": "Janna_3",
+        "label": "Frost Queen Janna"
+    },
+    {
+        "value": "Janna_4",
+        "label": "Victorious Janna"
+    },
+    {
+        "value": "Janna_5",
+        "label": "Forecast Janna"
+    },
+    {
+        "value": "Janna_6",
+        "label": "Fnatic Janna"
+    },
+    {
+        "value": "Janna_7",
+        "label": "Star Guardian Janna"
+    },
+    {
+        "value": "Janna_8",
+        "label": "Sacred Sword Janna"
+    },
+    {
+        "value": "Janna_13",
+        "label": "Bewitching Janna"
+    },
+    {
+        "value": "Janna_20",
+        "label": "Guardian of the Sands Janna"
+    },
+    {
+        "value": "Janna_27",
+        "label": "Battle Queen Janna"
+    },
+    {
+        "value": "Janna_36",
+        "label": "Crystal Rose Janna"
+    },
+    {
+        "value": "Janna_45",
+        "label": "Cyber Halo Janna"
+    },
+    {
+        "value": "Janna_46",
+        "label": "Prestige Cyber Halo Janna"
+    },
+    {
+        "value": "Janna_56",
+        "label": "Heavenscale Janna"
+    },
+    {
+        "value": "Janna_66",
+        "label": "Dawnbringer Janna"
+    },
+    {
+        "value": "JarvanIV_0",
+        "label": "JarvanIV"
+    },
+    {
+        "value": "JarvanIV_1",
+        "label": "Commando Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_2",
+        "label": "Dragonslayer Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_3",
+        "label": "Darkforge Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_4",
+        "label": "Victorious Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_5",
+        "label": "Warring Kingdoms Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_6",
+        "label": "Fnatic Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_7",
+        "label": "Dark Star Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_8",
+        "label": "SSG Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_9",
+        "label": "Hextech Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_11",
+        "label": "Pool Party Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_21",
+        "label": "Lunar Beast Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_30",
+        "label": "Worlds 2021 Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_35",
+        "label": "Nightbringer Jarvan IV"
+    },
+    {
+        "value": "JarvanIV_44",
+        "label": "Mythmaker Jarvan IV"
+    },
+    {
+        "value": "Jax_0",
+        "label": "Jax"
+    },
+    {
+        "value": "Jax_1",
+        "label": "The Mighty Jax"
+    },
+    {
+        "value": "Jax_2",
+        "label": "Vandal Jax"
+    },
+    {
+        "value": "Jax_3",
+        "label": "Angler Jax"
+    },
+    {
+        "value": "Jax_4",
+        "label": "PAX Jax"
+    },
+    {
+        "value": "Jax_5",
+        "label": "Jaximus"
+    },
+    {
+        "value": "Jax_6",
+        "label": "Temple Jax"
+    },
+    {
+        "value": "Jax_7",
+        "label": "Nemesis Jax"
+    },
+    {
+        "value": "Jax_8",
+        "label": "SKT T1 Jax"
+    },
+    {
+        "value": "Jax_12",
+        "label": "Warden Jax"
+    },
+    {
+        "value": "Jax_13",
+        "label": "God Staff Jax"
+    },
+    {
+        "value": "Jax_14",
+        "label": "Mecha Kingdoms Jax"
+    },
+    {
+        "value": "Jax_20",
+        "label": "Conqueror Jax"
+    },
+    {
+        "value": "Jax_21",
+        "label": "Prestige Conqueror Jax"
+    },
+    {
+        "value": "Jax_22",
+        "label": "Empyrean Jax"
+    },
+    {
+        "value": "Jax_32",
+        "label": "Neo PAX Jax"
+    },
+    {
+        "value": "Jax_33",
+        "label": "PROJECT: Jax"
+    },
+    {
+        "value": "Jayce_0",
+        "label": "Jayce"
+    },
+    {
+        "value": "Jayce_1",
+        "label": "Full Metal Jayce"
+    },
+    {
+        "value": "Jayce_2",
+        "label": "Debonair Jayce"
+    },
+    {
+        "value": "Jayce_3",
+        "label": "Forsaken Jayce"
+    },
+    {
+        "value": "Jayce_4",
+        "label": "Jayce Brighthammer"
+    },
+    {
+        "value": "Jayce_5",
+        "label": "Battle Academia Jayce"
+    },
+    {
+        "value": "Jayce_15",
+        "label": "Resistance Jayce"
+    },
+    {
+        "value": "Jayce_24",
+        "label": "Arcane Inventor Jayce"
+    },
+    {
+        "value": "Jayce_25",
+        "label": "Zenith Games Jayce"
+    },
+    {
+        "value": "Jayce_34",
+        "label": "T1 Jayce"
+    },
+    {
+        "value": "Jayce_35",
+        "label": "Arcane Survivor Jayce"
+    },
+    {
+        "value": "Jayce_36",
+        "label": "Prestige T1 Jayce"
+    },
+    {
+        "value": "Jhin_0",
+        "label": "Jhin"
+    },
+    {
+        "value": "Jhin_1",
+        "label": "High Noon Jhin"
+    },
+    {
+        "value": "Jhin_2",
+        "label": "Blood Moon Jhin"
+    },
+    {
+        "value": "Jhin_3",
+        "label": "SKT T1 Jhin"
+    },
+    {
+        "value": "Jhin_4",
+        "label": "PROJECT: Jhin"
+    },
+    {
+        "value": "Jhin_5",
+        "label": "Dark Cosmic Jhin"
+    },
+    {
+        "value": "Jhin_14",
+        "label": "Shan Hai Scrolls Jhin"
+    },
+    {
+        "value": "Jhin_23",
+        "label": "DWG Jhin"
+    },
+    {
+        "value": "Jhin_25",
+        "label": "Empyrean Jhin"
+    },
+    {
+        "value": "Jhin_36",
+        "label": "Soul Fighter Jhin"
+    },
+    {
+        "value": "Jhin_37",
+        "label": "Dark Cosmic Erasure Jhin"
+    },
+    {
+        "value": "Jhin_47",
+        "label": "Mythmaker Jhin"
+    },
+    {
+        "value": "Jinx_0",
+        "label": "Jinx"
+    },
+    {
+        "value": "Jinx_1",
+        "label": "Crime City Jinx"
+    },
+    {
+        "value": "Jinx_2",
+        "label": "Firecracker Jinx"
+    },
+    {
+        "value": "Jinx_3",
+        "label": "Zombie Slayer Jinx"
+    },
+    {
+        "value": "Jinx_4",
+        "label": "Star Guardian Jinx"
+    },
+    {
+        "value": "Jinx_12",
+        "label": "Ambitious Elf Jinx"
+    },
+    {
+        "value": "Jinx_13",
+        "label": "Odyssey Jinx"
+    },
+    {
+        "value": "Jinx_20",
+        "label": "PROJECT: Jinx"
+    },
+    {
+        "value": "Jinx_29",
+        "label": "Heartseeker Jinx"
+    },
+    {
+        "value": "Jinx_37",
+        "label": "Arcane Enemy Jinx"
+    },
+    {
+        "value": "Jinx_38",
+        "label": "Battle Cat Jinx"
+    },
+    {
+        "value": "Jinx_40",
+        "label": "Prestige Battle Cat Jinx"
+    },
+    {
+        "value": "Jinx_51",
+        "label": "Cafe Cuties Jinx"
+    },
+    {
+        "value": "Jinx_60",
+        "label": "Arcane Fractured Jinx"
+    },
+    {
+        "value": "Jinx_62",
+        "label": "T1 Jinx"
+    },
+    {
+        "value": "Kaisa_0",
+        "label": "Kaisa"
+    },
+    {
+        "value": "Kaisa_1",
+        "label": "Bullet Angel Kai'Sa"
+    },
+    {
+        "value": "Kaisa_14",
+        "label": "K\/DA Kai'Sa"
+    },
+    {
+        "value": "Kaisa_15",
+        "label": "Prestige K\/DA Kai'Sa"
+    },
+    {
+        "value": "Kaisa_16",
+        "label": "iG Kai'Sa"
+    },
+    {
+        "value": "Kaisa_17",
+        "label": "Arcade Kai'Sa"
+    },
+    {
+        "value": "Kaisa_26",
+        "label": "K\/DA ALL OUT Kai'Sa"
+    },
+    {
+        "value": "Kaisa_27",
+        "label": "Prestige K\/DA ALL OUT Kai'Sa"
+    },
+    {
+        "value": "Kaisa_29",
+        "label": "Lagoon Dragon Kai'Sa"
+    },
+    {
+        "value": "Kaisa_39",
+        "label": "Prestige K\/DA Kai'Sa (2022)"
+    },
+    {
+        "value": "Kaisa_40",
+        "label": "Star Guardian Kai'Sa"
+    },
+    {
+        "value": "Kaisa_48",
+        "label": "Inkshadow Kai'Sa"
+    },
+    {
+        "value": "Kaisa_59",
+        "label": "Heavenscale Kai'Sa"
+    },
+    {
+        "value": "Kaisa_69",
+        "label": "Dark Star Kai'Sa"
+    },
+    {
+        "value": "Kaisa_70",
+        "label": "Risen Legend Kai'Sa"
+    },
+    {
+        "value": "Kaisa_71",
+        "label": "Immortalized Legend Kai'Sa"
+    },
+    {
+        "value": "Kalista_0",
+        "label": "Kalista"
+    },
+    {
+        "value": "Kalista_1",
+        "label": "Blood Moon Kalista"
+    },
+    {
+        "value": "Kalista_2",
+        "label": "Worlds 2015 Kalista"
+    },
+    {
+        "value": "Kalista_3",
+        "label": "SKT T1 Kalista"
+    },
+    {
+        "value": "Kalista_5",
+        "label": "Marauder Kalista"
+    },
+    {
+        "value": "Kalista_14",
+        "label": "Faerie Court Kalista"
+    },
+    {
+        "value": "Kalista_24",
+        "label": "Dawnbringer Kalista"
+    },
+    {
+        "value": "Karma_0",
+        "label": "Karma"
+    },
+    {
+        "value": "Karma_1",
+        "label": "Sun Goddess Karma"
+    },
+    {
+        "value": "Karma_2",
+        "label": "Sakura Karma"
+    },
+    {
+        "value": "Karma_3",
+        "label": "Traditional Karma"
+    },
+    {
+        "value": "Karma_4",
+        "label": "Order of the Lotus Karma"
+    },
+    {
+        "value": "Karma_5",
+        "label": "Warden Karma"
+    },
+    {
+        "value": "Karma_6",
+        "label": "Winter Wonder Karma"
+    },
+    {
+        "value": "Karma_7",
+        "label": "Conqueror Karma"
+    },
+    {
+        "value": "Karma_8",
+        "label": "Dark Star Karma"
+    },
+    {
+        "value": "Karma_19",
+        "label": "Dawnbringer Karma"
+    },
+    {
+        "value": "Karma_26",
+        "label": "Odyssey Karma"
+    },
+    {
+        "value": "Karma_27",
+        "label": "Ruined Karma"
+    },
+    {
+        "value": "Karma_44",
+        "label": "Tranquility Dragon Karma"
+    },
+    {
+        "value": "Karma_54",
+        "label": "Faerie Queen Karma"
+    },
+    {
+        "value": "Karma_61",
+        "label": "Infernal Karma"
+    },
+    {
+        "value": "Karma_70",
+        "label": "Spirit Blossom Karma"
+    },
+    {
+        "value": "Karthus_0",
+        "label": "Karthus"
+    },
+    {
+        "value": "Karthus_1",
+        "label": "Phantom Karthus"
+    },
+    {
+        "value": "Karthus_2",
+        "label": "Statue of Karthus"
+    },
+    {
+        "value": "Karthus_3",
+        "label": "Grim Reaper Karthus"
+    },
+    {
+        "value": "Karthus_4",
+        "label": "Pentakill Karthus"
+    },
+    {
+        "value": "Karthus_5",
+        "label": "Fnatic Karthus"
+    },
+    {
+        "value": "Karthus_9",
+        "label": "Karthus Lightsbane"
+    },
+    {
+        "value": "Karthus_10",
+        "label": "Infernal Karthus"
+    },
+    {
+        "value": "Karthus_17",
+        "label": "Pentakill III: Lost Chapter Karthus"
+    },
+    {
+        "value": "Karthus_26",
+        "label": "Elderwood Karthus"
+    },
+    {
+        "value": "Kassadin_0",
+        "label": "Kassadin"
+    },
+    {
+        "value": "Kassadin_1",
+        "label": "Festival Kassadin"
+    },
+    {
+        "value": "Kassadin_2",
+        "label": "Deep One Kassadin"
+    },
+    {
+        "value": "Kassadin_3",
+        "label": "Pre-Void Kassadin"
+    },
+    {
+        "value": "Kassadin_4",
+        "label": "Harbinger Kassadin"
+    },
+    {
+        "value": "Kassadin_5",
+        "label": "Cosmic Reaver Kassadin"
+    },
+    {
+        "value": "Kassadin_6",
+        "label": "Count Kassadin"
+    },
+    {
+        "value": "Kassadin_14",
+        "label": "Hextech Kassadin"
+    },
+    {
+        "value": "Kassadin_15",
+        "label": "Shockblade Kassadin"
+    },
+    {
+        "value": "Kassadin_24",
+        "label": "Dragonmancer Kassadin"
+    },
+    {
+        "value": "Katarina_0",
+        "label": "Katarina"
+    },
+    {
+        "value": "Katarina_1",
+        "label": "Mercenary Katarina"
+    },
+    {
+        "value": "Katarina_2",
+        "label": "Red Card Katarina"
+    },
+    {
+        "value": "Katarina_3",
+        "label": "Bilgewater Katarina"
+    },
+    {
+        "value": "Katarina_4",
+        "label": "Kitty Cat Katarina"
+    },
+    {
+        "value": "Katarina_5",
+        "label": "High Command Katarina"
+    },
+    {
+        "value": "Katarina_6",
+        "label": "Sandstorm Katarina"
+    },
+    {
+        "value": "Katarina_7",
+        "label": "Slay Belle Katarina"
+    },
+    {
+        "value": "Katarina_8",
+        "label": "Warring Kingdoms Katarina"
+    },
+    {
+        "value": "Katarina_9",
+        "label": "PROJECT: Katarina"
+    },
+    {
+        "value": "Katarina_10",
+        "label": "Death Sworn Katarina"
+    },
+    {
+        "value": "Katarina_12",
+        "label": "Battle Academia Katarina"
+    },
+    {
+        "value": "Katarina_21",
+        "label": "Blood Moon Katarina"
+    },
+    {
+        "value": "Katarina_29",
+        "label": "Battle Queen Katarina"
+    },
+    {
+        "value": "Katarina_37",
+        "label": "High Noon Katarina"
+    },
+    {
+        "value": "Katarina_47",
+        "label": "Faerie Court Katarina"
+    },
+    {
+        "value": "Katarina_48",
+        "label": "Prestige Faerie Court Katarina"
+    },
+    {
+        "value": "Katarina_59",
+        "label": "Chosen of the Wolf Katarina"
+    },
+    {
+        "value": "Katarina_60",
+        "label": "Prestige Masque of the Black Rose Katarina"
+    },
+    {
+        "value": "Kayle_0",
+        "label": "Kayle"
+    },
+    {
+        "value": "Kayle_1",
+        "label": "Silver Kayle"
+    },
+    {
+        "value": "Kayle_2",
+        "label": "Viridian Kayle"
+    },
+    {
+        "value": "Kayle_3",
+        "label": "Transcended Kayle"
+    },
+    {
+        "value": "Kayle_4",
+        "label": "Battleborn Kayle"
+    },
+    {
+        "value": "Kayle_5",
+        "label": "Judgment Kayle"
+    },
+    {
+        "value": "Kayle_6",
+        "label": "Aether Wing Kayle"
+    },
+    {
+        "value": "Kayle_7",
+        "label": "Riot Kayle"
+    },
+    {
+        "value": "Kayle_8",
+        "label": "Iron Inquisitor Kayle"
+    },
+    {
+        "value": "Kayle_9",
+        "label": "Pentakill Kayle"
+    },
+    {
+        "value": "Kayle_15",
+        "label": "PsyOps Kayle"
+    },
+    {
+        "value": "Kayle_24",
+        "label": "Dragonslayer Kayle"
+    },
+    {
+        "value": "Kayle_33",
+        "label": "Pentakill III: Lost Chapter Kayle"
+    },
+    {
+        "value": "Kayle_42",
+        "label": "Sun-Eater Kayle"
+    },
+    {
+        "value": "Kayle_57",
+        "label": "Immortal Journey Kayle"
+    },
+    {
+        "value": "Kayle_66",
+        "label": "Empyrean Kayle"
+    },
+    {
+        "value": "Kayle_67",
+        "label": "Prestige Empyrean Kayle"
+    },
+    {
+        "value": "Kayle_78",
+        "label": "Spirit Blossom Kayle"
+    },
+    {
+        "value": "Kayn_0",
+        "label": "Kayn"
+    },
+    {
+        "value": "Kayn_1",
+        "label": "Soulhunter Kayn"
+    },
+    {
+        "value": "Kayn_2",
+        "label": "Odyssey Kayn"
+    },
+    {
+        "value": "Kayn_8",
+        "label": "Nightbringer Kayn"
+    },
+    {
+        "value": "Kayn_9",
+        "label": "Prestige Nightbringer Kayn"
+    },
+    {
+        "value": "Kayn_15",
+        "label": "Snow Moon Kayn"
+    },
+    {
+        "value": "Kayn_20",
+        "label": "HEARTSTEEL Kayn"
+    },
+    {
+        "value": "Kayn_26",
+        "label": "Battle Academia Kayn"
+    },
+    {
+        "value": "Kennen_0",
+        "label": "Kennen"
+    },
+    {
+        "value": "Kennen_1",
+        "label": "Deadly Kennen"
+    },
+    {
+        "value": "Kennen_2",
+        "label": "Swamp Master Kennen"
+    },
+    {
+        "value": "Kennen_3",
+        "label": "Karate Kennen"
+    },
+    {
+        "value": "Kennen_4",
+        "label": "Kennen M.D."
+    },
+    {
+        "value": "Kennen_5",
+        "label": "Arctic Ops Kennen"
+    },
+    {
+        "value": "Kennen_6",
+        "label": "Blood Moon Kennen"
+    },
+    {
+        "value": "Kennen_7",
+        "label": "Super Kennen"
+    },
+    {
+        "value": "Kennen_8",
+        "label": "Infernal Kennen"
+    },
+    {
+        "value": "Kennen_23",
+        "label": "DWG Kennen"
+    },
+    {
+        "value": "Kennen_25",
+        "label": "Astronaut Kennen"
+    },
+    {
+        "value": "Khazix_0",
+        "label": "Khazix"
+    },
+    {
+        "value": "Khazix_1",
+        "label": "Mecha Kha'Zix"
+    },
+    {
+        "value": "Khazix_2",
+        "label": "Guardian of the Sands Kha'Zix"
+    },
+    {
+        "value": "Khazix_3",
+        "label": "Death Blossom Kha'Zix"
+    },
+    {
+        "value": "Khazix_4",
+        "label": "Dark Star Kha'Zix"
+    },
+    {
+        "value": "Khazix_11",
+        "label": "Worlds 2018 Kha'Zix"
+    },
+    {
+        "value": "Khazix_60",
+        "label": "Odyssey Kha'Zix"
+    },
+    {
+        "value": "Khazix_69",
+        "label": "Lunar Guardian Kha'Zix"
+    },
+    {
+        "value": "Khazix_79",
+        "label": "Crystalis Indomitus Kha'Zix"
+    },
+    {
+        "value": "Kindred_0",
+        "label": "Kindred"
+    },
+    {
+        "value": "Kindred_1",
+        "label": "Shadowfire Kindred"
+    },
+    {
+        "value": "Kindred_2",
+        "label": "Super Galaxy Kindred"
+    },
+    {
+        "value": "Kindred_3",
+        "label": "Spirit Blossom Kindred"
+    },
+    {
+        "value": "Kindred_12",
+        "label": "Porcelain Kindred"
+    },
+    {
+        "value": "Kindred_22",
+        "label": "Woof and Lamb Kindred"
+    },
+    {
+        "value": "Kindred_23",
+        "label": "DRX Kindred"
+    },
+    {
+        "value": "Kindred_33",
+        "label": "Prestige Porcelain Kindred"
+    },
+    {
+        "value": "Kindred_34",
+        "label": "Chosen of the Wolf Kindred"
+    },
+    {
+        "value": "Kled_0",
+        "label": "Kled"
+    },
+    {
+        "value": "Kled_1",
+        "label": "Sir Kled"
+    },
+    {
+        "value": "Kled_2",
+        "label": "Count Kledula"
+    },
+    {
+        "value": "Kled_9",
+        "label": "Marauder Kled"
+    },
+    {
+        "value": "Kled_18",
+        "label": "Kibble-Head Kled"
+    },
+    {
+        "value": "KogMaw_0",
+        "label": "KogMaw"
+    },
+    {
+        "value": "KogMaw_1",
+        "label": "Caterpillar Kog'Maw"
+    },
+    {
+        "value": "KogMaw_2",
+        "label": "Sonoran Kog'Maw"
+    },
+    {
+        "value": "KogMaw_3",
+        "label": "Monarch Kog'Maw"
+    },
+    {
+        "value": "KogMaw_4",
+        "label": "Reindeer Kog'Maw"
+    },
+    {
+        "value": "KogMaw_5",
+        "label": "Lion Dance Kog'Maw"
+    },
+    {
+        "value": "KogMaw_6",
+        "label": "Deep Sea Kog'Maw"
+    },
+    {
+        "value": "KogMaw_7",
+        "label": "Jurassic Kog'Maw"
+    },
+    {
+        "value": "KogMaw_8",
+        "label": "Battlecast Kog'Maw"
+    },
+    {
+        "value": "KogMaw_9",
+        "label": "Pug'Maw"
+    },
+    {
+        "value": "KogMaw_10",
+        "label": "Hextech Kog'Maw"
+    },
+    {
+        "value": "KogMaw_19",
+        "label": "Arcanist Kog'Maw"
+    },
+    {
+        "value": "KogMaw_28",
+        "label": "Bee'Maw"
+    },
+    {
+        "value": "KogMaw_37",
+        "label": "Zap'Maw"
+    },
+    {
+        "value": "KogMaw_46",
+        "label": "Shan Hai Scrolls Kog'Maw"
+    },
+    {
+        "value": "KogMaw_55",
+        "label": "Victorious Kog'Maw"
+    },
+    {
+        "value": "KSante_0",
+        "label": "KSante"
+    },
+    {
+        "value": "KSante_1",
+        "label": "Empyrean K'Sante"
+    },
+    {
+        "value": "KSante_2",
+        "label": "Prestige Empyrean K'Sante"
+    },
+    {
+        "value": "KSante_8",
+        "label": "HEARTSTEEL K'Sante"
+    },
+    {
+        "value": "Leblanc_0",
+        "label": "Leblanc"
+    },
+    {
+        "value": "Leblanc_1",
+        "label": "Wicked LeBlanc"
+    },
+    {
+        "value": "Leblanc_2",
+        "label": "Prestigious LeBlanc"
+    },
+    {
+        "value": "Leblanc_3",
+        "label": "Mistletoe LeBlanc"
+    },
+    {
+        "value": "Leblanc_4",
+        "label": "Ravenborn LeBlanc"
+    },
+    {
+        "value": "Leblanc_5",
+        "label": "Elderwood LeBlanc"
+    },
+    {
+        "value": "Leblanc_12",
+        "label": "Program LeBlanc"
+    },
+    {
+        "value": "Leblanc_19",
+        "label": "iG LeBlanc"
+    },
+    {
+        "value": "Leblanc_20",
+        "label": "Coven LeBlanc"
+    },
+    {
+        "value": "Leblanc_29",
+        "label": "Worlds 2020 LeBlanc"
+    },
+    {
+        "value": "Leblanc_33",
+        "label": "Prestige Coven LeBlanc"
+    },
+    {
+        "value": "Leblanc_35",
+        "label": "Debonair LeBlanc"
+    },
+    {
+        "value": "Leblanc_45",
+        "label": "Bewitching LeBlanc"
+    },
+    {
+        "value": "Leblanc_55",
+        "label": "Risen Legend LeBlanc"
+    },
+    {
+        "value": "LeeSin_0",
+        "label": "LeeSin"
+    },
+    {
+        "value": "LeeSin_1",
+        "label": "Traditional Lee Sin"
+    },
+    {
+        "value": "LeeSin_2",
+        "label": "Acolyte Lee Sin"
+    },
+    {
+        "value": "LeeSin_3",
+        "label": "Dragon Fist Lee Sin"
+    },
+    {
+        "value": "LeeSin_4",
+        "label": "Muay Thai Lee Sin"
+    },
+    {
+        "value": "LeeSin_5",
+        "label": "Pool Party Lee Sin"
+    },
+    {
+        "value": "LeeSin_6",
+        "label": "SKT T1 Lee Sin"
+    },
+    {
+        "value": "LeeSin_10",
+        "label": "Knockout Lee Sin"
+    },
+    {
+        "value": "LeeSin_11",
+        "label": "God Fist Lee Sin"
+    },
+    {
+        "value": "LeeSin_12",
+        "label": "Playmaker Lee Sin"
+    },
+    {
+        "value": "LeeSin_27",
+        "label": "Nightbringer Lee Sin"
+    },
+    {
+        "value": "LeeSin_28",
+        "label": "Prestige Nightbringer Lee Sin"
+    },
+    {
+        "value": "LeeSin_29",
+        "label": "FPX Lee Sin"
+    },
+    {
+        "value": "LeeSin_31",
+        "label": "Storm Dragon Lee Sin"
+    },
+    {
+        "value": "LeeSin_39",
+        "label": "Prestige Nightbringer Lee Sin (2022)"
+    },
+    {
+        "value": "LeeSin_41",
+        "label": "Zenith Games Lee Sin"
+    },
+    {
+        "value": "LeeSin_51",
+        "label": "Heavenscale Lee Sin"
+    },
+    {
+        "value": "LeeSin_52",
+        "label": "Divine Heavenscale Lee Sin"
+    },
+    {
+        "value": "LeeSin_68",
+        "label": "T1 Lee Sin"
+    },
+    {
+        "value": "LeeSin_72",
+        "label": "Inkshadow Lee Sin"
+    },
+    {
+        "value": "Leona_0",
+        "label": "Leona"
+    },
+    {
+        "value": "Leona_1",
+        "label": "Valkyrie Leona"
+    },
+    {
+        "value": "Leona_2",
+        "label": "Defender Leona"
+    },
+    {
+        "value": "Leona_3",
+        "label": "Iron Solari Leona"
+    },
+    {
+        "value": "Leona_4",
+        "label": "Pool Party Leona"
+    },
+    {
+        "value": "Leona_8",
+        "label": "PROJECT: Leona"
+    },
+    {
+        "value": "Leona_9",
+        "label": "Barbecue Leona"
+    },
+    {
+        "value": "Leona_10",
+        "label": "Solar Eclipse Leona"
+    },
+    {
+        "value": "Leona_11",
+        "label": "Lunar Eclipse Leona"
+    },
+    {
+        "value": "Leona_12",
+        "label": "Mecha Kingdoms Leona"
+    },
+    {
+        "value": "Leona_21",
+        "label": "Battle Academia Leona"
+    },
+    {
+        "value": "Leona_22",
+        "label": "DWG Leona"
+    },
+    {
+        "value": "Leona_23",
+        "label": "Prestige Battle Academia Leona"
+    },
+    {
+        "value": "Leona_33",
+        "label": "Debonair Leona"
+    },
+    {
+        "value": "Leona_34",
+        "label": "High Noon Leona"
+    },
+    {
+        "value": "Leona_50",
+        "label": "Crystalis Motus Leona"
+    },
+    {
+        "value": "Leona_52",
+        "label": "Battle Lion Leona"
+    },
+    {
+        "value": "Leona_53",
+        "label": "Prestige Battle Lion Leona"
+    },
+    {
+        "value": "Lillia_0",
+        "label": "Lillia"
+    },
+    {
+        "value": "Lillia_1",
+        "label": "Spirit Blossom Lillia"
+    },
+    {
+        "value": "Lillia_10",
+        "label": "Nightbringer Lillia"
+    },
+    {
+        "value": "Lillia_19",
+        "label": "Shan Hai Scrolls Lillia"
+    },
+    {
+        "value": "Lillia_28",
+        "label": "Faerie Court Lillia"
+    },
+    {
+        "value": "Lissandra_0",
+        "label": "Lissandra"
+    },
+    {
+        "value": "Lissandra_1",
+        "label": "Bloodstone Lissandra"
+    },
+    {
+        "value": "Lissandra_2",
+        "label": "Blade Queen Lissandra"
+    },
+    {
+        "value": "Lissandra_3",
+        "label": "Program Lissandra"
+    },
+    {
+        "value": "Lissandra_4",
+        "label": "Coven Lissandra"
+    },
+    {
+        "value": "Lissandra_12",
+        "label": "Dark Cosmic Lissandra"
+    },
+    {
+        "value": "Lissandra_23",
+        "label": "Porcelain Lissandra"
+    },
+    {
+        "value": "Lissandra_33",
+        "label": "Prestige Porcelain Lissandra"
+    },
+    {
+        "value": "Lissandra_34",
+        "label": "Space Groove Lissandra"
+    },
+    {
+        "value": "Lucian_0",
+        "label": "Lucian"
+    },
+    {
+        "value": "Lucian_1",
+        "label": "Hired Gun Lucian"
+    },
+    {
+        "value": "Lucian_2",
+        "label": "Striker Lucian"
+    },
+    {
+        "value": "Lucian_6",
+        "label": "PROJECT: Lucian"
+    },
+    {
+        "value": "Lucian_7",
+        "label": "Heartseeker Lucian"
+    },
+    {
+        "value": "Lucian_8",
+        "label": "High Noon Lucian"
+    },
+    {
+        "value": "Lucian_9",
+        "label": "Demacia Vice Lucian"
+    },
+    {
+        "value": "Lucian_18",
+        "label": "Pulsefire Lucian"
+    },
+    {
+        "value": "Lucian_19",
+        "label": "Prestige Pulsefire Lucian"
+    },
+    {
+        "value": "Lucian_25",
+        "label": "Victorious Lucian"
+    },
+    {
+        "value": "Lucian_31",
+        "label": "Arcana Lucian"
+    },
+    {
+        "value": "Lucian_40",
+        "label": "Strike Paladin Lucian"
+    },
+    {
+        "value": "Lucian_52",
+        "label": "Winterblessed Lucian"
+    },
+    {
+        "value": "Lucian_62",
+        "label": "Masked Justice Lucian"
+    },
+    {
+        "value": "Lulu_0",
+        "label": "Lulu"
+    },
+    {
+        "value": "Lulu_1",
+        "label": "Bittersweet Lulu"
+    },
+    {
+        "value": "Lulu_2",
+        "label": "Wicked Lulu"
+    },
+    {
+        "value": "Lulu_3",
+        "label": "Dragon Trainer Lulu"
+    },
+    {
+        "value": "Lulu_4",
+        "label": "Winter Wonder Lulu"
+    },
+    {
+        "value": "Lulu_5",
+        "label": "Pool Party Lulu"
+    },
+    {
+        "value": "Lulu_6",
+        "label": "Star Guardian Lulu"
+    },
+    {
+        "value": "Lulu_14",
+        "label": "Cosmic Enchantress Lulu"
+    },
+    {
+        "value": "Lulu_15",
+        "label": "Pajama Guardian Lulu"
+    },
+    {
+        "value": "Lulu_26",
+        "label": "Space Groove Lulu"
+    },
+    {
+        "value": "Lulu_27",
+        "label": "Prestige Space Groove Lulu"
+    },
+    {
+        "value": "Lulu_37",
+        "label": "Monster Tamer Lulu"
+    },
+    {
+        "value": "Lulu_46",
+        "label": "Cafe Cuties Lulu"
+    },
+    {
+        "value": "Lux_0",
+        "label": "Lux"
+    },
+    {
+        "value": "Lux_1",
+        "label": "Sorceress Lux"
+    },
+    {
+        "value": "Lux_2",
+        "label": "Spellthief Lux"
+    },
+    {
+        "value": "Lux_3",
+        "label": "Commando Lux"
+    },
+    {
+        "value": "Lux_4",
+        "label": "Imperial Lux"
+    },
+    {
+        "value": "Lux_5",
+        "label": "Steel Legion Lux"
+    },
+    {
+        "value": "Lux_6",
+        "label": "Star Guardian Lux"
+    },
+    {
+        "value": "Lux_7",
+        "label": "Elementalist Lux"
+    },
+    {
+        "value": "Lux_8",
+        "label": "Lunar Empress Lux"
+    },
+    {
+        "value": "Lux_14",
+        "label": "Pajama Guardian Lux"
+    },
+    {
+        "value": "Lux_15",
+        "label": "Battle Academia Lux"
+    },
+    {
+        "value": "Lux_16",
+        "label": "Prestige Battle Academia Lux"
+    },
+    {
+        "value": "Lux_17",
+        "label": "Dark Cosmic Lux"
+    },
+    {
+        "value": "Lux_18",
+        "label": "Cosmic Lux"
+    },
+    {
+        "value": "Lux_19",
+        "label": "Space Groove Lux"
+    },
+    {
+        "value": "Lux_29",
+        "label": "Porcelain Lux"
+    },
+    {
+        "value": "Lux_38",
+        "label": "Soul Fighter Lux"
+    },
+    {
+        "value": "Lux_39",
+        "label": "Prestige Battle Academia Lux (2022)"
+    },
+    {
+        "value": "Lux_40",
+        "label": "Prestige Porcelain Lux"
+    },
+    {
+        "value": "Lux_42",
+        "label": "Empyrean Lux"
+    },
+    {
+        "value": "Lux_61",
+        "label": "Faerie Court Lux"
+    },
+    {
+        "value": "Lux_70",
+        "label": "Prestige Spirit Blossom Lux"
+    },
+    {
+        "value": "Malphite_0",
+        "label": "Malphite"
+    },
+    {
+        "value": "Malphite_1",
+        "label": "Shamrock Malphite"
+    },
+    {
+        "value": "Malphite_2",
+        "label": "Coral Reef Malphite"
+    },
+    {
+        "value": "Malphite_3",
+        "label": "Marble Malphite"
+    },
+    {
+        "value": "Malphite_4",
+        "label": "Obsidian Malphite"
+    },
+    {
+        "value": "Malphite_5",
+        "label": "Glacial Malphite"
+    },
+    {
+        "value": "Malphite_6",
+        "label": "Mecha Malphite"
+    },
+    {
+        "value": "Malphite_7",
+        "label": "Ironside Malphite"
+    },
+    {
+        "value": "Malphite_16",
+        "label": "Odyssey Malphite"
+    },
+    {
+        "value": "Malphite_23",
+        "label": "Dark Star Malphite"
+    },
+    {
+        "value": "Malphite_24",
+        "label": "Prestige Dark Star Malphite"
+    },
+    {
+        "value": "Malphite_25",
+        "label": "FPX Malphite"
+    },
+    {
+        "value": "Malphite_27",
+        "label": "Old God Malphite"
+    },
+    {
+        "value": "Malphite_37",
+        "label": "Lunar Guardian Malphite"
+    },
+    {
+        "value": "Malphite_48",
+        "label": "Pool Party Malphite"
+    },
+    {
+        "value": "Malzahar_0",
+        "label": "Malzahar"
+    },
+    {
+        "value": "Malzahar_1",
+        "label": "Vizier Malzahar"
+    },
+    {
+        "value": "Malzahar_2",
+        "label": "Shadow Prince Malzahar"
+    },
+    {
+        "value": "Malzahar_3",
+        "label": "Djinn Malzahar"
+    },
+    {
+        "value": "Malzahar_4",
+        "label": "Overlord Malzahar"
+    },
+    {
+        "value": "Malzahar_5",
+        "label": "Snow Day Malzahar"
+    },
+    {
+        "value": "Malzahar_6",
+        "label": "Battle Boss Malzahar"
+    },
+    {
+        "value": "Malzahar_7",
+        "label": "Hextech Malzahar"
+    },
+    {
+        "value": "Malzahar_9",
+        "label": "Worldbreaker Malzahar"
+    },
+    {
+        "value": "Malzahar_18",
+        "label": "Beezahar"
+    },
+    {
+        "value": "Malzahar_28",
+        "label": "Debonair Malzahar"
+    },
+    {
+        "value": "Malzahar_38",
+        "label": "Three Honors Malzahar"
+    },
+    {
+        "value": "Malzahar_39",
+        "label": "Empyrean Malzahar"
+    },
+    {
+        "value": "Malzahar_49",
+        "label": "Fatebreaker Malzahar"
+    },
+    {
+        "value": "Maokai_0",
+        "label": "Maokai"
+    },
+    {
+        "value": "Maokai_1",
+        "label": "Charred Maokai"
+    },
+    {
+        "value": "Maokai_2",
+        "label": "Totemic Maokai"
+    },
+    {
+        "value": "Maokai_3",
+        "label": "Festive Maokai"
+    },
+    {
+        "value": "Maokai_4",
+        "label": "Haunted Maokai"
+    },
+    {
+        "value": "Maokai_5",
+        "label": "Goalkeeper Maokai"
+    },
+    {
+        "value": "Maokai_6",
+        "label": "Meowkai"
+    },
+    {
+        "value": "Maokai_7",
+        "label": "Victorious Maokai"
+    },
+    {
+        "value": "Maokai_16",
+        "label": "Worldbreaker Maokai"
+    },
+    {
+        "value": "Maokai_24",
+        "label": "Astronaut Maokai"
+    },
+    {
+        "value": "Maokai_33",
+        "label": "DRX Maokai"
+    },
+    {
+        "value": "MasterYi_0",
+        "label": "MasterYi"
+    },
+    {
+        "value": "MasterYi_1",
+        "label": "Assassin Master Yi"
+    },
+    {
+        "value": "MasterYi_2",
+        "label": "Chosen Master Yi"
+    },
+    {
+        "value": "MasterYi_3",
+        "label": "Ionia Master Yi"
+    },
+    {
+        "value": "MasterYi_4",
+        "label": "Samurai Yi"
+    },
+    {
+        "value": "MasterYi_5",
+        "label": "Headhunter Master Yi"
+    },
+    {
+        "value": "MasterYi_9",
+        "label": "PROJECT: Yi"
+    },
+    {
+        "value": "MasterYi_10",
+        "label": "Cosmic Blade Master Yi"
+    },
+    {
+        "value": "MasterYi_11",
+        "label": "Eternal Sword Yi"
+    },
+    {
+        "value": "MasterYi_17",
+        "label": "Snow Man Yi"
+    },
+    {
+        "value": "MasterYi_24",
+        "label": "Blood Moon Master Yi"
+    },
+    {
+        "value": "MasterYi_33",
+        "label": "PsyOps Master Yi"
+    },
+    {
+        "value": "MasterYi_42",
+        "label": "Debonair Master Yi"
+    },
+    {
+        "value": "MasterYi_52",
+        "label": "Spirit Blossom Master Yi"
+    },
+    {
+        "value": "MasterYi_53",
+        "label": "Prestige Spirit Blossom Master Yi"
+    },
+    {
+        "value": "MasterYi_89",
+        "label": "Inkshadow Master Yi"
+    },
+    {
+        "value": "MasterYi_96",
+        "label": "Heavenscale Master Yi"
+    },
+    {
+        "value": "MasterYi_106",
+        "label": "Victorious Master Yi"
+    },
+    {
+        "value": "Mel_0",
+        "label": "Mel"
+    },
+    {
+        "value": "Mel_1",
+        "label": "Arcane Councilor Mel"
+    },
+    {
+        "value": "Milio_0",
+        "label": "Milio"
+    },
+    {
+        "value": "Milio_1",
+        "label": "Faerie Court Milio"
+    },
+    {
+        "value": "Milio_11",
+        "label": "Rain Shepherd Milio"
+    },
+    {
+        "value": "MissFortune_0",
+        "label": "MissFortune"
+    },
+    {
+        "value": "MissFortune_1",
+        "label": "Cowgirl Miss Fortune"
+    },
+    {
+        "value": "MissFortune_2",
+        "label": "Waterloo Miss Fortune"
+    },
+    {
+        "value": "MissFortune_3",
+        "label": "Secret Agent Miss Fortune"
+    },
+    {
+        "value": "MissFortune_4",
+        "label": "Candy Cane Miss Fortune"
+    },
+    {
+        "value": "MissFortune_5",
+        "label": "Road Warrior Miss Fortune"
+    },
+    {
+        "value": "MissFortune_6",
+        "label": "Crime City Miss Fortune"
+    },
+    {
+        "value": "MissFortune_7",
+        "label": "Arcade Miss Fortune"
+    },
+    {
+        "value": "MissFortune_8",
+        "label": "Captain Fortune"
+    },
+    {
+        "value": "MissFortune_9",
+        "label": "Pool Party Miss Fortune"
+    },
+    {
+        "value": "MissFortune_15",
+        "label": "Star Guardian Miss Fortune"
+    },
+    {
+        "value": "MissFortune_16",
+        "label": "Gun Goddess Miss Fortune"
+    },
+    {
+        "value": "MissFortune_17",
+        "label": "Pajama Guardian Miss Fortune"
+    },
+    {
+        "value": "MissFortune_18",
+        "label": "Bewitching Miss Fortune"
+    },
+    {
+        "value": "MissFortune_20",
+        "label": "Prestige Bewitching Miss Fortune"
+    },
+    {
+        "value": "MissFortune_21",
+        "label": "Ruined Miss Fortune"
+    },
+    {
+        "value": "MissFortune_31",
+        "label": "Battle Bunny Miss Fortune"
+    },
+    {
+        "value": "MissFortune_32",
+        "label": "Admiral Battle Bunny Miss Fortune"
+    },
+    {
+        "value": "MissFortune_33",
+        "label": "Prestige Bewitching Miss Fortune (2022)"
+    },
+    {
+        "value": "MissFortune_40",
+        "label": "Broken Covenant Miss Fortune"
+    },
+    {
+        "value": "MissFortune_41",
+        "label": "Prestige Broken Covenant Miss Fortune"
+    },
+    {
+        "value": "MissFortune_50",
+        "label": "Porcelain Miss Fortune"
+    },
+    {
+        "value": "MissFortune_60",
+        "label": "Battle Queen Miss Fortune"
+    },
+    {
+        "value": "MonkeyKing_0",
+        "label": "MonkeyKing"
+    },
+    {
+        "value": "MonkeyKing_1",
+        "label": "Volcanic Wukong"
+    },
+    {
+        "value": "MonkeyKing_2",
+        "label": "General Wukong"
+    },
+    {
+        "value": "MonkeyKing_3",
+        "label": "Jade Dragon Wukong"
+    },
+    {
+        "value": "MonkeyKing_4",
+        "label": "Underworld Wukong"
+    },
+    {
+        "value": "MonkeyKing_5",
+        "label": "Radiant Wukong"
+    },
+    {
+        "value": "MonkeyKing_6",
+        "label": "Lancer Stratus Wukong"
+    },
+    {
+        "value": "MonkeyKing_7",
+        "label": "Battle Academia Wukong"
+    },
+    {
+        "value": "MonkeyKing_16",
+        "label": "Elderwood Wukong"
+    },
+    {
+        "value": "Mordekaiser_0",
+        "label": "Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_1",
+        "label": "Dragon Knight Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_2",
+        "label": "Infernal Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_3",
+        "label": "Pentakill Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_4",
+        "label": "Lord Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_5",
+        "label": "King of Clubs Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_6",
+        "label": "Dark Star Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_13",
+        "label": "PROJECT: Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_23",
+        "label": "Pentakill III: Lost Chapter Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_32",
+        "label": "High Noon Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_42",
+        "label": "Ashen Graveknight Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_44",
+        "label": "Old God Mordekaiser"
+    },
+    {
+        "value": "Mordekaiser_54",
+        "label": "Sahn-Uzal Mordekaiser"
+    },
+    {
+        "value": "Morgana_0",
+        "label": "Morgana"
+    },
+    {
+        "value": "Morgana_1",
+        "label": "Exiled Morgana"
+    },
+    {
+        "value": "Morgana_2",
+        "label": "Sinful Succulence Morgana"
+    },
+    {
+        "value": "Morgana_3",
+        "label": "Blade Mistress Morgana"
+    },
+    {
+        "value": "Morgana_4",
+        "label": "Blackthorn Morgana"
+    },
+    {
+        "value": "Morgana_5",
+        "label": "Ghost Bride Morgana"
+    },
+    {
+        "value": "Morgana_6",
+        "label": "Victorious Morgana"
+    },
+    {
+        "value": "Morgana_10",
+        "label": "Lunar Wraith Morgana"
+    },
+    {
+        "value": "Morgana_11",
+        "label": "Bewitching Morgana"
+    },
+    {
+        "value": "Morgana_17",
+        "label": "Majestic Empress Morgana"
+    },
+    {
+        "value": "Morgana_26",
+        "label": "Coven Morgana"
+    },
+    {
+        "value": "Morgana_39",
+        "label": "Dawnbringer Morgana"
+    },
+    {
+        "value": "Morgana_41",
+        "label": "Prestige Bewitching Morgana"
+    },
+    {
+        "value": "Morgana_50",
+        "label": "Star Nemesis Morgana"
+    },
+    {
+        "value": "Morgana_60",
+        "label": "Snow Moon Morgana"
+    },
+    {
+        "value": "Morgana_70",
+        "label": "Porcelain Morgana"
+    },
+    {
+        "value": "Morgana_80",
+        "label": "Spirit Blossom Morgana"
+    },
+    {
+        "value": "Naafiri_0",
+        "label": "Naafiri"
+    },
+    {
+        "value": "Naafiri_1",
+        "label": "Soul Fighter Naafiri"
+    },
+    {
+        "value": "Naafiri_11",
+        "label": "PROJECT: Naafiri"
+    },
+    {
+        "value": "Naafiri_20",
+        "label": "Glizzy Naafiri"
+    },
+    {
+        "value": "Nami_0",
+        "label": "Nami"
+    },
+    {
+        "value": "Nami_1",
+        "label": "Koi Nami"
+    },
+    {
+        "value": "Nami_2",
+        "label": "River Spirit Nami"
+    },
+    {
+        "value": "Nami_3",
+        "label": "Urf the Nami-tee"
+    },
+    {
+        "value": "Nami_7",
+        "label": "Deep Sea Nami"
+    },
+    {
+        "value": "Nami_8",
+        "label": "SKT T1 Nami"
+    },
+    {
+        "value": "Nami_9",
+        "label": "Program Nami"
+    },
+    {
+        "value": "Nami_15",
+        "label": "Splendid Staff Nami"
+    },
+    {
+        "value": "Nami_24",
+        "label": "Cosmic Destiny Nami"
+    },
+    {
+        "value": "Nami_32",
+        "label": "Bewitching Nami"
+    },
+    {
+        "value": "Nami_41",
+        "label": "Space Groove Nami"
+    },
+    {
+        "value": "Nami_42",
+        "label": "Prestige Space Groove Nami"
+    },
+    {
+        "value": "Nami_51",
+        "label": "Coven Nami"
+    },
+    {
+        "value": "Nami_58",
+        "label": "Mythmaker Nami"
+    },
+    {
+        "value": "Nasus_0",
+        "label": "Nasus"
+    },
+    {
+        "value": "Nasus_1",
+        "label": "Galactic Nasus"
+    },
+    {
+        "value": "Nasus_2",
+        "label": "Pharaoh Nasus"
+    },
+    {
+        "value": "Nasus_3",
+        "label": "Dreadknight Nasus"
+    },
+    {
+        "value": "Nasus_4",
+        "label": "Riot K-9 Nasus"
+    },
+    {
+        "value": "Nasus_5",
+        "label": "Infernal Nasus"
+    },
+    {
+        "value": "Nasus_6",
+        "label": "Archduke Nasus"
+    },
+    {
+        "value": "Nasus_10",
+        "label": "Worldbreaker Nasus"
+    },
+    {
+        "value": "Nasus_11",
+        "label": "Lunar Guardian Nasus"
+    },
+    {
+        "value": "Nasus_16",
+        "label": "Battlecast Nasus"
+    },
+    {
+        "value": "Nasus_25",
+        "label": "Space Groove Nasus"
+    },
+    {
+        "value": "Nasus_35",
+        "label": "Armored Titan Nasus"
+    },
+    {
+        "value": "Nasus_45",
+        "label": "Nightbringer Nasus"
+    },
+    {
+        "value": "Nasus_54",
+        "label": "Fatemaker Nasus"
+    },
+    {
+        "value": "Nautilus_0",
+        "label": "Nautilus"
+    },
+    {
+        "value": "Nautilus_1",
+        "label": "Abyssal Nautilus"
+    },
+    {
+        "value": "Nautilus_2",
+        "label": "Subterranean Nautilus"
+    },
+    {
+        "value": "Nautilus_3",
+        "label": "AstroNautilus"
+    },
+    {
+        "value": "Nautilus_4",
+        "label": "Warden Nautilus"
+    },
+    {
+        "value": "Nautilus_5",
+        "label": "Worldbreaker Nautilus"
+    },
+    {
+        "value": "Nautilus_6",
+        "label": "Conqueror Nautilus"
+    },
+    {
+        "value": "Nautilus_9",
+        "label": "Shan Hai Scrolls Nautilus"
+    },
+    {
+        "value": "Nautilus_18",
+        "label": "Fright Night Nautilus"
+    },
+    {
+        "value": "Nautilus_27",
+        "label": "Cosmic Paladin Nautilus"
+    },
+    {
+        "value": "Nautilus_36",
+        "label": "Crystalis Indomitus Nautilus"
+    },
+    {
+        "value": "Neeko_0",
+        "label": "Neeko"
+    },
+    {
+        "value": "Neeko_1",
+        "label": "Winter Wonder Neeko"
+    },
+    {
+        "value": "Neeko_10",
+        "label": "Star Guardian Neeko"
+    },
+    {
+        "value": "Neeko_11",
+        "label": "Prestige Star Guardian Neeko"
+    },
+    {
+        "value": "Neeko_12",
+        "label": "Shan Hai Scrolls Neeko"
+    },
+    {
+        "value": "Neeko_21",
+        "label": "Prestige Star Guardian Neeko (2022)"
+    },
+    {
+        "value": "Neeko_22",
+        "label": "Bewitching Neeko"
+    },
+    {
+        "value": "Neeko_31",
+        "label": "Street Demons Neeko"
+    },
+    {
+        "value": "Neeko_40",
+        "label": "Cosplayer Neeko"
+    },
+    {
+        "value": "Nidalee_0",
+        "label": "Nidalee"
+    },
+    {
+        "value": "Nidalee_1",
+        "label": "Snow Bunny Nidalee"
+    },
+    {
+        "value": "Nidalee_2",
+        "label": "Leopard Nidalee"
+    },
+    {
+        "value": "Nidalee_3",
+        "label": "French Maid Nidalee"
+    },
+    {
+        "value": "Nidalee_4",
+        "label": "Pharaoh Nidalee"
+    },
+    {
+        "value": "Nidalee_5",
+        "label": "Bewitching Nidalee"
+    },
+    {
+        "value": "Nidalee_6",
+        "label": "Headhunter Nidalee"
+    },
+    {
+        "value": "Nidalee_7",
+        "label": "Warring Kingdoms Nidalee"
+    },
+    {
+        "value": "Nidalee_8",
+        "label": "Challenger Nidalee"
+    },
+    {
+        "value": "Nidalee_9",
+        "label": "Super Galaxy Nidalee"
+    },
+    {
+        "value": "Nidalee_11",
+        "label": "Dawnbringer Nidalee"
+    },
+    {
+        "value": "Nidalee_18",
+        "label": "Cosmic Huntress Nidalee"
+    },
+    {
+        "value": "Nidalee_27",
+        "label": "DWG Nidalee"
+    },
+    {
+        "value": "Nidalee_29",
+        "label": "Ocean Song Nidalee"
+    },
+    {
+        "value": "Nidalee_39",
+        "label": "Kittalee"
+    },
+    {
+        "value": "Nidalee_48",
+        "label": "La Ilusión Nidalee"
+    },
+    {
+        "value": "Nidalee_58",
+        "label": "Spirit Blossom Nidalee"
+    },
+    {
+        "value": "Nilah_0",
+        "label": "Nilah"
+    },
+    {
+        "value": "Nilah_1",
+        "label": "Star Guardian Nilah"
+    },
+    {
+        "value": "Nilah_11",
+        "label": "Coven Nilah"
+    },
+    {
+        "value": "Nilah_21",
+        "label": "Inkshadow Nilah"
+    },
+    {
+        "value": "Nocturne_0",
+        "label": "Nocturne"
+    },
+    {
+        "value": "Nocturne_1",
+        "label": "Frozen Terror Nocturne"
+    },
+    {
+        "value": "Nocturne_2",
+        "label": "Void Nocturne"
+    },
+    {
+        "value": "Nocturne_3",
+        "label": "Ravager Nocturne"
+    },
+    {
+        "value": "Nocturne_4",
+        "label": "Haunting Nocturne"
+    },
+    {
+        "value": "Nocturne_5",
+        "label": "Eternum Nocturne"
+    },
+    {
+        "value": "Nocturne_6",
+        "label": "Cursed Revenant Nocturne"
+    },
+    {
+        "value": "Nocturne_7",
+        "label": "Old God Nocturne"
+    },
+    {
+        "value": "Nocturne_16",
+        "label": "Hextech Nocturne"
+    },
+    {
+        "value": "Nocturne_17",
+        "label": "Broken Covenant Nocturne"
+    },
+    {
+        "value": "Nocturne_26",
+        "label": "Empyrean Nocturne"
+    },
+    {
+        "value": "Nunu_0",
+        "label": "Nunu"
+    },
+    {
+        "value": "Nunu_1",
+        "label": "Sasquatch Nunu & Willump"
+    },
+    {
+        "value": "Nunu_2",
+        "label": "Workshop Nunu & Willump"
+    },
+    {
+        "value": "Nunu_3",
+        "label": "Grungy Nunu & Willump"
+    },
+    {
+        "value": "Nunu_4",
+        "label": "Nunu & Willump Bot"
+    },
+    {
+        "value": "Nunu_5",
+        "label": "Demolisher Nunu & Willump"
+    },
+    {
+        "value": "Nunu_6",
+        "label": "TPA Nunu & Willump"
+    },
+    {
+        "value": "Nunu_7",
+        "label": "Zombie Nunu & Willump"
+    },
+    {
+        "value": "Nunu_8",
+        "label": "Papercraft Nunu & Willump"
+    },
+    {
+        "value": "Nunu_16",
+        "label": "Space Groove Nunu & Willump"
+    },
+    {
+        "value": "Nunu_26",
+        "label": "Nunu & Beelump"
+    },
+    {
+        "value": "Nunu_35",
+        "label": "Cosmic Paladins Nunu & Willump"
+    },
+    {
+        "value": "Nunu_44",
+        "label": "Fright Night Nunu & Willump"
+    },
+    {
+        "value": "Olaf_0",
+        "label": "Olaf"
+    },
+    {
+        "value": "Olaf_1",
+        "label": "Forsaken Olaf"
+    },
+    {
+        "value": "Olaf_2",
+        "label": "Glacial Olaf"
+    },
+    {
+        "value": "Olaf_3",
+        "label": "Brolaf"
+    },
+    {
+        "value": "Olaf_4",
+        "label": "Pentakill Olaf"
+    },
+    {
+        "value": "Olaf_5",
+        "label": "Marauder Olaf"
+    },
+    {
+        "value": "Olaf_6",
+        "label": "Butcher Olaf"
+    },
+    {
+        "value": "Olaf_15",
+        "label": "SKT T1 Olaf"
+    },
+    {
+        "value": "Olaf_16",
+        "label": "Dragonslayer Olaf"
+    },
+    {
+        "value": "Olaf_25",
+        "label": "Sentinel Olaf"
+    },
+    {
+        "value": "Olaf_35",
+        "label": "Pentakill III: Lost Chapter Olaf"
+    },
+    {
+        "value": "Olaf_44",
+        "label": "Infernal Olaf"
+    },
+    {
+        "value": "Orianna_0",
+        "label": "Orianna"
+    },
+    {
+        "value": "Orianna_1",
+        "label": "Gothic Orianna"
+    },
+    {
+        "value": "Orianna_2",
+        "label": "Sewn Chaos Orianna"
+    },
+    {
+        "value": "Orianna_3",
+        "label": "Bladecraft Orianna"
+    },
+    {
+        "value": "Orianna_4",
+        "label": "TPA Orianna"
+    },
+    {
+        "value": "Orianna_5",
+        "label": "Winter Wonder Orianna"
+    },
+    {
+        "value": "Orianna_6",
+        "label": "Heartseeker Orianna"
+    },
+    {
+        "value": "Orianna_7",
+        "label": "Dark Star Orianna"
+    },
+    {
+        "value": "Orianna_8",
+        "label": "Victorious Orianna"
+    },
+    {
+        "value": "Orianna_11",
+        "label": "Pool Party Orianna"
+    },
+    {
+        "value": "Orianna_20",
+        "label": "Orbeeanna"
+    },
+    {
+        "value": "Orianna_29",
+        "label": "Star Guardian Orianna"
+    },
+    {
+        "value": "Orianna_38",
+        "label": "T1 Orianna"
+    },
+    {
+        "value": "Ornn_0",
+        "label": "Ornn"
+    },
+    {
+        "value": "Ornn_1",
+        "label": "Thunder Lord Ornn"
+    },
+    {
+        "value": "Ornn_2",
+        "label": "Elderwood Ornn"
+    },
+    {
+        "value": "Ornn_11",
+        "label": "Space Groove Ornn"
+    },
+    {
+        "value": "Ornn_20",
+        "label": "Choo-Choo Ornn"
+    },
+    {
+        "value": "Pantheon_0",
+        "label": "Pantheon"
+    },
+    {
+        "value": "Pantheon_1",
+        "label": "Myrmidon Pantheon"
+    },
+    {
+        "value": "Pantheon_2",
+        "label": "Ruthless Pantheon"
+    },
+    {
+        "value": "Pantheon_3",
+        "label": "Perseus Pantheon"
+    },
+    {
+        "value": "Pantheon_4",
+        "label": "Full Metal Pantheon"
+    },
+    {
+        "value": "Pantheon_5",
+        "label": "Glaive Warrior Pantheon"
+    },
+    {
+        "value": "Pantheon_6",
+        "label": "Dragonslayer Pantheon"
+    },
+    {
+        "value": "Pantheon_7",
+        "label": "Zombie Slayer Pantheon"
+    },
+    {
+        "value": "Pantheon_8",
+        "label": "Baker Pantheon"
+    },
+    {
+        "value": "Pantheon_16",
+        "label": "Pulsefire Pantheon"
+    },
+    {
+        "value": "Pantheon_25",
+        "label": "Ruined Pantheon"
+    },
+    {
+        "value": "Pantheon_26",
+        "label": "Prestige Ascended Pantheon"
+    },
+    {
+        "value": "Pantheon_36",
+        "label": "Ashen Conqueror Pantheon"
+    },
+    {
+        "value": "Pantheon_38",
+        "label": "Chosen of the Wolf Pantheon"
+    },
+    {
+        "value": "Poppy_0",
+        "label": "Poppy"
+    },
+    {
+        "value": "Poppy_1",
+        "label": "Noxus Poppy"
+    },
+    {
+        "value": "Poppy_2",
+        "label": "Lollipoppy"
+    },
+    {
+        "value": "Poppy_3",
+        "label": "Blacksmith Poppy"
+    },
+    {
+        "value": "Poppy_4",
+        "label": "Ragdoll Poppy"
+    },
+    {
+        "value": "Poppy_5",
+        "label": "Battle Regalia Poppy"
+    },
+    {
+        "value": "Poppy_6",
+        "label": "Scarlet Hammer Poppy"
+    },
+    {
+        "value": "Poppy_7",
+        "label": "Star Guardian Poppy"
+    },
+    {
+        "value": "Poppy_14",
+        "label": "Snow Fawn Poppy"
+    },
+    {
+        "value": "Poppy_15",
+        "label": "Hextech Poppy"
+    },
+    {
+        "value": "Poppy_16",
+        "label": "Astronaut Poppy"
+    },
+    {
+        "value": "Poppy_24",
+        "label": "Bewitching Poppy"
+    },
+    {
+        "value": "Poppy_33",
+        "label": "Cafe Cuties Poppy"
+    },
+    {
+        "value": "Pyke_0",
+        "label": "Pyke"
+    },
+    {
+        "value": "Pyke_1",
+        "label": "Sand Wraith Pyke"
+    },
+    {
+        "value": "Pyke_9",
+        "label": "Blood Moon Pyke"
+    },
+    {
+        "value": "Pyke_16",
+        "label": "PROJECT: Pyke"
+    },
+    {
+        "value": "Pyke_25",
+        "label": "PsyOps Pyke"
+    },
+    {
+        "value": "Pyke_34",
+        "label": "Sentinel Pyke"
+    },
+    {
+        "value": "Pyke_44",
+        "label": "Ashen Knight Pyke"
+    },
+    {
+        "value": "Pyke_45",
+        "label": "Empyrean Pyke"
+    },
+    {
+        "value": "Pyke_53",
+        "label": "Soul Fighter Pyke"
+    },
+    {
+        "value": "Pyke_54",
+        "label": "Prestige Soul Fighter Pyke"
+    },
+    {
+        "value": "Pyke_64",
+        "label": "Fright Night Pyke"
+    },
+    {
+        "value": "Pyke_74",
+        "label": "Inkshadow Pyke"
+    },
+    {
+        "value": "Qiyana_0",
+        "label": "Qiyana"
+    },
+    {
+        "value": "Qiyana_1",
+        "label": "Battle Boss Qiyana"
+    },
+    {
+        "value": "Qiyana_2",
+        "label": "True Damage Qiyana"
+    },
+    {
+        "value": "Qiyana_10",
+        "label": "Prestige True Damage Qiyana"
+    },
+    {
+        "value": "Qiyana_11",
+        "label": "Battle Queen Qiyana"
+    },
+    {
+        "value": "Qiyana_20",
+        "label": "Shockblade Qiyana"
+    },
+    {
+        "value": "Qiyana_21",
+        "label": "Prestige True Damage Qiyana (2022)"
+    },
+    {
+        "value": "Qiyana_30",
+        "label": "Lunar Empress Qiyana"
+    },
+    {
+        "value": "Qiyana_40",
+        "label": "La Ilusión Qiyana"
+    },
+    {
+        "value": "Qiyana_50",
+        "label": "Prestige Battle Academia Qiyana"
+    },
+    {
+        "value": "Quinn_0",
+        "label": "Quinn"
+    },
+    {
+        "value": "Quinn_1",
+        "label": "Phoenix Quinn"
+    },
+    {
+        "value": "Quinn_2",
+        "label": "Woad Scout Quinn"
+    },
+    {
+        "value": "Quinn_3",
+        "label": "Corsair Quinn"
+    },
+    {
+        "value": "Quinn_4",
+        "label": "Heartseeker Quinn"
+    },
+    {
+        "value": "Quinn_5",
+        "label": "Warden Quinn"
+    },
+    {
+        "value": "Quinn_14",
+        "label": "Star Guardian Quinn"
+    },
+    {
+        "value": "Rakan_0",
+        "label": "Rakan"
+    },
+    {
+        "value": "Rakan_1",
+        "label": "Cosmic Dawn Rakan"
+    },
+    {
+        "value": "Rakan_2",
+        "label": "Sweetheart Rakan"
+    },
+    {
+        "value": "Rakan_3",
+        "label": "SSG Rakan"
+    },
+    {
+        "value": "Rakan_4",
+        "label": "iG Rakan"
+    },
+    {
+        "value": "Rakan_5",
+        "label": "Star Guardian Rakan"
+    },
+    {
+        "value": "Rakan_9",
+        "label": "Elderwood Rakan"
+    },
+    {
+        "value": "Rakan_18",
+        "label": "Arcana Rakan"
+    },
+    {
+        "value": "Rakan_27",
+        "label": "Broken Covenant Rakan"
+    },
+    {
+        "value": "Rakan_36",
+        "label": "Redeemed Star Guardian Rakan"
+    },
+    {
+        "value": "Rakan_37",
+        "label": "Dragonmancer Rakan"
+    },
+    {
+        "value": "Rakan_38",
+        "label": "Prestige Dragonmancer Rakan"
+    },
+    {
+        "value": "Rakan_47",
+        "label": "Battle Academia Rakan"
+    },
+    {
+        "value": "Rammus_0",
+        "label": "Rammus"
+    },
+    {
+        "value": "Rammus_1",
+        "label": "King Rammus"
+    },
+    {
+        "value": "Rammus_2",
+        "label": "Chrome Rammus"
+    },
+    {
+        "value": "Rammus_3",
+        "label": "Molten Rammus"
+    },
+    {
+        "value": "Rammus_4",
+        "label": "Freljord Rammus"
+    },
+    {
+        "value": "Rammus_5",
+        "label": "Ninja Rammus"
+    },
+    {
+        "value": "Rammus_6",
+        "label": "Full Metal Rammus"
+    },
+    {
+        "value": "Rammus_7",
+        "label": "Guardian of the Sands Rammus"
+    },
+    {
+        "value": "Rammus_8",
+        "label": "Sweeper Rammus"
+    },
+    {
+        "value": "Rammus_16",
+        "label": "Hextech Rammus"
+    },
+    {
+        "value": "Rammus_17",
+        "label": "Astronaut Rammus"
+    },
+    {
+        "value": "Rammus_26",
+        "label": "Durian Defender Rammus"
+    },
+    {
+        "value": "RekSai_0",
+        "label": "RekSai"
+    },
+    {
+        "value": "RekSai_1",
+        "label": "Eternum Rek'Sai"
+    },
+    {
+        "value": "RekSai_2",
+        "label": "Pool Party Rek'Sai"
+    },
+    {
+        "value": "RekSai_9",
+        "label": "Blackfrost Rek'Sai"
+    },
+    {
+        "value": "RekSai_17",
+        "label": "Elderwood Rek'Sai"
+    },
+    {
+        "value": "RekSai_26",
+        "label": "Primordian Rek'Sai"
+    },
+    {
+        "value": "Rell_0",
+        "label": "Rell"
+    },
+    {
+        "value": "Rell_1",
+        "label": "Battle Queen Rell"
+    },
+    {
+        "value": "Rell_10",
+        "label": "Star Guardian Rell"
+    },
+    {
+        "value": "Rell_20",
+        "label": "High Noon Rell"
+    },
+    {
+        "value": "Rell_30",
+        "label": "Grand Reckoning Rell"
+    },
+    {
+        "value": "Renata_0",
+        "label": "Renata"
+    },
+    {
+        "value": "Renata_1",
+        "label": "Admiral Glasc"
+    },
+    {
+        "value": "Renata_10",
+        "label": "Fright Night Renata Glasc"
+    },
+    {
+        "value": "Renata_20",
+        "label": "La Ilusión Renata Glasc"
+    },
+    {
+        "value": "Renata_21",
+        "label": "Prestige La Ilusión Renata Glasc"
+    },
+    {
+        "value": "Renata_31",
+        "label": "Masque of the Black Rose Renata Glasc"
+    },
+    {
+        "value": "Renekton_0",
+        "label": "Renekton"
+    },
+    {
+        "value": "Renekton_1",
+        "label": "Galactic Renekton"
+    },
+    {
+        "value": "Renekton_2",
+        "label": "Outback Renekton"
+    },
+    {
+        "value": "Renekton_3",
+        "label": "Bloodfury Renekton"
+    },
+    {
+        "value": "Renekton_4",
+        "label": "Rune Wars Renekton"
+    },
+    {
+        "value": "Renekton_5",
+        "label": "Scorched Earth Renekton"
+    },
+    {
+        "value": "Renekton_6",
+        "label": "Pool Party Renekton"
+    },
+    {
+        "value": "Renekton_7",
+        "label": "Prehistoric Renekton"
+    },
+    {
+        "value": "Renekton_8",
+        "label": "SKT T1 Renekton"
+    },
+    {
+        "value": "Renekton_9",
+        "label": "Renektoy"
+    },
+    {
+        "value": "Renekton_17",
+        "label": "Hextech Renekton"
+    },
+    {
+        "value": "Renekton_18",
+        "label": "Blackfrost Renekton"
+    },
+    {
+        "value": "Renekton_26",
+        "label": "PROJECT: Renekton"
+    },
+    {
+        "value": "Renekton_33",
+        "label": "Dawnbringer Renekton"
+    },
+    {
+        "value": "Renekton_42",
+        "label": "Worlds 2023 Renekton"
+    },
+    {
+        "value": "Renekton_48",
+        "label": "Inkshadow Renekton"
+    },
+    {
+        "value": "Rengar_0",
+        "label": "Rengar"
+    },
+    {
+        "value": "Rengar_1",
+        "label": "Headhunter Rengar"
+    },
+    {
+        "value": "Rengar_2",
+        "label": "Night Hunter Rengar"
+    },
+    {
+        "value": "Rengar_3",
+        "label": "SSW Rengar"
+    },
+    {
+        "value": "Rengar_8",
+        "label": "Mecha Rengar"
+    },
+    {
+        "value": "Rengar_15",
+        "label": "Pretty Kitty Rengar"
+    },
+    {
+        "value": "Rengar_23",
+        "label": "Guardian of the Sands Rengar"
+    },
+    {
+        "value": "Rengar_30",
+        "label": "Sentinel Rengar"
+    },
+    {
+        "value": "Rengar_40",
+        "label": "Street Demons Rengar"
+    },
+    {
+        "value": "Riven_0",
+        "label": "Riven"
+    },
+    {
+        "value": "Riven_1",
+        "label": "Redeemed Riven"
+    },
+    {
+        "value": "Riven_2",
+        "label": "Crimson Elite Riven"
+    },
+    {
+        "value": "Riven_3",
+        "label": "Battle Bunny Riven"
+    },
+    {
+        "value": "Riven_4",
+        "label": "Worlds 2012 Riven"
+    },
+    {
+        "value": "Riven_5",
+        "label": "Dragonblade Riven"
+    },
+    {
+        "value": "Riven_6",
+        "label": "Arcade Riven"
+    },
+    {
+        "value": "Riven_7",
+        "label": "Reignited Worlds 2012 Riven"
+    },
+    {
+        "value": "Riven_16",
+        "label": "Dawnbringer Riven"
+    },
+    {
+        "value": "Riven_18",
+        "label": "Pulsefire Riven"
+    },
+    {
+        "value": "Riven_20",
+        "label": "Valiant Sword Riven"
+    },
+    {
+        "value": "Riven_22",
+        "label": "Prestige Valiant Sword Riven"
+    },
+    {
+        "value": "Riven_23",
+        "label": "Spirit Blossom Riven"
+    },
+    {
+        "value": "Riven_34",
+        "label": "Sentinel Riven"
+    },
+    {
+        "value": "Riven_44",
+        "label": "Battle Bunny Prime Riven"
+    },
+    {
+        "value": "Riven_45",
+        "label": "Prestige Valiant Sword Riven (2022)"
+    },
+    {
+        "value": "Riven_55",
+        "label": "Broken Covenant Riven"
+    },
+    {
+        "value": "Riven_63",
+        "label": "Primal Ambush Riven"
+    },
+    {
+        "value": "Rumble_0",
+        "label": "Rumble"
+    },
+    {
+        "value": "Rumble_1",
+        "label": "Rumble in the Jungle"
+    },
+    {
+        "value": "Rumble_2",
+        "label": "Bilgerat Rumble"
+    },
+    {
+        "value": "Rumble_3",
+        "label": "Super Galaxy Rumble"
+    },
+    {
+        "value": "Rumble_4",
+        "label": "Badlands Baron Rumble"
+    },
+    {
+        "value": "Rumble_13",
+        "label": "Space Groove Rumble"
+    },
+    {
+        "value": "Rumble_23",
+        "label": "Cafe Cuties Rumble"
+    },
+    {
+        "value": "Ryze_0",
+        "label": "Ryze"
+    },
+    {
+        "value": "Ryze_1",
+        "label": "Young Ryze"
+    },
+    {
+        "value": "Ryze_2",
+        "label": "Tribal Ryze"
+    },
+    {
+        "value": "Ryze_3",
+        "label": "Uncle Ryze"
+    },
+    {
+        "value": "Ryze_4",
+        "label": "Triumphant Ryze"
+    },
+    {
+        "value": "Ryze_5",
+        "label": "Professor Ryze"
+    },
+    {
+        "value": "Ryze_6",
+        "label": "Zombie Ryze"
+    },
+    {
+        "value": "Ryze_7",
+        "label": "Dark Crystal Ryze"
+    },
+    {
+        "value": "Ryze_8",
+        "label": "Pirate Ryze"
+    },
+    {
+        "value": "Ryze_9",
+        "label": "Ryze Whitebeard"
+    },
+    {
+        "value": "Ryze_10",
+        "label": "SKT T1 Ryze"
+    },
+    {
+        "value": "Ryze_11",
+        "label": "Worlds 2019 Ryze"
+    },
+    {
+        "value": "Ryze_13",
+        "label": "Guardian of the Sands Ryze"
+    },
+    {
+        "value": "Ryze_20",
+        "label": "Arcana Ryze"
+    },
+    {
+        "value": "Ryze_29",
+        "label": "Blood Moon Ryze"
+    },
+    {
+        "value": "Samira_0",
+        "label": "Samira"
+    },
+    {
+        "value": "Samira_1",
+        "label": "PsyOps Samira"
+    },
+    {
+        "value": "Samira_10",
+        "label": "Space Groove Samira"
+    },
+    {
+        "value": "Samira_20",
+        "label": "High Noon Samira"
+    },
+    {
+        "value": "Samira_30",
+        "label": "Soul Fighter Samira"
+    },
+    {
+        "value": "Samira_33",
+        "label": "Masque of the Black Rose Samira"
+    },
+    {
+        "value": "Sejuani_0",
+        "label": "Sejuani"
+    },
+    {
+        "value": "Sejuani_1",
+        "label": "Sabretusk Sejuani"
+    },
+    {
+        "value": "Sejuani_2",
+        "label": "Darkrider Sejuani"
+    },
+    {
+        "value": "Sejuani_3",
+        "label": "Traditional Sejuani"
+    },
+    {
+        "value": "Sejuani_4",
+        "label": "Bear Cavalry Sejuani"
+    },
+    {
+        "value": "Sejuani_5",
+        "label": "Poro Rider Sejuani"
+    },
+    {
+        "value": "Sejuani_6",
+        "label": "Beast Hunter Sejuani"
+    },
+    {
+        "value": "Sejuani_7",
+        "label": "Sejuani Dawnchaser"
+    },
+    {
+        "value": "Sejuani_8",
+        "label": "Firecracker Sejuani"
+    },
+    {
+        "value": "Sejuani_15",
+        "label": "Hextech Sejuani"
+    },
+    {
+        "value": "Sejuani_16",
+        "label": "PROJECT: Sejuani"
+    },
+    {
+        "value": "Sejuani_26",
+        "label": "Solar Eclipse Sejuani"
+    },
+    {
+        "value": "Sejuani_36",
+        "label": "Victorious Sejuani"
+    },
+    {
+        "value": "Senna_0",
+        "label": "Senna"
+    },
+    {
+        "value": "Senna_1",
+        "label": "True Damage Senna"
+    },
+    {
+        "value": "Senna_9",
+        "label": "Prestige True Damage Senna"
+    },
+    {
+        "value": "Senna_10",
+        "label": "High Noon Senna"
+    },
+    {
+        "value": "Senna_16",
+        "label": "PROJECT: Senna"
+    },
+    {
+        "value": "Senna_26",
+        "label": "Lunar Eclipse Senna"
+    },
+    {
+        "value": "Senna_27",
+        "label": "Prestige Lunar Eclipse Senna"
+    },
+    {
+        "value": "Senna_36",
+        "label": "Bewitching Senna"
+    },
+    {
+        "value": "Senna_46",
+        "label": "Star Guardian Senna"
+    },
+    {
+        "value": "Senna_56",
+        "label": "Winterblessed Senna"
+    },
+    {
+        "value": "Senna_63",
+        "label": "Masked Justice Senna"
+    },
+    {
+        "value": "Seraphine_0",
+        "label": "Seraphine"
+    },
+    {
+        "value": "Seraphine_1",
+        "label": "K\/DA ALL OUT Seraphine Indie"
+    },
+    {
+        "value": "Seraphine_2",
+        "label": "K\/DA ALL OUT Seraphine Rising Star"
+    },
+    {
+        "value": "Seraphine_3",
+        "label": "K\/DA ALL OUT Seraphine Superstar"
+    },
+    {
+        "value": "Seraphine_4",
+        "label": "Graceful Phoenix Seraphine"
+    },
+    {
+        "value": "Seraphine_14",
+        "label": "Ocean Song Seraphine"
+    },
+    {
+        "value": "Seraphine_15",
+        "label": "Prestige Ocean Song Seraphine"
+    },
+    {
+        "value": "Seraphine_24",
+        "label": "Faerie Court Seraphine"
+    },
+    {
+        "value": "Seraphine_34",
+        "label": "Star Guardian Seraphine"
+    },
+    {
+        "value": "Seraphine_43",
+        "label": "Battle Dove Seraphine"
+    },
+    {
+        "value": "Seraphine_50",
+        "label": "Dumpling Darlings Seraphine"
+    },
+    {
+        "value": "Sett_0",
+        "label": "Sett"
+    },
+    {
+        "value": "Sett_1",
+        "label": "Mecha Kingdoms Sett"
+    },
+    {
+        "value": "Sett_8",
+        "label": "Obsidian Dragon Sett"
+    },
+    {
+        "value": "Sett_9",
+        "label": "Prestige Obsidian Dragon Sett"
+    },
+    {
+        "value": "Sett_10",
+        "label": "Pool Party Sett"
+    },
+    {
+        "value": "Sett_19",
+        "label": "Firecracker Sett"
+    },
+    {
+        "value": "Sett_38",
+        "label": "Spirit Blossom Sett"
+    },
+    {
+        "value": "Sett_45",
+        "label": "Soul Fighter Sett"
+    },
+    {
+        "value": "Sett_56",
+        "label": "HEARTSTEEL Sett"
+    },
+    {
+        "value": "Sett_66",
+        "label": "Radiant Serpent Sett"
+    },
+    {
+        "value": "Shaco_0",
+        "label": "Shaco"
+    },
+    {
+        "value": "Shaco_1",
+        "label": "Mad Hatter Shaco"
+    },
+    {
+        "value": "Shaco_2",
+        "label": "Royal Shaco"
+    },
+    {
+        "value": "Shaco_3",
+        "label": "Nutcracko"
+    },
+    {
+        "value": "Shaco_4",
+        "label": "Workshop Shaco"
+    },
+    {
+        "value": "Shaco_5",
+        "label": "Asylum Shaco"
+    },
+    {
+        "value": "Shaco_6",
+        "label": "Masked Shaco"
+    },
+    {
+        "value": "Shaco_7",
+        "label": "Wild Card Shaco"
+    },
+    {
+        "value": "Shaco_8",
+        "label": "Dark Star Shaco"
+    },
+    {
+        "value": "Shaco_15",
+        "label": "Arcanist Shaco"
+    },
+    {
+        "value": "Shaco_23",
+        "label": "Crime City Nightmare Shaco"
+    },
+    {
+        "value": "Shaco_33",
+        "label": "Winterblessed Shaco"
+    },
+    {
+        "value": "Shaco_43",
+        "label": "Soul Fighter Shaco"
+    },
+    {
+        "value": "Shaco_44",
+        "label": "Prestige Soul Fighter Shaco"
+    },
+    {
+        "value": "Shaco_54",
+        "label": "Fright Night Shaco"
+    },
+    {
+        "value": "Shaco_64",
+        "label": "Cat-in-the-Box Shaco"
+    },
+    {
+        "value": "Shen_0",
+        "label": "Shen"
+    },
+    {
+        "value": "Shen_1",
+        "label": "Frozen Shen"
+    },
+    {
+        "value": "Shen_2",
+        "label": "Yellow Jacket Shen"
+    },
+    {
+        "value": "Shen_3",
+        "label": "Surgeon Shen"
+    },
+    {
+        "value": "Shen_4",
+        "label": "Blood Moon Shen"
+    },
+    {
+        "value": "Shen_5",
+        "label": "Warlord Shen"
+    },
+    {
+        "value": "Shen_6",
+        "label": "TPA Shen"
+    },
+    {
+        "value": "Shen_15",
+        "label": "Pulsefire Shen"
+    },
+    {
+        "value": "Shen_16",
+        "label": "Infernal Shen"
+    },
+    {
+        "value": "Shen_22",
+        "label": "PsyOps Shen"
+    },
+    {
+        "value": "Shen_40",
+        "label": "Shockblade Shen"
+    },
+    {
+        "value": "Shen_49",
+        "label": "Ashen Guardian Shen"
+    },
+    {
+        "value": "Shen_51",
+        "label": "Three Honors Shen"
+    },
+    {
+        "value": "Shyvana_0",
+        "label": "Shyvana"
+    },
+    {
+        "value": "Shyvana_1",
+        "label": "Ironscale Shyvana"
+    },
+    {
+        "value": "Shyvana_2",
+        "label": "Boneclaw Shyvana"
+    },
+    {
+        "value": "Shyvana_3",
+        "label": "Darkflame Shyvana"
+    },
+    {
+        "value": "Shyvana_4",
+        "label": "Ice Drake Shyvana"
+    },
+    {
+        "value": "Shyvana_5",
+        "label": "Worlds 2014 Shyvana"
+    },
+    {
+        "value": "Shyvana_6",
+        "label": "Super Galaxy Shyvana"
+    },
+    {
+        "value": "Shyvana_8",
+        "label": "Ruined Shyvana"
+    },
+    {
+        "value": "Shyvana_17",
+        "label": "Immortal Journey Shyvana"
+    },
+    {
+        "value": "Singed_0",
+        "label": "Singed"
+    },
+    {
+        "value": "Singed_1",
+        "label": "Riot Squad Singed"
+    },
+    {
+        "value": "Singed_2",
+        "label": "Hextech Singed"
+    },
+    {
+        "value": "Singed_3",
+        "label": "Surfer Singed"
+    },
+    {
+        "value": "Singed_4",
+        "label": "Mad Scientist Singed"
+    },
+    {
+        "value": "Singed_5",
+        "label": "Augmented Singed"
+    },
+    {
+        "value": "Singed_6",
+        "label": "Snow Day Singed"
+    },
+    {
+        "value": "Singed_7",
+        "label": "SSW Singed"
+    },
+    {
+        "value": "Singed_8",
+        "label": "Black Scourge Singed"
+    },
+    {
+        "value": "Singed_9",
+        "label": "Beekeeper Singed"
+    },
+    {
+        "value": "Singed_10",
+        "label": "Resistance Singed"
+    },
+    {
+        "value": "Singed_19",
+        "label": "Astronaut Singed"
+    },
+    {
+        "value": "Singed_28",
+        "label": "Arcane Shimmer Lab Singed"
+    },
+    {
+        "value": "Sion_0",
+        "label": "Sion"
+    },
+    {
+        "value": "Sion_1",
+        "label": "Hextech Sion"
+    },
+    {
+        "value": "Sion_2",
+        "label": "Barbarian Sion"
+    },
+    {
+        "value": "Sion_3",
+        "label": "Lumberjack Sion"
+    },
+    {
+        "value": "Sion_4",
+        "label": "Warmonger Sion"
+    },
+    {
+        "value": "Sion_5",
+        "label": "Mecha Zero Sion"
+    },
+    {
+        "value": "Sion_14",
+        "label": "Worldbreaker Sion"
+    },
+    {
+        "value": "Sion_22",
+        "label": "Blackfrost Sion"
+    },
+    {
+        "value": "Sion_30",
+        "label": "High Noon Sion"
+    },
+    {
+        "value": "Sion_40",
+        "label": "Cosmic Paladin Sion"
+    },
+    {
+        "value": "Sion_49",
+        "label": "Grand Reckoning Sion"
+    },
+    {
+        "value": "Sivir_0",
+        "label": "Sivir"
+    },
+    {
+        "value": "Sivir_1",
+        "label": "Warrior Princess Sivir"
+    },
+    {
+        "value": "Sivir_2",
+        "label": "Spectacular Sivir"
+    },
+    {
+        "value": "Sivir_3",
+        "label": "Huntress Sivir"
+    },
+    {
+        "value": "Sivir_4",
+        "label": "Bandit Sivir"
+    },
+    {
+        "value": "Sivir_5",
+        "label": "PAX Sivir"
+    },
+    {
+        "value": "Sivir_6",
+        "label": "Snowstorm Sivir"
+    },
+    {
+        "value": "Sivir_7",
+        "label": "Warden Sivir"
+    },
+    {
+        "value": "Sivir_8",
+        "label": "Victorious Sivir"
+    },
+    {
+        "value": "Sivir_9",
+        "label": "Neo PAX Sivir"
+    },
+    {
+        "value": "Sivir_10",
+        "label": "Pizza Delivery Sivir"
+    },
+    {
+        "value": "Sivir_16",
+        "label": "Blood Moon Sivir"
+    },
+    {
+        "value": "Sivir_25",
+        "label": "Odyssey Sivir"
+    },
+    {
+        "value": "Sivir_34",
+        "label": "Cafe Cuties Sivir"
+    },
+    {
+        "value": "Sivir_43",
+        "label": "Solar Eclipse Sivir"
+    },
+    {
+        "value": "Sivir_50",
+        "label": "Mythmaker Sivir"
+    },
+    {
+        "value": "Sivir_51",
+        "label": "Prestige Mythmaker Sivir"
+    },
+    {
+        "value": "Sivir_61",
+        "label": "Primal Ambush Sivir"
+    },
+    {
+        "value": "Sivir_70",
+        "label": "Ann-Sivir-sary"
+    },
+    {
+        "value": "Skarner_0",
+        "label": "Skarner"
+    },
+    {
+        "value": "Skarner_1",
+        "label": "Sandscourge Skarner"
+    },
+    {
+        "value": "Skarner_2",
+        "label": "Earthrune Skarner"
+    },
+    {
+        "value": "Skarner_3",
+        "label": "Battlecast Alpha Skarner"
+    },
+    {
+        "value": "Skarner_4",
+        "label": "Guardian of the Sands Skarner"
+    },
+    {
+        "value": "Skarner_5",
+        "label": "Cosmic Sting Skarner"
+    },
+    {
+        "value": "Smolder_0",
+        "label": "Smolder"
+    },
+    {
+        "value": "Smolder_1",
+        "label": "Heavenscale Smolder"
+    },
+    {
+        "value": "Sona_0",
+        "label": "Sona"
+    },
+    {
+        "value": "Sona_1",
+        "label": "Muse Sona"
+    },
+    {
+        "value": "Sona_2",
+        "label": "Pentakill Sona"
+    },
+    {
+        "value": "Sona_3",
+        "label": "Silent Night Sona"
+    },
+    {
+        "value": "Sona_4",
+        "label": "Guqin Sona"
+    },
+    {
+        "value": "Sona_5",
+        "label": "Arcade Sona"
+    },
+    {
+        "value": "Sona_6",
+        "label": "DJ Sona"
+    },
+    {
+        "value": "Sona_7",
+        "label": "Sweetheart Sona"
+    },
+    {
+        "value": "Sona_9",
+        "label": "Odyssey Sona"
+    },
+    {
+        "value": "Sona_17",
+        "label": "PsyOps Sona"
+    },
+    {
+        "value": "Sona_26",
+        "label": "Pentakill III: Lost Chapter Sona"
+    },
+    {
+        "value": "Sona_35",
+        "label": "Star Guardian Sona"
+    },
+    {
+        "value": "Sona_45",
+        "label": "Immortal Journey Sona"
+    },
+    {
+        "value": "Sona_46",
+        "label": "Prestige Immortal Journey Sona"
+    },
+    {
+        "value": "Sona_56",
+        "label": "Victorious Sona"
+    },
+    {
+        "value": "Soraka_0",
+        "label": "Soraka"
+    },
+    {
+        "value": "Soraka_1",
+        "label": "Dryad Soraka"
+    },
+    {
+        "value": "Soraka_2",
+        "label": "Divine Soraka"
+    },
+    {
+        "value": "Soraka_3",
+        "label": "Celestine Soraka"
+    },
+    {
+        "value": "Soraka_4",
+        "label": "Reaper Soraka"
+    },
+    {
+        "value": "Soraka_5",
+        "label": "Order of the Banana Soraka"
+    },
+    {
+        "value": "Soraka_6",
+        "label": "Program Soraka"
+    },
+    {
+        "value": "Soraka_7",
+        "label": "Star Guardian Soraka"
+    },
+    {
+        "value": "Soraka_8",
+        "label": "Pajama Guardian Soraka"
+    },
+    {
+        "value": "Soraka_9",
+        "label": "Winter Wonder Soraka"
+    },
+    {
+        "value": "Soraka_15",
+        "label": "Dawnbringer Soraka"
+    },
+    {
+        "value": "Soraka_16",
+        "label": "Nightbringer Soraka"
+    },
+    {
+        "value": "Soraka_17",
+        "label": "Prestige Star Guardian Soraka"
+    },
+    {
+        "value": "Soraka_18",
+        "label": "Cafe Cuties Soraka"
+    },
+    {
+        "value": "Soraka_27",
+        "label": "Spirit Blossom Soraka"
+    },
+    {
+        "value": "Soraka_37",
+        "label": "Immortal Journey Soraka"
+    },
+    {
+        "value": "Soraka_44",
+        "label": "Faerie Court Soraka"
+    },
+    {
+        "value": "Swain_0",
+        "label": "Swain"
+    },
+    {
+        "value": "Swain_1",
+        "label": "Northern Front Swain"
+    },
+    {
+        "value": "Swain_2",
+        "label": "Bilgewater Swain"
+    },
+    {
+        "value": "Swain_3",
+        "label": "Tyrant Swain"
+    },
+    {
+        "value": "Swain_4",
+        "label": "Dragon Master Swain"
+    },
+    {
+        "value": "Swain_11",
+        "label": "Hextech Swain"
+    },
+    {
+        "value": "Swain_12",
+        "label": "Crystal Rose Swain"
+    },
+    {
+        "value": "Swain_21",
+        "label": "Winterblessed Swain"
+    },
+    {
+        "value": "Swain_32",
+        "label": "Chosen of the Wolf Swain"
+    },
+    {
+        "value": "Swain_33",
+        "label": "Prestige Chosen of the Wolf Swain"
+    },
+    {
+        "value": "Sylas_0",
+        "label": "Sylas"
+    },
+    {
+        "value": "Sylas_1",
+        "label": "Lunar Wraith Sylas"
+    },
+    {
+        "value": "Sylas_8",
+        "label": "Freljord Sylas"
+    },
+    {
+        "value": "Sylas_13",
+        "label": "PROJECT: Sylas"
+    },
+    {
+        "value": "Sylas_14",
+        "label": "Prestige PROJECT: Sylas"
+    },
+    {
+        "value": "Sylas_24",
+        "label": "Battle Wolf Sylas"
+    },
+    {
+        "value": "Sylas_34",
+        "label": "Ashen Slayer Sylas"
+    },
+    {
+        "value": "Sylas_36",
+        "label": "Winterblessed Sylas"
+    },
+    {
+        "value": "Sylas_46",
+        "label": "Dark Star Sylas"
+    },
+    {
+        "value": "Syndra_0",
+        "label": "Syndra"
+    },
+    {
+        "value": "Syndra_1",
+        "label": "Justicar Syndra"
+    },
+    {
+        "value": "Syndra_2",
+        "label": "Atlantean Syndra"
+    },
+    {
+        "value": "Syndra_3",
+        "label": "Queen of Diamonds Syndra"
+    },
+    {
+        "value": "Syndra_4",
+        "label": "Snow Day Syndra"
+    },
+    {
+        "value": "Syndra_5",
+        "label": "SKT T1 Syndra"
+    },
+    {
+        "value": "Syndra_6",
+        "label": "Star Guardian Syndra"
+    },
+    {
+        "value": "Syndra_7",
+        "label": "Pool Party Syndra"
+    },
+    {
+        "value": "Syndra_16",
+        "label": "Withered Rose Syndra"
+    },
+    {
+        "value": "Syndra_25",
+        "label": "Bewitching Syndra"
+    },
+    {
+        "value": "Syndra_34",
+        "label": "Prestige Star Guardian Syndra"
+    },
+    {
+        "value": "Syndra_44",
+        "label": "Spirit Blossom Syndra"
+    },
+    {
+        "value": "Syndra_54",
+        "label": "Coven Syndra"
+    },
+    {
+        "value": "Syndra_65",
+        "label": "Dumpling Darlings Syndra"
+    },
+    {
+        "value": "TahmKench_0",
+        "label": "TahmKench"
+    },
+    {
+        "value": "TahmKench_1",
+        "label": "Master Chef Tahm Kench"
+    },
+    {
+        "value": "TahmKench_2",
+        "label": "Urf Kench"
+    },
+    {
+        "value": "TahmKench_3",
+        "label": "Coin Emperor Tahm Kench"
+    },
+    {
+        "value": "TahmKench_11",
+        "label": "Arcana Tahm Kench"
+    },
+    {
+        "value": "TahmKench_20",
+        "label": "High Noon Tahm Kench"
+    },
+    {
+        "value": "TahmKench_30",
+        "label": "Shan Hai Scrolls Tahm Kench"
+    },
+    {
+        "value": "Taliyah_0",
+        "label": "Taliyah"
+    },
+    {
+        "value": "Taliyah_1",
+        "label": "Freljord Taliyah"
+    },
+    {
+        "value": "Taliyah_2",
+        "label": "SSG Taliyah"
+    },
+    {
+        "value": "Taliyah_3",
+        "label": "Pool Party Taliyah"
+    },
+    {
+        "value": "Taliyah_11",
+        "label": "Star Guardian Taliyah"
+    },
+    {
+        "value": "Taliyah_21",
+        "label": "Crystalis Motus Taliyah"
+    },
+    {
+        "value": "Talon_0",
+        "label": "Talon"
+    },
+    {
+        "value": "Talon_1",
+        "label": "Renegade Talon"
+    },
+    {
+        "value": "Talon_2",
+        "label": "Crimson Elite Talon"
+    },
+    {
+        "value": "Talon_3",
+        "label": "Dragonblade Talon"
+    },
+    {
+        "value": "Talon_4",
+        "label": "SSW Talon"
+    },
+    {
+        "value": "Talon_5",
+        "label": "Blood Moon Talon"
+    },
+    {
+        "value": "Talon_12",
+        "label": "Enduring Sword Talon"
+    },
+    {
+        "value": "Talon_20",
+        "label": "Talon Blackwood"
+    },
+    {
+        "value": "Talon_29",
+        "label": "Withered Rose Talon"
+    },
+    {
+        "value": "Talon_38",
+        "label": "High Noon Talon"
+    },
+    {
+        "value": "Talon_39",
+        "label": "Prestige High Noon Talon"
+    },
+    {
+        "value": "Talon_49",
+        "label": "Primal Ambush Talon"
+    },
+    {
+        "value": "Talon_59",
+        "label": "Grand Reckoning Talon"
+    },
+    {
+        "value": "Taric_0",
+        "label": "Taric"
+    },
+    {
+        "value": "Taric_1",
+        "label": "Emerald Taric"
+    },
+    {
+        "value": "Taric_2",
+        "label": "Armor of the Fifth Age Taric"
+    },
+    {
+        "value": "Taric_3",
+        "label": "Bloodstone Taric"
+    },
+    {
+        "value": "Taric_4",
+        "label": "Pool Party Taric"
+    },
+    {
+        "value": "Taric_9",
+        "label": "Taric Luminshield"
+    },
+    {
+        "value": "Taric_18",
+        "label": "Space Groove Taric"
+    },
+    {
+        "value": "Taric_27",
+        "label": "Fatebreaker Taric"
+    },
+    {
+        "value": "Teemo_0",
+        "label": "Teemo"
+    },
+    {
+        "value": "Teemo_1",
+        "label": "Happy Elf Teemo"
+    },
+    {
+        "value": "Teemo_2",
+        "label": "Recon Teemo"
+    },
+    {
+        "value": "Teemo_3",
+        "label": "Badger Teemo"
+    },
+    {
+        "value": "Teemo_4",
+        "label": "Astronaut Teemo"
+    },
+    {
+        "value": "Teemo_5",
+        "label": "Cottontail Teemo"
+    },
+    {
+        "value": "Teemo_6",
+        "label": "Super Teemo"
+    },
+    {
+        "value": "Teemo_7",
+        "label": "Panda Teemo"
+    },
+    {
+        "value": "Teemo_8",
+        "label": "Omega Squad Teemo"
+    },
+    {
+        "value": "Teemo_14",
+        "label": "Little Devil Teemo"
+    },
+    {
+        "value": "Teemo_18",
+        "label": "Beemo"
+    },
+    {
+        "value": "Teemo_25",
+        "label": "Spirit Blossom Teemo"
+    },
+    {
+        "value": "Teemo_27",
+        "label": "Prestige Spirit Blossom Teemo"
+    },
+    {
+        "value": "Teemo_37",
+        "label": "Firecracker Teemo"
+    },
+    {
+        "value": "Teemo_47",
+        "label": "Space Groove Teemo"
+    },
+    {
+        "value": "Thresh_0",
+        "label": "Thresh"
+    },
+    {
+        "value": "Thresh_1",
+        "label": "Deep Terror Thresh"
+    },
+    {
+        "value": "Thresh_2",
+        "label": "Worlds 2013 Thresh"
+    },
+    {
+        "value": "Thresh_3",
+        "label": "Blood Moon Thresh"
+    },
+    {
+        "value": "Thresh_4",
+        "label": "SSW Thresh"
+    },
+    {
+        "value": "Thresh_5",
+        "label": "Dark Star Thresh"
+    },
+    {
+        "value": "Thresh_6",
+        "label": "High Noon Thresh"
+    },
+    {
+        "value": "Thresh_13",
+        "label": "Pulsefire Thresh"
+    },
+    {
+        "value": "Thresh_14",
+        "label": "Prestige Pulsefire Thresh"
+    },
+    {
+        "value": "Thresh_15",
+        "label": "FPX Thresh"
+    },
+    {
+        "value": "Thresh_17",
+        "label": "Spirit Blossom Thresh"
+    },
+    {
+        "value": "Thresh_27",
+        "label": "Unbound Thresh"
+    },
+    {
+        "value": "Thresh_28",
+        "label": "Steel Dragon Thresh"
+    },
+    {
+        "value": "Thresh_38",
+        "label": "Prestige Pulsefire Thresh (2022)"
+    },
+    {
+        "value": "Thresh_39",
+        "label": "Lunar Emperor Thresh"
+    },
+    {
+        "value": "Thresh_49",
+        "label": "Winterblessed Thresh"
+    },
+    {
+        "value": "Thresh_59",
+        "label": "Janitor Thresh"
+    },
+    {
+        "value": "Tristana_0",
+        "label": "Tristana"
+    },
+    {
+        "value": "Tristana_1",
+        "label": "Riot Girl Tristana"
+    },
+    {
+        "value": "Tristana_2",
+        "label": "Earnest Elf Tristana"
+    },
+    {
+        "value": "Tristana_3",
+        "label": "Firefighter Tristana"
+    },
+    {
+        "value": "Tristana_4",
+        "label": "Guerilla Tristana"
+    },
+    {
+        "value": "Tristana_5",
+        "label": "Buccaneer Tristana"
+    },
+    {
+        "value": "Tristana_6",
+        "label": "Rocket Girl Tristana"
+    },
+    {
+        "value": "Tristana_10",
+        "label": "Dragon Trainer Tristana"
+    },
+    {
+        "value": "Tristana_11",
+        "label": "Bewitching Tristana"
+    },
+    {
+        "value": "Tristana_12",
+        "label": "Omega Squad Tristana"
+    },
+    {
+        "value": "Tristana_24",
+        "label": "Little Demon Tristana"
+    },
+    {
+        "value": "Tristana_33",
+        "label": "Pengu Cosplay Tristana"
+    },
+    {
+        "value": "Tristana_40",
+        "label": "Hextech Tristana"
+    },
+    {
+        "value": "Tristana_41",
+        "label": "Firecracker Tristana"
+    },
+    {
+        "value": "Tristana_51",
+        "label": "Spirit Blossom Tristana"
+    },
+    {
+        "value": "Tristana_61",
+        "label": "Faerie Court Tristana"
+    },
+    {
+        "value": "Trundle_0",
+        "label": "Trundle"
+    },
+    {
+        "value": "Trundle_1",
+        "label": "Lil' Slugger Trundle"
+    },
+    {
+        "value": "Trundle_2",
+        "label": "Junkyard Trundle"
+    },
+    {
+        "value": "Trundle_3",
+        "label": "Traditional Trundle"
+    },
+    {
+        "value": "Trundle_4",
+        "label": "Constable Trundle"
+    },
+    {
+        "value": "Trundle_5",
+        "label": "Worldbreaker Trundle"
+    },
+    {
+        "value": "Trundle_6",
+        "label": "Dragonslayer Trundle"
+    },
+    {
+        "value": "Trundle_12",
+        "label": "Fright Night Trundle"
+    },
+    {
+        "value": "Trundle_21",
+        "label": "Esports Fan Trundle"
+    },
+    {
+        "value": "Tryndamere_0",
+        "label": "Tryndamere"
+    },
+    {
+        "value": "Tryndamere_1",
+        "label": "Highland Tryndamere"
+    },
+    {
+        "value": "Tryndamere_2",
+        "label": "King Tryndamere"
+    },
+    {
+        "value": "Tryndamere_3",
+        "label": "Viking Tryndamere"
+    },
+    {
+        "value": "Tryndamere_4",
+        "label": "Demonblade Tryndamere"
+    },
+    {
+        "value": "Tryndamere_5",
+        "label": "Sultan Tryndamere"
+    },
+    {
+        "value": "Tryndamere_6",
+        "label": "Warring Kingdoms Tryndamere"
+    },
+    {
+        "value": "Tryndamere_7",
+        "label": "Nightmare Tryndamere"
+    },
+    {
+        "value": "Tryndamere_8",
+        "label": "Beast Hunter Tryndamere"
+    },
+    {
+        "value": "Tryndamere_9",
+        "label": "Chemtech Tryndamere"
+    },
+    {
+        "value": "Tryndamere_10",
+        "label": "Blood Moon Tryndamere"
+    },
+    {
+        "value": "Tryndamere_18",
+        "label": "Nightbringer Tryndamere"
+    },
+    {
+        "value": "Tryndamere_27",
+        "label": "Victorious Tryndamere"
+    },
+    {
+        "value": "TwistedFate_0",
+        "label": "TwistedFate"
+    },
+    {
+        "value": "TwistedFate_1",
+        "label": "PAX Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_2",
+        "label": "Jack of Hearts Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_3",
+        "label": "The Magnificent Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_4",
+        "label": "Tango Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_5",
+        "label": "High Noon Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_6",
+        "label": "Musketeer Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_7",
+        "label": "Underworld Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_8",
+        "label": "Red Card Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_9",
+        "label": "Cutpurse Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_10",
+        "label": "Blood Moon Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_11",
+        "label": "Pulsefire Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_13",
+        "label": "Odyssey Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_23",
+        "label": "DWG Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_25",
+        "label": "Crime City Nightmare Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_36",
+        "label": "Space Groove Twisted Fate"
+    },
+    {
+        "value": "TwistedFate_45",
+        "label": "Victorious Twisted Fate"
+    },
+    {
+        "value": "Twitch_0",
+        "label": "Twitch"
+    },
+    {
+        "value": "Twitch_1",
+        "label": "Kingpin Twitch"
+    },
+    {
+        "value": "Twitch_2",
+        "label": "Whistler Village Twitch"
+    },
+    {
+        "value": "Twitch_3",
+        "label": "Medieval Twitch"
+    },
+    {
+        "value": "Twitch_4",
+        "label": "Crime City Twitch"
+    },
+    {
+        "value": "Twitch_5",
+        "label": "Vandal Twitch"
+    },
+    {
+        "value": "Twitch_6",
+        "label": "Pickpocket Twitch"
+    },
+    {
+        "value": "Twitch_7",
+        "label": "SSW Twitch"
+    },
+    {
+        "value": "Twitch_8",
+        "label": "Omega Squad Twitch"
+    },
+    {
+        "value": "Twitch_12",
+        "label": "Ice King Twitch"
+    },
+    {
+        "value": "Twitch_27",
+        "label": "Twitch Shadowfoot"
+    },
+    {
+        "value": "Twitch_36",
+        "label": "Dragonslayer Twitch"
+    },
+    {
+        "value": "Twitch_45",
+        "label": "High Noon Twitch"
+    },
+    {
+        "value": "Twitch_55",
+        "label": "Cheddar Chief Twitch"
+    },
+    {
+        "value": "Twitch_64",
+        "label": "Pool Party Twitch"
+    },
+    {
+        "value": "Udyr_0",
+        "label": "Udyr"
+    },
+    {
+        "value": "Udyr_1",
+        "label": "Black Belt Udyr"
+    },
+    {
+        "value": "Udyr_2",
+        "label": "Primal Udyr"
+    },
+    {
+        "value": "Udyr_3",
+        "label": "Spirit Guard Udyr"
+    },
+    {
+        "value": "Udyr_4",
+        "label": "Definitely Not Udyr"
+    },
+    {
+        "value": "Udyr_5",
+        "label": "Dragon Oracle Udyr"
+    },
+    {
+        "value": "Udyr_6",
+        "label": "Inkshadow Udyr"
+    },
+    {
+        "value": "Urgot_0",
+        "label": "Urgot"
+    },
+    {
+        "value": "Urgot_1",
+        "label": "Giant Enemy Crabgot"
+    },
+    {
+        "value": "Urgot_2",
+        "label": "Butcher Urgot"
+    },
+    {
+        "value": "Urgot_3",
+        "label": "Battlecast Urgot"
+    },
+    {
+        "value": "Urgot_9",
+        "label": "High Noon Urgot"
+    },
+    {
+        "value": "Urgot_15",
+        "label": "Pajama Guardian Cosplay Urgot"
+    },
+    {
+        "value": "Urgot_23",
+        "label": "Fright Night Urgot"
+    },
+    {
+        "value": "Urgot_32",
+        "label": "Urgot the Clogfather"
+    },
+    {
+        "value": "Varus_0",
+        "label": "Varus"
+    },
+    {
+        "value": "Varus_1",
+        "label": "Blight Crystal Varus"
+    },
+    {
+        "value": "Varus_2",
+        "label": "Arclight Varus"
+    },
+    {
+        "value": "Varus_3",
+        "label": "Arctic Ops Varus"
+    },
+    {
+        "value": "Varus_4",
+        "label": "Heartseeker Varus"
+    },
+    {
+        "value": "Varus_5",
+        "label": "Varus Swiftbolt"
+    },
+    {
+        "value": "Varus_6",
+        "label": "Dark Star Varus"
+    },
+    {
+        "value": "Varus_7",
+        "label": "Conqueror Varus"
+    },
+    {
+        "value": "Varus_9",
+        "label": "Infernal Varus"
+    },
+    {
+        "value": "Varus_16",
+        "label": "PROJECT: Varus"
+    },
+    {
+        "value": "Varus_17",
+        "label": "Cosmic Hunter Varus"
+    },
+    {
+        "value": "Varus_34",
+        "label": "High Noon Varus"
+    },
+    {
+        "value": "Varus_44",
+        "label": "Snow Moon Varus"
+    },
+    {
+        "value": "Varus_53",
+        "label": "Empyrean Varus"
+    },
+    {
+        "value": "Varus_60",
+        "label": "Spirit Blossom Varus"
+    },
+    {
+        "value": "Vayne_0",
+        "label": "Vayne"
+    },
+    {
+        "value": "Vayne_1",
+        "label": "Vindicator Vayne"
+    },
+    {
+        "value": "Vayne_2",
+        "label": "Aristocrat Vayne"
+    },
+    {
+        "value": "Vayne_3",
+        "label": "Dragonslayer Vayne"
+    },
+    {
+        "value": "Vayne_4",
+        "label": "Heartseeker Vayne"
+    },
+    {
+        "value": "Vayne_5",
+        "label": "SKT T1 Vayne"
+    },
+    {
+        "value": "Vayne_6",
+        "label": "Arclight Vayne"
+    },
+    {
+        "value": "Vayne_10",
+        "label": "Soulstealer Vayne"
+    },
+    {
+        "value": "Vayne_11",
+        "label": "PROJECT: Vayne"
+    },
+    {
+        "value": "Vayne_12",
+        "label": "Firecracker Vayne"
+    },
+    {
+        "value": "Vayne_13",
+        "label": "Prestige Firecracker Vayne"
+    },
+    {
+        "value": "Vayne_14",
+        "label": "Spirit Blossom Vayne"
+    },
+    {
+        "value": "Vayne_15",
+        "label": "FPX Vayne"
+    },
+    {
+        "value": "Vayne_25",
+        "label": "Sentinel Vayne"
+    },
+    {
+        "value": "Vayne_32",
+        "label": "Battle Bat Vayne"
+    },
+    {
+        "value": "Vayne_33",
+        "label": "Prestige Firecracker Vayne (2022)"
+    },
+    {
+        "value": "Vayne_44",
+        "label": "Dawnbringer Vayne"
+    },
+    {
+        "value": "Vayne_55",
+        "label": "Dragonmancer Vayne"
+    },
+    {
+        "value": "Vayne_64",
+        "label": "Risen Legend Vayne"
+    },
+    {
+        "value": "Veigar_0",
+        "label": "Veigar"
+    },
+    {
+        "value": "Veigar_1",
+        "label": "White Mage Veigar"
+    },
+    {
+        "value": "Veigar_2",
+        "label": "Curling Veigar"
+    },
+    {
+        "value": "Veigar_3",
+        "label": "Veigar Greybeard"
+    },
+    {
+        "value": "Veigar_4",
+        "label": "Leprechaun Veigar"
+    },
+    {
+        "value": "Veigar_5",
+        "label": "Baron Von Veigar"
+    },
+    {
+        "value": "Veigar_6",
+        "label": "Superb Villain Veigar"
+    },
+    {
+        "value": "Veigar_7",
+        "label": "Bad Santa Veigar"
+    },
+    {
+        "value": "Veigar_8",
+        "label": "Final Boss Veigar"
+    },
+    {
+        "value": "Veigar_9",
+        "label": "Omega Squad Veigar"
+    },
+    {
+        "value": "Veigar_13",
+        "label": "Elderwood Veigar"
+    },
+    {
+        "value": "Veigar_23",
+        "label": "Furyhorn Cosplay Veigar"
+    },
+    {
+        "value": "Veigar_32",
+        "label": "Astronaut Veigar"
+    },
+    {
+        "value": "Veigar_41",
+        "label": "Monster Tamer Veigar"
+    },
+    {
+        "value": "Veigar_51",
+        "label": "King Beegar"
+    },
+    {
+        "value": "Veigar_60",
+        "label": "Fright Night Veigar"
+    },
+    {
+        "value": "Velkoz_0",
+        "label": "Velkoz"
+    },
+    {
+        "value": "Velkoz_1",
+        "label": "Battlecast Vel'Koz"
+    },
+    {
+        "value": "Velkoz_2",
+        "label": "Arclight Vel'Koz"
+    },
+    {
+        "value": "Velkoz_3",
+        "label": "Definitely Not Vel'Koz"
+    },
+    {
+        "value": "Velkoz_4",
+        "label": "Infernal Vel'Koz"
+    },
+    {
+        "value": "Velkoz_11",
+        "label": "Blackfrost Vel'Koz"
+    },
+    {
+        "value": "Velkoz_20",
+        "label": "Bee'Koz"
+    },
+    {
+        "value": "Vex_0",
+        "label": "Vex"
+    },
+    {
+        "value": "Vex_1",
+        "label": "Dawnbringer Vex"
+    },
+    {
+        "value": "Vex_10",
+        "label": "Empyrean Vex"
+    },
+    {
+        "value": "Vex_20",
+        "label": "Stargazer Vex"
+    },
+    {
+        "value": "Vi_0",
+        "label": "Vi"
+    },
+    {
+        "value": "Vi_1",
+        "label": "Neon Strike Vi"
+    },
+    {
+        "value": "Vi_2",
+        "label": "Officer Vi"
+    },
+    {
+        "value": "Vi_3",
+        "label": "Debonair Vi"
+    },
+    {
+        "value": "Vi_4",
+        "label": "Demon Vi"
+    },
+    {
+        "value": "Vi_5",
+        "label": "Warring Kingdoms Vi"
+    },
+    {
+        "value": "Vi_11",
+        "label": "PROJECT: Vi"
+    },
+    {
+        "value": "Vi_12",
+        "label": "Heartbreaker Vi"
+    },
+    {
+        "value": "Vi_20",
+        "label": "PsyOps Vi"
+    },
+    {
+        "value": "Vi_29",
+        "label": "Arcane Undercity Vi"
+    },
+    {
+        "value": "Vi_30",
+        "label": "Heartache Vi"
+    },
+    {
+        "value": "Vi_39",
+        "label": "Primal Ambush Vi"
+    },
+    {
+        "value": "Vi_48",
+        "label": "Arcane Brawler Vi"
+    },
+    {
+        "value": "Viego_0",
+        "label": "Viego"
+    },
+    {
+        "value": "Viego_1",
+        "label": "Lunar Beast Viego"
+    },
+    {
+        "value": "Viego_10",
+        "label": "Dissonance of Pentakill Viego"
+    },
+    {
+        "value": "Viego_19",
+        "label": "EDG Viego"
+    },
+    {
+        "value": "Viego_21",
+        "label": "King Viego"
+    },
+    {
+        "value": "Viego_30",
+        "label": "Soul Fighter Viego"
+    },
+    {
+        "value": "Viego_37",
+        "label": "Worlds 2024 Viego"
+    },
+    {
+        "value": "Viktor_0",
+        "label": "Viktor"
+    },
+    {
+        "value": "Viktor_1",
+        "label": "Full Machine Viktor"
+    },
+    {
+        "value": "Viktor_2",
+        "label": "Prototype Viktor"
+    },
+    {
+        "value": "Viktor_3",
+        "label": "Creator Viktor"
+    },
+    {
+        "value": "Viktor_4",
+        "label": "Death Sworn Viktor"
+    },
+    {
+        "value": "Viktor_5",
+        "label": "PsyOps Viktor"
+    },
+    {
+        "value": "Viktor_14",
+        "label": "High Noon Viktor"
+    },
+    {
+        "value": "Viktor_24",
+        "label": "Arcane Savior Viktor"
+    },
+    {
+        "value": "Vladimir_0",
+        "label": "Vladimir"
+    },
+    {
+        "value": "Vladimir_1",
+        "label": "Count Vladimir"
+    },
+    {
+        "value": "Vladimir_2",
+        "label": "Marquis Vladimir"
+    },
+    {
+        "value": "Vladimir_3",
+        "label": "Nosferatu Vladimir"
+    },
+    {
+        "value": "Vladimir_4",
+        "label": "Vandal Vladimir"
+    },
+    {
+        "value": "Vladimir_5",
+        "label": "Blood Lord Vladimir"
+    },
+    {
+        "value": "Vladimir_6",
+        "label": "Soulstealer Vladimir"
+    },
+    {
+        "value": "Vladimir_7",
+        "label": "Academy Vladimir"
+    },
+    {
+        "value": "Vladimir_8",
+        "label": "Dark Waters Vladimir"
+    },
+    {
+        "value": "Vladimir_14",
+        "label": "Nightbringer Vladimir"
+    },
+    {
+        "value": "Vladimir_21",
+        "label": "Cosmic Devourer Vladimir"
+    },
+    {
+        "value": "Vladimir_30",
+        "label": "Cafe Cuties Vladimir"
+    },
+    {
+        "value": "Vladimir_39",
+        "label": "Broken Covenant Vladimir"
+    },
+    {
+        "value": "Vladimir_48",
+        "label": "Masque of the Black Rose Vladimir"
+    },
+    {
+        "value": "Volibear_0",
+        "label": "Volibear"
+    },
+    {
+        "value": "Volibear_1",
+        "label": "Thunder Lord Volibear"
+    },
+    {
+        "value": "Volibear_2",
+        "label": "Northern Storm Volibear"
+    },
+    {
+        "value": "Volibear_3",
+        "label": "Runeguard Volibear"
+    },
+    {
+        "value": "Volibear_4",
+        "label": "Captain Volibear"
+    },
+    {
+        "value": "Volibear_5",
+        "label": "El Rayo Volibear"
+    },
+    {
+        "value": "Volibear_6",
+        "label": "The Thousand-Pierced Bear"
+    },
+    {
+        "value": "Volibear_7",
+        "label": "Duality Dragon Volibear"
+    },
+    {
+        "value": "Volibear_9",
+        "label": "Prestige Duality Dragon Volibear"
+    },
+    {
+        "value": "Volibear_19",
+        "label": "Inkshadow Volibear"
+    },
+    {
+        "value": "Warwick_0",
+        "label": "Warwick"
+    },
+    {
+        "value": "Warwick_1",
+        "label": "Grey Warwick"
+    },
+    {
+        "value": "Warwick_2",
+        "label": "Urf the Manatee"
+    },
+    {
+        "value": "Warwick_3",
+        "label": "Big Bad Warwick"
+    },
+    {
+        "value": "Warwick_4",
+        "label": "Tundra Hunter Warwick"
+    },
+    {
+        "value": "Warwick_5",
+        "label": "Feral Warwick"
+    },
+    {
+        "value": "Warwick_6",
+        "label": "Firefang Warwick"
+    },
+    {
+        "value": "Warwick_7",
+        "label": "Hyena Warwick"
+    },
+    {
+        "value": "Warwick_8",
+        "label": "Marauder Warwick"
+    },
+    {
+        "value": "Warwick_9",
+        "label": "Urfwick"
+    },
+    {
+        "value": "Warwick_10",
+        "label": "Lunar Guardian Warwick"
+    },
+    {
+        "value": "Warwick_16",
+        "label": "PROJECT: Warwick"
+    },
+    {
+        "value": "Warwick_35",
+        "label": "Old God Warwick"
+    },
+    {
+        "value": "Warwick_45",
+        "label": "Winterblessed Warwick"
+    },
+    {
+        "value": "Warwick_46",
+        "label": "Prestige Winterblessed Warwick"
+    },
+    {
+        "value": "Warwick_56",
+        "label": "Arcane Vander Warwick"
+    },
+    {
+        "value": "Xayah_0",
+        "label": "Xayah"
+    },
+    {
+        "value": "Xayah_1",
+        "label": "Cosmic Dusk Xayah"
+    },
+    {
+        "value": "Xayah_2",
+        "label": "Sweetheart Xayah"
+    },
+    {
+        "value": "Xayah_3",
+        "label": "SSG Xayah"
+    },
+    {
+        "value": "Xayah_4",
+        "label": "Star Guardian Xayah"
+    },
+    {
+        "value": "Xayah_8",
+        "label": "Elderwood Xayah"
+    },
+    {
+        "value": "Xayah_17",
+        "label": "Brave Phoenix Xayah"
+    },
+    {
+        "value": "Xayah_26",
+        "label": "Prestige Brave Phoenix Xayah"
+    },
+    {
+        "value": "Xayah_28",
+        "label": "Arcana Xayah"
+    },
+    {
+        "value": "Xayah_37",
+        "label": "Broken Covenant Xayah"
+    },
+    {
+        "value": "Xayah_38",
+        "label": "Redeemed Star Guardian Xayah"
+    },
+    {
+        "value": "Xayah_47",
+        "label": "Battle Bat Xayah"
+    },
+    {
+        "value": "Xayah_57",
+        "label": "Battle Academia Xayah"
+    },
+    {
+        "value": "Xerath_0",
+        "label": "Xerath"
+    },
+    {
+        "value": "Xerath_1",
+        "label": "Runeborn Xerath"
+    },
+    {
+        "value": "Xerath_2",
+        "label": "Battlecast Xerath"
+    },
+    {
+        "value": "Xerath_3",
+        "label": "Scorched Earth Xerath"
+    },
+    {
+        "value": "Xerath_4",
+        "label": "Guardian of the Sands Xerath"
+    },
+    {
+        "value": "Xerath_5",
+        "label": "Dark Star Xerath"
+    },
+    {
+        "value": "Xerath_12",
+        "label": "Arcana Xerath"
+    },
+    {
+        "value": "Xerath_21",
+        "label": "Astronaut Xerath"
+    },
+    {
+        "value": "Xerath_30",
+        "label": "Crystalis Indomitus Xerath"
+    },
+    {
+        "value": "XinZhao_0",
+        "label": "XinZhao"
+    },
+    {
+        "value": "XinZhao_1",
+        "label": "Commando Xin Zhao"
+    },
+    {
+        "value": "XinZhao_2",
+        "label": "Imperial Xin Zhao"
+    },
+    {
+        "value": "XinZhao_3",
+        "label": "Viscero Xin Zhao"
+    },
+    {
+        "value": "XinZhao_4",
+        "label": "Winged Hussar Xin Zhao"
+    },
+    {
+        "value": "XinZhao_5",
+        "label": "Warring Kingdoms Xin Zhao"
+    },
+    {
+        "value": "XinZhao_6",
+        "label": "Secret Agent Xin Zhao"
+    },
+    {
+        "value": "XinZhao_13",
+        "label": "Dragonslayer Xin Zhao"
+    },
+    {
+        "value": "XinZhao_20",
+        "label": "Cosmic Defender Xin Zhao"
+    },
+    {
+        "value": "XinZhao_27",
+        "label": "Marauder Xin Zhao"
+    },
+    {
+        "value": "XinZhao_36",
+        "label": "Firecracker Xin Zhao"
+    },
+    {
+        "value": "Yasuo_0",
+        "label": "Yasuo"
+    },
+    {
+        "value": "Yasuo_1",
+        "label": "High Noon Yasuo"
+    },
+    {
+        "value": "Yasuo_2",
+        "label": "PROJECT: Yasuo"
+    },
+    {
+        "value": "Yasuo_3",
+        "label": "Blood Moon Yasuo"
+    },
+    {
+        "value": "Yasuo_9",
+        "label": "Nightbringer Yasuo"
+    },
+    {
+        "value": "Yasuo_10",
+        "label": "Odyssey Yasuo"
+    },
+    {
+        "value": "Yasuo_17",
+        "label": "Battle Boss Yasuo"
+    },
+    {
+        "value": "Yasuo_18",
+        "label": "True Damage Yasuo"
+    },
+    {
+        "value": "Yasuo_35",
+        "label": "Prestige True Damage Yasuo"
+    },
+    {
+        "value": "Yasuo_36",
+        "label": "Spirit Blossom Yasuo"
+    },
+    {
+        "value": "Yasuo_45",
+        "label": "Sea Dog Yasuo"
+    },
+    {
+        "value": "Yasuo_54",
+        "label": "Truth Dragon Yasuo"
+    },
+    {
+        "value": "Yasuo_55",
+        "label": "Dream Dragon Yasuo"
+    },
+    {
+        "value": "Yasuo_56",
+        "label": "Inkshadow Yasuo"
+    },
+    {
+        "value": "Yasuo_57",
+        "label": "Prestige Inkshadow Yasuo"
+    },
+    {
+        "value": "Yasuo_68",
+        "label": "Foreseen Yasuo"
+    },
+    {
+        "value": "Yasuo_77",
+        "label": "Battle Wolf Yasuo"
+    },
+    {
+        "value": "Yasuo_87",
+        "label": "Genesis Nightbringer Yasuo"
+    },
+    {
+        "value": "Yone_0",
+        "label": "Yone"
+    },
+    {
+        "value": "Yone_1",
+        "label": "Spirit Blossom Yone"
+    },
+    {
+        "value": "Yone_10",
+        "label": "Battle Academia Yone"
+    },
+    {
+        "value": "Yone_19",
+        "label": "Dawnbringer Yone"
+    },
+    {
+        "value": "Yone_26",
+        "label": "Ocean Song Yone"
+    },
+    {
+        "value": "Yone_35",
+        "label": "Inkshadow Yone"
+    },
+    {
+        "value": "Yone_45",
+        "label": "HEARTSTEEL Yone"
+    },
+    {
+        "value": "Yone_46",
+        "label": "Prestige HEARTSTEEL Yone"
+    },
+    {
+        "value": "Yone_55",
+        "label": "High Noon Yone"
+    },
+    {
+        "value": "Yone_58",
+        "label": "Peacemaker High Noon Yone"
+    },
+    {
+        "value": "Yone_65",
+        "label": "Masked Justice Yone"
+    },
+    {
+        "value": "Yorick_0",
+        "label": "Yorick"
+    },
+    {
+        "value": "Yorick_1",
+        "label": "Undertaker Yorick"
+    },
+    {
+        "value": "Yorick_2",
+        "label": "Pentakill Yorick"
+    },
+    {
+        "value": "Yorick_3",
+        "label": "Arclight Yorick"
+    },
+    {
+        "value": "Yorick_4",
+        "label": "Meowrick"
+    },
+    {
+        "value": "Yorick_12",
+        "label": "Resistance Yorick"
+    },
+    {
+        "value": "Yorick_21",
+        "label": "Pentakill III: Lost Chapter Yorick"
+    },
+    {
+        "value": "Yorick_30",
+        "label": "Spirit Blossom Yorick"
+    },
+    {
+        "value": "Yorick_40",
+        "label": "Dark Star Yorick"
+    },
+    {
+        "value": "Yorick_50",
+        "label": "High Noon Yorick"
+    },
+    {
+        "value": "Yunara_0",
+        "label": "Yunara"
+    },
+    {
+        "value": "Yunara_1",
+        "label": "Spirit Blossom Springs Yunara"
+    },
+    {
+        "value": "Yuumi_0",
+        "label": "Yuumi"
+    },
+    {
+        "value": "Yuumi_1",
+        "label": "Battle Principal Yuumi"
+    },
+    {
+        "value": "Yuumi_11",
+        "label": "Heartseeker Yuumi"
+    },
+    {
+        "value": "Yuumi_19",
+        "label": "Yuubee"
+    },
+    {
+        "value": "Yuumi_28",
+        "label": "Bewitching Yuumi"
+    },
+    {
+        "value": "Yuumi_37",
+        "label": "EDG Yuumi"
+    },
+    {
+        "value": "Yuumi_39",
+        "label": "Shiba Yuumi"
+    },
+    {
+        "value": "Yuumi_49",
+        "label": "Cyber Cat Yuumi"
+    },
+    {
+        "value": "Yuumi_50",
+        "label": "Prestige Cyber Cat Yuumi"
+    },
+    {
+        "value": "Yuumi_61",
+        "label": "Nightbringer Yuumi"
+    },
+    {
+        "value": "Zac_0",
+        "label": "Zac"
+    },
+    {
+        "value": "Zac_1",
+        "label": "Special Weapon Zac"
+    },
+    {
+        "value": "Zac_2",
+        "label": "Pool Party Zac"
+    },
+    {
+        "value": "Zac_6",
+        "label": "SKT T1 Zac"
+    },
+    {
+        "value": "Zac_7",
+        "label": "Battlecast Zac"
+    },
+    {
+        "value": "Zac_14",
+        "label": "Empyrean Zac"
+    },
+    {
+        "value": "Zac_24",
+        "label": "Zesty Dip Zac"
+    },
+    {
+        "value": "Zed_0",
+        "label": "Zed"
+    },
+    {
+        "value": "Zed_1",
+        "label": "Shockblade Zed"
+    },
+    {
+        "value": "Zed_2",
+        "label": "SKT T1 Zed"
+    },
+    {
+        "value": "Zed_3",
+        "label": "PROJECT: Zed"
+    },
+    {
+        "value": "Zed_10",
+        "label": "Worlds 2016 Zed"
+    },
+    {
+        "value": "Zed_11",
+        "label": "Death Sworn Zed"
+    },
+    {
+        "value": "Zed_13",
+        "label": "Galaxy Slayer Zed"
+    },
+    {
+        "value": "Zed_15",
+        "label": "PsyOps Zed"
+    },
+    {
+        "value": "Zed_30",
+        "label": "Prestige PROJECT: Zed"
+    },
+    {
+        "value": "Zed_31",
+        "label": "Debonair Zed"
+    },
+    {
+        "value": "Zed_38",
+        "label": "Empyrean Zed"
+    },
+    {
+        "value": "Zed_49",
+        "label": "Immortal Journey Zed"
+    },
+    {
+        "value": "Zed_58",
+        "label": "Blood Moon Zed"
+    },
+    {
+        "value": "Zed_68",
+        "label": "Quantum Galaxy Slayer Zed"
+    },
+    {
+        "value": "Zed_69",
+        "label": "Prestige Spirit Blossom Zed"
+    },
+    {
+        "value": "Zeri_0",
+        "label": "Zeri"
+    },
+    {
+        "value": "Zeri_1",
+        "label": "Withered Rose Zeri"
+    },
+    {
+        "value": "Zeri_10",
+        "label": "Ocean Song Zeri"
+    },
+    {
+        "value": "Zeri_19",
+        "label": "Immortal Journey Zeri"
+    },
+    {
+        "value": "Zeri_28",
+        "label": "Fright Night Zeri"
+    },
+    {
+        "value": "Zeri_29",
+        "label": "Prestige Fright Night Zeri"
+    },
+    {
+        "value": "Ziggs_0",
+        "label": "Ziggs"
+    },
+    {
+        "value": "Ziggs_1",
+        "label": "Mad Scientist Ziggs"
+    },
+    {
+        "value": "Ziggs_2",
+        "label": "Major Ziggs"
+    },
+    {
+        "value": "Ziggs_3",
+        "label": "Pool Party Ziggs"
+    },
+    {
+        "value": "Ziggs_4",
+        "label": "Snow Day Ziggs"
+    },
+    {
+        "value": "Ziggs_5",
+        "label": "Master Arcanist Ziggs"
+    },
+    {
+        "value": "Ziggs_6",
+        "label": "Battle Boss Ziggs"
+    },
+    {
+        "value": "Ziggs_7",
+        "label": "Odyssey Ziggs"
+    },
+    {
+        "value": "Ziggs_14",
+        "label": "Sugar Rush Ziggs"
+    },
+    {
+        "value": "Ziggs_23",
+        "label": "Hextech Ziggs"
+    },
+    {
+        "value": "Ziggs_24",
+        "label": "BZZZiggs"
+    },
+    {
+        "value": "Ziggs_33",
+        "label": "La Ilusión Ziggs"
+    },
+    {
+        "value": "Zilean_0",
+        "label": "Zilean"
+    },
+    {
+        "value": "Zilean_1",
+        "label": "Old Saint Zilean"
+    },
+    {
+        "value": "Zilean_2",
+        "label": "Groovy Zilean"
+    },
+    {
+        "value": "Zilean_3",
+        "label": "Shurima Desert Zilean"
+    },
+    {
+        "value": "Zilean_4",
+        "label": "Time Machine Zilean"
+    },
+    {
+        "value": "Zilean_5",
+        "label": "Blood Moon Zilean"
+    },
+    {
+        "value": "Zilean_6",
+        "label": "Sugar Rush Zilean"
+    },
+    {
+        "value": "Zilean_14",
+        "label": "Winterblessed Zilean"
+    },
+    {
+        "value": "Zoe_0",
+        "label": "Zoe"
+    },
+    {
+        "value": "Zoe_1",
+        "label": "Cyber Pop Zoe"
+    },
+    {
+        "value": "Zoe_2",
+        "label": "Pool Party Zoe"
+    },
+    {
+        "value": "Zoe_9",
+        "label": "Star Guardian Zoe"
+    },
+    {
+        "value": "Zoe_18",
+        "label": "Arcanist Zoe"
+    },
+    {
+        "value": "Zoe_19",
+        "label": "Prestige Arcanist Zoe"
+    },
+    {
+        "value": "Zoe_20",
+        "label": "EDG Zoe"
+    },
+    {
+        "value": "Zoe_22",
+        "label": "Winterblessed Zoe"
+    },
+    {
+        "value": "Zoe_33",
+        "label": "Dark Star Zoe"
+    },
+    {
+        "value": "Zyra_0",
+        "label": "Zyra"
+    },
+    {
+        "value": "Zyra_1",
+        "label": "Wildfire Zyra"
+    },
+    {
+        "value": "Zyra_2",
+        "label": "Haunted Zyra"
+    },
+    {
+        "value": "Zyra_3",
+        "label": "SKT T1 Zyra"
+    },
+    {
+        "value": "Zyra_4",
+        "label": "Dragon Sorceress Zyra"
+    },
+    {
+        "value": "Zyra_5",
+        "label": "Coven Zyra"
+    },
+    {
+        "value": "Zyra_6",
+        "label": "Prestige Coven Zyra"
+    },
+    {
+        "value": "Zyra_7",
+        "label": "Crystal Rose Zyra"
+    },
+    {
+        "value": "Zyra_16",
+        "label": "Crime City Nightmare Zyra"
+    },
+    {
+        "value": "Zyra_36",
+        "label": "Mythmaker Zyra"
+    },
+    {
+        "value": "Zyra_46",
+        "label": "Street Demons Zyra"
+    },
+    {
+        "value": "Zyra_55",
+        "label": "Blood Moon Zyra"
+    },
+    {
+        "value": "Zyra_64",
+        "label": "Spirit Blossom Zyra"
+    }
+]

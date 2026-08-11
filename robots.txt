@@ -1,0 +1,69 @@
+User-agent: *
+
+# Dashboards and checkout: nothing here belongs in a search index, and every
+# one of these pages runs authenticated DB queries. Crawling them is pure load.
+Disallow: /admin-area
+Disallow: /admin-logs
+Disallow: /booster-area
+Disallow: /seller-area
+Disallow: /profile
+Disallow: /checkout
+Disallow: /ajax
+Disallow: /auth
+
+# Shop filters generate an unbounded number of URL permutations. A crawler that
+# follows them will hit the heaviest queries on the site forever.
+Disallow: /*?*sort=
+Disallow: /*?*page=
+Disallow: /*?*price_min=
+Disallow: /*?*price_max=
+Disallow: /*?*servers=
+Disallow: /*?*ranks=
+Disallow: /*?*roles=
+Disallow: /*?*types=
+Disallow: /*?*delivery=
+Disallow: /*?*search=
+Disallow: /*?*q=
+
+# Individual marketplace listings are short-lived and get deleted once sold.
+Disallow: /account/
+Disallow: /item/
+Disallow: /premium-account/
+
+# Aggressive SEO crawlers that send no search traffic in return.
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: SeekportBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Search engines we do want, with a crawl delay so a full sweep cannot spike
+# the CPU. Googlebot ignores crawl-delay — set that rate in Search Console.
+User-agent: bingbot
+Crawl-delay: 10
+
+User-agent: Yandex
+Crawl-delay: 10
+
+Sitemap: https://lolboost.gg/sitemap.xml

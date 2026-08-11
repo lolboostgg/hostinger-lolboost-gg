@@ -1,0 +1,21 @@
+In admin/layouts/partials/sidebar.php, nach dem Block mit "selling-accounts" (Accounts), einfügen:
+
+                    <?php if ($Admin || $SuperAdmin): ?>
+                        <div class="nav-item">
+                            <a class="nav-link" href="<?= ADMN_URL ?>/sellers" data-link="sellers"
+                                data-placement="left">
+                                <i class="fa-duotone fa-store nav-icon"></i>
+                                <span class="nav-link-title">Sellers</span>
+                            </a>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ($Admin || $SuperAdmin): ?>
+                        <div class="nav-item">
+                            <a class="nav-link" href="<?= ADMN_URL ?>/seller-payout-requests" data-link="seller-payout-requests"
+                                data-placement="left">
+                                <i class="fa-duotone fa-building-columns nav-icon"></i>
+                                <span class="nav-link-title">Seller Payouts</span>
+                            </a>
+                        </div>
+                    <?php endif; ?>

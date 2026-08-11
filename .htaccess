@@ -1,0 +1,66 @@
+RewriteEngine On
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 30 days"
+    ExpiresByType application/javascript "access plus 30 days"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(?:png|jpe?g|gif|webp|avif|svg|ico|woff2?)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+    <FilesMatch "\.(?:css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+    Header append Vary "Accept-Encoding"
+</IfModule>
+
+# Enforce HTTPS
+RewriteCond %{HTTPS} off
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.lolboost\.gg [NC]
+RewriteRule ^(.*)$ https://lolboost.gg/$1 [L,R=301]
+
+# --- Language + routing ---
+# Allow only 2-letter language codes at the start (adjust list if needed)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z]{2})/(.*)$ index.php?lang=$1&path=$2 [QSA,L]
+
+# Optional: root-level language (e.g. /en -> index.php?lang=en)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z]{2})$ index.php?lang=$1 [QSA,L]
+
+# --- Generic catch-all for non-lang URLs (default language) ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?path=$1 [QSA,L]
+
+# Block access to sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|bat|bin)$">
+    Require all denied
+</FilesMatch>
+
+
+
+
+

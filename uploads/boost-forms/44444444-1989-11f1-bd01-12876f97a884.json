@@ -1,0 +1,17 @@
+{
+    "main":  {
+                 "Co-Pilot":  2000,
+                 "VOD-Review":  2000,
+                 "copilot":  0,
+                 "vodreview":  0
+             },
+    "extra":  {
+                  "champions":  "0.00"
+              },
+    "options":  {
+                    "opt-champions":  "champions"
+                },
+    "completion_time":  1,
+    "division_count":  4,
+    "apex_from":  7
+}

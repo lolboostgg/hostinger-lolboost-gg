@@ -1,0 +1,57 @@
+{
+  "modes": {
+    "normal_draft": {
+      "title": "Normal Draft Game",
+      "desc": "Queue Normal Draft games together.",
+      "price_cents": 400,
+      "unit": "Games",
+      "icon": "fa-solid fa-gamepad"
+    },
+    "swiftplay": {
+      "title": "Swift Play",
+      "desc": "Fast Swift Play matches by her side.",
+      "price_cents": 400,
+      "unit": "Games",
+      "icon": "fa-solid fa-bolt"
+    },
+    "aram": {
+      "title": "ARAM",
+      "desc": "Fun ARAM games with a GGirl.",
+      "price_cents": 400,
+      "unit": "Games",
+      "icon": "fa-solid fa-dice-d20"
+    },
+    "solo_queue": {
+      "title": "Solo Queue",
+      "desc": "Duo your Ranked Solo/Duo queue.",
+      "price_cents": 800,
+      "unit": "Games",
+      "icon": "fa-solid fa-trophy"
+    },
+    "chatting": {
+      "title": "30 Minutes of Chatting",
+      "desc": "30 minutes of voice chat and company.",
+      "price_cents": 600,
+      "unit": "Sessions",
+      "icon": "fa-solid fa-comments"
+    },
+    "watching": {
+      "title": "Watching You Play",
+      "desc": "She watches and hypes while you play.",
+      "price_cents": 500,
+      "unit": "Sessions",
+      "icon": "fa-solid fa-eye"
+    }
+  },
+  "ranks": {
+    "unranked": { "label": "Unranked", "tier": 0, "price_modifier_cents": 0 },
+    "iron": { "label": "Iron", "tier": 1, "price_modifier_cents": 0 },
+    "bronze": { "label": "Bronze", "tier": 2, "price_modifier_cents": 0 },
+    "silver": { "label": "Silver", "tier": 3, "price_modifier_cents": 0 },
+    "gold": { "label": "Gold", "tier": 4, "price_modifier_cents": 50 },
+    "platinum": { "label": "Platinum", "tier": 5, "price_modifier_cents": 75 },
+    "emerald": { "label": "Emerald", "tier": 6, "price_modifier_cents": 100 },
+    "diamond": { "label": "Diamond", "tier": 7, "price_modifier_cents": 150 },
+    "master": { "label": "Master", "tier": 8, "price_modifier_cents": 200 }
+  }
+}

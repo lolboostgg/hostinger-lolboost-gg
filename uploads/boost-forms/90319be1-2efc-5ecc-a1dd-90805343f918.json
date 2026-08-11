@@ -1,0 +1,471 @@
+{
+  "dynamic_boosting": true,
+  "game_slug": "apex-legends",
+  "source": "gameboost",
+  "banner_path": "/public/assets/website/images/boosting/banners/apex-legends.webp",
+  "game_icon_path": "/public/assets/website/images/boosting/icons/apex-legends.png",
+  "rank_names": {
+    "1": "Rookie",
+    "2": "Bronze",
+    "3": "Silver",
+    "4": "Gold",
+    "5": "Platinum",
+    "6": "Diamond",
+    "7": "Master",
+    "8": "Predator"
+  },
+  "rank_icons": {
+    "1": {
+      "mini": "/public/assets/website/images/boosting/ranks/apex-legends/rookie.webp",
+      "url": "/public/assets/website/images/boosting/ranks/apex-legends/rookie.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/apex-legends/rookie.webp"
+    },
+    "2": {
+      "mini": "/public/assets/website/images/boosting/ranks/apex-legends/bronze.webp",
+      "url": "/public/assets/website/images/boosting/ranks/apex-legends/bronze.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/apex-legends/bronze.webp"
+    },
+    "3": {
+      "mini": "/public/assets/website/images/boosting/ranks/apex-legends/silver.webp",
+      "url": "/public/assets/website/images/boosting/ranks/apex-legends/silver.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/apex-legends/silver.webp"
+    },
+    "4": {
+      "mini": "/public/assets/website/images/boosting/ranks/apex-legends/gold.webp",
+      "url": "/public/assets/website/images/boosting/ranks/apex-legends/gold.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/apex-legends/gold.webp"
+    },
+    "5": {
+      "mini": "/public/assets/website/images/boosting/ranks/apex-legends/platinum.webp",
+      "url": "/public/assets/website/images/boosting/ranks/apex-legends/platinum.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/apex-legends/platinum.webp"
+    },
+    "6": {
+      "mini": "/public/assets/website/images/boosting/ranks/apex-legends/diamond.webp",
+      "url": "/public/assets/website/images/boosting/ranks/apex-legends/diamond.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/apex-legends/diamond.webp"
+    },
+    "7": {
+      "mini": "/public/assets/website/images/boosting/ranks/apex-legends/master.webp",
+      "url": "/public/assets/website/images/boosting/ranks/apex-legends/master.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/apex-legends/master.webp"
+    },
+    "8": {
+      "mini": "/public/assets/website/images/boosting/ranks/apex-legends/predator.webp",
+      "url": "/public/assets/website/images/boosting/ranks/apex-legends/predator.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/apex-legends/predator.webp"
+    }
+  },
+  "division_count": 4,
+  "division_names": {
+    "1": "IV",
+    "2": "III",
+    "3": "II",
+    "4": "I"
+  },
+  "rank_divs": {},
+  "points_label": "RP",
+  "points_options": {
+    "0-20": "0-20 RP",
+    "21-40": "21-40 RP",
+    "41-60": "41-60 RP",
+    "61-80": "61-80 RP",
+    "81-100": "81-100 RP"
+  },
+  "lp_gain_options": {
+    "auto": "Auto"
+  },
+  "server_options": {
+    "europe": "Europe",
+    "north-america": "North America",
+    "asia": "Asia"
+  },
+  "platform_options": {
+    "pc": "PC",
+    "playstation": "PlayStation",
+    "xbox": "Xbox",
+    "switch": "Switch"
+  },
+  "queue_type_options": {
+    "battle-royale": "Battle Royale",
+    "arena": "Arena"
+  },
+  "form_config": {
+    "show_server": true,
+    "show_platform": true,
+    "show_current_points": true,
+    "show_queue_type": true,
+    "show_solo_duo": true,
+    "rank_divs": {}
+  },
+  "extra": {
+    "is_duo": 0.35,
+    "is_priority": 0.25,
+    "is_streaming": 0.15,
+    "is_solo_only": 0.2
+  },
+  "extra_config": {
+    "is_duo": {
+      "label": "Duo",
+      "def": 0.35,
+      "icon": "priority.svg"
+    },
+    "is_priority": {
+      "label": "Priority Boost Completion",
+      "def": 0.25,
+      "icon": "priority.svg"
+    },
+    "is_streaming": {
+      "label": "Stream Games",
+      "def": 0.15,
+      "icon": "priority.svg"
+    },
+    "is_solo_only": {
+      "label": "Solo Only Queue",
+      "def": 0.2,
+      "icon": "priority.svg"
+    }
+  },
+  "completion_time": 4,
+  "main": {
+    "1": {
+      "1": {
+        "eu": 768,
+        "na": 844,
+        "europe": 768,
+        "north_america": 844,
+        "asia": 805,
+        "sea": 768,
+        "oceania": 883,
+        "middle_east": 860
+      },
+      "2": {
+        "eu": 917,
+        "na": 1009,
+        "europe": 917,
+        "north_america": 1009,
+        "asia": 963,
+        "sea": 917,
+        "oceania": 1055,
+        "middle_east": 1026
+      },
+      "3": {
+        "eu": 917,
+        "na": 1008,
+        "europe": 917,
+        "north_america": 1008,
+        "asia": 962,
+        "sea": 917,
+        "oceania": 1053,
+        "middle_east": 1026
+      },
+      "4": {
+        "eu": 917,
+        "na": 1009,
+        "europe": 917,
+        "north_america": 1009,
+        "asia": 962,
+        "sea": 917,
+        "oceania": 1054,
+        "middle_east": 1026
+      }
+    },
+    "2": {
+      "1": {
+        "eu": 917,
+        "na": 1008,
+        "europe": 917,
+        "north_america": 1008,
+        "asia": 962,
+        "sea": 917,
+        "oceania": 1054,
+        "middle_east": 1027
+      },
+      "2": {
+        "eu": 917,
+        "na": 1009,
+        "europe": 917,
+        "north_america": 1009,
+        "asia": 963,
+        "sea": 917,
+        "oceania": 1053,
+        "middle_east": 1027
+      },
+      "3": {
+        "eu": 917,
+        "na": 1008,
+        "europe": 917,
+        "north_america": 1008,
+        "asia": 962,
+        "sea": 917,
+        "oceania": 1053,
+        "middle_east": 1027
+      },
+      "4": {
+        "eu": 1285,
+        "na": 1414,
+        "europe": 1285,
+        "north_america": 1414,
+        "asia": 1348,
+        "sea": 1285,
+        "oceania": 1477,
+        "middle_east": 1437
+      }
+    },
+    "3": {
+      "1": {
+        "eu": 1294,
+        "na": 1423,
+        "europe": 1294,
+        "north_america": 1423,
+        "asia": 1358,
+        "sea": 1294,
+        "oceania": 1488,
+        "middle_east": 1448
+      },
+      "2": {
+        "eu": 1294,
+        "na": 1423,
+        "europe": 1294,
+        "north_america": 1423,
+        "asia": 1359,
+        "sea": 1294,
+        "oceania": 1486,
+        "middle_east": 1448
+      },
+      "3": {
+        "eu": 1294,
+        "na": 1423,
+        "europe": 1294,
+        "north_america": 1423,
+        "asia": 1358,
+        "sea": 1294,
+        "oceania": 1487,
+        "middle_east": 1449
+      },
+      "4": {
+        "eu": 1294,
+        "na": 1423,
+        "europe": 1294,
+        "north_america": 1423,
+        "asia": 1358,
+        "sea": 1294,
+        "oceania": 1487,
+        "middle_east": 1449
+      }
+    },
+    "4": {
+      "1": {
+        "eu": 1585,
+        "na": 1743,
+        "europe": 1585,
+        "north_america": 1743,
+        "asia": 1663,
+        "sea": 1585,
+        "oceania": 1822,
+        "middle_east": 1775
+      },
+      "2": {
+        "eu": 1585,
+        "na": 1744,
+        "europe": 1585,
+        "north_america": 1744,
+        "asia": 1664,
+        "sea": 1585,
+        "oceania": 1823,
+        "middle_east": 1775
+      },
+      "3": {
+        "eu": 1585,
+        "na": 1743,
+        "europe": 1585,
+        "north_america": 1743,
+        "asia": 1664,
+        "sea": 1585,
+        "oceania": 1821,
+        "middle_east": 1774
+      },
+      "4": {
+        "eu": 1585,
+        "na": 1744,
+        "europe": 1585,
+        "north_america": 1744,
+        "asia": 1663,
+        "sea": 1585,
+        "oceania": 1822,
+        "middle_east": 1774
+      }
+    },
+    "5": {
+      "1": {
+        "eu": 2253,
+        "na": 2477,
+        "europe": 2253,
+        "north_america": 2477,
+        "asia": 2364,
+        "sea": 2253,
+        "oceania": 2590,
+        "middle_east": 2522
+      },
+      "2": {
+        "eu": 2253,
+        "na": 2478,
+        "europe": 2253,
+        "north_america": 2478,
+        "asia": 2366,
+        "sea": 2253,
+        "oceania": 2591,
+        "middle_east": 2522
+      },
+      "3": {
+        "eu": 2253,
+        "na": 2477,
+        "europe": 2253,
+        "north_america": 2477,
+        "asia": 2365,
+        "sea": 2253,
+        "oceania": 2589,
+        "middle_east": 2523
+      },
+      "4": {
+        "eu": 2253,
+        "na": 2478,
+        "europe": 2253,
+        "north_america": 2478,
+        "asia": 2364,
+        "sea": 2253,
+        "oceania": 2590,
+        "middle_east": 2523
+      }
+    },
+    "6": {
+      "1": {
+        "eu": 3045,
+        "na": 3348,
+        "europe": 3045,
+        "north_america": 3348,
+        "asia": 3195,
+        "sea": 3045,
+        "oceania": 3501,
+        "middle_east": 3410
+      },
+      "2": {
+        "eu": 3327,
+        "na": 3660,
+        "europe": 3327,
+        "north_america": 3660,
+        "asia": 3493,
+        "sea": 3327,
+        "oceania": 3826,
+        "middle_east": 3724
+      },
+      "3": {
+        "eu": 3607,
+        "na": 3966,
+        "europe": 3607,
+        "north_america": 3966,
+        "asia": 3787,
+        "sea": 3607,
+        "oceania": 4146,
+        "middle_east": 4038
+      },
+      "4": {
+        "eu": 4560,
+        "na": 5016,
+        "europe": 4560,
+        "north_america": 5016,
+        "asia": 4786,
+        "sea": 4560,
+        "oceania": 5242,
+        "middle_east": 5105
+      }
+    },
+    "7": {
+      "1": {
+        "eu": 1295,
+        "na": 1424,
+        "europe": 1295,
+        "north_america": 1424,
+        "asia": 1359,
+        "sea": 1295,
+        "oceania": 1489,
+        "middle_east": 1450
+      },
+      "2": {
+        "eu": 1260,
+        "na": 1386,
+        "europe": 1260,
+        "north_america": 1386,
+        "asia": 1323,
+        "sea": 1260,
+        "oceania": 1449,
+        "middle_east": 1411
+      },
+      "3": {
+        "eu": 1225,
+        "na": 1347,
+        "europe": 1225,
+        "north_america": 1347,
+        "asia": 1286,
+        "sea": 1225,
+        "oceania": 1408,
+        "middle_east": 1372
+      },
+      "4": {
+        "eu": 1190,
+        "na": 1309,
+        "europe": 1190,
+        "north_america": 1309,
+        "asia": 1249,
+        "sea": 1190,
+        "oceania": 1368,
+        "middle_east": 1332
+      }
+    },
+    "8": {
+      "1": {
+        "eu": 1415,
+        "na": 1556,
+        "europe": 1415,
+        "north_america": 1556,
+        "asia": 1485,
+        "sea": 1415,
+        "oceania": 1627,
+        "middle_east": 1584
+      },
+      "2": {
+        "eu": 1380,
+        "na": 1518,
+        "europe": 1380,
+        "north_america": 1518,
+        "asia": 1449,
+        "sea": 1380,
+        "oceania": 1586,
+        "middle_east": 1545
+      },
+      "3": {
+        "eu": 1345,
+        "na": 1479,
+        "europe": 1345,
+        "north_america": 1479,
+        "asia": 1412,
+        "sea": 1345,
+        "oceania": 1546,
+        "middle_east": 1506
+      },
+      "4": {
+        "eu": 1310,
+        "na": 1441,
+        "europe": 1310,
+        "north_america": 1441,
+        "asia": 1375,
+        "sea": 1310,
+        "oceania": 1506,
+        "middle_east": 1467
+      }
+    }
+  },
+  "service_slug": "rank-boost",
+  "service_name": "Rank Boost",
+  "service_description": "High quality Apex Legends rank boosting."
+}

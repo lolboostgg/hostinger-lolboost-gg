@@ -1,0 +1,432 @@
+{
+  "dynamic_boosting": true,
+  "game_slug": "marvel-rivals",
+  "source": "gameboost",
+  "banner_path": "/public/assets/website/images/boosting/banners/marvel-rivals.webp",
+  "game_icon_path": "/public/assets/website/images/boosting/icons/marvel-rivals.png",
+  "rank_names": {
+    "1": "Bronze",
+    "2": "Silver",
+    "3": "Gold",
+    "4": "Platinum",
+    "5": "Diamond",
+    "6": "Grandmaster",
+    "7": "Celestial",
+    "8": "Eternity",
+    "9": "One Above All"
+  },
+  "rank_icons": {
+    "1": {
+      "mini": "/public/assets/website/images/boosting/ranks/marvel-rivals/bronze.webp",
+      "url": "/public/assets/website/images/boosting/ranks/marvel-rivals/bronze.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/marvel-rivals/bronze.webp"
+    },
+    "2": {
+      "mini": "/public/assets/website/images/boosting/ranks/marvel-rivals/silver.webp",
+      "url": "/public/assets/website/images/boosting/ranks/marvel-rivals/silver.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/marvel-rivals/silver.webp"
+    },
+    "3": {
+      "mini": "/public/assets/website/images/boosting/ranks/marvel-rivals/gold.webp",
+      "url": "/public/assets/website/images/boosting/ranks/marvel-rivals/gold.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/marvel-rivals/gold.webp"
+    },
+    "4": {
+      "mini": "/public/assets/website/images/boosting/ranks/marvel-rivals/platinum.webp",
+      "url": "/public/assets/website/images/boosting/ranks/marvel-rivals/platinum.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/marvel-rivals/platinum.webp"
+    },
+    "5": {
+      "mini": "/public/assets/website/images/boosting/ranks/marvel-rivals/diamond.webp",
+      "url": "/public/assets/website/images/boosting/ranks/marvel-rivals/diamond.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/marvel-rivals/diamond.webp"
+    },
+    "6": {
+      "mini": "",
+      "url": "",
+      "icon": ""
+    },
+    "7": {
+      "mini": "/public/assets/website/images/boosting/ranks/marvel-rivals/celestial.webp",
+      "url": "/public/assets/website/images/boosting/ranks/marvel-rivals/celestial.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/marvel-rivals/celestial.webp"
+    },
+    "8": {
+      "mini": "/public/assets/website/images/boosting/ranks/marvel-rivals/eternity.webp",
+      "url": "/public/assets/website/images/boosting/ranks/marvel-rivals/eternity.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/marvel-rivals/eternity.webp"
+    },
+    "9": {
+      "mini": "/public/assets/website/images/boosting/ranks/marvel-rivals/one-above-all.webp",
+      "url": "/public/assets/website/images/boosting/ranks/marvel-rivals/one-above-all.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/marvel-rivals/one-above-all.webp"
+    }
+  },
+  "division_count": 3,
+  "division_names": {
+    "1": "III",
+    "2": "II",
+    "3": "I"
+  },
+  "rank_divs": {},
+  "points_label": "Points",
+  "points_options": {
+    "0-20": "0-20 Points",
+    "21-40": "21-40 Points",
+    "41-60": "41-60 Points",
+    "61-80": "61-80 Points",
+    "81-100": "81-100 Points"
+  },
+  "lp_gain_options": {
+    "auto": "Auto"
+  },
+  "server_options": {
+    "europe": "Europe",
+    "north-america": "North America",
+    "asia": "Asia"
+  },
+  "platform_options": {
+    "pc": "PC",
+    "playstation": "PlayStation",
+    "xbox": "Xbox"
+  },
+  "queue_type_options": {
+    "ranked": "Ranked"
+  },
+  "form_config": {
+    "show_server": true,
+    "show_platform": true,
+    "show_current_points": true,
+    "show_queue_type": true,
+    "show_solo_duo": true,
+    "rank_divs": {}
+  },
+  "extra": {
+    "is_duo": 0.45,
+    "specific_hero": 0.0,
+    "is_priority": 0.25,
+    "is_streaming": 0.15,
+    "is_solo_only": 0.2
+  },
+  "extra_config": {
+    "is_duo": {
+      "label": "Duo",
+      "def": 0.45,
+      "icon": "priority.svg"
+    },
+    "specific_hero": {
+      "label": "Heroes and Roles Selection",
+      "def": 0.0,
+      "icon": "priority.svg"
+    },
+    "is_priority": {
+      "label": "Priority Boost Completion",
+      "def": 0.25,
+      "icon": "priority.svg"
+    },
+    "is_streaming": {
+      "label": "Stream Games",
+      "def": 0.15,
+      "icon": "priority.svg"
+    },
+    "is_solo_only": {
+      "label": "Solo Only Queue",
+      "def": 0.2,
+      "icon": "priority.svg"
+    }
+  },
+  "completion_time": 2,
+  "main": {
+    "1": {
+      "1": {
+        "eu": 193,
+        "na": 212,
+        "europe": 193,
+        "north_america": 212,
+        "asia": 203,
+        "sea": 193,
+        "oceania": 222,
+        "middle_east": 216
+      },
+      "2": {
+        "eu": 198,
+        "na": 218,
+        "europe": 198,
+        "north_america": 218,
+        "asia": 208,
+        "sea": 198,
+        "oceania": 227,
+        "middle_east": 222
+      },
+      "3": {
+        "eu": 204,
+        "na": 224,
+        "europe": 204,
+        "north_america": 224,
+        "asia": 214,
+        "sea": 204,
+        "oceania": 234,
+        "middle_east": 228
+      }
+    },
+    "2": {
+      "1": {
+        "eu": 214,
+        "na": 235,
+        "europe": 214,
+        "north_america": 235,
+        "asia": 225,
+        "sea": 214,
+        "oceania": 246,
+        "middle_east": 240
+      },
+      "2": {
+        "eu": 220,
+        "na": 242,
+        "europe": 220,
+        "north_america": 242,
+        "asia": 231,
+        "sea": 220,
+        "oceania": 253,
+        "middle_east": 246
+      },
+      "3": {
+        "eu": 225,
+        "na": 248,
+        "europe": 225,
+        "north_america": 248,
+        "asia": 236,
+        "sea": 225,
+        "oceania": 259,
+        "middle_east": 252
+      }
+    },
+    "3": {
+      "1": {
+        "eu": 275,
+        "na": 302,
+        "europe": 275,
+        "north_america": 302,
+        "asia": 289,
+        "sea": 275,
+        "oceania": 316,
+        "middle_east": 308
+      },
+      "2": {
+        "eu": 280,
+        "na": 308,
+        "europe": 280,
+        "north_america": 308,
+        "asia": 294,
+        "sea": 280,
+        "oceania": 322,
+        "middle_east": 313
+      },
+      "3": {
+        "eu": 286,
+        "na": 315,
+        "europe": 286,
+        "north_america": 315,
+        "asia": 300,
+        "sea": 286,
+        "oceania": 329,
+        "middle_east": 320
+      }
+    },
+    "4": {
+      "1": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 352
+      },
+      "2": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 351
+      },
+      "3": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 351
+      }
+    },
+    "5": {
+      "1": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 352
+      },
+      "2": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 352
+      },
+      "3": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 352
+      }
+    },
+    "6": {
+      "1": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 351
+      },
+      "2": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 352
+      },
+      "3": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 352
+      }
+    },
+    "7": {
+      "1": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 352
+      },
+      "2": {
+        "eu": 314,
+        "na": 345,
+        "europe": 314,
+        "north_america": 345,
+        "asia": 330,
+        "sea": 314,
+        "oceania": 361,
+        "middle_east": 352
+      },
+      "3": {
+        "eu": 1190,
+        "na": 1309,
+        "europe": 1190,
+        "north_america": 1309,
+        "asia": 1249,
+        "sea": 1190,
+        "oceania": 1368,
+        "middle_east": 1332
+      }
+    },
+    "8": {
+      "1": {
+        "eu": 5256,
+        "na": 5782,
+        "europe": 5256,
+        "north_america": 5782,
+        "asia": 5519,
+        "sea": 5256,
+        "oceania": 6041,
+        "middle_east": 5884
+      },
+      "2": {
+        "eu": 5256,
+        "na": 5780,
+        "europe": 5256,
+        "north_america": 5780,
+        "asia": 5518,
+        "sea": 5256,
+        "oceania": 6041,
+        "middle_east": 5885
+      },
+      "3": {
+        "eu": 5256,
+        "na": 5782,
+        "europe": 5256,
+        "north_america": 5782,
+        "asia": 5517,
+        "sea": 5256,
+        "oceania": 6042,
+        "middle_east": 5886
+      }
+    },
+    "9": {
+      "1": {
+        "eu": 1500,
+        "na": 1650,
+        "europe": 1500,
+        "north_america": 1650,
+        "asia": 1575,
+        "sea": 1500,
+        "oceania": 1724,
+        "middle_east": 1680
+      },
+      "2": {
+        "eu": 1465,
+        "na": 1611,
+        "europe": 1465,
+        "north_america": 1611,
+        "asia": 1538,
+        "sea": 1465,
+        "oceania": 1684,
+        "middle_east": 1640
+      },
+      "3": {
+        "eu": 1430,
+        "na": 1573,
+        "europe": 1430,
+        "north_america": 1573,
+        "asia": 1501,
+        "sea": 1430,
+        "oceania": 1644,
+        "middle_east": 1601
+      }
+    }
+  },
+  "service_slug": "win-boost",
+  "service_name": "Win Boost",
+  "service_description": "Get wins with a verified Marvel Rivals booster."
+}

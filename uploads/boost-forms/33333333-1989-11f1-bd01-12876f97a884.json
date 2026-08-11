@@ -1,0 +1,142 @@
+{
+    "main":  [
+                 {
+                     "eu":  293,
+                     "na":  337
+                 },
+                 {
+                     "1":  {
+                               "eu":  174,
+                               "na":  201
+                           },
+                     "2":  {
+                               "eu":  174,
+                               "na":  201
+                           },
+                     "3":  {
+                               "eu":  174,
+                               "na":  201
+                           },
+                     "4":  {
+                               "eu":  174,
+                               "na":  201
+                           }
+                 },
+                 {
+                     "1":  {
+                               "eu":  229,
+                               "na":  261
+                           },
+                     "2":  {
+                               "eu":  229,
+                               "na":  261
+                           },
+                     "3":  {
+                               "eu":  229,
+                               "na":  261
+                           },
+                     "4":  {
+                               "eu":  229,
+                               "na":  261
+                           }
+                 },
+                 {
+                     "1":  {
+                               "eu":  281,
+                               "na":  323
+                           },
+                     "2":  {
+                               "eu":  281,
+                               "na":  323
+                           },
+                     "3":  {
+                               "eu":  281,
+                               "na":  323
+                           },
+                     "4":  {
+                               "eu":  281,
+                               "na":  323
+                           }
+                 },
+                 {
+                     "1":  {
+                               "eu":  329,
+                               "na":  377
+                           },
+                     "2":  {
+                               "eu":  329,
+                               "na":  377
+                           },
+                     "3":  {
+                               "eu":  329,
+                               "na":  377
+                           },
+                     "4":  {
+                               "eu":  329,
+                               "na":  377
+                           }
+                 },
+                 {
+                     "1":  {
+                               "eu":  459,
+                               "na":  526
+                           },
+                     "2":  {
+                               "eu":  459,
+                               "na":  526
+                           },
+                     "3":  {
+                               "eu":  459,
+                               "na":  526
+                           },
+                     "4":  {
+                               "eu":  459,
+                               "na":  526
+                           }
+                 },
+                 {
+                     "1":  {
+                               "eu":  664,
+                               "na":  824
+                           },
+                     "2":  {
+                               "eu":  720,
+                               "na":  834
+                           },
+                     "3":  {
+                               "eu":  784,
+                               "na":  857
+                           },
+                     "4":  {
+                               "eu":  824,
+                               "na":  910
+                           }
+                 },
+                 {
+                     "eu":  1434,
+                     "na":  1619
+                 }
+             ],
+    "extra":  {
+                  "champions":  "0.10",
+                  "is_duo":  "0.50",
+                  "is_coaching":  "0.20",
+                  "is_priority":  "0.25",
+                  "is_streaming":  "0.15",
+                  "is_solo_only":  "0.30",
+                  "is_hidden_duo":  "0.50"
+              },
+    "options":  {
+                    "opt-duo":  "is_duo",
+                    "opt-champions":  "champions",
+                    "opt-priority":  "is_priority",
+                    "opt-coaching":  "is_coaching",
+                    "opt-streaming":  "is_streaming",
+                    "opt-solo-only":  "is_solo_only",
+                    "opt-hidden-duo":  "is_hidden_duo"
+                },
+    "completion_time":  1.5,
+    "division_count":  4,
+    "apex_from":  7,
+    "lol_classic_pricing_version":  4
+}

@@ -1,0 +1,610 @@
+{
+  "dynamic_boosting": true,
+  "game_slug": "overwatch-2",
+  "source": "gameboost",
+  "banner_path": "/public/assets/website/images/boosting/banners/overwatch-2.webp",
+  "game_icon_path": "/public/assets/website/images/boosting/icons/overwatch-2.png",
+  "rank_names": {
+    "1": "Bronze",
+    "2": "Silver",
+    "3": "Gold",
+    "4": "Platinum",
+    "5": "Diamond",
+    "6": "Master",
+    "7": "Grandmaster",
+    "8": "Champion",
+    "9": "Top 500"
+  },
+  "rank_icons": {
+    "1": {
+      "mini": "/public/assets/website/images/boosting/ranks/overwatch-2/bronze.webp",
+      "url": "/public/assets/website/images/boosting/ranks/overwatch-2/bronze.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/overwatch-2/bronze.webp"
+    },
+    "2": {
+      "mini": "/public/assets/website/images/boosting/ranks/overwatch-2/silver.webp",
+      "url": "/public/assets/website/images/boosting/ranks/overwatch-2/silver.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/overwatch-2/silver.webp"
+    },
+    "3": {
+      "mini": "/public/assets/website/images/boosting/ranks/overwatch-2/gold.webp",
+      "url": "/public/assets/website/images/boosting/ranks/overwatch-2/gold.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/overwatch-2/gold.webp"
+    },
+    "4": {
+      "mini": "/public/assets/website/images/boosting/ranks/overwatch-2/platinum.webp",
+      "url": "/public/assets/website/images/boosting/ranks/overwatch-2/platinum.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/overwatch-2/platinum.webp"
+    },
+    "5": {
+      "mini": "/public/assets/website/images/boosting/ranks/overwatch-2/diamond.webp",
+      "url": "/public/assets/website/images/boosting/ranks/overwatch-2/diamond.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/overwatch-2/diamond.webp"
+    },
+    "6": {
+      "mini": "/public/assets/website/images/boosting/ranks/overwatch-2/master.webp",
+      "url": "/public/assets/website/images/boosting/ranks/overwatch-2/master.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/overwatch-2/master.webp"
+    },
+    "7": {
+      "mini": "/public/assets/website/images/boosting/ranks/overwatch-2/grandmaster.webp",
+      "url": "/public/assets/website/images/boosting/ranks/overwatch-2/grandmaster.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/overwatch-2/grandmaster.webp"
+    },
+    "8": {
+      "mini": "/public/assets/website/images/boosting/ranks/overwatch-2/champion.webp",
+      "url": "/public/assets/website/images/boosting/ranks/overwatch-2/champion.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/overwatch-2/champion.webp"
+    },
+    "9": {
+      "mini": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  "division_count": 5,
+  "division_names": {
+    "1": "5",
+    "2": "4",
+    "3": "3",
+    "4": "2",
+    "5": "1"
+  },
+  "rank_divs": {},
+  "points_label": "Rank Progress",
+  "points_options": {
+    "0-20": "0-20 Rank Progress",
+    "21-40": "21-40 Rank Progress",
+    "41-60": "41-60 Rank Progress",
+    "61-80": "61-80 Rank Progress",
+    "81-100": "81-100 Rank Progress"
+  },
+  "lp_gain_options": {
+    "auto": "Auto"
+  },
+  "server_options": {
+    "europe": "Europe",
+    "north-america": "North America",
+    "asia": "Asia"
+  },
+  "platform_options": {
+    "pc": "PC",
+    "playstation": "PlayStation",
+    "xbox": "Xbox",
+    "switch": "Switch"
+  },
+  "queue_type_options": {
+    "role-queue": "Role Queue",
+    "open-queue": "Open Queue"
+  },
+  "form_config": {
+    "show_server": true,
+    "show_platform": true,
+    "show_current_points": true,
+    "show_queue_type": true,
+    "show_solo_duo": true,
+    "rank_divs": {}
+  },
+  "extra": {
+    "is_duo": 0.35,
+    "is_priority": 0.25,
+    "is_streaming": 0.15,
+    "is_solo_only": 0.2
+  },
+  "extra_config": {
+    "is_duo": {
+      "label": "Duo",
+      "def": 0.35,
+      "icon": "priority.svg"
+    },
+    "is_priority": {
+      "label": "Priority Boost Completion",
+      "def": 0.25,
+      "icon": "priority.svg"
+    },
+    "is_streaming": {
+      "label": "Stream Games",
+      "def": 0.15,
+      "icon": "priority.svg"
+    },
+    "is_solo_only": {
+      "label": "Solo Only Queue",
+      "def": 0.2,
+      "icon": "priority.svg"
+    }
+  },
+  "completion_time": 2,
+  "main": {
+    "1": {
+      "1": {
+        "eu": 241,
+        "na": 265,
+        "europe": 241,
+        "north_america": 265,
+        "asia": 253,
+        "sea": 241,
+        "oceania": 277,
+        "middle_east": 270
+      },
+      "2": {
+        "eu": 241,
+        "na": 265,
+        "europe": 241,
+        "north_america": 265,
+        "asia": 253,
+        "sea": 241,
+        "oceania": 277,
+        "middle_east": 270
+      },
+      "3": {
+        "eu": 241,
+        "na": 265,
+        "europe": 241,
+        "north_america": 265,
+        "asia": 253,
+        "sea": 241,
+        "oceania": 277,
+        "middle_east": 270
+      },
+      "4": {
+        "eu": 241,
+        "na": 265,
+        "europe": 241,
+        "north_america": 265,
+        "asia": 253,
+        "sea": 241,
+        "oceania": 277,
+        "middle_east": 270
+      },
+      "5": {
+        "eu": 241,
+        "na": 265,
+        "europe": 241,
+        "north_america": 265,
+        "asia": 253,
+        "sea": 241,
+        "oceania": 277,
+        "middle_east": 270
+      }
+    },
+    "2": {
+      "1": {
+        "eu": 274,
+        "na": 301,
+        "europe": 274,
+        "north_america": 301,
+        "asia": 288,
+        "sea": 274,
+        "oceania": 315,
+        "middle_east": 307
+      },
+      "2": {
+        "eu": 274,
+        "na": 301,
+        "europe": 274,
+        "north_america": 301,
+        "asia": 287,
+        "sea": 274,
+        "oceania": 315,
+        "middle_east": 307
+      },
+      "3": {
+        "eu": 274,
+        "na": 301,
+        "europe": 274,
+        "north_america": 301,
+        "asia": 288,
+        "sea": 274,
+        "oceania": 315,
+        "middle_east": 307
+      },
+      "4": {
+        "eu": 274,
+        "na": 301,
+        "europe": 274,
+        "north_america": 301,
+        "asia": 288,
+        "sea": 274,
+        "oceania": 315,
+        "middle_east": 307
+      },
+      "5": {
+        "eu": 274,
+        "na": 301,
+        "europe": 274,
+        "north_america": 301,
+        "asia": 287,
+        "sea": 274,
+        "oceania": 315,
+        "middle_east": 307
+      }
+    },
+    "3": {
+      "1": {
+        "eu": 439,
+        "na": 483,
+        "europe": 439,
+        "north_america": 483,
+        "asia": 461,
+        "sea": 439,
+        "oceania": 505,
+        "middle_east": 492
+      },
+      "2": {
+        "eu": 439,
+        "na": 483,
+        "europe": 439,
+        "north_america": 483,
+        "asia": 461,
+        "sea": 439,
+        "oceania": 505,
+        "middle_east": 491
+      },
+      "3": {
+        "eu": 439,
+        "na": 483,
+        "europe": 439,
+        "north_america": 483,
+        "asia": 461,
+        "sea": 439,
+        "oceania": 504,
+        "middle_east": 491
+      },
+      "4": {
+        "eu": 549,
+        "na": 604,
+        "europe": 549,
+        "north_america": 604,
+        "asia": 576,
+        "sea": 549,
+        "oceania": 631,
+        "middle_east": 615
+      },
+      "5": {
+        "eu": 549,
+        "na": 604,
+        "europe": 549,
+        "north_america": 604,
+        "asia": 576,
+        "sea": 549,
+        "oceania": 631,
+        "middle_east": 615
+      }
+    },
+    "4": {
+      "1": {
+        "eu": 549,
+        "na": 604,
+        "europe": 549,
+        "north_america": 604,
+        "asia": 576,
+        "sea": 549,
+        "oceania": 631,
+        "middle_east": 615
+      },
+      "2": {
+        "eu": 549,
+        "na": 604,
+        "europe": 549,
+        "north_america": 604,
+        "asia": 576,
+        "sea": 549,
+        "oceania": 631,
+        "middle_east": 615
+      },
+      "3": {
+        "eu": 604,
+        "na": 664,
+        "europe": 604,
+        "north_america": 664,
+        "asia": 634,
+        "sea": 604,
+        "oceania": 695,
+        "middle_east": 676
+      },
+      "4": {
+        "eu": 604,
+        "na": 664,
+        "europe": 604,
+        "north_america": 664,
+        "asia": 634,
+        "sea": 604,
+        "oceania": 694,
+        "middle_east": 676
+      },
+      "5": {
+        "eu": 659,
+        "na": 725,
+        "europe": 659,
+        "north_america": 725,
+        "asia": 692,
+        "sea": 659,
+        "oceania": 757,
+        "middle_east": 738
+      }
+    },
+    "5": {
+      "1": {
+        "eu": 659,
+        "na": 725,
+        "europe": 659,
+        "north_america": 725,
+        "asia": 692,
+        "sea": 659,
+        "oceania": 758,
+        "middle_east": 738
+      },
+      "2": {
+        "eu": 879,
+        "na": 966,
+        "europe": 879,
+        "north_america": 966,
+        "asia": 922,
+        "sea": 879,
+        "oceania": 1011,
+        "middle_east": 984
+      },
+      "3": {
+        "eu": 989,
+        "na": 1088,
+        "europe": 989,
+        "north_america": 1088,
+        "asia": 1038,
+        "sea": 989,
+        "oceania": 1137,
+        "middle_east": 1107
+      },
+      "4": {
+        "eu": 1099,
+        "na": 1208,
+        "europe": 1099,
+        "north_america": 1208,
+        "asia": 1154,
+        "sea": 1099,
+        "oceania": 1263,
+        "middle_east": 1231
+      },
+      "5": {
+        "eu": 1209,
+        "na": 1330,
+        "europe": 1209,
+        "north_america": 1330,
+        "asia": 1269,
+        "sea": 1209,
+        "oceania": 1390,
+        "middle_east": 1354
+      }
+    },
+    "6": {
+      "1": {
+        "eu": 1429,
+        "na": 1572,
+        "europe": 1429,
+        "north_america": 1572,
+        "asia": 1500,
+        "sea": 1429,
+        "oceania": 1643,
+        "middle_east": 1600
+      },
+      "2": {
+        "eu": 1649,
+        "na": 1813,
+        "europe": 1649,
+        "north_america": 1813,
+        "asia": 1730,
+        "sea": 1649,
+        "oceania": 1896,
+        "middle_east": 1847
+      },
+      "3": {
+        "eu": 1868,
+        "na": 2055,
+        "europe": 1868,
+        "north_america": 2055,
+        "asia": 1961,
+        "sea": 1868,
+        "oceania": 2148,
+        "middle_east": 2091
+      },
+      "4": {
+        "eu": 2088,
+        "na": 2296,
+        "europe": 2088,
+        "north_america": 2296,
+        "asia": 2192,
+        "sea": 2088,
+        "oceania": 2400,
+        "middle_east": 2337
+      },
+      "5": {
+        "eu": 2198,
+        "na": 2418,
+        "europe": 2198,
+        "north_america": 2418,
+        "asia": 2307,
+        "sea": 2198,
+        "oceania": 2527,
+        "middle_east": 2461
+      }
+    },
+    "7": {
+      "1": {
+        "eu": 2309,
+        "na": 2540,
+        "europe": 2309,
+        "north_america": 2540,
+        "asia": 2424,
+        "sea": 2309,
+        "oceania": 2654,
+        "middle_east": 2585
+      },
+      "2": {
+        "eu": 2419,
+        "na": 2660,
+        "europe": 2419,
+        "north_america": 2660,
+        "asia": 2539,
+        "sea": 2419,
+        "oceania": 2781,
+        "middle_east": 2709
+      },
+      "3": {
+        "eu": 2639,
+        "na": 2903,
+        "europe": 2639,
+        "north_america": 2903,
+        "asia": 2771,
+        "sea": 2639,
+        "oceania": 3035,
+        "middle_east": 2955
+      },
+      "4": {
+        "eu": 2859,
+        "na": 3144,
+        "europe": 2859,
+        "north_america": 3144,
+        "asia": 3001,
+        "sea": 2859,
+        "oceania": 3286,
+        "middle_east": 3202
+      },
+      "5": {
+        "eu": 3189,
+        "na": 3508,
+        "europe": 3189,
+        "north_america": 3508,
+        "asia": 3347,
+        "sea": 3189,
+        "oceania": 3666,
+        "middle_east": 3570
+      }
+    },
+    "8": {
+      "1": {
+        "eu": 2309,
+        "na": 2540,
+        "europe": 2309,
+        "north_america": 2540,
+        "asia": 2424,
+        "sea": 2309,
+        "oceania": 2655,
+        "middle_east": 2586
+      },
+      "2": {
+        "eu": 2419,
+        "na": 2660,
+        "europe": 2419,
+        "north_america": 2660,
+        "asia": 2539,
+        "sea": 2419,
+        "oceania": 2781,
+        "middle_east": 2708
+      },
+      "3": {
+        "eu": 2639,
+        "na": 2903,
+        "europe": 2639,
+        "north_america": 2903,
+        "asia": 2771,
+        "sea": 2639,
+        "oceania": 3033,
+        "middle_east": 2955
+      },
+      "4": {
+        "eu": 2859,
+        "na": 3144,
+        "europe": 2859,
+        "north_america": 3144,
+        "asia": 3001,
+        "sea": 2859,
+        "oceania": 3286,
+        "middle_east": 3201
+      },
+      "5": {
+        "eu": 3189,
+        "na": 3508,
+        "europe": 3189,
+        "north_america": 3508,
+        "asia": 3347,
+        "sea": 3189,
+        "oceania": 3666,
+        "middle_east": 3571
+      }
+    },
+    "9": {
+      "1": {
+        "eu": 4289,
+        "na": 4718,
+        "europe": 4289,
+        "north_america": 4718,
+        "asia": 4502,
+        "sea": 4289,
+        "oceania": 4931,
+        "middle_east": 4803
+      },
+      "2": {
+        "eu": 4289,
+        "na": 4717,
+        "europe": 4289,
+        "north_america": 4717,
+        "asia": 4501,
+        "sea": 4289,
+        "oceania": 4932,
+        "middle_east": 4803
+      },
+      "3": {
+        "eu": 4289,
+        "na": 4718,
+        "europe": 4289,
+        "north_america": 4718,
+        "asia": 4503,
+        "sea": 4289,
+        "oceania": 4929,
+        "middle_east": 4804
+      },
+      "4": {
+        "eu": 4289,
+        "na": 4716,
+        "europe": 4289,
+        "north_america": 4716,
+        "asia": 4503,
+        "sea": 4289,
+        "oceania": 4930,
+        "middle_east": 4801
+      },
+      "5": {
+        "eu": 4289,
+        "na": 4718,
+        "europe": 4289,
+        "north_america": 4718,
+        "asia": 4502,
+        "sea": 4289,
+        "oceania": 4931,
+        "middle_east": 4802
+      }
+    }
+  },
+  "service_slug": "win-boost",
+  "service_name": "Win Boost",
+  "service_description": "Secure Overwatch 2 wins with pros."
+}

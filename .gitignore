@@ -1,0 +1,44 @@
+/vendor
+/app/core/config.php
+/public/assets/core/dash/img
+/public/assets/core/main/img
+/public/assets/core/main/plugins
+/public/assets/core/main/translations
+/public/assets/origin/main/audio
+/public/assets/origin/main/img
+/public/assets/origin/main/scss
+/public/assets/origin/main/vendor
+/public/assets/origin/main/json
+/public/assets/origin/main/favicon
+/public/assets/origin/dash/img
+/public/assets/origin/dash/svg
+/public/assets/origin/dash/vendor
+/public/assets/origin/dash/video
+/public/uploads/
+/composer.lock
+/composer.json
+/webhook_debug.log
+/compare.php
+
+# Lokale Zugangsdaten und Datenbank-Sicherungen niemals versionieren
+/.env
+/.env.*
+/*.sql
+/*.sql.gz
+/*.zip
+/*.tar
+/*.tar.gz
+/*.bak
+
+# Laufzeitdaten und Logs bleiben ausschließlich auf Hostinger
+*.log
+/cache/
+/sessions/
+/security_data/
+/public/assets/seller-gallery/
+
+# Lokale Entwicklungswerkzeuge und Betriebssystemdateien
+/.claude/
+.DS_Store
+
+# Preis-/Formulardaten unter /uploads/boost-forms bleiben absichtlich erlaubt.

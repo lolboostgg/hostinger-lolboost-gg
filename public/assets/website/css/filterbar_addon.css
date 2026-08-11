@@ -1,0 +1,1474 @@
+/* lolboost.gg – Ranked Accounts Filterbar Addon (v4)
+   Load this AFTER your main.css (or append at the end of main.css)
+*/
+
+.ranked-accounts-page .shop-filterbar{position:relative;z-index:1000000;margin-top:22px;}
+/* sticky top is computed from the real header height via JS (fallback 110px) */
+.ranked-accounts-page .shop-filterbar--sticky{position:sticky;top:var(--lb-sticky-top, 110px);z-index:1000000;}
+
+/* Layout row */
+.ranked-accounts-page .shop-filterbar__row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.ranked-accounts-page .shop-filterbar__actions{margin-left:auto;display:flex;gap:10px;}
+
+/* Search */
+.ranked-accounts-page .shop-filterbar__search{
+  flex:1 1 280px;min-width:220px;
+  display:flex;align-items:center;gap:10px;
+  height:44px;padding:0 14px;border-radius:999px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter: blur(18px);
+  border:1px solid rgba(255,255,255,0.08);
+}
+.ranked-accounts-page .shop-filterbar__search input{width:100%;background:transparent;border:0;outline:0;color:rgba(255,255,255,0.92);}
+
+/* Pills */
+.ranked-accounts-page .shop-filterpill{position:relative;}
+.ranked-accounts-page .shop-filterpill__btn{
+  display:flex;align-items:center;gap:10px;
+  height:44px;padding:0 14px;border-radius:999px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter: blur(18px);
+  border:1px solid rgba(255,255,255,0.08);
+  color:rgba(255,255,255,0.92);
+}
+.ranked-accounts-page .shop-filterpill__btn:hover{border-color:rgba(255,255,255,0.14);}
+.ranked-accounts-page .shop-dropdown.is-open{display:block;}
+.ranked-accounts-page .shop-filterpill__value{opacity:.9;font-weight:800;}
+.ranked-accounts-page .shop-filterpill__label{font-weight:700;}
+
+/* Dropdown */
+.ranked-accounts-page .shop-dropdown{
+  position:absolute;top:calc(100% + 10px);left:0;
+  width:360px;max-width:calc(100vw - 24px);
+  background:rgba(255,255,255,.06);
+  backdrop-filter: blur(18px);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;
+  box-shadow:0 18px 60px rgba(0,0,0,0.55);
+  display:none;overflow:hidden;
+}
+.ranked-accounts-page .shop-dropdown__head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.ranked-accounts-page .shop-dropdown__head span{font-weight:800;}
+.ranked-accounts-page .shop-dropdown__close{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,0.10);
+  color:rgba(255,255,255,0.9);
+  border-radius:10px;width:34px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+
+/* Toolbar buttons (Sort + Compact) */
+.ranked-accounts-page .shop-sort__btn,
+
+/* Active chips wrapper */
+.ranked-accounts-page .shop-filterbar__chips{
+  border-radius:14px;
+  padding:10px;
+  backdrop-filter: blur(18px);
+}
+
+/* Accounts grid: 3 columns (12 per page = 4 rows) */
+.ranked-accounts-page .accounts-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:22px;
+}
+@media (max-width: 1100px){
+  .ranked-accounts-page .accounts-grid{grid-template-columns:repeat(2, minmax(0, 1fr));}
+}
+@media (max-width: 720px){
+  .ranked-accounts-page .accounts-grid{grid-template-columns:1fr;}
+}
+.ranked-accounts-page .shop-dropdown__body{padding:12px 14px;}
+
+/* Align menus right when in toolbar */
+.ranked-accounts-page .shop-toolbar__right .shop-dropdown,
+.ranked-accounts-page .shop-sort .shop-dropdown{left:auto;right:0;}
+
+/* Facet search input */
+.ranked-accounts-page .facet-search{
+  display:flex;align-items:center;gap:10px;margin-bottom:10px;
+  background:rgba(0,0,0,0.22);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;padding:10px 12px;
+}
+.ranked-accounts-page .facet-search__input{width:100%;background:transparent;border:0;outline:0;color:rgba(255,255,255,0.92);}
+
+/* Hide the source <select> elements (we build custom checkbox lists) */
+.ranked-accounts-page select.js-facet-source.is-hidden{display:none!important;}
+
+/* Checkbox facet list */
+.ranked-accounts-page .facet-scroll{
+  max-height:360px;overflow:auto;padding-right:6px;
+}
+.ranked-accounts-page .facet-scroll::-webkit-scrollbar{width:6px;}
+.ranked-accounts-page .facet-scroll::-webkit-scrollbar-thumb{background:rgba(140,110,255,0.55);border-radius:999px;}
+
+.ranked-accounts-page .facet-item{
+  position:relative;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px 10px;border-radius:12px;
+  cursor:pointer;user-select:none;
+}
+.ranked-accounts-page .facet-item:hover{background:rgba(255,255,255,0.04);}
+.ranked-accounts-page .facet-item__left{display:flex;align-items:center;gap:10px;min-width:0;}
+.ranked-accounts-page .facet-item__text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ranked-accounts-page .facet-item__icon{opacity:.9;}
+.ranked-accounts-page .facet-item__check{position:absolute;opacity:0;pointer-events:none;}
+.ranked-accounts-page .facet-item__box{
+  width:18px;height:18px;border-radius:6px;
+  border:1px solid rgba(255,255,255,0.18);
+  background:rgba(0,0,0,0.22);
+  flex:0 0 auto;
+}
+.ranked-accounts-page .facet-item__check:checked + .facet-item__box{
+  background:rgba(140,110,255,0.95);
+  border-color:rgba(140,110,255,0.95);
+  box-shadow:0 0 0 3px rgba(140,110,255,0.25);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Mobile: Dropdowns should use (almost) full width and show more items
+   - Rank: show ALL ranks without internal scrolling (use 2-column grid)
+   - Server: maximize visible items (taller sheet + compact rows)
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 720px){
+  /* Make dropdowns feel like a sheet: full width + stable placement */
+  .ranked-accounts-page .shop-dropdown{
+    position:fixed;
+    left:12px !important;
+    right:12px !important;
+    width:auto !important;
+    max-width:none !important;
+    top:calc(var(--lb-sticky-top, 110px) + 10px);
+    z-index:1000002;
+  }
+
+  /* Less padding so more items fit */
+  .ranked-accounts-page .shop-dropdown__head{padding:10px 12px;}
+  .ranked-accounts-page .shop-dropdown__body{padding:10px 12px;}
+
+  /* Default: allow body to grow tall; list scroll happens inside facet-scroll */
+  .ranked-accounts-page .facet-scroll{
+    max-height:calc(100vh - var(--lb-sticky-top, 110px) - 170px);
+  }
+
+  /* More compact rows on mobile */
+  .ranked-accounts-page .facet-item{padding:8px 10px;}
+  .ranked-accounts-page .facet-item__box{width:16px;height:16px;border-radius:6px;}
+
+  /* Rank: show all ranks without scroll, and use 2 columns */
+  .ranked-accounts-page #ddRank .facet-scroll{
+    max-height:none;
+    overflow:visible;
+    padding-right:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:6px;
+  }
+  .ranked-accounts-page #ddRank .facet-search{margin-bottom:8px;}
+
+  /* Server: show as many as possible; keep scroll if still too many */
+  .ranked-accounts-page #ddServer .facet-scroll{
+    max-height:calc(100vh - var(--lb-sticky-top, 110px) - 170px);
+  }
+}
+
+/* More Filters grid */
+.ranked-accounts-page #ddMore .shop-dropdown__grid{display:grid;grid-template-columns:1fr;gap:14px;}
+@media (min-width: 900px){ .ranked-accounts-page #ddMore .shop-dropdown__grid{grid-template-columns:1fr 1fr;} }
+.ranked-accounts-page .shop-dropdown__group label{display:block;font-size:12px;opacity:.85;margin:2px 0 8px;font-weight:700;}
+
+/* Make "More Filters" cleaner */
+.ranked-accounts-page #ddMore.shop-dropdown{width:560px;max-width:calc(100vw - 24px);} 
+.ranked-accounts-page #ddMore .shop-dropdown__actions{padding-top:10px;display:flex;justify-content:flex-end;}
+.ranked-accounts-page #ddMore .shop-dropdown__actions .btn{min-width:140px;border-radius:999px;}
+
+/* Price */
+.ranked-accounts-page .shop-price__fields{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:end;}
+.ranked-accounts-page .shop-price__field label{display:block;font-size:12px;opacity:.8;margin-bottom:6px;}
+.ranked-accounts-page .shop-price__input{display:flex;align-items:center;gap:8px;height:42px;padding:0 12px;border-radius:12px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.08);}
+.ranked-accounts-page .shop-price__input input{width:100%;background:transparent;border:0;outline:0;color:rgba(255,255,255,0.92);}
+.ranked-accounts-page .shop-price__sep{opacity:.7;padding-bottom:8px;}
+.ranked-accounts-page .shop-range{position:relative;margin:14px 2px 8px;height:28px;}
+.ranked-accounts-page .shop-range input[type=range]{
+  position:absolute;left:0;top:13px;width:100%;
+  pointer-events:none;background:transparent;
+  -webkit-appearance:none;appearance:none;
+}
+.ranked-accounts-page .shop-range input[type=range]::-webkit-slider-runnable-track{height:6px;background:transparent;border:0;}
+.ranked-accounts-page .shop-range input[type=range]::-moz-range-track{height:6px;background:transparent;border:0;}
+.ranked-accounts-page .shop-range input[type=range]::-webkit-slider-thumb{
+  pointer-events:auto;
+  -webkit-appearance:none;appearance:none;
+  width:18px;height:18px;border-radius:999px;
+  background:rgba(140,110,255,0.95);
+  border:2px solid rgba(12,12,22,0.9);
+  box-shadow:0 0 0 4px rgba(140,110,255,0.18);
+  margin-top:0;
+}
+.ranked-accounts-page .shop-range input[type=range]::-moz-range-thumb{
+  pointer-events:auto;
+  width:18px;height:18px;border-radius:999px;
+  background:rgba(140,110,255,0.95);
+  border:2px solid rgba(12,12,22,0.9);
+  box-shadow:0 0 0 4px rgba(140,110,255,0.18);
+}
+.ranked-accounts-page .shop-range__track{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);height:6px;border-radius:999px;background:rgba(255,255,255,0.12);}
+.ranked-accounts-page .shop-range__fill{position:absolute;top:0;height:6px;border-radius:999px;background:rgba(140,110,255,0.95);}
+.ranked-accounts-page .shop-price__labels{display:flex;justify-content:space-between;opacity:.85;font-weight:800;}
+
+/* Active filter chips */
+.ranked-accounts-page .shop-filterbar__chips{
+  margin-top:10px;
+  display:flex;gap:8px;overflow:auto;
+  padding-bottom:4px;
+}
+.ranked-accounts-page .shop-filterbar__chips::-webkit-scrollbar{height:6px;}
+.ranked-accounts-page .shop-filterbar__chips::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.18);border-radius:999px;}
+.ranked-accounts-page .filter-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 10px;border-radius:999px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.10);
+  color:rgba(255,255,255,0.92);
+  white-space:nowrap;
+}
+.ranked-accounts-page .filter-chip:hover{border-color:rgba(140,110,255,0.35);}
+.ranked-accounts-page .filter-chip__x{opacity:.85;}
+.ranked-accounts-page .active-filters__hint{opacity:.7;white-space:nowrap;}
+
+/* Toolbar */
+.ranked-accounts-page .shop-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 10px;}
+.ranked-accounts-page .shop-count{opacity:.85;font-weight:800;}
+.ranked-accounts-page .shop-count__sep{opacity:.5;padding:0 6px;}
+
+/* Sort + density */
+.ranked-accounts-page .shop-sort{position:relative;}
+.ranked-accounts-page .shop-sort__btn,
+.ranked-accounts-page .reset-filters--ghost{
+  display:flex;align-items:center;gap:10px;
+  height:44px;padding:0 14px;border-radius:999px;
+  background:rgba(0,0,0,0.18);
+  border:1px solid rgba(255,255,255,0.08);
+  color:rgba(255,255,255,0.92);
+}
+
+/* Clear button: solid primary background */
+.ranked-accounts-page .reset-filters--ghost{
+  background:#6366f1;
+  border-color:rgba(99,102,241,0.65);
+}
+.ranked-accounts-page .reset-filters--ghost:hover{
+  filter:brightness(1.05);
+  border-color:rgba(99,102,241,0.85);
+}
+.ranked-accounts-page .shop-sort__btn:hover{
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.14);
+}
+.ranked-accounts-page .shop-sort__btn:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.25);
+}
+
+.ranked-accounts-page #ddSort.shop-dropdown{width:260px;}
+
+/* ddSort: padding inside body (so the header can stay flush) */
+.ranked-accounts-page #ddSort .shop-dropdown__body{padding:10px;}
+.ranked-accounts-page .shop-menuitem{
+  width:100%;text-align:left;background:transparent;border:0;
+  color:rgba(255,255,255,0.92);
+  padding:10px 10px;border-radius:10px;
+}
+.ranked-accounts-page .shop-menuitem:hover{background:rgba(255,255,255,0.06);}
+
+/* Pagination */
+.ranked-accounts-page .shop-pagination{display:flex;justify-content:center;margin:24px 0 40px;}
+.ranked-accounts-page .page-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.ranked-accounts-page .page-btn{
+  min-width:40px;height:40px;padding:0 12px;border-radius:12px;
+  background:rgba(0,0,0,0.18);
+  border:1px solid rgba(255,255,255,0.10);
+  color:rgba(255,255,255,0.92);
+  font-weight:800;
+}
+.ranked-accounts-page .page-btn:hover{border-color:rgba(140,110,255,0.35);}
+.ranked-accounts-page .page-btn.is-active{background:rgba(140,110,255,0.22);border-color:rgba(140,110,255,0.45);}
+.ranked-accounts-page .page-btn.is-disabled{opacity:.45;cursor:not-allowed;}
+.ranked-accounts-page .page-ellipsis{opacity:.6;padding:0 4px;}
+
+/* Density toggle (uses .container.density-compact from JS) */
+.ranked-accounts-page .container.density-compact .account-card .excerpt{display:none !important;}
+.ranked-accounts-page .container.density-compact .account-card .highlights{display:none !important;}
+.ranked-accounts-page .container.density-compact .account-card{padding-bottom:10px;}
+
+
+/* v7.2 More Filters polish */
+@media (min-width: 900px){
+  .ranked-accounts-page #ddMore .shop-dropdown__grid{column-gap:26px;}
+  .ranked-accounts-page #ddMore .shop-dropdown__grid .shop-dropdown__group:nth-child(2){
+    padding-left:18px;
+    border-left:1px solid rgba(255,255,255,0.08);
+  }
+}
+.ranked-accounts-page #ddMore .shop-check{height:44px;padding:0 10px;border-radius:12px;}
+.ranked-accounts-page #ddMore .shop-check:hover{background:rgba(255,255,255,0.06);}
+
+/* v7.4 UI hotfixes */
+.ranked-accounts-page .shop-filterpill,
+.ranked-accounts-page .shop-sort{z-index:100000;}
+.ranked-accounts-page .shop-dropdown{z-index:100001;}
+
+/* Range slider alignment + smoother drag */
+.ranked-accounts-page .shop-range{height:26px;}
+.ranked-accounts-page .shop-range__track,
+.ranked-accounts-page .shop-range__fill{
+  top:50%;
+  transform:translateY(-50%);
+}
+.ranked-accounts-page .shop-range input[type=range]{
+  top:50%;
+  transform:translateY(-50%);
+  touch-action:none;
+}
+.ranked-accounts-page .shop-range input[type=range]::-webkit-slider-thumb{margin-top:0;}
+
+
+/* Dropdowns must overlay everything (incl. toolbar "Recommended" sort button) */
+.ranked-accounts-page .shop-dropdown,
+.ranked-accounts-page .shop-sort__menu{
+  z-index: 1000002 !important;
+}
+.ranked-accounts-page .shop-filterpill,
+.ranked-accounts-page .shop-sort{
+  z-index: 1000001 !important;
+}
+
+/* Ensure the content below never sits above the filter dropdowns */
+.ranked-accounts-page .shop-toolbar{
+  position: relative;
+  z-index: 1;
+}
+
+/* Range: ensure visual track is centered and thumbs sit on it */
+.ranked-accounts-page .shop-range{
+  position: relative;
+  height: 38px;
+}
+
+/* Center the visible track */
+.ranked-accounts-page .shop-range__track{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10) !important;
+}
+
+/* Fill sits inside the track */
+.ranked-accounts-page .shop-range__track .shop-range__fill,
+.ranked-accounts-page .shop-range__fill{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100% !important;
+  border-radius: inherit;
+  background: rgba(140,110,255,0.90) !important;
+}
+
+/* Ensure native range track is centered with the same height */
+.ranked-accounts-page .shop-range input[type=range]::-webkit-slider-runnable-track{
+  height: 6px;
+  background: transparent;
+}
+.ranked-accounts-page .shop-range input[type=range]::-moz-range-track{
+  height: 6px;
+  background: transparent;
+}
+
+/* Thumb centered on a 6px track: (6-22)/2 = -8px */
+.ranked-accounts-page .shop-range input[type=range]::-webkit-slider-thumb{
+  margin-top: -8px !important;
+}
+
+/* Extra: make thumb easier to grab without changing visuals too much */
+.ranked-accounts-page .shop-range input[type=range]::-webkit-slider-thumb,
+.ranked-accounts-page .shop-range input[type=range]::-moz-range-thumb{
+  width: 22px;
+  height: 22px;
+}
+
+/* ---------- Rank icons (real images) ---------- */
+.ranked-accounts-page .facet-item__rank{
+  width:24px;
+  height:24px;
+  object-fit:contain;
+  flex:0 0 auto;
+  opacity:.95;
+}
+
+
+
+/* Rank icons inside active filter chips */
+.filter-chip__icon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;flex:0 0 auto;}
+.filter-chip__icon img{width:100%;height:100%;object-fit:contain;}
+/* More Filters drilldown */
+.ranked-accounts-page #ddMore.shop-dropdown{
+  width: 340px;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100vh - 140px);
+  overflow: hidden;
+}
+.ranked-accounts-page #ddMore .shop-dropdown__body{
+  padding: 10px;
+  max-height: calc(100vh - 140px - 56px);
+  overflow: hidden;
+}
+
+/* Views */
+.ranked-accounts-page #ddMore .mf-view{display:none;}
+.ranked-accounts-page #ddMore .mf-view.is-active{display:block;}
+
+/* Menu */
+.ranked-accounts-page #ddMore .mf-menu{display:flex;flex-direction:column;gap:8px;}
+.ranked-accounts-page #ddMore .mf-menuitem{
+  display:flex;align-items:center;gap:10px;
+  width:100%;
+  padding:12px 12px;
+  border-radius:12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.92);
+  cursor:pointer;
+}
+.ranked-accounts-page #ddMore .mf-menuitem:hover{background: rgba(255,255,255,0.09);}
+.ranked-accounts-page #ddMore .mf-menuitem__left{width:22px;display:inline-flex;justify-content:center;opacity:.9;}
+.ranked-accounts-page #ddMore .mf-menuitem__label{flex:1;text-align:left;font-weight:600;}
+.ranked-accounts-page #ddMore .mf-menuitem__right{opacity:.65;}
+
+/* Panel */
+.ranked-accounts-page #ddMore .mf-panelhead{
+  display:flex;align-items:center;gap:10px;
+  padding: 8px 8px 12px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  margin: -2px -2px 10px;
+}
+.ranked-accounts-page #ddMore .mf-back{
+  width:34px;height:34px;border-radius:10px;
+  background: rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.92);
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.ranked-accounts-page #ddMore .mf-title{font-weight:700;flex:1;text-align:center;margin-right:34px;}
+.ranked-accounts-page #ddMore .mf-panelbody{
+  max-height: calc(100vh - 140px - 56px - 56px);
+  overflow: auto;
+  padding-right: 2px;
+}
+.ranked-accounts-page #ddMore .mf-hint,
+.ranked-accounts-page #ddMore .mf-empty{
+  font-size:12px;opacity:.75;margin-top:10px;line-height:1.35;
+}
+
+
+
+/* ddMore: keep dropdown out of normal flow (prevents big empty gap when closed) */
+#ddMore.shop-dropdown{
+  position: absolute;
+  left: auto;
+  top: calc(100% + 10px);
+  transform: none;
+  max-height: none;
+}
+#ddMore.shop-dropdown:not(.is-open){ display:none; }
+#ddMore.shop-dropdown.is-open{ display:block; }
+
+/* ensure ddMore scroll happens inside panel only when open */
+#ddMore.shop-dropdown.is-open{
+  max-height: calc(100vh - 140px);
+  overflow: hidden;
+}
+#ddMore.shop-dropdown.is-open .shop-dropdown__body{
+  max-height: calc(100vh - 140px - 56px);
+  overflow: hidden;
+}
+
+/* ===== Sort Dropdown – Optik ===== */
+.ranked-accounts-page #ddSort.shop-dropdown{
+  width: 260px;
+  padding: 0;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(18, 18, 28, .78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+}
+
+/* optional: Header "Sort By" schöner */
+.ranked-accounts-page #ddSort .shop-dropdown__section-title{
+  margin: 2px 6px 8px;
+  font-size: 12px;
+  letter-spacing: .02em;
+  color: rgba(255,255,255,.72);
+}
+
+/* Liste/Items */
+.ranked-accounts-page #ddSort .shop-dropdown__item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: rgba(255,255,255,.88);
+  transition: background .15s ease, transform .12s ease;
+}
+
+/* Icon links gleich breit (saubere Ausrichtung) */
+.ranked-accounts-page #ddSort .shop-dropdown__item i{
+  width: 18px;
+  text-align: center;
+  opacity: .9;
+}
+
+/* Hover */
+.ranked-accounts-page #ddSort .shop-dropdown__item:hover{
+  background: rgba(255,255,255,.06);
+}
+
+/* Active/Selected (falls du eine Klasse setzt) */
+.ranked-accounts-page #ddSort .shop-dropdown__item.is-active,
+.ranked-accounts-page #ddSort .shop-dropdown__item[aria-current="true"]{
+  background: rgba(99,102,241,.18);
+  border: 1px solid rgba(99,102,241,.28);
+}
+
+/* Trennlinie (falls du Divider nutzt) */
+.ranked-accounts-page #ddSort .shop-dropdown__divider{
+  height: 1px;
+  background: rgba(255,255,255,.08);
+  margin: 8px 6px;
+}
+
+/* ===== Mobile: Dropdowns wirklich über allem + Backdrop ===== */
+@media (max-width: 768px){
+  body.filter-dd-open::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.90);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000000;
+    pointer-events: auto;
+  }
+
+  /* Dropdown selbst über dem Backdrop */
+  .ranked-accounts-page .shop-dropdown{
+    z-index: 1000001 !important;
+  }
+
+  /* Navbar hinter Backdrop schieben wenn Filter offen */
+  body.filter-dd-open .navbar-mobile,
+  body.filter-dd-open .navbar-top {
+    z-index: 999 !important;
+  }
+
+  /* wenn geöffnet: fullscreen sheet */
+  .ranked-accounts-page .shop-dropdown.is-open{
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    top: calc(env(safe-area-inset-top, 0px) + 12px) !important;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 12px) !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+
+  /* Body scroll sperren */
+  body.filter-dd-open{
+    overflow: hidden !important;
+    touch-action: none;
+  }
+
+  /* Inhalt scrollt innerhalb des Sheets */
+  .ranked-accounts-page .shop-dropdown.is-open .shop-dropdown__body{
+    height: 100% !important;
+    max-height: 100% !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Head sticky innerhalb des Sheets */
+  .ranked-accounts-page .shop-dropdown.is-open .shop-dropdown__head{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: inherit;
+    backdrop-filter: inherit;
+    -webkit-backdrop-filter: inherit;
+  }
+}
+
+@media (max-width: 768px){
+  .ranked-accounts-page .shop-dropdown.is-open{
+    background: rgba(18, 18, 28, .95) !important;
+  }
+  .ranked-accounts-page .shop-dropdown.is-open .shop-dropdown__head{
+    background: rgba(18, 18, 28, .98) !important;
+  }
+  .ranked-accounts-page .shop-dropdown.is-open .shop-dropdown__close{
+    z-index: 1000002 !important;
+    pointer-events: auto !important;
+  }
+}
+
+@media (max-width: 768px){
+  .ranked-accounts-page .shop-dropdown.is-open{
+    background: rgba(10, 10, 16, .98) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .ranked-accounts-page .shop-dropdown.is-open .shop-dropdown__head{
+    background: rgba(10, 10, 16, .98) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+@media (max-width: 768px){
+  .ranked-accounts-page .shop-dropdown.is-portal{
+    position: fixed !important;
+    z-index: 1000001 !important;
+  }
+}
+
+/* ===== Desktop: mehr Filter in einer Zeile, Suche kompakter ===== */
+@media (min-width: 1100px){
+  .ranked-accounts-page .shop-filterbar__row{
+    flex-wrap: nowrap; /* vorher wrap */
+    align-items: center;
+  }
+
+  /* Suchfeld kleiner */
+  .ranked-accounts-page .shop-filterbar__search{
+    flex: 0 0 220px;
+    min-width: 180px;
+  }
+
+  /* Pills etwas kompakter, damit mehr nebeneinander passt */
+  .ranked-accounts-page .shop-filterpill__btn{
+    padding: 0 12px;
+  }
+}
+
+/* ===== Tablet/Mobil: wieder wrappen, damit nichts gequetscht aussieht ===== */
+@media (max-width: 1099px){
+  .ranked-accounts-page .shop-filterbar__row{
+    flex-wrap: wrap;
+  }
+}
+
+.ranked-accounts-page .shop-toolbar__right{display:none;}
+
+
+/* Actions alignment: Clear zwischen Filtern & Sort, Sort ganz rechts */
+.ranked-accounts-page .shop-filterbar__actions{display:flex;align-items:center;gap:10px;}
+.ranked-accounts-page .shop-filterbar__actions .shop-sort{margin-left:auto;}
+
+/* Aktive Filter-Chips immer unter der Leiste */
+.ranked-accounts-page .shop-filterbar__chips{width:100%;}
+
+
+
+.ranked-accounts-page .shop-filterbar__row{
+  width:100%;
+}
+
+.ranked-accounts-page .shop-filterbar__chips{
+  width:100%;
+  margin-top:8px;
+  order: 2; /* ensure it's after the row */
+}
+
+
+/* Safety: Active Filters should always start on a new line */
+.ranked-accounts-page .shop-filterbar__chips{
+  display:flex;
+  flex-basis: 100%;
+}
+
+
+/* Final alignment */
+.ranked-accounts-page .shop-filterbar__actions{display:flex;align-items:center;gap:10px;}
+.ranked-accounts-page .shop-filterbar__actions .shop-sort{margin-left:auto;}
+.ranked-accounts-page .shop-filterbar__chips{width:100%;margin-top:8px;display:flex;gap:8px;overflow:auto;padding-bottom:4px;}
+
+
+/* Disable sticky filterbar */
+.ranked-accounts-page .shop-filterbar--sticky{
+  position: relative !important;
+  top: auto !important;
+}
+
+
+/* Facet list: server flag icons */
+.ranked-accounts-page .facet-item__flag{
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  object-fit: cover;
+  flex: 0 0 18px;
+}
+
+
+/* Facet list: server text badges */
+.ranked-accounts-page .facet-item__badge{
+  height: 18px;
+  min-width: 28px;
+  padding: 0 8px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  flex: 0 0 auto;
+  line-height: 1;
+}
+
+
+/* Filter pill: image icon */
+.ranked-accounts-page .shop-filterpill__iconimg{
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  margin-right: 8px;
+  filter: grayscale(1) brightness(2);
+  opacity: .9;
+}
+
+
+
+/* Facet list: role icons */
+.ranked-accounts-page .facet-item__role{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex: 0 0 18px;
+  filter: grayscale(1) brightness(2);
+  opacity: 0.9;
+}
+
+
+
+/* Filter pill: FontAwesome icon (Roles) */
+.ranked-accounts-page .shop-filterpill__iconfa{
+  font-size: 14px;
+  margin-right: 8px;
+  opacity: .9;
+}
+
+
+/* Desktop: Clear Button breiter */
+@media (min-width: 1100px){
+  .ranked-accounts-page .shop-filterbar__actions .reset-filters.reset-filters--ghost{
+    padding-left: 22px;
+    padding-right: 22px;
+    min-width: 92px;   /* optional: feste Mindestbreite */
+  }
+}
+
+@media (min-width: 1100px){
+  .ranked-accounts-page .shop-filterbar__actions .reset-filters.reset-filters--ghost{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Text mittig */
+    text-align: center;
+  }
+}
+
+
+/* Empty state (no results) */
+.ranked-accounts-page .shop-empty{
+  width:100%;
+  padding:36px 0 20px;
+}
+.ranked-accounts-page .shop-empty__inner{
+  max-width:560px;
+  margin:0 auto;
+  text-align:center;
+  padding:22px 18px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+.ranked-accounts-page .shop-empty__emoji{
+  font-size:34px;
+  margin-bottom:10px;
+}
+.ranked-accounts-page .shop-empty__title{
+  font-weight:800;
+  font-size:18px;
+  margin-bottom:6px;
+}
+.ranked-accounts-page .shop-empty__text{
+  opacity:.8;
+  font-size:13px;
+  line-height:1.35;
+  margin-bottom:14px;
+}
+.ranked-accounts-page .shop-empty__actions{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.ranked-accounts-page .shop-empty__btn{
+  height:40px;
+  padding:0 14px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.06);
+  color:inherit;
+  cursor:pointer;
+}
+.ranked-accounts-page .shop-empty__btn--primary{
+  background:rgba(99,102,241,0.25);
+  border-color:rgba(99,102,241,0.45);
+}
+.ranked-accounts-page .shop-empty__btn--ghost{
+  background:rgba(255,255,255,0.04);
+}
+
+/* ===== Desktop Filterbar Harmonization (auto) ===== */
+@media (min-width: 1100px){
+  /* Make the filter row feel like one unified surface */
+  .ranked-accounts-page .shop-filterbar__row{
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* Normalize pill/button heights */
+  .ranked-accounts-page .shop-filterpill__btn,
+  .ranked-accounts-page .shop-sort__btn{
+    height: 46px;
+  }
+
+  /* Normalize search height if present */
+  .ranked-accounts-page .shop-filterbar__search{
+    height: 46px;
+  }
+}
+
+/* Hide "More Filters" for now (feature not shipped yet) */
+.ranked-accounts-page .shop-filterpill[data-dropdown="ddMore"],
+.ranked-accounts-page #ddMore{
+  display: none !important;
+}
+
+/* Make Clear button larger & more prominent */
+.ranked-accounts-page .reset-filters--ghost{
+  height: 48px;
+  padding: 0 22px;
+  font-weight: 900;
+  letter-spacing: .01em;
+  background: linear-gradient(135deg,#6366f1 0%, #8b5cf6 100%);
+  border-color: rgba(99,102,241,0.75);
+  box-shadow: 0 14px 34px rgba(99,102,241,0.28);
+}
+
+.ranked-accounts-page .reset-filters--ghost:hover{
+  box-shadow: 0 18px 44px rgba(99,102,241,0.34);
+}
+/* ===== End Desktop Filterbar Harmonization (auto) ===== */
+
+
+/* ===== Grouped active filter chips ===== */
+.ranked-accounts-page .filter-chip__icon{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.ranked-accounts-page .filter-chip__icon svg{display:block;}
+
+
+/* ===== Active filter chip FA icon alignment ===== */
+.ranked-accounts-page .filter-chip__icon i.shop-filterpill__iconfa{
+  font-size: 14px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+/* ===== UI polish: calmer active chips + clearer hierarchy ===== */
+
+/* Active filter chips: make them visually secondary */
+.ranked-accounts-page #activeFilters{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ranked-accounts-page .filter-chip{
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.86);
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.ranked-accounts-page .filter-chip:hover{
+  background: rgba(255,255,255,0.055);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.ranked-accounts-page .filter-chip__x{
+  opacity: .7;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.ranked-accounts-page .filter-chip__icon{
+  opacity: .9;
+  margin-right: 8px;
+}
+
+.ranked-accounts-page .filter-chip__icon i.shop-filterpill__iconfa{
+  font-size: 13px;
+}
+
+/* Desktop: make Search feel like the primary entry */
+@media (min-width: 1100px){
+  .ranked-accounts-page .shop-filterbar__search{
+    width: 320px;
+    min-width: 320px;
+  }
+}
+
+/* Sort button: slightly more "tertiary" so Clear stays dominant */
+.ranked-accounts-page .shop-sort__btn{
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.07);
+}
+
+.ranked-accounts-page .shop-sort__btn:hover{
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.10);
+}
+
+/* Clear button: keep prominent, but communicate "reset" on hover */
+.ranked-accounts-page .reset-filters--ghost{
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+
+.ranked-accounts-page .reset-filters--ghost:hover{
+  transform: translateY(-1px);
+  filter: saturate(1.08);
+}
+
+
+/* ===== Fix v3: keep dropdowns working + remove vertical scrollbar ===== */
+/* Important: dropdown menus need overflow visible on the filter row */
+.ranked-accounts-page .shop-filterbar,
+.ranked-accounts-page .shop-filterbar__row{
+  overflow: visible !important;
+}
+
+/* The active-chips strip should only scroll horizontally (never vertically) */
+.ranked-accounts-page .shop-filterbar__chips{
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide the scrollbar track if it appears, but keep horizontal scroll working */
+.ranked-accounts-page .shop-filterbar__chips{
+  scrollbar-width: none; /* Firefox */
+}
+.ranked-accounts-page .shop-filterbar__chips::-webkit-scrollbar{
+  height: 0;
+}
+
+
+/* ===== Mobile filterbar layout (grid + full-width controls) ===== */
+@media (max-width: 768px){
+  .ranked-accounts-page .shop-filterbar__row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .ranked-accounts-page .shop-filterbar__search{
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    flex: none;
+  }
+
+  .ranked-accounts-page .shop-filterpill{
+    width: 100%;
+  }
+  .ranked-accounts-page .shop-filterpill__btn{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Actions row: Clear + Sort side-by-side, full width */
+  .ranked-accounts-page .shop-filterbar__actions{
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .ranked-accounts-page .reset-filters--ghost{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ranked-accounts-page .shop-sort{
+    width: 100%;
+  }
+  .ranked-accounts-page .shop-sort__btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Active chips: wrap nicely (no tiny scrollbar on mobile) */
+  .ranked-accounts-page .shop-filterbar__chips{
+    overflow: visible;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* ===== Pagination (Ranked Accounts) – match Blog Pagination look ===== */
+.ranked-accounts-page .shop-pagination{
+  margin-top: 2.083vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ranked-accounts-page .page-bar{
+  display: flex;
+  align-items: center;
+  gap: 0.521vw;
+  flex-wrap: wrap;
+}
+
+.ranked-accounts-page .page-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.604vw;
+  height: 2.604vw;
+  padding: 0 0.781vw;
+
+  border: 0.104vw solid rgba(114,110,142,0.2);
+  border-radius: 0.625vw;
+
+  background: transparent;
+  color: #726e8e;
+  font-weight: 500;
+  font-size: 0.95vw;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ranked-accounts-page .page-btn:hover{
+  border-color: #6366f1;
+  color: #6366f1;
+  background-color: rgba(99,102,241,0.1);
+}
+
+.ranked-accounts-page .page-btn.is-active{
+  background-color: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+  pointer-events: none;
+}
+
+.ranked-accounts-page .page-btn.is-disabled{
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.ranked-accounts-page .page-btn.is-nav{
+  font-weight: 600;
+  font-size: 0.9vw;
+}
+
+.ranked-accounts-page .page-ellipsis{
+  opacity: 0.6;
+  padding: 0 0.4vw;
+}
+
+
+/* ===== Navbar über/unter Filter-Dropdown ===== */
+/* Wenn ein Filter-Dropdown offen ist: Navbar hinter das Dropdown schieben.
+   Gilt fuer beide: Mobile (navbar-mobile) und Desktop (navbar-top).
+   Verhindert dass der sticky/fixed Header das Dropdown überdeckt. */
+body.filter-dd-open .navbar-mobile,
+body.filter-dd-open .navbar-top {
+  z-index: 999 !important;
+}
+
+
+/* Final mobile filter override, use existing desktop filters, only expose mobile search and filter opener */
+.lb-mobile-filter-trigger,
+.lb-mobile-filter-sheet-head{display:none!important;}
+
+@media (min-width:768px){
+  body.ranked-accounts-page.lb-shop-filters-open{overflow:auto!important;}
+  body.ranked-accounts-page.lb-shop-filters-open::before{display:none!important;}
+  body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar{position:relative!important;inset:auto!important;pointer-events:auto!important;}
+  body.ranked-accounts-page.lb-shop-filters-open #shopFilters{position:static!important;max-height:none!important;overflow:visible!important;padding:0!important;border-radius:0!important;background:transparent!important;border:0!important;box-shadow:none!important;}
+}
+
+@media (max-width:767px){
+  body.ranked-accounts-page #shopFilterbar.shop-filterbar{position:sticky!important;top:0!important;z-index:250!important;margin:0 -16px 14px!important;padding:12px 16px 10px!important;background:#0b0e16!important;border-bottom:1px solid rgba(255,255,255,.075)!important;box-shadow:0 10px 26px rgba(0,0,0,.26)!important;}
+  body.ranked-accounts-page .shop-filterbar__row{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:12px!important;width:100%!important;padding:0!important;margin:0!important;background:transparent!important;border:0!important;}
+  body.ranked-accounts-page .shop-filterbar__search{flex:1 1 auto!important;min-width:0!important;width:auto!important;height:50px!important;border-radius:7px!important;background:#0f131d!important;border:1px solid rgba(255,255,255,.105)!important;box-shadow:none!important;}
+  body.ranked-accounts-page .lb-mobile-filter-trigger{display:inline-flex!important;flex:0 0 auto!important;min-width:78px!important;height:50px!important;padding:0!important;border-radius:0!important;border:0!important;background:transparent!important;color:#fff!important;align-items:center!important;justify-content:center!important;gap:8px!important;font-size:15px!important;font-weight:850!important;}
+  body.ranked-accounts-page #shopFilterbar .shop-filterpill,
+  body.ranked-accounts-page #shopFilterbar .shop-filterbar__actions{display:none!important;}
+  body.ranked-accounts-page #activeFilters.shop-filterbar__chips{display:none!important;}
+  body.ranked-accounts-page.lb-shop-filters-open{overflow:hidden!important;}
+  body.ranked-accounts-page.lb-shop-filters-open::before{content:""!important;position:fixed!important;inset:0!important;z-index:99970!important;background:rgba(0,0,0,.58)!important;backdrop-filter:blur(4px)!important;}
+  body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar{position:fixed!important;inset:0!important;z-index:99980!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;pointer-events:none!important;}
+  body.ranked-accounts-page.lb-shop-filters-open #shopFilters{position:absolute!important;left:0!important;right:0!important;bottom:0!important;max-height:88vh!important;overflow-y:auto!important;overscroll-behavior:contain!important;pointer-events:auto!important;padding:12px 16px 24px!important;border-radius:24px 24px 0 0!important;background:#0b0e16!important;border:1px solid rgba(255,255,255,.10)!important;box-shadow:0 -24px 60px rgba(0,0,0,.55)!important;}
+  body.ranked-accounts-page.lb-shop-filters-open .lb-mobile-filter-sheet-head{display:flex!important;}
+  body.ranked-accounts-page.lb-shop-filters-open .shop-filterbar__search,
+  body.ranked-accounts-page.lb-shop-filters-open .lb-mobile-filter-trigger{display:none!important;}
+  body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar .shop-filterpill,
+  body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar .shop-filterbar__actions{display:block!important;}
+}
+
+
+/* ===== Mobile GameBoost filter final ===== */
+@media (min-width: 768px){
+  html body.ranked-accounts-page .lb-mobile-filter-trigger,
+  html body.ranked-accounts-page .lb-mobile-filter-sheet-head,
+  html body.ranked-accounts-page .lb-mobile-sort-section{
+    display:none !important;
+    visibility:hidden !important;
+    height:0 !important;
+    overflow:hidden !important;
+  }
+}
+
+@media (max-width: 767px){
+  html body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar .shop-filterbar__actions,
+  html body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar .reset-filters,
+  html body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar .shop-sort,
+  html body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar #ddSort,
+  html body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar .shop-filterpill[data-dropdown="ddMore"],
+  html body.ranked-accounts-page.lb-shop-filters-open #shopFilterbar #ddMore{
+    display:none !important;
+  }
+  html body.ranked-accounts-page .lb-mobile-sort-section{
+    display:none !important;
+  }
+  html body.ranked-accounts-page.lb-shop-filters-open .lb-mobile-sort-section{
+    display:block !important;
+    margin:0 0 22px !important;
+  }
+}
+
+
+/* ===== Mobile polish: Lolboost search/filter bar + clear filters CTA ===== */
+@media (max-width: 767px){
+  html body.ranked-accounts-page #shopFilterbar.shop-filterbar{
+    padding:12px 14px 11px!important;
+    background:linear-gradient(180deg,#0c0f19 0%,#090c14 100%)!important;
+    border-bottom:1px solid rgba(118,103,255,.18)!important;
+    box-shadow:0 14px 34px rgba(0,0,0,.38)!important;
+  }
+
+  html body.ranked-accounts-page #shopFilterbar .shop-filterbar__row{
+    gap:10px!important;
+  }
+
+  html body.ranked-accounts-page #shopFilterbar .shop-filterbar__search{
+    height:50px!important;
+    border-radius:10px!important;
+    padding:0 15px!important;
+    background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))!important;
+    border:1px solid rgba(255,255,255,.10)!important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 8px 20px rgba(0,0,0,.18)!important;
+  }
+
+  html body.ranked-accounts-page #shopFilterbar .shop-filterbar__search:focus-within{
+    border-color:rgba(113,97,255,.62)!important;
+    box-shadow:0 0 0 3px rgba(113,97,255,.16),inset 0 1px 0 rgba(255,255,255,.04)!important;
+  }
+
+  html body.ranked-accounts-page #shopFilterbar .shop-filterbar__search i{
+    color:rgba(255,255,255,.68)!important;
+    font-size:16px!important;
+  }
+
+  html body.ranked-accounts-page #shopFilterbar .shop-filterbar__search input{
+    color:#fff!important;
+    font-size:15px!important;
+    font-weight:650!important;
+  }
+
+  html body.ranked-accounts-page #shopFilterbar .shop-filterbar__search input::placeholder{
+    color:rgba(255,255,255,.46)!important;
+    font-weight:600!important;
+  }
+
+  html body.ranked-accounts-page #shopFilterbar .lb-mobile-filter-trigger{
+    height:50px!important;
+    min-width:96px!important;
+    padding:0 14px!important;
+    border-radius:12px!important;
+    background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025))!important;
+    border:1px solid rgba(255,255,255,.10)!important;
+    color:#fff!important;
+    font-size:15px!important;
+    font-weight:900!important;
+    letter-spacing:.01em!important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 8px 20px rgba(0,0,0,.20)!important;
+  }
+
+  html body.ranked-accounts-page #shopFilterbar .lb-mobile-filter-trigger i{
+    color:#8b7cff!important;
+    font-size:16px!important;
+    filter:drop-shadow(0 0 10px rgba(139,124,255,.45))!important;
+  }
+
+  html body.ranked-accounts-page #shopFilterbar .lb-mobile-filter-trigger:active{
+    transform:translateY(1px)!important;
+  }
+
+  html body.ranked-accounts-page.lb-shop-filters-open #shopFilters{
+    background:linear-gradient(180deg,#0d1018 0%,#080b12 100%)!important;
+    border-color:rgba(118,103,255,.22)!important;
+  }
+
+  html body.ranked-accounts-page.lb-shop-filters-open .lb-mobile-filter-sheet-head{
+    align-items:center!important;
+    gap:10px!important;
+    margin:0 0 22px!important;
+    padding:0 0 4px!important;
+  }
+
+  html body.ranked-accounts-page.lb-shop-filters-open .lb-mobile-filter-sheet-title{
+    flex:1 1 auto!important;
+    font-size:23px!important;
+    font-weight:950!important;
+    color:#fff!important;
+    letter-spacing:-.02em!important;
+  }
+
+  html body.ranked-accounts-page.lb-shop-filters-open .lb-mobile-filter-sheet-clear{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    height:36px!important;
+    padding:0 13px!important;
+    border-radius:999px!important;
+    background:rgba(139,124,255,.14)!important;
+    border:1px solid rgba(139,124,255,.32)!important;
+    color:#c7c2ff!important;
+    font-size:12px!important;
+    font-weight:900!important;
+    line-height:1!important;
+    white-space:nowrap!important;
+    text-shadow:none!important;
+  }
+
+  html body.ranked-accounts-page.lb-shop-filters-open .lb-mobile-filter-sheet-clear::before{
+    content:"\f2ed"!important;
+    font-family:"Font Awesome 6 Pro","Font Awesome 6 Free"!important;
+    font-weight:900!important;
+    margin-right:7px!important;
+    font-size:11px!important;
+  }
+
+  html body.ranked-accounts-page.lb-shop-filters-open .lb-mobile-filter-sheet-clear:active{
+    transform:translateY(1px)!important;
+  }
+
+  html body.ranked-accounts-page.lb-shop-filters-open .lb-mobile-filter-sheet-close{
+    width:40px!important;
+    height:40px!important;
+    border-radius:13px!important;
+    background:rgba(255,255,255,.06)!important;
+    border:1px solid rgba(255,255,255,.12)!important;
+    color:#fff!important;
+  }
+}
+
+
+/* ===== Mobile scroll unlock final ===== */
+@media (max-width: 767px){
+  html,
+  body.ranked-accounts-page{
+    height:auto!important;
+    min-height:100%!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    touch-action:auto!important;
+    overscroll-behavior-y:auto!important;
+  }
+
+  body.ranked-accounts-page:not(.lb-shop-filters-open){
+    position:static!important;
+    height:auto!important;
+    overflow-y:auto!important;
+    touch-action:auto!important;
+  }
+
+  body.ranked-accounts-page:not(.lb-shop-filters-open)::before{
+    display:none!important;
+    content:none!important;
+    pointer-events:none!important;
+  }
+
+  body.ranked-accounts-page .page-zoom,
+  body.ranked-accounts-page main,
+  body.ranked-accounts-page .container{
+    height:auto!important;
+    min-height:0!important;
+    overflow:visible!important;
+  }
+}
+
+/* LoLBoost shop filterbar redesign, final layer */
+body.ranked-accounts-page .shop-filterbar{
+  margin:0 0 24px!important;
+  padding:12px!important;
+  border:1px solid rgba(255,255,255,.085)!important;
+  border-radius:20px!important;
+  background:rgba(9,12,28,.82)!important;
+  box-shadow:0 16px 45px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.035)!important;
+  backdrop-filter:blur(20px)!important;
+}
+body.ranked-accounts-page .shop-filterbar--sticky{
+  top:var(--lb-sticky-top,110px)!important;
+}
+body.ranked-accounts-page .shop-filterbar__row{gap:8px!important;}
+body.ranked-accounts-page .shop-filterbar__search,
+body.ranked-accounts-page .shop-filterpill__btn,
+body.ranked-accounts-page .shop-sort__btn,
+body.ranked-accounts-page .shop-view-toggle{
+  min-height:43px!important;
+  height:43px!important;
+  border-radius:12px!important;
+  border:1px solid rgba(255,255,255,.075)!important;
+  background:rgba(255,255,255,.045)!important;
+  box-shadow:none!important;
+  color:rgba(245,247,255,.9)!important;
+  backdrop-filter:none!important;
+  transition:border-color .18s ease,background .18s ease,transform .18s ease!important;
+}
+body.ranked-accounts-page .shop-filterbar__search:focus-within,
+body.ranked-accounts-page .shop-filterpill__btn:hover,
+body.ranked-accounts-page .shop-sort__btn:hover{
+  border-color:rgba(124,159,255,.30)!important;
+  background:rgba(79,110,247,.09)!important;
+}
+body.ranked-accounts-page .shop-filterbar__search i,
+body.ranked-accounts-page .shop-filterpill__btn>i:first-child,
+body.ranked-accounts-page .shop-sort__btn>i:first-child{color:#8ea5ff!important;}
+body.ranked-accounts-page .shop-dropdown{
+  margin-top:2px!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  border-radius:16px!important;
+  background:rgba(10,13,30,.98)!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.48)!important;
+  backdrop-filter:blur(22px)!important;
+}
+body.ranked-accounts-page .shop-dropdown__head{
+  padding:14px 15px!important;
+  border-bottom:1px solid rgba(255,255,255,.07)!important;
+}
+body.ranked-accounts-page .facet-item{border-radius:10px!important;}
+body.ranked-accounts-page .facet-item:hover{background:rgba(79,110,247,.09)!important;}
+
+@media(max-width:760px){
+  body.ranked-accounts-page .shop-filterbar{padding:10px!important;border-radius:16px!important;margin-bottom:18px!important;}
+  body.ranked-accounts-page .shop-filterbar__search{flex:1 1 100%!important;min-width:0!important;}
+  body.ranked-accounts-page .shop-filterbar__actions{width:100%!important;margin-left:0!important;display:grid!important;grid-template-columns:1fr 1fr!important;}
+  body.ranked-accounts-page .shop-filterpill{flex:1 1 calc(50% - 4px)!important;}
+  body.ranked-accounts-page .shop-filterpill__btn{width:100%!important;justify-content:center!important;}
+}
+
+/* Final compact filterbar correction */
+.ranked-accounts-page .shop-filterbar{margin-top:0!important;}
+.ranked-accounts-page .shop-filterbar__row{gap:8px!important;}
+.ranked-accounts-page .shop-filterbar__actions{gap:8px!important;}
+.ranked-accounts-page .shop-dropdown{background:#111426!important;border-color:rgba(255,255,255,.09)!important;border-radius:14px!important;box-shadow:0 18px 48px rgba(0,0,0,.42)!important;}
+
+
+/* Readability pass for desktop html zoom 0.88 */
+@media (min-width:768px){
+  body.ranked-accounts-page .shop-filterbar__search input{
+    font-size:15px!important;
+  }
+  body.ranked-accounts-page .shop-filterpill__btn,
+  body.ranked-accounts-page .shop-sort__btn,
+  body.ranked-accounts-page .reset-filters{
+    font-size:14px!important;font-weight:800!important;
+  }
+  body.ranked-accounts-page .shop-filterbar__search i,
+  body.ranked-accounts-page .shop-filterpill__btn i,
+  body.ranked-accounts-page .shop-sort__btn i{
+    font-size:14px!important;
+  }
+  body.ranked-accounts-page .shop-filterbar__search,
+  body.ranked-accounts-page .shop-filterpill__btn,
+  body.ranked-accounts-page .shop-sort__btn,
+  body.ranked-accounts-page .reset-filters{
+    min-height:47px!important;height:47px!important;
+  }
+  body.ranked-accounts-page .shop-dropdown__head span{font-size:15px!important;}
+  body.ranked-accounts-page .facet-search__input,
+  body.ranked-accounts-page .facet-item__text,
+  body.ranked-accounts-page .shop-menuitem,
+  body.ranked-accounts-page .mf-menuitem,
+  body.ranked-accounts-page .mf-title,
+  body.ranked-accounts-page .shop-price__field label,
+  body.ranked-accounts-page .shop-price__input input{
+    font-size:14px!important;
+  }
+  body.ranked-accounts-page .shop-filterbar__chips,
+  body.ranked-accounts-page .shop-filterchip{font-size:13px!important;}
+}

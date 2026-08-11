@@ -1,0 +1,255 @@
+{
+    "dynamic_boosting": true,
+    "game_slug": "marvel-rivals",
+    "source": "gameboost",
+    "banner_path": "\/public\/assets\/website\/images\/boosting\/banners\/marvel-rivals.webp",
+    "game_icon_path": "\/public\/assets\/website\/images\/boosting\/icons\/marvel-rivals.png",
+    "rank_names": {
+        "1": "Bronze",
+        "2": "Silver",
+        "3": "Gold",
+        "4": "Platinum",
+        "5": "Diamond",
+        "6": "Celestial",
+        "7": "Eternity",
+        "8": "Grand Master"
+    },
+    "rank_icons": {
+        "1": "\/public\/assets\/website\/images\/boosting\/ranks\/marvel-rivals\/bronze.webp",
+        "2": "\/public\/assets\/website\/images\/boosting\/ranks\/marvel-rivals\/silver.webp",
+        "3": "\/public\/assets\/website\/images\/boosting\/ranks\/marvel-rivals\/gold.webp",
+        "4": "\/public\/assets\/website\/images\/boosting\/ranks\/marvel-rivals\/platinum.webp",
+        "5": "\/public\/assets\/website\/images\/boosting\/ranks\/marvel-rivals\/diamond.webp",
+        "6": "\/public\/assets\/website\/images\/boosting\/ranks\/marvel-rivals\/celestial.webp",
+        "7": "\/public\/assets\/website\/images\/boosting\/ranks\/marvel-rivals\/eternity.webp",
+        "8": "\/public\/assets\/website\/images\/boosting\/ranks\/marvel-rivals\/grandmaster.webp"
+    },
+    "division_count": 4,
+    "division_names": {
+        "1": "III",
+        "2": "II",
+        "3": "I"
+    },
+    "rank_divs": [],
+    "points_label": "Points",
+    "points_options": {
+        "0-20": "0-20 Points",
+        "21-40": "21-40 Points",
+        "41-60": "41-60 Points",
+        "61-80": "61-80 Points",
+        "81-100": "81-100 Points"
+    },
+    "lp_gain_options": {
+        "auto": "Auto"
+    },
+    "server_options": {
+        "europe": "Europe",
+        "north-america": "North America",
+        "asia": "Asia"
+    },
+    "platform_options": {
+        "pc": "PC",
+        "playstation": "PlayStation",
+        "xbox": "Xbox"
+    },
+    "queue_type_options": {
+        "ranked": "Ranked"
+    },
+    "form_config": {
+        "show_server": true,
+        "show_platform": true,
+        "show_current_points": true,
+        "show_lp_gain": true,
+        "show_queue_type": true,
+        "show_solo_duo": true,
+        "div_order": "desc",
+        "ranks": {
+            "1": "Bronze",
+            "2": "Silver",
+            "3": "Gold",
+            "4": "Platinum",
+            "5": "Diamond",
+            "6": "Celestial",
+            "7": "Eternity",
+            "8": "Grand Master"
+        },
+        "rank_divs": {
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 4,
+            "5": 4,
+            "6": 4,
+            "7": 4,
+            "8": 4
+        },
+        "divisions": 4
+    },
+    "extra": {
+        "is_duo": 0.45,
+        "is_priority": 0.25,
+        "is_streaming": 0.15,
+        "is_solo_only": 0.2
+    },
+    "extra_config": {
+        "is_duo": {
+            "label": "Duo",
+            "icon": "priority.svg",
+            "def": 0.45,
+            "enabled": true,
+            "class": ""
+        },
+        "specific_hero": {
+            "label": "Heroes and Roles Selection",
+            "icon": "priority.svg",
+            "def": 0,
+            "enabled": false,
+            "class": ""
+        },
+        "is_priority": {
+            "label": "Priority Boost Completion",
+            "icon": "priority.svg",
+            "def": 0.25,
+            "enabled": true,
+            "class": ""
+        },
+        "is_streaming": {
+            "label": "Stream Games",
+            "icon": "priority.svg",
+            "def": 0.15,
+            "enabled": true,
+            "class": ""
+        },
+        "is_solo_only": {
+            "label": "Solo Only Queue",
+            "icon": "priority.svg",
+            "def": 0.2,
+            "enabled": true,
+            "class": ""
+        }
+    },
+    "completion_time": 4,
+    "main": {
+        "1": {
+            "1": {
+                "eu": 164,
+                "na": 180
+            },
+            "2": {
+                "eu": 170,
+                "na": 187
+            },
+            "3": {
+                "eu": 235,
+                "na": 258
+            }
+        },
+        "2": {
+            "1": {
+                "eu": 240,
+                "na": 264
+            },
+            "2": {
+                "eu": 244,
+                "na": 268
+            },
+            "3": {
+                "eu": 365,
+                "na": 268
+            }
+        },
+        "3": {
+            "1": {
+                "eu": 371,
+                "na": 268
+            },
+            "2": {
+                "eu": 374,
+                "na": 268
+            },
+            "3": {
+                "eu": 402,
+                "na": 442
+            }
+        },
+        "4": {
+            "1": {
+                "eu": 411,
+                "na": 842
+            },
+            "2": {
+                "eu": 415,
+                "na": 841
+            },
+            "3": {
+                "eu": 765,
+                "na": 842
+            }
+        },
+        "5": {
+            "1": {
+                "eu": 765,
+                "na": 842
+            },
+            "2": {
+                "eu": 790,
+                "na": 841
+            },
+            "3": {
+                "eu": 2993,
+                "na": 3292
+            }
+        },
+        "6": {
+            "1": {
+                "eu": 3029,
+                "na": 3332
+            },
+            "2": {
+                "eu": 3156,
+                "na": 3470
+            },
+            "3": {
+                "eu": 5760,
+                "na": 6336
+            }
+        },
+        "7": {
+            "1": {
+                "eu": 6048,
+                "na": 6653
+            },
+            "2": {
+                "eu": 6157,
+                "na": 6770
+            },
+            "3": {
+                "eu": 9066,
+                "na": 9973
+            }
+        },
+        "8": {
+            "1": {
+                "eu": 3029,
+                "na": 1518
+            },
+            "2": {
+                "eu": 3156,
+                "na": 1479
+            },
+            "3": {
+                "eu": 5760,
+                "na": 1441
+            }
+        }
+    },
+    "service_slug": "rank-boost",
+    "service_name": "Rank Boost",
+    "service_description": "Boost your Marvel Rivals rank today!",
+    "points_min": 0,
+    "points_step": 1,
+    "queue_options": {
+        "standard": "3v3 (Standard)",
+        "competitive": "3v3 (Competitive)"
+    }
+}

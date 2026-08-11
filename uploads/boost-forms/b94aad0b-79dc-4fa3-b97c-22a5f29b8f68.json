@@ -1,0 +1,40 @@
+{
+    "main": {
+        "1": {
+            "eu": 650,
+            "na": 850
+        },
+        "2": {
+            "eu": 850,
+            "na": 1050
+        },
+        "3": {
+            "eu": 1150,
+            "na": 1350
+        },
+        "4": {
+            "eu": 1450,
+            "na": 1650
+        }
+    },
+    "booster": 454,
+    "extra": {
+        "champions": "0.15",
+        "is_duo": "0.50",
+        "is_coaching": "0.20",
+        "is_priority": "0.25",
+        "is_streaming": "0.15",
+        "is_solo_only": "0.20",
+        "is_undercover_winrate": "0.40",
+        "is_moderate_kda": "0.30"
+    },
+    "options": {
+        "opt-duo": "is_duo",
+        "opt-champions": "champions",
+        "opt-priority": "is_priority",
+        "opt-coaching": "is_coaching",
+        "opt-streaming": "is_streaming",
+        "opt-solo-only": "is_solo_only"
+    },
+    "completion_time": 1
+}

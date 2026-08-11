@@ -1,0 +1,467 @@
+{
+  "dynamic_boosting": true,
+  "game_slug": "rocket-league",
+  "source": "gameboost",
+  "banner_path": "/public/assets/website/images/boosting/banners/rocket-league.webp",
+  "game_icon_path": "/public/assets/website/images/boosting/icons/rocket-league.png",
+  "rank_names": {
+    "1": "Bronze",
+    "2": "Silver",
+    "3": "Gold",
+    "4": "Platinum",
+    "5": "Diamond",
+    "6": "Champion",
+    "7": "Grand Champion",
+    "8": "Supersonic Legend"
+  },
+  "rank_icons": {
+    "1": {
+      "mini": "/public/assets/website/images/boosting/ranks/rocket-league/bronze.png",
+      "url": "/public/assets/website/images/boosting/ranks/rocket-league/bronze.png",
+      "icon": "/public/assets/website/images/boosting/ranks/rocket-league/bronze.png"
+    },
+    "2": {
+      "mini": "/public/assets/website/images/boosting/ranks/rocket-league/silver.png",
+      "url": "/public/assets/website/images/boosting/ranks/rocket-league/silver.png",
+      "icon": "/public/assets/website/images/boosting/ranks/rocket-league/silver.png"
+    },
+    "3": {
+      "mini": "/public/assets/website/images/boosting/ranks/rocket-league/gold.png",
+      "url": "/public/assets/website/images/boosting/ranks/rocket-league/gold.png",
+      "icon": "/public/assets/website/images/boosting/ranks/rocket-league/gold.png"
+    },
+    "4": {
+      "mini": "/public/assets/website/images/boosting/ranks/rocket-league/platinum.png",
+      "url": "/public/assets/website/images/boosting/ranks/rocket-league/platinum.png",
+      "icon": "/public/assets/website/images/boosting/ranks/rocket-league/platinum.png"
+    },
+    "5": {
+      "mini": "/public/assets/website/images/boosting/ranks/rocket-league/diamond.png",
+      "url": "/public/assets/website/images/boosting/ranks/rocket-league/diamond.png",
+      "icon": "/public/assets/website/images/boosting/ranks/rocket-league/diamond.png"
+    },
+    "6": {
+      "mini": "/public/assets/website/images/boosting/ranks/rocket-league/champion.png",
+      "url": "/public/assets/website/images/boosting/ranks/rocket-league/champion.png",
+      "icon": "/public/assets/website/images/boosting/ranks/rocket-league/champion.png"
+    },
+    "7": {
+      "mini": "",
+      "url": "",
+      "icon": ""
+    },
+    "8": {
+      "mini": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  "division_count": 4,
+  "division_names": {
+    "1": "I",
+    "2": "II",
+    "3": "III",
+    "4": "IV"
+  },
+  "rank_divs": {},
+  "points_label": "MMR",
+  "points_options": {
+    "0-20": "0-20 MMR",
+    "21-40": "21-40 MMR",
+    "41-60": "41-60 MMR",
+    "61-80": "61-80 MMR",
+    "81-100": "81-100 MMR"
+  },
+  "lp_gain_options": {
+    "auto": "Auto"
+  },
+  "server_options": {
+    "europe": "Europe",
+    "north-america": "North America",
+    "oceania": "Oceania",
+    "middle-east": "Middle East"
+  },
+  "platform_options": {
+    "pc": "PC",
+    "playstation": "PlayStation",
+    "xbox": "Xbox",
+    "switch": "Switch"
+  },
+  "queue_type_options": {
+    "2v2": "2v2 Doubles",
+    "3v3": "3v3 Standard",
+    "1v1": "1v1 Duel"
+  },
+  "form_config": {
+    "show_server": true,
+    "show_platform": true,
+    "show_current_points": true,
+    "show_queue_type": true,
+    "show_solo_duo": true,
+    "rank_divs": {}
+  },
+  "extra": {
+    "is_duo": 0.35,
+    "is_priority": 0.25,
+    "is_streaming": 0.15
+  },
+  "extra_config": {
+    "is_duo": {
+      "label": "Duo",
+      "def": 0.35,
+      "icon": "priority.svg"
+    },
+    "is_priority": {
+      "label": "Priority Boost Completion",
+      "def": 0.25,
+      "icon": "priority.svg"
+    },
+    "is_streaming": {
+      "label": "Stream Games",
+      "def": 0.15,
+      "icon": "priority.svg"
+    }
+  },
+  "completion_time": 2,
+  "main": {
+    "1": {
+      "1": {
+        "eu": 164,
+        "na": 180,
+        "europe": 164,
+        "north_america": 180,
+        "asia": 172,
+        "sea": 164,
+        "oceania": 189,
+        "middle_east": 184
+      },
+      "2": {
+        "eu": 164,
+        "na": 180,
+        "europe": 164,
+        "north_america": 180,
+        "asia": 172,
+        "sea": 164,
+        "oceania": 189,
+        "middle_east": 183
+      },
+      "3": {
+        "eu": 164,
+        "na": 180,
+        "europe": 164,
+        "north_america": 180,
+        "asia": 172,
+        "sea": 164,
+        "oceania": 188,
+        "middle_east": 183
+      },
+      "4": {
+        "eu": 164,
+        "na": 180,
+        "europe": 164,
+        "north_america": 180,
+        "asia": 172,
+        "sea": 164,
+        "oceania": 188,
+        "middle_east": 183
+      }
+    },
+    "2": {
+      "1": {
+        "eu": 219,
+        "na": 241,
+        "europe": 219,
+        "north_america": 241,
+        "asia": 230,
+        "sea": 219,
+        "oceania": 252,
+        "middle_east": 245
+      },
+      "2": {
+        "eu": 219,
+        "na": 241,
+        "europe": 219,
+        "north_america": 241,
+        "asia": 230,
+        "sea": 219,
+        "oceania": 252,
+        "middle_east": 245
+      },
+      "3": {
+        "eu": 219,
+        "na": 241,
+        "europe": 219,
+        "north_america": 241,
+        "asia": 230,
+        "sea": 219,
+        "oceania": 252,
+        "middle_east": 245
+      },
+      "4": {
+        "eu": 219,
+        "na": 241,
+        "europe": 219,
+        "north_america": 241,
+        "asia": 230,
+        "sea": 219,
+        "oceania": 252,
+        "middle_east": 245
+      }
+    },
+    "3": {
+      "1": {
+        "eu": 219,
+        "na": 241,
+        "europe": 219,
+        "north_america": 241,
+        "asia": 230,
+        "sea": 219,
+        "oceania": 252,
+        "middle_east": 245
+      },
+      "2": {
+        "eu": 329,
+        "na": 362,
+        "europe": 329,
+        "north_america": 362,
+        "asia": 345,
+        "sea": 329,
+        "oceania": 378,
+        "middle_east": 368
+      },
+      "3": {
+        "eu": 329,
+        "na": 362,
+        "europe": 329,
+        "north_america": 362,
+        "asia": 345,
+        "sea": 329,
+        "oceania": 378,
+        "middle_east": 368
+      },
+      "4": {
+        "eu": 329,
+        "na": 362,
+        "europe": 329,
+        "north_america": 362,
+        "asia": 345,
+        "sea": 329,
+        "oceania": 378,
+        "middle_east": 368
+      }
+    },
+    "4": {
+      "1": {
+        "eu": 439,
+        "na": 483,
+        "europe": 439,
+        "north_america": 483,
+        "asia": 461,
+        "sea": 439,
+        "oceania": 505,
+        "middle_east": 492
+      },
+      "2": {
+        "eu": 439,
+        "na": 483,
+        "europe": 439,
+        "north_america": 483,
+        "asia": 461,
+        "sea": 439,
+        "oceania": 505,
+        "middle_east": 492
+      },
+      "3": {
+        "eu": 439,
+        "na": 483,
+        "europe": 439,
+        "north_america": 483,
+        "asia": 461,
+        "sea": 439,
+        "oceania": 504,
+        "middle_east": 491
+      },
+      "4": {
+        "eu": 439,
+        "na": 483,
+        "europe": 439,
+        "north_america": 483,
+        "asia": 461,
+        "sea": 439,
+        "oceania": 504,
+        "middle_east": 491
+      }
+    },
+    "5": {
+      "1": {
+        "eu": 494,
+        "na": 543,
+        "europe": 494,
+        "north_america": 543,
+        "asia": 518,
+        "sea": 494,
+        "oceania": 568,
+        "middle_east": 553
+      },
+      "2": {
+        "eu": 494,
+        "na": 543,
+        "europe": 494,
+        "north_america": 543,
+        "asia": 519,
+        "sea": 494,
+        "oceania": 568,
+        "middle_east": 553
+      },
+      "3": {
+        "eu": 494,
+        "na": 543,
+        "europe": 494,
+        "north_america": 543,
+        "asia": 519,
+        "sea": 494,
+        "oceania": 568,
+        "middle_east": 553
+      },
+      "4": {
+        "eu": 494,
+        "na": 543,
+        "europe": 494,
+        "north_america": 543,
+        "asia": 519,
+        "sea": 494,
+        "oceania": 568,
+        "middle_east": 553
+      }
+    },
+    "6": {
+      "1": {
+        "eu": 659,
+        "na": 725,
+        "europe": 659,
+        "north_america": 725,
+        "asia": 692,
+        "sea": 659,
+        "oceania": 758,
+        "middle_east": 738
+      },
+      "2": {
+        "eu": 659,
+        "na": 725,
+        "europe": 659,
+        "north_america": 725,
+        "asia": 692,
+        "sea": 659,
+        "oceania": 758,
+        "middle_east": 738
+      },
+      "3": {
+        "eu": 659,
+        "na": 725,
+        "europe": 659,
+        "north_america": 725,
+        "asia": 692,
+        "sea": 659,
+        "oceania": 757,
+        "middle_east": 738
+      },
+      "4": {
+        "eu": 659,
+        "na": 725,
+        "europe": 659,
+        "north_america": 725,
+        "asia": 692,
+        "sea": 659,
+        "oceania": 757,
+        "middle_east": 738
+      }
+    },
+    "7": {
+      "1": {
+        "eu": 769,
+        "na": 846,
+        "europe": 769,
+        "north_america": 846,
+        "asia": 807,
+        "sea": 769,
+        "oceania": 884,
+        "middle_east": 861
+      },
+      "2": {
+        "eu": 879,
+        "na": 967,
+        "europe": 879,
+        "north_america": 967,
+        "asia": 923,
+        "sea": 879,
+        "oceania": 1011,
+        "middle_east": 984
+      },
+      "3": {
+        "eu": 1099,
+        "na": 1208,
+        "europe": 1099,
+        "north_america": 1208,
+        "asia": 1154,
+        "sea": 1099,
+        "oceania": 1263,
+        "middle_east": 1231
+      },
+      "4": {
+        "eu": 1099,
+        "na": 1208,
+        "europe": 1099,
+        "north_america": 1208,
+        "asia": 1154,
+        "sea": 1099,
+        "oceania": 1263,
+        "middle_east": 1231
+      }
+    },
+    "8": {
+      "1": {
+        "eu": 1319,
+        "na": 1450,
+        "europe": 1319,
+        "north_america": 1450,
+        "asia": 1384,
+        "sea": 1319,
+        "oceania": 1517,
+        "middle_east": 1477
+      },
+      "2": {
+        "eu": 1319,
+        "na": 1451,
+        "europe": 1319,
+        "north_america": 1451,
+        "asia": 1385,
+        "sea": 1319,
+        "oceania": 1516,
+        "middle_east": 1477
+      },
+      "3": {
+        "eu": 1319,
+        "na": 1450,
+        "europe": 1319,
+        "north_america": 1450,
+        "asia": 1385,
+        "sea": 1319,
+        "oceania": 1516,
+        "middle_east": 1477
+      },
+      "4": {
+        "eu": 1319,
+        "na": 1450,
+        "europe": 1319,
+        "north_america": 1450,
+        "asia": 1385,
+        "sea": 1319,
+        "oceania": 1516,
+        "middle_east": 1477
+      }
+    }
+  },
+  "service_slug": "win-boost",
+  "service_name": "Win Boost",
+  "service_description": "Get guaranteed Rocket League wins."
+}

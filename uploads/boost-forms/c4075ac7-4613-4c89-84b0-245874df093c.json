@@ -1,0 +1,25 @@
+{
+    "main": {
+        "unrated_matches": {
+            "eu": 190,
+            "na": 190
+        }
+    },
+    "extra": {
+        "agents": "0.10",
+        "is_duo": "0.50",
+        "is_coaching": "0.25",
+        "is_priority": "0.25",
+        "is_streaming": "0.15",
+        "is_solo_only": "0.20"
+    },
+    "options": {
+        "opt-duo": "is_duo",
+        "opt-agents": "agents",
+        "opt-priority": "is_priority",
+        "opt-coaching": "is_coaching",
+        "opt-streaming": "is_streaming",
+        "opt-solo-only": "is_solo_only"
+    },
+    "completion_time": 1.5
+}

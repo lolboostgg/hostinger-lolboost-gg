@@ -1,0 +1,487 @@
+{
+  "dynamic_boosting": true,
+  "game_slug": "lol-wild-rift",
+  "source": "gameboost",
+  "banner_path": "/public/assets/website/images/boosting/banners/lol-wild-rift.webp",
+  "game_icon_path": "/public/assets/website/images/boosting/icons/lol-wild-rift.png",
+  "rank_names": {
+    "1": "Iron",
+    "2": "Bronze",
+    "3": "Silver",
+    "4": "Gold",
+    "5": "Platinum",
+    "6": "Emerald",
+    "7": "Diamond",
+    "8": "Master",
+    "9": "Grandmaster",
+    "10": "Challenger",
+    "11": "Sovereign"
+  },
+  "rank_icons": {
+    "1": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/iron.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/iron.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/iron.webp"
+    },
+    "2": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/bronze.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/bronze.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/bronze.webp"
+    },
+    "3": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/silver.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/silver.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/silver.webp"
+    },
+    "4": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/gold.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/gold.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/gold.webp"
+    },
+    "5": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/platinum.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/platinum.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/platinum.webp"
+    },
+    "6": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/emerald.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/emerald.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/emerald.webp"
+    },
+    "7": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/diamond.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/diamond.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/diamond.webp"
+    },
+    "8": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/master.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/master.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/master.webp"
+    },
+    "9": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/grandmaster.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/grandmaster.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/grandmaster.webp"
+    },
+    "10": {
+      "mini": "/public/assets/website/images/boosting/ranks/lol-wild-rift/challenger.webp",
+      "url": "/public/assets/website/images/boosting/ranks/lol-wild-rift/challenger.webp",
+      "icon": "/public/assets/website/images/boosting/ranks/lol-wild-rift/challenger.webp"
+    },
+    "11": {
+      "mini": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  "division_count": 4,
+  "division_names": {
+    "1": "IV",
+    "2": "III",
+    "3": "II",
+    "4": "I"
+  },
+  "rank_divs": {
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0
+  },
+  "points_label": "Marks",
+  "points_options": {
+    "0-20": "0-20 Marks",
+    "21-40": "21-40 Marks",
+    "41-60": "41-60 Marks",
+    "61-80": "61-80 Marks",
+    "81-100": "81-100 Marks"
+  },
+  "lp_gain_options": {
+    "auto": "Auto"
+  },
+  "server_options": {
+    "europe": "Europe",
+    "north-america": "North America",
+    "sea": "SEA"
+  },
+  "platform_options": {
+    "android": "Android",
+    "ios": "iOS"
+  },
+  "queue_type_options": {
+    "ranked": "Ranked",
+    "duo": "Duo"
+  },
+  "form_config": {
+    "show_server": true,
+    "show_platform": true,
+    "show_current_points": true,
+    "show_queue_type": true,
+    "show_solo_duo": true,
+    "rank_divs": {
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0
+    }
+  },
+  "extra": {
+    "is_duo": 0.35,
+    "is_priority": 0.25,
+    "is_streaming": 0.15,
+    "is_solo_only": 0.2
+  },
+  "extra_config": {
+    "is_duo": {
+      "label": "Duo",
+      "def": 0.35,
+      "icon": "priority.svg"
+    },
+    "is_priority": {
+      "label": "Priority Boost Completion",
+      "def": 0.25,
+      "icon": "priority.svg"
+    },
+    "is_streaming": {
+      "label": "Stream Games",
+      "def": 0.15,
+      "icon": "priority.svg"
+    },
+    "is_solo_only": {
+      "label": "Solo Only Queue",
+      "def": 0.2,
+      "icon": "priority.svg"
+    }
+  },
+  "completion_time": 4,
+  "main": {
+    "1": {
+      "1": {
+        "eu": 178,
+        "na": 196,
+        "europe": 178,
+        "north_america": 196,
+        "asia": 187,
+        "sea": 178,
+        "oceania": 205,
+        "middle_east": 199
+      },
+      "2": {
+        "eu": 178,
+        "na": 196,
+        "europe": 178,
+        "north_america": 196,
+        "asia": 187,
+        "sea": 178,
+        "oceania": 205,
+        "middle_east": 199
+      },
+      "3": {
+        "eu": 178,
+        "na": 196,
+        "europe": 178,
+        "north_america": 196,
+        "asia": 187,
+        "sea": 178,
+        "oceania": 204,
+        "middle_east": 199
+      },
+      "4": {
+        "eu": 178,
+        "na": 196,
+        "europe": 178,
+        "north_america": 196,
+        "asia": 187,
+        "sea": 178,
+        "oceania": 205,
+        "middle_east": 199
+      }
+    },
+    "2": {
+      "1": {
+        "eu": 316,
+        "na": 347,
+        "europe": 316,
+        "north_america": 347,
+        "asia": 331,
+        "sea": 316,
+        "oceania": 363,
+        "middle_east": 354
+      },
+      "2": {
+        "eu": 316,
+        "na": 348,
+        "europe": 316,
+        "north_america": 348,
+        "asia": 332,
+        "sea": 316,
+        "oceania": 363,
+        "middle_east": 354
+      },
+      "3": {
+        "eu": 316,
+        "na": 347,
+        "europe": 316,
+        "north_america": 347,
+        "asia": 332,
+        "sea": 316,
+        "oceania": 363,
+        "middle_east": 354
+      },
+      "4": {
+        "eu": 437,
+        "na": 481,
+        "europe": 437,
+        "north_america": 481,
+        "asia": 458,
+        "sea": 437,
+        "oceania": 502,
+        "middle_east": 489
+      }
+    },
+    "3": {
+      "1": {
+        "eu": 437,
+        "na": 480,
+        "europe": 437,
+        "north_america": 480,
+        "asia": 458,
+        "sea": 437,
+        "oceania": 502,
+        "middle_east": 489
+      },
+      "2": {
+        "eu": 437,
+        "na": 481,
+        "europe": 437,
+        "north_america": 481,
+        "asia": 459,
+        "sea": 437,
+        "oceania": 502,
+        "middle_east": 489
+      },
+      "3": {
+        "eu": 437,
+        "na": 480,
+        "europe": 437,
+        "north_america": 480,
+        "asia": 459,
+        "sea": 437,
+        "oceania": 502,
+        "middle_east": 489
+      },
+      "4": {
+        "eu": 721,
+        "na": 793,
+        "europe": 721,
+        "north_america": 793,
+        "asia": 757,
+        "sea": 721,
+        "oceania": 829,
+        "middle_east": 807
+      }
+    },
+    "4": {
+      "1": {
+        "eu": 770,
+        "na": 847,
+        "europe": 770,
+        "north_america": 847,
+        "asia": 808,
+        "sea": 770,
+        "oceania": 885,
+        "middle_east": 862
+      },
+      "2": {
+        "eu": 770,
+        "na": 847,
+        "europe": 770,
+        "north_america": 847,
+        "asia": 808,
+        "sea": 770,
+        "oceania": 885,
+        "middle_east": 862
+      },
+      "3": {
+        "eu": 770,
+        "na": 847,
+        "europe": 770,
+        "north_america": 847,
+        "asia": 808,
+        "sea": 770,
+        "oceania": 885,
+        "middle_east": 862
+      },
+      "4": {
+        "eu": 1045,
+        "na": 1150,
+        "europe": 1045,
+        "north_america": 1150,
+        "asia": 1097,
+        "sea": 1045,
+        "oceania": 1201,
+        "middle_east": 1170
+      }
+    },
+    "5": {
+      "1": {
+        "eu": 883,
+        "na": 971,
+        "europe": 883,
+        "north_america": 971,
+        "asia": 927,
+        "sea": 883,
+        "oceania": 1015,
+        "middle_east": 988
+      },
+      "2": {
+        "eu": 883,
+        "na": 971,
+        "europe": 883,
+        "north_america": 971,
+        "asia": 927,
+        "sea": 883,
+        "oceania": 1015,
+        "middle_east": 989
+      },
+      "3": {
+        "eu": 883,
+        "na": 971,
+        "europe": 883,
+        "north_america": 971,
+        "asia": 927,
+        "sea": 883,
+        "oceania": 1015,
+        "middle_east": 989
+      },
+      "4": {
+        "eu": 1612,
+        "na": 1773,
+        "europe": 1612,
+        "north_america": 1773,
+        "asia": 1692,
+        "sea": 1612,
+        "oceania": 1853,
+        "middle_east": 1805
+      }
+    },
+    "6": {
+      "1": {
+        "eu": 1661,
+        "na": 1826,
+        "europe": 1661,
+        "north_america": 1826,
+        "asia": 1743,
+        "sea": 1661,
+        "oceania": 1910,
+        "middle_east": 1860
+      },
+      "2": {
+        "eu": 1742,
+        "na": 1916,
+        "europe": 1742,
+        "north_america": 1916,
+        "asia": 1829,
+        "sea": 1742,
+        "oceania": 2003,
+        "middle_east": 1950
+      },
+      "3": {
+        "eu": 2066,
+        "na": 2272,
+        "europe": 2066,
+        "north_america": 2272,
+        "asia": 2169,
+        "sea": 2066,
+        "oceania": 2374,
+        "middle_east": 2313
+      },
+      "4": {
+        "eu": 2714,
+        "na": 2985,
+        "europe": 2714,
+        "north_america": 2985,
+        "asia": 2848,
+        "sea": 2714,
+        "oceania": 3120,
+        "middle_east": 3039
+      }
+    },
+    "7": {
+      "1": {
+        "eu": 3636,
+        "na": 3998,
+        "europe": 3636,
+        "north_america": 3998,
+        "asia": 3816,
+        "sea": 3636,
+        "oceania": 4181,
+        "middle_east": 4071
+      },
+      "2": {
+        "eu": 5390,
+        "na": 5929,
+        "europe": 5390,
+        "north_america": 5929,
+        "asia": 5660,
+        "sea": 5390,
+        "oceania": 6198,
+        "middle_east": 6036
+      },
+      "3": {
+        "eu": 6184,
+        "na": 6800,
+        "europe": 6184,
+        "north_america": 6800,
+        "asia": 6492,
+        "sea": 6184,
+        "oceania": 7108,
+        "middle_east": 6926
+      },
+      "4": {
+        "eu": 8327,
+        "na": 9160,
+        "europe": 8327,
+        "north_america": 9160,
+        "asia": 8740,
+        "sea": 8327,
+        "oceania": 9573,
+        "middle_east": 9321
+      }
+    },
+    "8": {
+      "eu": 3200,
+      "na": 3520,
+      "europe": 3200,
+      "north_america": 3520,
+      "asia": 3360,
+      "sea": 3200
+    },
+    "9": {
+      "eu": 3450,
+      "na": 3795,
+      "europe": 3450,
+      "north_america": 3795,
+      "asia": 3622,
+      "sea": 3450
+    },
+    "10": {
+      "eu": 3700,
+      "na": 4070,
+      "europe": 3700,
+      "north_america": 4070,
+      "asia": 3885,
+      "sea": 3700
+    },
+    "11": {
+      "eu": 3950,
+      "na": 4345,
+      "europe": 3950,
+      "north_america": 4345,
+      "asia": 4147,
+      "sea": 3950
+    }
+  },
+  "service_slug": "rank-boost",
+  "service_name": "Rank Boost",
+  "service_description": "Climb your Wild Rift rank safely."
+}

@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>LolBoost.gg — App</title>
+<link rel="icon" type="image/png" href="https://lolboost.gg/public/assets/core/main/img/logos/PNG/icon-bg-64x64.png?v6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --bg:#08080d;
+  --bg-soft:#0d0d14;
+  --surface:#14141d;
+  --surface-2:#1b1b26;
+  --surface-3:#22222f;
+  --border:#26262f;
+  --border-soft:#1d1d27;
+  --text:#f3f3f7;
+  --text-dim:#9898a9;
+  --text-faint:#5c5c6b;
+  --accent:#6366f1;
+  --accent-2:#8b5cf6;
+  --accent-grad:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);
+  --accent-soft:#1c1c33;
+  --teal:#2dd4ee;
+  --teal-soft:#102530;
+  --green:#22c55e;
+  --green-soft:#0f2419;
+  --amber:#f5a623;
+  --amber-soft:#2a2013;
+  --red:#fb5170;
+  --red-soft:#2a141b;
+  --radius-xl:26px;
+  --radius-lg:20px;
+  --radius-md:14px;
+  --radius-sm:10px;
+  --shadow-card:0 6px 20px rgba(0,0,0,0.35);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;overflow-x:hidden;}
+body{
+  background:#000;
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.font-display{font-family:'Sora',system-ui,sans-serif;}
+button{font-family:inherit;}
+a{color:inherit;text-decoration:none;}
+input{font-family:inherit;}
+::selection{background:var(--accent);color:#fff;}
+
+/* ---------- layout shell ---------- */
+.page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:36px 16px;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(99,102,241,0.16), transparent 45%),
+    radial-gradient(circle at 85% 92%, rgba(139,92,246,0.12), transparent 45%),
+    var(--bg);
+}
+.phone{
+  position:relative;
+  width:390px;
+  height:844px;
+  background:var(--bg);
+  border-radius:46px;
+  border:1px solid #2a2a36;
+  box-shadow:0 0 0 6px #000, 0 30px 70px rgba(0,0,0,0.6);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+.notch{
+  position:absolute;
+  top:0; left:50%;
+  transform:translateX(-50%);
+  width:120px; height:26px;
+  background:#000;
+  border-radius:0 0 18px 18px;
+  z-index:50;
+}
+.statusbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 26px 4px;
+  font-size:14px;
+  font-weight:600;
+  color:var(--text);
+  flex-shrink:0;
+  z-index:40;
+}
+.statusbar .icons{display:flex;align-items:center;gap:5px;color:var(--text);}
+.statusbar svg{display:block;}
+
+.screen{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+  position:relative;
+}
+
+/* ---------- app bar ---------- */
+.appbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:6px 18px 14px;
+  flex-shrink:0;
+}
+.appbar.hidden{display:none;}
+.icon-btn{
+  width:38px;height:38px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--surface);
+  border:1px solid var(--border-soft);
+  color:var(--text);
+  cursor:pointer;
+}
+.icon-btn:active{transform:scale(0.94);}
+.appbar .brand{display:flex;align-items:center;gap:8px;}
+.appbar .brand img{height:24px;display:block;}
+.appbar .brand .wordmark{font-family:'Sora';font-weight:800;font-size:15px;letter-spacing:0.2px;}
+.appbar .brand .wordmark span{color:var(--accent-2);}
+.avatar{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Sora';font-weight:700;font-size:13px;color:#fff;
+  flex-shrink:0;
+  border:2px solid rgba(255,255,255,0.08);
+}
+.appbar-title{
+  display:flex;align-items:center;gap:10px;
+  min-width:0;flex:1;justify-content:center;
+}
+.appbar-title h1{font-size:17px;margin:0;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.appbar-sub{font-size:12px;color:var(--text-dim);}
+
+/* ---------- content ---------- */
+.content{
+  flex:1;
+  overflow-y:auto;
+  padding:0 18px 18px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.content::-webkit-scrollbar{display:none;}
+.view{display:none;}
+.view.active{display:block;animation:fadeIn .22s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+/* ---------- tab bar ---------- */
+.tabbar{
+  display:flex;
+  border-top:1px solid var(--border-soft);
+  background:rgba(13,13,20,0.92);
+  backdrop-filter:blur(14px);
+  padding:8px 6px 4px;
+  flex-shrink:0;
+}
+.tabbar.hidden{display:none;}
+.tab{
+  flex:1;
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  padding:6px 2px 8px;
+  color:var(--text-faint);
+  cursor:pointer;
+  position:relative;
+}
+.tab svg{width:22px;height:22px;}
+.tab i{font-size:19px;line-height:1;}
+.tab span{font-size:10.5px;font-weight:600;}
+.tab.active{color:var(--accent-2);}
+.tab .dot{
+  position:absolute;top:2px;right:24%;
+  width:7px;height:7px;border-radius:50%;background:var(--red);
+  border:1.5px solid var(--bg);
+}
+.home-indicator{
+  width:120px;height:4px;border-radius:3px;
+  background:#4a4a55;
+  margin:6px auto 8px;
+  flex-shrink:0;
+}
+
+/* ---------- shared bits ---------- */
+.section-title{
+  font-size:13px;
+  font-weight:700;
+  color:var(--text-dim);
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  margin:22px 2px 10px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.section-title a{color:var(--accent-2);font-size:12px;text-transform:none;letter-spacing:0;font-weight:700;}
+.card{
+  background:var(--surface);
+  border:1px solid var(--border-soft);
+  border-radius:var(--radius-lg);
+  padding:16px;
+  box-shadow:var(--shadow-card);
+}
+.pill{
+  font-size:11.5px;
+  font-weight:700;
+  padding:4px 11px;
+  border-radius:30px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  white-space:nowrap;
+}
+.pill.placed{background:var(--teal-soft);color:var(--teal);}
+.pill.in_progress{background:var(--accent-soft);color:#a5a8ff;}
+.pill.completed{background:var(--green-soft);color:var(--green);}
+.pill.cancelled{background:var(--red-soft);color:var(--red);}
+.btn{
+  border:none;
+  border-radius:var(--radius-md);
+  padding:13px 18px;
+  font-weight:700;
+  font-size:14.5px;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;
+}
+.btn:active{transform:scale(0.98);}
+.btn-primary{background:var(--accent-grad);color:#fff;}
+.btn-ghost{background:var(--surface-2);color:var(--text);border:1px solid var(--border);}
+.btn-outline{background:transparent;color:var(--accent-2);border:1.5px solid var(--accent);}
+.btn-sm{padding:9px 14px;font-size:13px;width:auto;}
+.game-badge{
+  width:40px;height:40px;border-radius:11px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Sora';font-weight:800;font-size:11px;
+  flex-shrink:0;
+  color:#fff;
+}
+.game-badge.lol{background:linear-gradient(135deg,#0a1428,#1e3a5f);color:#c8aa6e;border:1px solid #c8aa6e44;}
+.game-badge.val{background:linear-gradient(135deg,#1a1a1f,#3a0d14);color:#ff4655;border:1px solid #ff465544;}
+.game-badge.tft{background:linear-gradient(135deg,#0e2a28,#16504a);color:#52e0c4;border:1px solid #52e0c444;}
+.row{display:flex;align-items:center;}
+.row.between{justify-content:space-between;}
+.muted{color:var(--text-dim);}
+.faint{color:var(--text-faint);}
+.toast{
+  position:absolute;
+  bottom:96px;left:50%;
+  transform:translateX(-50%) translateY(10px);
+  background:var(--surface-3);
+  border:1px solid var(--border);
+  color:var(--text);
+  padding:11px 18px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:600;
+  box-shadow:0 10px 30px rgba(0,0,0,0.45);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s, transform .25s;
+  z-index:200;
+  display:flex;align-items:center;gap:8px;
+  white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ---------- login ---------- */
+.login-wrap{padding:26px 18px 18px;height:100%;display:flex;flex-direction:column;}
+.login-hero{
+  border-radius:var(--radius-xl);
+  height:240px;
+  margin-bottom:26px;
+  background:
+    linear-gradient(180deg, rgba(8,8,13,0.25) 0%, rgba(8,8,13,0.5) 55%, rgba(8,8,13,0.92) 100%),
+    radial-gradient(circle at 80% 15%, rgba(99,102,241,0.3), transparent 55%),
+    url('https://lolboost.gg/public/assets/website/images/landing/lolboost-hero-multigame6.webp') center/cover no-repeat,
+    linear-gradient(160deg,#11111b,#0a0a10);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--border-soft);
+}
+.login-hero-brand{display:flex;flex-direction:column;align-items:center;gap:12px;}
+.login-hero-brand img{height:130px;filter:drop-shadow(0 10px 28px rgba(0,0,0,0.8));}
+.login-hero-brand .lb-label{font-family:'Sora';font-weight:700;font-size:15px;letter-spacing:1.5px;color:rgba(255,255,255,0.92);text-shadow:0 2px 10px rgba(0,0,0,0.8);text-transform:uppercase;}
+.wordmark-fallback{font-family:'Sora';font-weight:800;letter-spacing:0.5px;}
+.wordmark-fallback span{color:var(--accent-2);}
+.seg{
+  display:flex;background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:30px;padding:4px;margin-bottom:22px;
+}
+.seg button{
+  flex:1;background:none;border:none;color:var(--text-dim);
+  font-weight:700;font-size:13.5px;padding:10px 0;border-radius:26px;cursor:pointer;
+}
+.seg button.active{background:var(--accent-grad);color:#fff;}
+.field{
+  background:var(--surface);
+  border:1px solid var(--border-soft);
+  border-radius:var(--radius-md);
+  padding:14px 16px;
+  margin-bottom:12px;
+}
+.field input{
+  background:none;border:none;outline:none;color:var(--text);width:100%;font-size:14.5px;
+}
+.field input::placeholder{color:var(--text-faint);}
+.divider{
+  display:flex;align-items:center;gap:10px;
+  color:var(--text-faint);font-size:12px;font-weight:600;
+  margin:18px 0;
+}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--border);}
+.social-row{display:flex;gap:10px;margin-bottom:10px;}
+.social-btn{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:var(--radius-md);padding:13px 0;font-weight:700;font-size:13.5px;cursor:pointer;color:var(--text);
+}
+.login-foot{margin-top:auto;text-align:center;font-size:13px;color:var(--text-dim);padding-top:14px;}
+.login-foot a{color:var(--accent-2);font-weight:700;}
+
+/* ---------- home ---------- */
+.greeting{font-size:23px;font-weight:800;margin:4px 0 2px;}
+.greeting .wave{display:inline-block;}
+.greeting-sub{color:var(--text-dim);font-size:13.5px;margin-bottom:6px;}
+.stat-strip{display:flex;gap:10px;margin-top:16px;}
+.stat-chip{
+  flex:1;background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:var(--radius-md);padding:12px;text-align:left;
+}
+.stat-chip .num{font-family:'Sora';font-weight:800;font-size:18px;}
+.stat-chip .lbl{font-size:11px;color:var(--text-dim);margin-top:2px;}
+.hscroll{
+  display:flex;gap:12px;overflow-x:auto;padding:2px 2px 6px;margin:0 -2px;
+  scrollbar-width:none;
+}
+.hscroll::-webkit-scrollbar{display:none;}
+.order-card{
+  min-width:268px;
+  scroll-snap-align:start;
+}
+.order-card .top-row{margin-bottom:12px;}
+.order-card .price{font-family:'Sora';font-weight:800;font-size:15px;}
+.order-card .title-line{font-weight:700;font-size:14.5px;margin:10px 0 2px;}
+.order-card .sub-line{font-size:12.5px;color:var(--text-dim);}
+.order-card .meta{margin-top:12px;padding-top:12px;border-top:1px solid var(--border-soft);font-size:12px;color:var(--text-dim);display:flex;justify-content:space-between;}
+.progress-bar{height:6px;border-radius:6px;background:var(--surface-2);overflow:hidden;margin-top:10px;}
+.progress-bar > div{height:100%;background:var(--accent-grad);}
+.promo-card{
+  border-radius:var(--radius-lg);
+  padding:16px;
+  margin-bottom:12px;
+  display:flex;align-items:center;gap:14px;
+  border:1px solid var(--border-soft);
+}
+.promo-card .icon-wrap{
+  width:46px;height:46px;border-radius:14px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+}
+.promo-cashback{background:linear-gradient(135deg,#102e22,#0c1c18);}
+.promo-cashback .icon-wrap{background:#16472f;}
+.promo-coins{background:linear-gradient(135deg,#2a2013,#1b150c);}
+.promo-coins .icon-wrap{background:#4a3414;}
+.promo-card .big{font-family:'Sora';font-weight:800;font-size:17px;}
+.promo-card .small{font-size:12px;color:var(--text-dim);margin-top:2px;line-height:1.35;}
+.quicklinks{display:flex;flex-direction:column;gap:8px;}
+.quicklink{
+  display:flex;align-items:center;gap:12px;
+  background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:var(--radius-md);padding:13px 14px;cursor:pointer;
+}
+.quicklink .qi{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.quicklink .txt{flex:1;}
+.quicklink .ttl{font-weight:700;font-size:13.5px;}
+.quicklink .sub{font-size:11.5px;color:var(--text-dim);}
+.empty-state{
+  text-align:center;padding:34px 10px;color:var(--text-dim);
+}
+.empty-state .ic{font-size:30px;margin-bottom:10px;}
+.empty-state .t{font-weight:700;color:var(--text);font-size:14.5px;margin-bottom:4px;}
+.empty-state .d{font-size:12.5px;line-height:1.4;}
+
+/* booster home specifics */
+.avail-toggle{
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:var(--radius-lg);padding:14px 16px;margin-top:16px;
+}
+.avail-toggle .lbl-wrap{display:flex;align-items:center;gap:10px;}
+.avail-dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(34,197,94,0.18);}
+.avail-dot.off{background:var(--text-faint);box-shadow:none;}
+.switch{
+  width:46px;height:27px;border-radius:30px;background:var(--surface-2);
+  border:1px solid var(--border);position:relative;cursor:pointer;flex-shrink:0;
+}
+.switch .knob{
+  position:absolute;top:2px;left:2px;width:21px;height:21px;border-radius:50%;
+  background:var(--text-faint);transition:.2s;
+}
+.switch.on{background:var(--accent-soft);border-color:var(--accent);}
+.switch.on .knob{left:22px;background:var(--accent-grad);}
+
+/* ---------- orders / list screens ---------- */
+.filter-row{display:flex;gap:8px;margin:14px 0 12px;}
+.chip{
+  background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:30px;padding:9px 14px;font-size:12.5px;font-weight:700;color:var(--text-dim);
+  display:flex;align-items:center;gap:6px;cursor:pointer;white-space:nowrap;
+}
+.chip.active{background:var(--accent-soft);color:#b3b5ff;border-color:#3a3a8c;}
+.search-bar{
+  display:flex;align-items:center;gap:10px;
+  background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:var(--radius-md);padding:11px 14px;margin-bottom:14px;color:var(--text-faint);
+}
+.search-bar input{background:none;border:none;outline:none;color:var(--text);width:100%;font-size:13.5px;}
+.order-row{
+  background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:var(--radius-lg);padding:15px;margin-bottom:12px;cursor:pointer;
+}
+.order-row:active{transform:scale(0.99);}
+.order-row .hd{display:flex;align-items:center;gap:11px;margin-bottom:12px;}
+.order-row .hd .id{font-weight:700;font-size:14px;}
+.order-row .hd .price{margin-left:auto;font-family:'Sora';font-weight:800;font-size:14.5px;}
+.order-row .body-row{display:flex;justify-content:space-between;font-size:12.5px;margin-top:6px;}
+.order-row .body-row .k{color:var(--text-dim);}
+.order-row .body-row .v{font-weight:600;}
+.order-row .ft{display:flex;justify-content:space-between;align-items:center;margin-top:13px;padding-top:13px;border-top:1px solid var(--border-soft);}
+.order-row .accept-btn{background:var(--accent-grad);color:#fff;border:none;border-radius:30px;padding:8px 16px;font-weight:700;font-size:12.5px;cursor:pointer;}
+
+/* ---------- order detail ---------- */
+.detail-hero{display:flex;align-items:center;gap:14px;margin:16px 0 18px;}
+.detail-hero .game-badge{width:52px;height:52px;border-radius:15px;font-size:13px;}
+.detail-hero h2{font-size:18px;margin:0 0 3px;}
+.detail-hero .sub{font-size:13px;color:var(--text-dim);}
+.kv-card{margin-bottom:14px;}
+.kv-row{display:flex;justify-content:space-between;padding:9px 0;font-size:13.5px;border-bottom:1px solid var(--border-soft);}
+.kv-row:last-child{border-bottom:none;}
+.kv-row .k{color:var(--text-dim);}
+.kv-row .v{font-weight:600;text-align:right;min-width:0;max-width:62%;overflow-wrap:anywhere;word-break:break-word;white-space:pre-wrap;}
+.person-card{
+  display:flex;align-items:center;gap:12px;margin-bottom:14px;
+}
+.person-card .info{flex:1;}
+.person-card .nm{font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:6px;}
+.person-card .rt{font-size:12px;color:var(--text-dim);margin-top:2px;}
+.person-actions{display:flex;gap:10px;margin-top:14px;}
+.online-dot{width:9px;height:9px;border-radius:50%;background:var(--green);display:inline-block;border:2px solid var(--surface);margin-left:-2px;}
+
+/* ---------- chats ---------- */
+.chat-row{
+  display:flex;gap:12px;padding:13px 4px;border-bottom:1px solid var(--border-soft);cursor:pointer;
+}
+.chat-row:active{opacity:0.7;}
+.chat-row .av{position:relative;flex-shrink:0;}
+.chat-row .content2{flex:1;min-width:0;}
+.chat-row .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+.chat-row .nm{font-weight:700;font-size:14px;}
+.chat-row .time{font-size:11px;color:var(--text-faint);flex-shrink:0;}
+.chat-row .preview{font-size:12.5px;color:var(--text-dim);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.chat-row .tag{display:inline-block;font-size:10.5px;color:var(--text-faint);margin-top:3px;font-weight:600;}
+.unread-dot{width:9px;height:9px;border-radius:50%;background:var(--accent-2);flex-shrink:0;margin-top:5px;}
+
+/* ---------- chat detail ---------- */
+.chat-screen{display:flex;flex-direction:column;height:100%;}
+.chat-thread{flex:1;overflow-y:auto;overflow-x:hidden;padding:8px 18px;display:flex;flex-direction:column;gap:10px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.15) transparent;}
+.chat-thread::-webkit-scrollbar{width:4px;}
+.chat-thread::-webkit-scrollbar-track{background:transparent;}
+.chat-thread::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15);border-radius:10px;}
+.bubble-row{display:flex;}
+.bubble-row.me{justify-content:flex-end;}
+.bubble{
+  max-width:76%;
+  padding:10px 14px;
+  border-radius:18px;
+  font-size:13.5px;
+  line-height:1.4;
+}
+.bubble-row.them .bubble{background:var(--surface-2);border-bottom-left-radius:5px;}
+.bubble-row.me .bubble{background:var(--accent-grad);color:#fff;border-bottom-right-radius:5px;}
+.bubble img,.chat-media-img{
+  display:block;
+  width:auto;
+  max-width:min(210px,100%);
+  max-height:220px;
+  object-fit:contain;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.08);
+  background:#000;
+}
+.bubble.has-media{padding:6px;background:transparent;border:none;box-shadow:none;}
+.bubble.has-media .chat-caption{margin-top:6px;padding:0 6px;font-size:12.5px;color:var(--text-dim);}
+.bubble-row.me .bubble.has-media .chat-caption{color:rgba(255,255,255,0.82);}
+.bubble-time{font-size:10px;color:var(--text-faint);margin-top:3px;padding:0 4px;}
+.bubble-row.me .bubble-time{text-align:right;}
+.order-context{
+  margin:8px 16px 4px;
+  background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:var(--radius-md);padding:10px 13px;
+  display:flex;align-items:center;gap:10px;cursor:pointer;
+}
+.order-context .txt{flex:1;font-size:12px;}
+.order-context .txt b{font-size:13px;}
+.chat-input-bar{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 16px 14px;
+  border-top:1px solid var(--border-soft);
+  flex-shrink:0;
+}
+.chat-input-bar input{
+  flex:1;background:var(--surface);border:1px solid var(--border-soft);
+  border-radius:30px;padding:12px 16px;color:var(--text);outline:none;font-size:13.5px;
+}
+.send-btn{
+  width:42px;height:42px;border-radius:50%;background:var(--accent-grad);
+  border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;
+}
+
+/* ---------- notifications ---------- */
+.notif-row{display:flex;gap:13px;padding:14px 4px;border-bottom:1px solid var(--border-soft);}
+.notif-row .ic{
+  width:40px;height:40px;border-radius:12px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.notif-row .nt{font-weight:700;font-size:13.5px;line-height:1.35;}
+.notif-row .nd{font-size:12px;color:var(--text-dim);margin-top:3px;}
+.notif-row .ntime{font-size:11px;color:var(--text-faint);margin-left:auto;flex-shrink:0;padding-left:8px;}
+.notif-top{display:flex;justify-content:space-between;align-items:baseline;}
+
+/* ---------- settings ---------- */
+.profile-card{
+  display:flex;align-items:center;gap:14px;margin:14px 0 22px;
+}
+.profile-card .avatar{width:58px;height:58px;font-size:18px;}
+.profile-card .nm{font-weight:800;font-size:16px;}
+.profile-card .em{font-size:12.5px;color:var(--text-dim);margin-top:2px;}
+.role-tag{
+  display:inline-flex;align-items:center;gap:5px;
+  background:var(--accent-soft);color:#b3b5ff;font-size:11px;font-weight:700;
+  padding:3px 9px;border-radius:20px;margin-top:5px;
+}
+.list-card{padding:4px 6px;}
+.list-item{
+  display:flex;align-items:center;gap:12px;padding:13px 8px;cursor:pointer;
+}
+.list-item + .list-item{border-top:1px solid var(--border-soft);}
+.list-item .li-ic{width:32px;height:32px;border-radius:9px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;color:#b3b5ff;}
+.list-item .li-txt{flex:1;font-size:13.5px;font-weight:600;}
+.list-item .li-val{font-size:12.5px;color:var(--text-dim);}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 18px;}
+.about-stat{background:var(--surface);border:1px solid var(--border-soft);border-radius:var(--radius-md);padding:13px;text-align:center;}
+.about-stat .v{font-family:'Sora';font-weight:800;font-size:17px;}
+.about-stat .l{font-size:11px;color:var(--text-dim);margin-top:2px;}
+
+/* ---------- drawer ---------- */
+.drawer-overlay{
+  position:absolute;inset:0;background:rgba(0,0,0,0.55);
+  opacity:0;pointer-events:none;transition:opacity .25s;z-index:60;
+}
+.drawer-overlay.show{opacity:1;pointer-events:auto;}
+.drawer{
+  position:absolute;top:0;left:0;bottom:0;width:78%;max-width:300px;
+  background:var(--bg-soft);border-right:1px solid var(--border-soft);
+  transform:translateX(-100%);transition:transform .28s cubic-bezier(.4,0,.2,1);
+  z-index:70;display:flex;flex-direction:column;padding:54px 18px 18px;
+}
+.drawer.show{transform:translateX(0);}
+.drawer .profile-card{margin:0 0 6px;}
+.drawer-email{font-size:11.5px;color:var(--text-faint);}
+.drawer-divider{height:1px;background:var(--border-soft);margin:16px 0;}
+.drawer-nav{display:flex;flex-direction:column;gap:3px;flex:1;}
+.drawer-link{
+  display:flex;align-items:center;gap:13px;padding:12px 10px;border-radius:var(--radius-sm);
+  font-weight:600;font-size:14px;color:var(--text-dim);cursor:pointer;
+}
+.drawer-link.active{background:var(--surface-2);color:var(--text);}
+.drawer-link svg{width:19px;height:19px;flex-shrink:0;}
+.drawer-link i{width:19px;text-align:center;font-size:16px;flex-shrink:0;}
+.drawer-role-switch{margin:14px 0;}
+.drawer-role-switch .lbl{font-size:11px;color:var(--text-faint);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;}
+.drawer-logout{
+  display:flex;align-items:center;gap:13px;padding:12px 10px;color:var(--red);font-weight:700;font-size:14px;cursor:pointer;
+}
+
+/* small inline icon helper */
+.svgicon{width:19px;height:19px;flex-shrink:0;font-size:17px;line-height:1;display:inline-flex;align-items:center;justify-content:center;}
+
+@media (max-width:480px){
+  .page{padding:0;}
+  .phone{
+    width:100vw;height:100vh;border-radius:0;border:none;box-shadow:none;
+  }
+  .notch{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="phone" id="phone">
+    <div class="notch"></div>
+    <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+    <aside class="drawer" id="drawer">
+      <div class="profile-card">
+        <div class="avatar" id="drawerAvatar" style="background:var(--accent-grad)">MK</div>
+        <div>
+          <div class="nm" id="drawerName">Mira K.</div>
+          <div class="drawer-email" id="drawerEmail">mira.k@lolboost.gg</div>
+        </div>
+      </div>
+      <div class="drawer-role-switch">
+        <div class="lbl">Dashboard</div>
+        <div class="seg" style="margin-bottom:0;">
+          <button id="drawerSegClient" class="active" onclick="setRole('client')">Client</button>
+          <button id="drawerSegBooster" onclick="setRole('booster')">Booster</button>
+        </div>
+      </div>
+      <div class="drawer-divider"></div>
+      <nav class="drawer-nav" id="drawerNav"></nav>
+      <div class="drawer-divider"></div>
+      <div class="drawer-logout" onclick="logout()">
+        <i class="svgicon fa-solid fa-right-from-bracket"></i>
+        Log Out
+      </div>
+      <img src="https://lolboost.gg/public/assets/website/images/logo-footer.webp" alt="LolBoost.gg" style="height:20px;opacity:0.55;margin:18px auto 2px;display:block;">
+    </aside>
+
+    <div class="screen">
+      <div class="statusbar">
+        <span id="clock">9:41</span>
+        <div class="icons">
+          <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 9.5C1 9.5 3 4 9 4C15 4 17 9.5 17 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect x="1" y="3" width="11" height="8" rx="2" stroke="currentColor" stroke-width="1.3"/><rect x="2.2" y="4.2" width="7.5" height="5.6" rx="1" fill="currentColor"/><path d="M13.5 5.5V8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+
+      <!-- top app bars -->
+      <div class="appbar" id="appbarMain">
+        <div class="icon-btn" onclick="openDrawer()">
+          <i class="svgicon fa-solid fa-bars"></i>
+        </div>
+        <div class="brand">
+          <img src="https://lolboost.gg/public/assets/website/images/logo-footer.webp" alt="LolBoost.gg" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'wordmark-fallback',style:'font-size:16px',innerHTML:'LOL<span>BOOST</span>'}))">
+        </div>
+        <div class="avatar" id="topAvatar" style="background:var(--accent-grad);width:34px;height:34px;font-size:12px;" onclick="goView('settings')">MK</div>
+      </div>
+
+      <div class="appbar" id="appbarDetail" style="display:none;">
+        <div class="icon-btn" onclick="goBack()">
+          <i class="svgicon fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="appbar-title">
+          <div class="avatar" id="detailAvatar" style="display:none;width:30px;height:30px;font-size:11px;background:var(--accent-grad);"></div>
+          <h1 id="detailTitle">Title</h1>
+        </div>
+        <div class="icon-btn" id="detailAction" style="visibility:hidden;">
+          <i class="svgicon fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+
+      <main class="content" id="content">
+
+        <!-- LOGIN -->
+        <section class="view active" data-view="login">
+          <div class="login-wrap">
+            <div id="modeBanner" style="display:none;border-radius:14px;padding:10px 13px;font-size:12px;line-height:1.4;margin-bottom:16px;border:1px solid var(--border-soft);"></div>
+
+            <div class="login-hero">
+              <div class="login-hero-brand">
+                <img src="https://lolboost.gg/public/assets/website/images/logo.svg" alt="LolBoost.gg" onerror="this.style.display='none'">
+                <div class="lb-label">lolboost.gg</div>
+              </div>
+            </div>
+            <h2 style="margin:0 0 4px;font-size:20px;">Welcome back</h2>
+            <p class="muted" style="margin:0 0 20px;font-size:13.5px;" id="loginSubtext">Sign in to track orders, chat with your booster and manage your account.</p>
+
+            <div class="seg" id="loginSeg">
+              <button class="active" onclick="selectLoginRole(this,'client')">I'm a Client</button>
+              <button onclick="selectLoginRole(this,'booster')">I'm a Booster</button>
+            </div>
+
+            <div class="field"><input type="email" placeholder="Email address" id="loginEmail" autocomplete="username"></div>
+            <div class="field" id="loginPasswordField"><input type="password" placeholder="Password" id="loginPassword" autocomplete="current-password" onkeydown="if(event.key==='Enter') doLogin();"></div>
+            <button class="btn btn-primary" id="loginSubmitBtn" onclick="doLogin()">Continue</button>
+
+            <div class="divider">OR CONTINUE WITH</div>
+            <div class="social-row">
+              <button class="social-btn" onclick="socialLogin('google')">
+                <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#fff" d="M21.35 11.1h-9.17v2.92h5.27c-.23 1.42-1.66 4.17-5.27 4.17-3.17 0-5.76-2.62-5.76-5.86s2.59-5.86 5.76-5.86c1.81 0 3.02.77 3.72 1.43l2.54-2.45C16.95 3.7 14.86 2.7 12.18 2.7 6.92 2.7 2.7 6.92 2.7 12.18s4.22 9.48 9.48 9.48c5.47 0 9.1-3.84 9.1-9.25 0-.62-.07-1.1-.93-1.31Z"/></svg>
+                Google
+              </button>
+              <button class="social-btn" onclick="socialLogin('discord')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#5865F2"><path d="M20.3 5.4a17.5 17.5 0 0 0-4.3-1.3l-.2.4c1.5.4 2.9 1 4.1 1.8a14.6 14.6 0 0 0-15.8 0 11 11 0 0 1 4.2-1.8l-.2-.4c-1.5.3-3 .7-4.3 1.3C1.6 9 .9 12.6 1.2 16.1a17.7 17.7 0 0 0 5.3 2.7l.6-1a10 10 0 0 1-1.7-.8 9 9 0 0 0 1-.5 13 13 0 0 0 11.2 0 9 9 0 0 0 1 .5 10 10 0 0 1-1.7.8l.6 1a17.7 17.7 0 0 0 5.3-2.7c.4-4-.8-7.5-2.5-10.7ZM8.8 14.3c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.6.8 1.5 1.7c0 1-.7 1.7-1.5 1.7Zm6.4 0c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7Z"/></svg>
+                Discord
+              </button>
+            </div>
+            <button class="social-btn" style="width:100%;" onclick="doGuestLogin()">
+              <i class="svgicon fa-solid fa-lock" style="font-size:15px;"></i>
+              Continue as Guest
+            </button>
+
+            <div class="login-foot">Don't have an account? <a href="https://lolboost.gg/" target="_blank">Sign up on lolboost.gg</a></div>
+          </div>
+        </section>
+
+        <!-- HOME -->
+        <section class="view" data-view="home">
+          <div class="greeting" id="homeGreeting">Good afternoon, Mira <span class="wave">👋</span></div>
+          <div class="greeting-sub" id="homeSub">Here's what's happening with your boosts.</div>
+
+          <div id="homeBody"></div>
+        </section>
+
+        <!-- CHATS LIST -->
+        <section class="view" data-view="chats">
+          <div style="height:6px;"></div>
+          <div id="chatsList"></div>
+        </section>
+
+        <!-- CHAT DETAIL -->
+        <section class="view" data-view="chatDetail" style="height:100%;">
+          <div class="chat-screen" id="chatScreenBody" style="height:calc(100% - 0px);"></div>
+        </section>
+
+        <!-- ORDERS LIST -->
+        <section class="view" data-view="orders">
+          <div class="filter-row" id="ordersFilterRow"></div>
+          <div class="search-bar">
+            <i class="svgicon fa-solid fa-magnifying-glass" style="font-size:14px;"></i>
+            <input placeholder="Search orders">
+          </div>
+          <div id="ordersList"></div>
+        </section>
+
+        <!-- ORDER DETAIL -->
+        <section class="view" data-view="orderDetail">
+          <div id="orderDetailBody"></div>
+        </section>
+
+        <!-- NOTIFICATIONS -->
+        <section class="view" data-view="notifications">
+          <div class="row between" style="margin:10px 2px 4px;">
+            <h2 style="font-size:19px;margin:0;">Notifications</h2>
+            <a href="javascript:void(0)" style="color:var(--accent-2);font-weight:700;font-size:12.5px;" onclick="markAllNotifsRead()">Mark all as read</a>
+          </div>
+          <div id="notifList"></div>
+        </section>
+
+        <!-- SETTINGS -->
+        <section class="view" data-view="settings">
+          <div class="profile-card">
+            <div class="avatar" id="settingsAvatar" style="background:var(--accent-grad)">MK</div>
+            <div>
+              <div class="nm" id="settingsName">Mira K.</div>
+              <div class="em" id="settingsEmail">mira.k@lolboost.gg</div>
+              <div class="role-tag" id="settingsRoleTag">Client account</div>
+            </div>
+          </div>
+
+          <div class="section-title">Account</div>
+          <div class="list-card" id="settingsAccountList"></div>
+
+          <div class="section-title">About lolboost.gg</div>
+          <div class="card" style="display:flex;align-items:center;justify-content:center;padding:18px;margin-bottom:12px;background:linear-gradient(135deg,#11111b,#0a0a10);">
+            <img src="https://lolboost.gg/public/assets/website/images/logo-footer.webp" alt="LolBoost.gg" style="height:30px;">
+          </div>
+          <div class="about-stats">
+            <div class="about-stat"><div class="v">4.9 / 5</div><div class="l">1,000+ Trustpilot reviews</div></div>
+            <div class="about-stat"><div class="v">142</div><div class="l">Boosters online now</div></div>
+            <div class="about-stat"><div class="v">24/7</div><div class="l">Live support</div></div>
+            <div class="about-stat"><div class="v">100%</div><div class="l">Money-back guarantee</div></div>
+          </div>
+          <div class="card list-card" style="margin-bottom:14px;">
+            <div class="list-item" onclick="window.open('https://lolboost.gg','_blank')"><div class="li-ic"><i class="fa-solid fa-link"></i></div><div class="li-txt">Visit lolboost.gg</div></div>
+            <div class="list-item" onclick="window.open('https://lolboost.gg/discord','_blank')"><div class="li-ic"><i class="fa-brands fa-discord" style="color:#8a8fff;"></i></div><div class="li-txt">Join our Discord</div></div>
+            <div class="list-item" onclick="window.open('https://www.trustpilot.com/review/lolboost.gg','_blank')"><div class="li-ic"><i class="fa-solid fa-star"></i></div><div class="li-txt">Read reviews on Trustpilot</div></div>
+            <div class="list-item" onclick="window.open('https://lolboost.gg/loyalty','_blank')"><div class="li-ic"><i class="fa-solid fa-coins"></i></div><div class="li-txt">Loyalty &amp; LB Coins</div></div>
+            <div class="list-item" id="becomeBoosterRow" onclick="window.open('https://lolboost.gg/jobs','_blank')"><div class="li-ic"><i class="fa-solid fa-gamepad"></i></div><div class="li-txt">Become a Booster</div></div>
+            <div class="list-item" onclick="window.open('https://lolboost.gg/legal/terms','_blank')"><div class="li-ic"><i class="fa-solid fa-file-lines"></i></div><div class="li-txt">Terms &amp; Privacy</div></div>
+          </div>
+
+          <div style="display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;opacity:0.7;margin:6px 0 20px;">
+            <img src="https://lolboost.gg/public/assets/website/images/payment-gateways/visa.webp" alt="Visa" style="height:18px;">
+            <img src="https://lolboost.gg/public/assets/website/images/payment-gateways/mastercard.webp" alt="Mastercard" style="height:18px;">
+            <img src="https://lolboost.gg/public/assets/website/images/payment-gateways/paypal.webp" alt="PayPal" style="height:18px;">
+            <img src="https://lolboost.gg/public/assets/website/images/payment-gateways/apple-pay.webp" alt="Apple Pay" style="height:18px;">
+            <img src="https://lolboost.gg/public/assets/website/images/payment-gateways/gpay.webp" alt="Google Pay" style="height:18px;">
+            <img src="https://lolboost.gg/public/assets/website/images/payment-gateways/bitcoin.webp" alt="Bitcoin" style="height:18px;">
+          </div>
+
+          <button class="btn btn-ghost" style="color:var(--red);margin-bottom:18px;" onclick="logout()">Log Out</button>
+        </section>
+
+      </main>
+
+      <nav class="tabbar" id="tabbar"></nav>
+      <div class="home-indicator" id="homeIndicator"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+</div>
+
+<script>
+/* =================== ICONS =================== */
+const ICONS = {
+  home:'<i class="svgicon fa-solid fa-house"></i>',
+  chat:'<i class="svgicon fa-solid fa-comment-dots"></i>',
+  orders:'<i class="svgicon fa-solid fa-receipt"></i>',
+  bell:'<i class="svgicon fa-solid fa-bell"></i>',
+  settings:'<i class="svgicon fa-solid fa-gear"></i>',
+  send:'<i class="fa-solid fa-paper-plane" style="color:#fff;font-size:16px;"></i>',
+  chevron:'<i class="svgicon fa-solid fa-chevron-right" style="font-size:14px;"></i>',
+  coin:'<i class="fa-solid fa-coins"></i>',
+  cashback:'<i class="fa-solid fa-wallet"></i>',
+  star:'<i class="fa-solid fa-star"></i>',
+  check:'<i class="svgicon fa-solid fa-check"></i>',
+  cart:'<i class="fa-solid fa-cart-shopping"></i>',
+  megaphone:'<i class="fa-solid fa-bullhorn"></i>',
+  bolt:'<i class="fa-solid fa-bolt"></i>',
+  wallet:'<i class="fa-solid fa-wallet"></i>',
+  comment:'<i class="fa-solid fa-comment-dots"></i>',
+  trophy:'<i class="fa-solid fa-trophy"></i>',
+  pause:'<i class="fa-solid fa-pause"></i>',
+  play:'<i class="fa-solid fa-play"></i>',
+  rotate:'<i class="fa-solid fa-rotate-left"></i>',
+  userCheck:'<i class="fa-solid fa-user-check"></i>',
+  userMinus:'<i class="fa-solid fa-user-minus"></i>',
+  userX:'<i class="fa-solid fa-user-xmark"></i>',
+  receipt:'<i class="fa-solid fa-receipt"></i>',
+  invoice:'<i class="fa-solid fa-file-invoice"></i>',
+  poke:'<i class="fa-solid fa-hand-point-up"></i>',
+  store:'<i class="fa-solid fa-store"></i>',
+  bagShopping:'<i class="fa-solid fa-bag-shopping"></i>',
+  payout:'<i class="fa-solid fa-money-bill-transfer"></i>',
+  circleCheck:'<i class="fa-solid fa-circle-check"></i>',
+  circleX:'<i class="fa-solid fa-circle-xmark"></i>',
+  circlePlay:'<i class="fa-solid fa-circle-play"></i>',
+  messages:'<i class="fa-solid fa-comments"></i>'
+};
+
+/* =================== STATE & MOCK DATA =================== */
+let role = 'client';
+let currentView = 'login';
+let viewStack = [];
+let appUnlocked = false; // true only after an explicit, successful login/guest/register action
+let activeOrderId = null;
+let activeChatId = null;
+
+const PERSONAS = {
+  client: {name:'Mira K.', email:'mira.k@lolboost.gg', initials:'MK', color:'var(--accent-grad)'},
+  booster:{name:'ShadowEcho', email:'shadowecho@booster.lolboost.gg', initials:'SE', color:'linear-gradient(135deg,#22c55e,#0ea5e9)'}
+};
+
+const ORDERS = [
+  {
+    id:'LB58291', game:'lol', title:'Rank Boost', subtitle:'Gold II → Platinum III', server:'EUW',
+    price:89.00, status:'in_progress', requestDate:'Jun 24, 2026 · 14:02', eta:'Today, ~22:40', platform:'PC',
+    payment:'Stripe (Checkout)', assigned:true,
+    counterpart:{role:'booster', name:'ShadowEcho', initials:'SE', rating:'4.9★ · 1,240 boosts', online:true},
+    details:[{label:'Service',value:'Solo Rank Boost'},{label:'Champions',value:'No restrictions'},{label:'Live Stream',value:'Off'},{label:'Server',value:'EUW'}],
+    chatId:'c1', progress:64
+  },
+  {
+    id:'LB60214', game:'val', title:'Duo Boost', subtitle:'Silver 2 → Gold 3', server:'EU',
+    price:54.50, status:'placed', requestDate:'Jun 26, 2026 · 09:15', eta:'Looking for booster', platform:'PC',
+    payment:'PayPal', assigned:false,
+    counterpart:null,
+    details:[{label:'Service',value:'Play with a Booster'},{label:'Agents',value:'Duelist preferred'},{label:'Server',value:'EU'}],
+    chatId:null, progress:0
+  },
+  {
+    id:'LB55330', game:'tft', title:'Coaching · VOD Review', subtitle:'3 VOD Reviews', server:'—',
+    price:39.00, status:'completed', requestDate:'Jun 20, 2026 · 17:30', eta:'Delivered', platform:'Mobile App',
+    payment:'Stripe (Checkout)', assigned:true,
+    counterpart:{role:'booster', name:'MetaMind', initials:'MM', rating:'5.0★ · 410 reviews', online:false},
+    details:[{label:'Reviews delivered',value:'3 / 3'},{label:'Focus area',value:'Itemization & positioning'}],
+    chatId:'c2', progress:100
+  },
+  {
+    id:'LB61040', game:'lol', title:'Placements', subtitle:'5/5 Wins Guaranteed', server:'EUW',
+    price:46.00, status:'placed', requestDate:'Jun 27, 2026 · 19:48', eta:'Looking for booster', platform:'PC',
+    payment:'Bank Transfer', assigned:false,
+    counterpart:null,
+    details:[{label:'Service',value:'Placement Matches'},{label:'Role',value:'Jungle preferred'},{label:'Server',value:'EUW'}],
+    chatId:null, progress:0
+  }
+];
+
+const CHATS = {
+  client:[
+    {id:'c1', orderId:'LB58291', name:'ShadowEcho', initials:'SE', online:true, tag:'Order #LB58291 · In Progress',
+      messages:[
+        {from:'them', text:'Hey Mira! Logging in now to start the climb 🔥', time:'14:05'},
+        {from:'me', text:'Awesome, please play Jungle/Mid only 🙏', time:'14:06'},
+        {from:'them', text:'Sure thing, sticking to Jungle. Will update you after every game.', time:'14:07'},
+        {from:'me', text:'Sounds perfect, thank you!', time:'14:08'}
+      ]},
+    {id:'c2', orderId:'LB55330', name:'MetaMind', initials:'MM', online:false, tag:'Order #LB55330 · Completed',
+      messages:[
+        {from:'them', text:'VOD review #3 is uploaded, check your dashboard!', time:'Yesterday'},
+        {from:'me', text:'Just watched it, super helpful insights on positioning!', time:'Yesterday'},
+        {from:'them', text:'Glad it helped! Good luck climbing 🚀', time:'Yesterday'}
+      ]},
+    {id:'c3', orderId:null, name:'LolBoost Support', initials:'LB', online:true, tag:'General support',
+      messages:[
+        {from:'them', text:'Hi Mira! Let us know if you need anything 🙌', time:'Mon'}
+      ]}
+  ],
+  booster:[
+    {id:'c1', orderId:'LB58291', name:'Mira K.', initials:'MK', online:true, tag:'Order #LB58291 · In Progress',
+      messages:[
+        {from:'me', text:'Hey Mira! Logging in now to start the climb 🔥', time:'14:05'},
+        {from:'them', text:'Awesome, please play Jungle/Mid only 🙏', time:'14:06'},
+        {from:'me', text:'Sure thing, sticking to Jungle. Will update you after every game.', time:'14:07'},
+        {from:'them', text:'Sounds perfect, thank you!', time:'14:08'}
+      ]},
+    {id:'c4', orderId:null, name:'NightOwl92', initials:'NO', online:true, tag:'Pre-order question',
+      messages:[
+        {from:'them', text:'Hey, are you available for a Diamond duo session this weekend?', time:'10:21'}
+      ]},
+    {id:'c5', orderId:null, name:'LolBoost Booster Support', initials:'LB', online:true, tag:'Booster support',
+      messages:[
+        {from:'them', text:'Reminder: weekly payouts go out every Friday 💸', time:'Mon'}
+      ]}
+  ],
+  seller:[],
+  admin:[]
+};
+
+const NOTIFS = {
+  client:[
+    {ic:'check', color:'green', title:'Order #LB58291 accepted by ShadowEcho', time:'8m ago'},
+    {ic:'cart', color:'indigo', title:'Order #LB60214 placed successfully', time:'1h ago'},
+    {ic:'star', color:'teal', title:'VOD Review #LB55330 completed', time:'2d ago'},
+    {ic:'coin', color:'amber', title:'You earned 18 LB Coins from your last order', time:'2d ago'},
+    {ic:'megaphone', color:'pink', title:'Rate us on Trustpilot and get 5% off your next order', time:'3d ago'}
+  ],
+  booster:[
+    {ic:'bolt', color:'indigo', title:'New order available: LoL Placements (5 wins) · EUW', time:'12m ago'},
+    {ic:'wallet', color:'green', title:'Payout of $214.60 has been processed', time:'1h ago'},
+    {ic:'chat', color:'teal', title:'NightOwl92 sent you a message', time:'3h ago'},
+    {ic:'star', color:'amber', title:'Your rating increased to 4.9★', time:'1d ago'}
+  ]
+};
+
+const COLOR_MAP = {
+  green:{bg:'var(--green-soft)',fg:'var(--green)'},
+  indigo:{bg:'var(--accent-soft)',fg:'#a5a8ff'},
+  teal:{bg:'var(--teal-soft)',fg:'var(--teal)'},
+  amber:{bg:'var(--amber-soft)',fg:'var(--amber)'},
+  pink:{bg:'var(--red-soft)',fg:'var(--red)'}
+};
+
+let notifState = {client:[...NOTIFS.client], booster:[...NOTIFS.booster], seller:[], admin:[]};
+
+/* =================== HELPERS =================== */
+const GAME_ICON_URL = {
+  lol: 'https://lolboost.gg/public/assets/website/images/icons/league-of-legends.png',
+  val: 'https://lolboost.gg/public/assets/website/images/icons/valorant.png',
+  tft: 'https://lolboost.gg/public/assets/website/images/icons/teamfight-tactics.png',
+  account: 'https://lolboost.gg/public/assets/core/main/img/logos/PNG/icon-bg-64x64.png?v6',
+  item: 'https://lolboost.gg/public/assets/core/main/img/logos/PNG/icon-bg-64x64.png?v6'
+};
+function gameBadge(game){
+  const labels = {lol:'LoL', val:'VAL', tft:'TFT', account:'ACC', item:'ITEM'};
+  const src = GAME_ICON_URL[game] || GAME_ICON_URL.lol;
+  return `<div class="game-badge ${game}">
+    <img src="${src}" alt="${labels[game]||game}" style="width:62%;height:62%;object-fit:contain;display:block;" onerror="this.outerHTML='${labels[game]||'??'}'">
+  </div>`;
+}
+function statusLabel(s){
+  return {placed:'Placed', in_progress:'In Progress', completed:'Completed', cancelled:'Cancelled'}[s] || s;
+}
+function statusPill(s){
+  return `<span class="pill ${s}">${statusLabel(s)}</span>`;
+}
+const CURRENCY_SYMBOLS = {EUR:'€', USD:'$', GBP:'£', CHF:'CHF', PLN:'zł', SEK:'kr', NOK:'kr', DKK:'kr', BRL:'R$', TRY:'₺'};
+function fmtMoney(n, currency){
+  const code = (currency || 'EUR').toUpperCase();
+  const sym = CURRENCY_SYMBOLS[code] || (code + ' ');
+  return sym + ' ' + Number(n || 0).toFixed(2);
+}
+function normalizeApiPrice(o, isProduct){
+  let p = Number(o && o.price != null ? o.price : 0);
+  if(!Number.isFinite(p)) p = 0;
+  // Accounts/items in your database are stored as cents. New ajax.php returns euros,
+  // but this fallback also fixes older cached ajax.php responses that still send 9900.
+  if((o && (o.price_is_cents || o.price_cents)) && Number(o.price_cents || p) >= 0){
+    return Math.round(Number(o.price_cents || p)) / 100;
+  }
+  if(isProduct && p >= 1000 && Number.isInteger(p)){
+    return p / 100;
+  }
+  return p;
+}
+function decodeHtmlEntities(v){
+  let s = String(v ?? '');
+  // Decode values that arrive from PHP/DB already entity-encoded, e.g. &quot; or &#039;.
+  // Run a few passes because old data can be double encoded.
+  for(let i=0;i<3;i++){
+    const ta = document.createElement('textarea');
+    ta.innerHTML = s;
+    const d = ta.value;
+    if(d === s) break;
+    s = d;
+  }
+  return s;
+}
+function cleanDetailValue(v){
+  let s = decodeHtmlEntities(v).replace(/\u00a0/g, ' ').trim();
+  // Some account data was stored as one quoted string. Show the real quotes,
+  // but remove only a useless wrapping quote pair around the whole value.
+  if(s.length >= 2 && ((s[0] === '"' && s[s.length-1] === '"') || (s[0] === "'" && s[s.length-1] === "'"))){
+    s = s.slice(1, -1).trim();
+  }
+  return s;
+}
+function escHtml(v){
+  return String(v ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+function orderDisplayId(o){
+  if(!o) return '';
+  const rawId = String(o.id || '');
+  const numeric = o.numericId || o.numeric_id || o.refId || o.ref_id || rawId.replace(/^(macc_|acc_|item_)/,'');
+  if(o.displayId || o.display_id) return String(o.displayId || o.display_id).replace(/^#/,'');
+  if((o.appKind === 'account' && o.accountType === 'marketplace') || rawId.startsWith('macc_')) return 'S' + numeric;
+  if((o.appKind === 'account' && o.accountType === 'smurf') || rawId.startsWith('acc_')) return String(numeric);
+  if(o.appKind === 'item' || rawId.startsWith('item_')) return 'I' + numeric;
+  return rawId;
+}
+function detailValueHtml(v){
+  const val = escHtml(cleanDetailValue(v));
+  return `<span class="v long-value">${val || '—'}</span>`;
+}
+function detailRowsHtml(details){
+  return (details || []).map(d=>`<div class="kv-row"><span class="k">${escHtml(d.label)}</span>${detailValueHtml(d.value)}</div>`).join('');
+}
+function accountCredentialRows(details){
+  const credentialLabels = ['Riot ID','In-Game Name','IGN','Login','Password','Account Email','Email','Email Password','2FA','Data'];
+  const set = new Set(credentialLabels.map(x => x.toLowerCase()));
+  return (details || []).filter(d => set.has(String(d.label || '').toLowerCase()) && String(d.value ?? '').trim() !== '');
+}
+function accountInfoRows(details){
+  const creds = new Set(accountCredentialRows(details).map(d => String(d.label || '').toLowerCase()));
+  return (details || []).filter(d => !creds.has(String(d.label || '').toLowerCase()));
+}
+function showToast(msg, icon){
+  const t = document.getElementById('toast');
+  t.innerHTML = (icon? icon+' ' : '') + msg;
+  t.classList.add('show');
+  clearTimeout(window.__toastTimer);
+  window.__toastTimer = setTimeout(()=> t.classList.remove('show'), 2200);
+}
+function visibleOrders(){
+  if(role==='client') return ORDERS;
+  return ORDERS; // booster sees all; split into available / assigned within render
+}
+function getOrder(id){ return ORDERS.find(o=>String(o.id)===String(id)); }
+function getChat(id){ return CHATS[role].find(c=>c.id===id); }
+
+/* =================== LIVE BACKEND INTEGRATION ===================
+   This app talks to the REAL lolboost.gg backend (POST /ajax, action=...)
+   using the same session cookies as the website. Because of that it only
+   works when this file is hosted on the lolboost.gg domain itself — opening
+   it anywhere else (e.g. this Claude preview) has no session cookie and is
+   blocked by the browser's same-origin policy, so the app falls back to
+   the demo data above instead.
+================================================================== */
+const IS_LIVE = /(^|\.)lolboost\.gg$/i.test(location.hostname);
+const AJAX_URL = '/ajax';
+const REALTIME_URL = 'https://socket.lolboost.gg';
+let liveLoggedIn = false;
+let liveHasBothRoles = false; // true if this browser session has BOTH a valid client and booster login
+let soundNotificationsEnabled = true;
+let lbPageVisible = !document.hidden;
+const chatNotifSound = new Audio('https://lolboost.gg/public/assets/core/dash/audio/new-message.mp3');
+function playChatNotifSound(){
+  if(!soundNotificationsEnabled) return;
+  try{ chatNotifSound.currentTime = 0; chatNotifSound.volume = 0.6; chatNotifSound.play().catch(()=>{}); }catch(e){}
+}
+let liveHasOrdersBackend = true; // flips to false if the new endpoints aren't installed yet
+
+async function api(action, params = {}){
+  const fd = new FormData();
+  fd.append('action', action);
+  fd.append('scope', role); // required by shared actions (e.g. notifications_*) to pick client vs booster on dual-role accounts
+  Object.entries(params).forEach(([k,v]) => fd.append(k, v ?? ''));
+  const res = await fetch(AJAX_URL, { method:'POST', body:fd, credentials:'same-origin' });
+  let data = {};
+  try { data = await res.json(); } catch(e){ data = {}; }
+  return data;
+}
+function isUnknownAction(res){
+  return !!(res && res.sendToast && /Unknown action/i.test(res.sendToast.message || ''));
+}
+
+
+/* =================== LIGHTWEIGHT REALTIME ===================
+   WebSocket is the primary refresh trigger. AJAX is only used when an event
+   arrives, or as a slow fallback while the socket is unavailable. This prevents
+   many open tabs from hammering /ajax every few seconds.
+================================================================== */
+const lbRealtime = {
+  socket:null,
+  native:null,
+  connected:false,
+  scriptLoading:false,
+  started:false,
+  roleJoined:null,
+  reconnectTimer:null,
+  refreshTimers:{},
+  connect(){
+    if(!IS_LIVE || !liveLoggedIn || this.started) return;
+    this.started = true;
+    this.loadSocketIo().then(()=> this.connectSocketIo()).catch(()=> this.connectNative());
+  },
+  loadSocketIo(){
+    return new Promise((resolve, reject)=>{
+      if(window.io) return resolve();
+      if(this.scriptLoading){
+        let tries = 0;
+        const wait = setInterval(()=>{
+          tries++;
+          if(window.io){ clearInterval(wait); resolve(); }
+          if(tries > 40){ clearInterval(wait); reject(); }
+        }, 250);
+        return;
+      }
+      this.scriptLoading = true;
+      const sc = document.createElement('script');
+      sc.src = REALTIME_URL.replace(/\/$/,'') + '/socket.io/socket.io.js';
+      sc.async = true;
+      sc.onload = ()=> resolve();
+      sc.onerror = ()=> reject();
+      document.head.appendChild(sc);
+    });
+  },
+  connectSocketIo(){
+    if(!window.io) return this.connectNative();
+    try{
+      const s = window.io(REALTIME_URL, {
+        transports:['websocket'],
+        withCredentials:true,
+        reconnection:true,
+        reconnectionDelay:1500,
+        reconnectionDelayMax:15000,
+        timeout:6000
+      });
+      this.socket = s;
+      s.on('connect', ()=>{
+        this.connected = true;
+        this.joinRooms();
+        this.stopChatFallback();
+      });
+      s.on('disconnect', ()=>{
+        this.connected = false;
+        this.startChatFallback();
+      });
+      s.on('connect_error', ()=>{
+        this.connected = false;
+        this.startChatFallback();
+      });
+      this.bindSocketIoEvents(s);
+    }catch(e){
+      this.connectNative();
+    }
+  },
+  connectNative(){
+    try{
+      const url = REALTIME_URL.replace(/^http/i,'ws').replace(/\/$/,'') + '/?role=' + encodeURIComponent(role);
+      const ws = new WebSocket(url);
+      this.native = ws;
+      ws.onopen = ()=>{
+        this.connected = true;
+        this.joinRooms();
+        this.stopChatFallback();
+      };
+      ws.onclose = ()=>{
+        this.connected = false;
+        this.startChatFallback();
+        this.scheduleReconnect();
+      };
+      ws.onerror = ()=>{
+        this.connected = false;
+        this.startChatFallback();
+      };
+      ws.onmessage = ev => {
+        let msg = {};
+        try{ msg = JSON.parse(ev.data || '{}'); }catch(e){ return; }
+        const event = msg.event || msg.type || msg.name;
+        this.handle(event, msg.data || msg.payload || msg);
+      };
+    }catch(e){
+      this.connected = false;
+      this.startChatFallback();
+      this.scheduleReconnect();
+    }
+  },
+  bindSocketIoEvents(s){
+    const events = [
+      'chat_update','order_status_update','order_updated','order_refresh','order_account_update','price_update',
+      'orders_panel_update','new_order','booster_request','ranked_5s_lanes_update','ranked_5s_booster_removed',
+      'notification_new','new_notification','notifications_update','seller_chat_message','seller_new_message',
+      'account_ping','order_ping','account_order_paid','item_order_paid','seller_account_sold','seller_item_sold'
+    ];
+    events.forEach(ev => s.on(ev, data => this.handle(ev, data || {})));
+  },
+  joinRooms(){
+    const rooms = new Set(['clients','boosters','admins','sellers', role + 's']);
+    if(role === 'client') rooms.add('client');
+    if(role === 'booster') rooms.add('booster');
+    if(role === 'seller') rooms.add('seller');
+    if(role === 'admin') rooms.add('admin');
+    const payload = {role, rooms:Array.from(rooms)};
+    if(this.socket && this.socket.connected){
+      ['join','subscribe','room'].forEach(ev => this.socket.emit(ev, payload));
+      this.roleJoined = role;
+    }
+    if(this.native && this.native.readyState === 1){
+      this.native.send(JSON.stringify({event:'join', data:payload}));
+      this.roleJoined = role;
+    }
+  },
+  resetForRoleChange(){
+    this.roleJoined = null;
+    if(this.connected) this.joinRooms();
+    this.schedule('orders', ()=> liveLoadOrders().then(()=>{ if(currentView==='home') renderHome(); if(currentView==='orders') renderOrdersList(); }), 250);
+    this.schedule('notifications', ()=> liveLoadNotifications().then(()=>{ if(currentView==='notifications') renderNotifs(); renderTabbar(); }), 500);
+    this.schedule('chats', ()=> liveLoadChatsList().then(()=>{ if(currentView==='chats') renderChatsList(); }), 700);
+  },
+  schedule(key, fn, delay){
+    clearTimeout(this.refreshTimers[key]);
+    this.refreshTimers[key] = setTimeout(()=>{
+      if(!lbPageVisible) return;
+      Promise.resolve().then(fn).catch(()=>{});
+    }, delay || 350);
+  },
+  handle(event, data){
+    if(!event || !liveLoggedIn) return;
+    const d = data || {};
+    const eventName = String(event);
+    const orderId = d.order_id || d.orderId || d.id || null;
+    if(['chat_update','seller_chat_message','seller_new_message'].includes(eventName)){
+      this.schedule('chatThread', ()=>{
+        const c = activeChatId ? getChat(activeChatId) : null;
+        const matchesOrder = c && c.isOrderChat && orderId && String(c.orderId) === String(orderId);
+        if(currentView === 'chatDetail' && c && (!orderId || matchesOrder)) liveOpenChatThread(c.id);
+        liveLoadChatsList().then(()=>{ if(currentView==='chats') renderChatsList(); });
+      }, 250);
+      this.schedule('notifications', ()=> liveLoadNotifications().then(()=>{ if(currentView==='notifications') renderNotifs(); renderTabbar(); }), 700);
+      return;
+    }
+    if(['order_status_update','order_updated','order_refresh','order_account_update','price_update','orders_panel_update','new_order','booster_request','ranked_5s_lanes_update','ranked_5s_booster_removed','account_order_paid','item_order_paid','seller_account_sold','seller_item_sold'].includes(eventName)){
+      this.schedule('orders', ()=> liveLoadOrders().then(()=>{
+        if(currentView==='home') renderHome();
+        if(currentView==='orders') renderOrdersList();
+        if(currentView==='orderDetail' && activeOrderId) goView('orderDetail', false);
+      }), 350);
+      this.schedule('notifications', ()=> liveLoadNotifications().then(()=>{ if(currentView==='notifications') renderNotifs(); renderTabbar(); }), 900);
+      return;
+    }
+    if(['notification_new','new_notification','notifications_update','account_ping','order_ping'].includes(eventName)){
+      this.schedule('notifications', ()=> liveLoadNotifications().then(()=>{ if(currentView==='notifications') renderNotifs(); renderTabbar(); }), 250);
+    }
+  },
+  scheduleReconnect(){
+    clearTimeout(this.reconnectTimer);
+    this.reconnectTimer = setTimeout(()=>{
+      if(!this.connected && IS_LIVE && liveLoggedIn && lbPageVisible) this.connectNative();
+    }, 10000);
+  },
+  startChatFallback(){
+    if(activeChatId) startChatFallbackPoll(activeChatId);
+  },
+  stopChatFallback(){
+    clearInterval(chatPollTimer);
+    chatPollTimer = null;
+  }
+};
+
+document.addEventListener('visibilitychange', ()=>{
+  lbPageVisible = !document.hidden;
+  if(!lbPageVisible){
+    clearInterval(chatPollTimer);
+    chatPollTimer = null;
+    return;
+  }
+  if(IS_LIVE && liveLoggedIn){
+    if(lbRealtime.connected) lbRealtime.joinRooms();
+    else lbRealtime.startChatFallback();
+  }
+});
+function initialsOf(name){
+  name = (name || '').trim();
+  if(!name) return '??';
+  const parts = name.replace(/[^a-zA-Z0-9 ]/g,' ').trim().split(/\s+/);
+  return ((parts[0]||'')[0]||'').toUpperCase() + ((parts[1]||'')[0]||'').toUpperCase() || name.slice(0,2).toUpperCase();
+}
+// Renders the real lolboost.gg profile icon (clients/boosters.icon) when available,
+// falling back to a colored initials circle if there's no icon or it fails to load.
+function avatarMarkup(name, icon){
+  const initials = initialsOf(name);
+  if(!icon) return initials;
+  return `<img src="${icon}" alt="${initials}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;" onerror="this.parentElement.textContent='${initials}';">`;
+}
+function statusFromApi(s){
+  s = (s||'').toUpperCase();
+  if(s==='IN_PROGRESS') return 'in_progress';
+  if(['COMPLETED','COMPLETE','DELIVERED','SOLD','PAID'].includes(s)) return 'completed';
+  if(['CANCELLED','REFUND','REFUNDED','CANCELED'].includes(s)) return 'cancelled';
+  if(s==='PAUSED') return 'placed';
+  return 'placed';
+}
+function fmtApiDate(d){
+  if(!d) return '—';
+  const dt = new Date(String(d).replace(' ','T'));
+  if(isNaN(dt)) return d;
+  return dt.toLocaleDateString(undefined,{month:'short',day:'numeric'}) + ' · ' + dt.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});
+}
+function timeAgo(d){
+  if(!d) return '';
+  const dt = new Date(String(d).replace(' ','T'));
+  if(isNaN(dt)) return '';
+  const s = Math.max(1, Math.floor((Date.now()-dt.getTime())/1000));
+  if(s<60) return s+'s ago';
+  if(s<3600) return Math.floor(s/60)+'m ago';
+  if(s<86400) return Math.floor(s/3600)+'h ago';
+  return Math.floor(s/86400)+'d ago';
+}
+/* ---- Real rank-naming logic, ported 1:1 from core/functions.php ----
+   (util_format_tier / util_format_division / util_format_rank_display /
+   util_format_arena_display / util_format_boost_overview) so the app shows
+   "Silver I → Gold IV" instead of raw DB values like "3 4". ---- */
+const TIER_NAMES = {
+  lol: {0:'Unranked',1:'Iron',2:'Bronze',3:'Silver',4:'Gold',5:'Platinum',6:'Emerald',7:'Diamond',8:'Master',9:'Grandmaster',10:'Challenger'},
+  tft: {0:'Unranked',1:'Iron',2:'Bronze',3:'Silver',4:'Gold',5:'Platinum',6:'Emerald',7:'Diamond',8:'Master',9:'Grandmaster',10:'Challenger'},
+  val: {0:'Unranked',1:'Iron',2:'Bronze',3:'Silver',4:'Gold',5:'Platinum',6:'Diamond',7:'Ascendant',8:'Immortal',9:'Radiant'}
+};
+const DIVISION_NAMES = {
+  lol: {4:'I',3:'II',2:'III',1:'IV'},
+  tft: {4:'I',3:'II',2:'III',1:'IV'},
+  val: {3:'III',2:'II',1:'I'}
+};
+const ARENA_NAMES = {1:'Wood',2:'Bronze',3:'Silver',4:'Gold',5:'Gladiator'};
+
+function tierName(game, tier){
+  const t = TIER_NAMES[game] || TIER_NAMES.lol;
+  const n = Number(tier);
+  return (n in t) ? t[n] : null;
+}
+function divisionName(game, division){
+  const d = DIVISION_NAMES[game] || DIVISION_NAMES.lol;
+  const n = Number(division);
+  return (n in d) ? d[n] : (division ?? '');
+}
+// Mirrors util_format_rank_display($game,$tier,$division,$lp,$rr)
+function rankDisplay(game, tier, division, lp, rr){
+  const tierInt = Number(tier) || 0;
+  const label = tierName(game, tierInt);
+  if(tierInt <= 0) return label || 'Unranked';
+  if(tierInt >= 8){ // Master/Grandmaster/Challenger (lol/tft) or Immortal/Radiant (val)
+    const points = game === 'val' ? rr : lp;
+    return label + ((points!=null && points!=='') ? ' ' + Math.round(points) + (game==='val' ? ' RR' : ' LP') : '');
+  }
+  return label + ' ' + divisionName(game, division);
+}
+// Mirrors util_format_boost_overview() for the "X → Y" subtitle line.
+function boostOverviewText(o){
+  const game = o.game || 'lol';
+  const type = (o.form_type || '').toLowerCase().replace(/_/g,' ');
+  const start = () => rankDisplay(game, o.start_tier, o.start_division, o.start_lp, o.start_rr);
+  const end   = () => rankDisplay(game, o.end_tier, o.end_division, o.end_lp, o.end_rr);
+  switch(type){
+    case 'win': return start() + ' → ' + (o.matches||0) + ' Wins';
+    case 'placement': return start() + ' → ' + (o.matches||0) + ' Placements';
+    case 'normal': return 'Normals Boost → ' + (o.matches||0) + ' Normals';
+    case 'match': return start() + ' → ' + (o.matches||0) + ' Games';
+    case 'arena': return (ARENA_NAMES[Number(o.start_tier)] || 'Arena') + ' → ' + (o.matches||0) + ' Wins';
+    case 'mastery': return 'Mastery ' + (o.start_tier ?? '?') + ' → Mastery ' + (o.end_tier ?? '?');
+    case 'clash': return (o.hours||0) + ' Boosters · Tier ' + (o.start_tier ?? '?') + ' → ' + (o.matches||0) + ' Matches';
+    case 'level': return 'Level ' + (o.start_tier ?? '?') + ' → Level ' + (o.end_tier ?? '?');
+    case 'coaching': return humanize(o.coach_type || 'Coaching') + ' → ' + (o.hours||0) + ' Hours';
+    case 'duo pass': return 'Duo Pass · ' + start() + ' → ' + (o.hours||3) + ' Hours';
+    case 'pro games': return 'Pro Games · ' + start() + ' → ' + (o.matches||1) + ' Games';
+    case 'double up':
+    case 'rank':
+      if(o.start_tier || o.end_tier) return start() + ' → ' + end();
+      // fall through
+    default:
+      if(o.start_tier || o.end_tier) return start() + ' → ' + end();
+      if(o.matches) return o.matches + ' Games';
+      return o.form_type ? humanize(o.form_type) : 'Boost order';
+  }
+}
+function humanize(s){ return (s||'').replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase()); }
+
+function mergeProductDetailFallbacks(details, o){
+  const out = Array.isArray(details) ? details.slice() : [];
+  const seen = new Set(out.map(d => String(d.label || '').toLowerCase()));
+  const add = (label, value, always=false) => {
+    if(seen.has(String(label).toLowerCase())) return;
+    const s = cleanDetailValue(value);
+    if(!always && (!s || s === '-' || s.toLowerCase() === 'null')) return;
+    out.push({label, value: s || '—'});
+    seen.add(String(label).toLowerCase());
+  };
+  if(o.app_kind === 'account'){
+    add('Type', (o.account_type === 'smurf' ? 'Smurf Account' : 'Marketplace Account'), true);
+    add('Account', o.account_name || o.title);
+    add('Seller', o.seller_username);
+    add('Server', o.server ? String(o.server).toUpperCase() : '—', true);
+    add('Riot ID', o.riot_id || o.in_game_name || o.ign);
+    add('In-Game Name', o.in_game_name || o.ign);
+    add('Login', o.login || o.account_login || o.username);
+    add('Password', o.password || o.account_password);
+    add('Account Email', o.account_email || o.email);
+    add('Email Password', o.email_password || o.mail_password);
+    add('2FA', o.twofa || o['2fa']);
+    add('Data', o.data || o.account_data);
+    add('Rank', o.rank_label || o.rank);
+    add('Peak Rank', o.peak_rank_label || o.peak_rank);
+    add('Agents', o.agents || o.agent_count);
+    add('Level', o.level);
+    add('Skins', o.skins || o.skin_count || o.weapon_skins);
+    add('Sprays', o.sprays || o.spray_count);
+    add('Cards', o.cards || o.card_count);
+    add('Buddies', o.buddies || o.buddy_count);
+    add('Blue Essence', o.blue_essence);
+    add('Riot Points', o.riot_points);
+  }
+  return out;
+}
+
+// Map a row from client_orders_list_json / booster_orders_queue_json / order_detail_json
+// into the same shape the existing UI (orderCardHTML, renderOrderDetail, etc.) expects.
+function mapApiOrder(o, assigned){
+  const kind = o.app_kind || 'boost';
+  const isProduct = kind === 'account' || kind === 'item';
+  const legacyChatType = o.legacy_chat_type || (kind === 'account' && (o.account_type || '') === 'smurf' ? 'premium_account' : (kind === 'account' && (o.account_type || '') === 'marketplace' ? 'marketplace_account' : null));
+  const sellerName = legacyChatType === 'premium_account' ? 'Support' : (o.seller_username || o.admin_username || 'Seller');
+  const sellerIcon = o.seller_icon || o.admin_icon || null;
+  const counterpart = isProduct
+    ? {role:(legacyChatType === 'premium_account' ? 'admin' : 'seller'), name:sellerName, icon:sellerIcon, initials:initialsOf(sellerName), rating: legacyChatType === 'premium_account' ? 'Account support' : (kind === 'item' ? 'Item seller' : 'Account seller'), online:false}
+    : (assigned
+        ? (role==='client'
+            ? (o.booster_username ? {role:'booster', name:o.booster_username, icon:o.booster_icon||null, initials:initialsOf(o.booster_username), rating:'Assigned booster', online:true} : null)
+            : (o.client_username ? {role:'client', name:o.client_username, icon:o.client_icon||null, initials:initialsOf(o.client_username), rating:'Client', online:true} : null))
+        : null);
+
+  const overview = isProduct ? (o.subtitle || (kind === 'item' ? 'Item purchase' : 'Purchased account')) : boostOverviewText(o);
+  let details = Array.isArray(o.details) && o.details.length ? o.details.slice() : [
+    {label:'Service', value: o.form_name || humanize(o.form_type) || '—'},
+    {label:'Server', value: (o.server || '—').toString().toUpperCase()},
+  ];
+  if(isProduct){
+    details = mergeProductDetailFallbacks(details, o);
+  }
+  if(!isProduct){
+    if(o.start_tier || o.end_tier) details.push({label:'Rank range', value: overview});
+    if(o.matches) details.push({label: /win|wins/.test(o.form_type||'') ? 'Wins' : 'Games', value: String(o.matches)});
+    if(o.hours) details.push({label:'Hours', value: String(o.hours)});
+  }
+
+  const chatId = isProduct
+    ? (legacyChatType === 'premium_account'
+        ? ('premium_account:' + (o.ref_id || o.numeric_id || o.id))
+        : (legacyChatType === 'marketplace_account'
+            ? ('marketplace_account:' + (o.ref_id || o.numeric_id || o.id))
+            : (o.seller_id && o.ref_type && o.ref_id ? ('seller:' + o.ref_type + ':' + o.ref_id) : null)))
+    : (assigned ? ('order:' + o.id) : null);
+
+  return {
+    id: String(o.id),
+    numericId: o.numeric_id || o.ref_id || o.id,
+    displayId: o.display_id || null,
+    appKind: kind,
+    accountType: o.account_type || null,
+    isSellerChat: isProduct && !!chatId,
+    isProductChat: isProduct && !!chatId,
+    legacyChatType,
+    sellerId: o.seller_id || null,
+    refType: o.ref_type || null,
+    refId: o.ref_id || o.numeric_id || String(o.id || '').replace(/^(macc_|acc_|item_)/,''),
+    sourceUrl: o.source_url || null,
+    game: isProduct ? kind : (o.game || 'lol'),
+    title: o.title || o.form_name || humanize(o.form_type) || (kind === 'item' ? 'Item Order' : 'Boost Order'),
+    subtitle: overview,
+    server: (o.server || '—').toString().toUpperCase(),
+    price: normalizeApiPrice(o, isProduct),
+    priceCents: o.price_cents || null,
+    currency: o.currency || 'EUR',
+    status: statusFromApi(o.status),
+    rawStatus: (o.status||'').toUpperCase(),
+    requestDate: fmtApiDate(o.created_at),
+    eta: isProduct ? 'Delivered' : (o.status === 'IN_PROGRESS' ? 'In progress' : (o.status==='COMPLETED' ? 'Delivered' : 'Looking for booster')),
+    platform: isProduct ? (kind === 'item' ? 'Items Marketplace' : 'Accounts Marketplace') : 'Online',
+    payment: '—',
+    assigned: isProduct ? true : !!assigned,
+    counterpart,
+    details,
+    chatId,
+    progress: null,
+    live: true,
+  };
+}
+
+async function liveLoadOrders(){
+  if(!IS_LIVE || !liveLoggedIn) return;
+  const res = role==='booster'
+    ? await api('booster_orders_queue_json')
+    : await api('client_orders_list_json');
+
+  if(isUnknownAction(res)){ liveHasOrdersBackend = false; return; }
+  if(!res || res.success===false) return;
+  liveHasOrdersBackend = true;
+
+  ORDERS.length = 0;
+  if(role==='booster'){
+    (res.assigned||[]).forEach(o => ORDERS.push(mapApiOrder(o, true)));
+    (res.available||[]).forEach(o => ORDERS.push(mapApiOrder(o, false)));
+  } else {
+    (res.orders||[]).forEach(o => ORDERS.push(mapApiOrder(o, true)));
+  }
+}
+
+
+function productChatsFromOrders(){
+  return ORDERS.filter(o => o && o.assigned && ['account','item'].includes(o.appKind) && o.chatId).map(o => {
+    const cp = o.counterpart || {};
+    const displayName = cp.name || (o.legacyChatType === 'premium_account' ? 'Support' : (o.appKind === 'item' ? 'Seller' : 'Seller'));
+    return {
+      id: o.chatId,
+      orderId: null,
+      chatKey: '',
+      isOrderChat: false,
+      isProductChat: true,
+      isSellerChat: true,
+      sellerId: o.sellerId || null,
+      refType: o.refType || null,
+      refId: o.refId || o.numericId || o.id,
+      legacyChatType: o.legacyChatType || null,
+      name: displayName,
+      icon: cp.icon || null,
+      initials: cp.initials || initialsOf(displayName),
+      online: false,
+      tag: (o.appKind === 'item' ? 'Item Order' : (o.legacyChatType === 'premium_account' ? 'Account support' : 'Account Order')) + ' #' + orderDisplayId(o),
+      live: true,
+      loaded: false,
+      sig: '',
+      messages: [{from:'them', text:'Tap to open this conversation', time:o.requestDate || ''}]
+    };
+  });
+}
+function mergeChats(existing, extra){
+  const map = new Map();
+  (existing || []).forEach(c => map.set(String(c.id), c));
+  (extra || []).forEach(c => {
+    const key = String(c.id);
+    if(!map.has(key)) map.set(key, c);
+    else map.set(key, Object.assign({}, c, map.get(key)));
+  });
+  return Array.from(map.values());
+}
+
+async function liveLoadChatsList(){
+  if(!IS_LIVE || !liveLoggedIn) return;
+  if(role==='client'){
+    // Account chats are not part of the normal seller inbox endpoint, so first
+    // refresh orders and then add all purchased account/item chats as real chat rows.
+    await liveLoadOrders();
+    const productChats = productChatsFromOrders();
+    const res = await api('client_seller_chat_inbox_state', {sig:''});
+    const inboxChats = (res && res.success !== false ? (res.conversations||[]) : []).map(c => ({
+      id: c.key,
+      orderId: c.ref_type==='booster_order' ? (c.ref_id || 0) : null,
+      chatKey: c.chat_key || '',
+      isOrderChat: c.ref_type==='booster_order',
+      sellerId: c.seller_id, refType: c.ref_type, refId: c.ref_id,
+      legacyChatType: c.legacy_chat_type || null,
+      name: c.seller_username || c.title || 'Conversation',
+      icon: c.seller_icon || null,
+      initials: initialsOf(c.seller_username || c.title),
+      online: false,
+      tag: c.title || '',
+      live: true, loaded:false, sig:'',
+      messages: [{from:'them', text: decodeHtmlEntities(c.last_body || 'No messages yet'), time: c.last_time_label || ''}]
+    }));
+    CHATS.client = mergeChats(inboxChats, productChats);
+  } else {
+    // Boosters don't have a unified inbox endpoint — derive chats from assigned orders.
+    CHATS.booster = ORDERS.filter(o=>o.assigned && o.counterpart).map(o => ({
+      id: 'order:' + o.id,
+      orderId: o.id,
+      chatKey: '',
+      isOrderChat: true,
+      name: o.counterpart.name,
+      icon: o.counterpart.icon || null,
+      initials: o.counterpart.initials,
+      online: true,
+      tag: '#' + o.id + ' · ' + statusLabel(o.status),
+      live: true, loaded:false, sig:'',
+      messages: [{from:'them', text:'Tap to open this conversation', time:''}]
+    }));
+  }
+}
+
+async function liveOpenChatThread(chatId){
+  const c = getChat(chatId);
+  if(!c || !c.live) return;
+  const wasLoaded = c.loaded;
+  const prevCount = c.messages.length;
+  let res, msgs;
+  if(c.isOrderChat && role === 'client'){
+    // The real client inbox uses this endpoint specifically (not load_chat,
+    // which is the admin/booster-side loader and doesn't work for clients).
+    res = await api('client_booster_chat_load', {
+      order_id: c.orderId || 0,
+      chat_key: c.chatKey || '',
+      sig: c.loaded ? (c.sig || '') : '', // empty sig forces a full reload the first time
+      mark_read: '1'
+    });
+    if(res && res.sig) c.sig = res.sig;
+    msgs = res ? res.messages : [];
+    if(msgs === null || msgs === undefined){
+      c.loaded = true;
+      return; // server says nothing changed since our last sig — keep current thread as-is
+    }
+    c.messages = msgs.map(m => ({
+      from: (m.sender_type || m.sender) === 'client' ? 'me' : 'them',
+      text: m.body || m.raw || '',
+      type: m.message_type || m.type || 'text',
+      image: m.image_url || ((m.message_type || m.type) === 'image' ? (m.body || m.raw || '') : ''),
+      time: m.created_at_fmt || ''
+    }));
+  } else if(c.isOrderChat){
+    // Booster side: the generic admin/booster chat loader.
+    res = await api('load_chat', {order_id:c.orderId});
+    msgs = res.messages || [];
+    c.messages = msgs.map(m => ({
+      from: m.sender===role ? 'me':'them',
+      text: m.content || m.raw || '',
+      type: m.message_type || m.type || 'text',
+      image: m.image_url || ((m.message_type || m.type) === 'image' ? (m.content || m.raw || '') : ''),
+      time: m.time ? new Date(m.time*1000).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : ''
+    }));
+  } else if(c.legacyChatType === 'premium_account'){
+    res = await api('client_premium_account_chat_load', {account_id:c.refId, last_ts:0});
+    msgs = res.messages || [];
+    c.messages = msgs.map(m => ({
+      from: (m.sender_type||m.sender||m.type)==='client' ? 'me':'them',
+      text: m.body || m.content || m.message || m.raw || '',
+      type: m.message_type || m.type || 'text',
+      image: m.image_url || ((m.message_type || m.type) === 'image' ? (m.message || m.content || m.raw || '') : ''),
+      time: m.created_at_fmt || (m.time ? new Date(Number(m.time)*1000).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : '')
+    }));
+  } else if(c.legacyChatType === 'marketplace_account'){
+    res = await api('seller_account_chat_load', {account_id:c.refId, mark_read:'1'});
+    msgs = res.messages || [];
+    c.messages = msgs.map(m => ({
+      from: (m.sender_type||m.sender||m.type)==='client' ? 'me':'them',
+      text: m.body || m.content || m.message || m.raw || '',
+      type: m.message_type || m.type || 'text',
+      image: m.image_url || ((m.message_type || m.type) === 'image' ? (m.message || m.content || m.raw || '') : ''),
+      time: m.created_at_fmt || (m.time ? new Date(Number(m.time)*1000).toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}) : '')
+    }));
+  } else {
+    res = await api('client_seller_chat_load', {seller_id:c.sellerId, ref_type:c.refType, ref_id:c.refId, sig:'', mark_read:'1'});
+    msgs = res.messages || [];
+    c.messages = msgs.map(m => ({
+      from: (m.sender_type||m.sender||m.from)==='client' ? 'me':'them',
+      text: m.body || m.content || m.raw || '',
+      type: m.message_type || m.type || 'text',
+      image: m.image_url || ((m.message_type || m.type) === 'image' ? (m.body || m.content || m.raw || '') : ''),
+      time: m.created_at_fmt || ''
+    }));
+  }
+  if(!c.messages.length) c.messages = [{from:'them', text:'No messages yet — say hi 👋', time:''}];
+  c.loaded = true;
+  if(wasLoaded && c.messages.length > prevCount && c.messages[c.messages.length-1].from === 'them'){
+    playChatNotifSound();
+  }
+  renderChatThread();
+}
+
+function decodeB64(v){ try{ return atob(String(v||'')); }catch(e){ return String(v||''); } }
+function lbDecodeMaybeBase64Number(v){
+  if(v===null || v===undefined) return null;
+  if(typeof v==='number') return v;
+  let s = String(v).trim();
+  if(!s) return null;
+  if(!/^-?\d+(?:\.\d+)?$/.test(s) && /^[A-Za-z0-9+/=]+$/.test(s) && (s.length % 4 === 0)){
+    try{ const dec = atob(s); if(/^-?\d+(?:\.\d+)?$/.test(dec.trim())) s = dec.trim(); }catch(e){}
+  }
+  s = s.replace(/EUR|€/gi,'').trim().replace(',','.');
+  const n = Number(s);
+  return Number.isFinite(n) ? n : null;
+}
+function lbFormatEurFromCents(v){
+  const n = lbDecodeMaybeBase64Number(v);
+  if(n === null) return '';
+  const eur = Math.round(n) / 100;
+  return eur.toFixed(2) + ' €';
+}
+// Faithful port of the same mapNotif() used in client/layouts/partials/header.php,
+// so the app's Alerts tab matches the website's notification dropdown exactly.
+function mapNotif(row){
+  const type = row.type || '';
+  let data = {};
+  try { data = typeof row.data === 'string' ? JSON.parse(row.data || '{}') : (row.data || {}); } catch(e){}
+  const isClient = role === 'client';
+  const isBooster = role === 'booster';
+
+  let title = 'Notification';
+  let subtitle = humanize(type);
+  let icon = 'fa-solid fa-bell';
+  let url = '';
+  let orderId = null;
+  let cta = '';
+
+  const encodedOrderId = data.order_id || data.orderId || null;
+  if(encodedOrderId){
+    const oid = parseInt(decodeB64(encodedOrderId), 10);
+    if(oid > 0) orderId = oid;
+  }
+  const oidNum = orderId || 0;
+  const oidStr = oidNum > 0 ? (' #' + oidNum) : '';
+  const decodeName = v => v ? (decodeB64(String(v)).trim() || null) : null;
+  const boosterName = decodeName(data.booster_username || data.booster || null);
+  const clientName  = decodeName(data.client_username  || data.client  || data.customer || null);
+
+  if(type === 'ds_msg_notif_client'){
+    title = 'New message'; subtitle = boosterName ? (boosterName + ' sent you a message') : 'Your booster sent you a message'; icon = 'fa-solid fa-comment-dots';
+  } else if(type === 'ds_msg_notif_booster'){
+    title = 'New message'; subtitle = clientName ? (clientName + ' sent you a message') : 'A customer sent you a message'; icon = 'fa-solid fa-comment-dots';
+  } else if(type === 'poke_client'){
+    title = 'You were poked'; subtitle = (boosterName || 'Your booster') + ' poked you'; icon = 'fa-solid fa-hand-point-up';
+  } else if(type === 'poke_booster'){
+    title = 'You were poked'; subtitle = (clientName || 'A customer') + ' poked you'; icon = 'fa-solid fa-hand-point-up';
+  } else if(type === 'booster_money_added'){
+    title = 'Balance updated'; const eur = lbFormatEurFromCents(data.amount); subtitle = 'Money added' + (eur ? ' (+' + eur + ')' : ''); icon = 'fa-solid fa-wallet';
+  } else if(type === 'booster_money_fined'){
+    title = 'Balance updated'; const eur = lbFormatEurFromCents(data.amount || data.money_fined || data.money_removed); subtitle = 'Money removed' + (eur ? ' (-' + eur + ')' : ''); icon = 'fa-solid fa-wallet';
+  } else if(type === 'booster_balance_withdrawn'){
+    title = 'Balance updated'; const eur = lbFormatEurFromCents(data.amount || data.withdrawn); subtitle = 'Withdrawal processed' + (eur ? ' (-' + eur + ')' : ''); icon = 'fa-solid fa-wallet';
+  } else if(type === 'order_claimed'){
+    title = 'Order started'; icon = 'fa-solid fa-play';
+    subtitle = isClient
+      ? (boosterName ? (boosterName + ' claimed your order' + oidStr) : ('Your order' + oidStr + ' has been claimed'))
+      : ('You claimed order' + oidStr);
+  } else if(type === 'order_paused'){
+    title = 'Order paused'; subtitle = isClient ? ('Your order' + oidStr + ' has been paused') : ('Order' + oidStr + ' has been paused'); icon = 'fa-solid fa-pause';
+  } else if(type === 'order_completed'){
+    title = 'Order completed! 🎉'; icon = 'fa-solid fa-trophy';
+    if(isBooster && (data.payout_cents || data.payout || data.amount)){
+      const eur = lbFormatEurFromCents(data.payout_cents || data.payout || data.amount);
+      subtitle = 'You earned' + (eur ? ' (+' + eur + ')' : '') + (oidStr ? ' · Order' + oidStr : '');
+    } else if(isClient){
+      subtitle = 'Your order' + oidStr + ' has been completed'; cta = '⭐ Leave a review';
+    } else {
+      subtitle = 'Order' + oidStr + ' has been completed';
+    }
+  } else if(type === 'order_refunded'){
+    title = 'Order refunded'; subtitle = 'Your order' + oidStr + ' has been refunded'; icon = 'fa-solid fa-rotate-left';
+  } else if(type === 'order_ping'){
+    title = 'Order update'; subtitle = 'You have a new update on order' + oidStr; icon = 'fa-solid fa-bell';
+  } else if(type === 'invoice_paid' || type === 'invoice_payment_succeeded'){
+    title = 'Payment received';
+    const eur = lbFormatEurFromCents(data.amount || data.amount_cents || data.total || data.total_cents || data.paid_cents || data.paid_amount || null);
+    subtitle = 'Invoice paid' + (eur ? ' (' + eur + ')' : ''); icon = 'fa-solid fa-receipt';
+    if(!url) url = 'https://lolboost.gg/profile/billing';
+  } else if(type === 'client_custom_invoice'){
+    title = 'New invoice'; subtitle = 'You have a new invoice to pay'; icon = 'fa-solid fa-file-invoice';
+    if(!url) url = 'https://lolboost.gg/profile/billing';
+  } else if(type === 'booster_assigned'){
+    title = 'Booster assigned'; icon = 'fa-solid fa-user-check';
+    subtitle = isClient
+      ? (boosterName ? (boosterName + ' has been assigned to your order' + oidStr) : ('A booster has been assigned to your order' + oidStr))
+      : (clientName ? ('You were assigned to an order from ' + clientName + oidStr) : ('You were assigned to order' + oidStr));
+  } else if(type === 'booster_removed'){
+    title = 'Boost update'; icon = 'fa-solid fa-user-minus';
+    subtitle = isClient
+      ? ('Your booster has been removed from order' + oidStr + '. A new one will be assigned soon.')
+      : ('You were removed from order' + oidStr);
+  } else if(type === 'booster_request' || type === 'booster_ready_request'){
+    title = 'Boost request'; subtitle = clientName ? (clientName + ' requested you for order' + oidStr) : ('You received a boost request' + oidStr); icon = 'fa-solid fa-bolt';
+  } else if(type === 'booster_request_declined'){
+    title = 'Boost update'; subtitle = isClient ? ('Your requested booster declined order' + oidStr) : ('You declined a boost request' + oidStr); icon = 'fa-solid fa-user-xmark';
+  } else if(type === 'egirl_session_started'){
+    title = 'Session started'; subtitle = 'Your session' + oidStr + ' has started'; icon = 'fa-solid fa-circle-play';
+  } else if(type === 'egirl_session_completed'){
+    title = 'Session completed! 🎉'; subtitle = 'Your session' + oidStr + ' has been completed'; icon = 'fa-solid fa-circle-check'; cta = '⭐ Leave a review';
+  } else if(type === 'welcome_seller'){
+    title = 'Seller account ready'; subtitle = 'Your seller account has been approved'; icon = 'fa-solid fa-store';
+  } else if(type === 'seller_payout_request'){
+    title = 'Payout requested'; subtitle = 'Your payout request was created'; icon = 'fa-solid fa-money-bill-transfer';
+  } else if(type === 'seller_payout_paid'){
+    title = 'Payout paid'; subtitle = 'Your seller payout has been paid'; icon = 'fa-solid fa-circle-check';
+  } else if(type === 'seller_payout_rejected'){
+    title = 'Payout rejected'; subtitle = 'Your payout request was rejected'; icon = 'fa-solid fa-circle-xmark';
+  } else if(type === 'seller_account_sold' || type === 'account_order_paid'){
+    title = 'Account sold'; subtitle = 'You received a new account sale'; icon = 'fa-solid fa-cart-shopping';
+  } else if(type === 'seller_item_sold' || type === 'item_order_paid'){
+    title = 'Item sold'; subtitle = 'You received a new item sale'; icon = 'fa-solid fa-bag-shopping';
+  } else if(type === 'seller_chat_message' || type === 'seller_new_message'){
+    title = 'New seller message'; subtitle = 'You received a new customer message'; icon = 'fa-solid fa-comments';
+  }
+
+  return {
+    _id: row.id, title, subtitle, cta, icon, url, orderId,
+    time: timeAgo(row.created_at),
+    seen: parseInt(row.is_seen || 0, 10) === 1
+  };
+}
+
+async function liveLoadNotifications(){
+  if(!IS_LIVE || !liveLoggedIn) return;
+  const res = await api('notifications_list', {limit:30});
+  if(!res || res.success===false) return;
+  notifState[role] = (res.items||[]).map(mapNotif);
+}
+
+async function afterLiveLogin(silent){
+  liveLoggedIn = true;
+  appUnlocked = true;
+  lbRealtime.connect();
+  const who = await api('whoami_json');
+
+  if(who && who.success){
+    liveHasBothRoles = !!(who.has_client && who.has_booster);
+    // Keep whatever role the login flow already determined (from the
+    // auth_unified_login redirect), but fall back sensibly if that
+    // particular identity isn't actually present on this session.
+    if(role === 'booster' && !who.has_booster) role = who.has_client ? 'client' : 'booster';
+    if(role === 'client' && !who.has_client) role = who.has_booster ? 'booster' : 'client';
+
+    if(who.client) PERSONAS.client = {
+      name: who.client.username || 'Client',
+      email: who.client.email || '',
+      icon: who.client.icon || null,
+      initials: initialsOf(who.client.username || 'Client'),
+      color: 'var(--accent-grad)'
+    };
+    if(who.booster) PERSONAS.booster = {
+      name: who.booster.username || 'Booster',
+      email: who.booster.email || '',
+      icon: who.booster.icon || null,
+      initials: initialsOf(who.booster.username || 'Booster'),
+      color: 'linear-gradient(135deg,#22c55e,#0ea5e9)'
+    };
+  } else {
+    liveHasBothRoles = false;
+    PERSONAS[role] = {
+      name: role==='booster' ? 'Booster' : 'Client',
+      email: document.getElementById('loginEmail').value || '',
+      icon: null,
+      initials: initialsOf(role),
+      color: role==='booster' ? 'linear-gradient(135deg,#22c55e,#0ea5e9)' : 'var(--accent-grad)'
+    };
+  }
+
+  lbRealtime.resetForRoleChange();
+  applyPersona();
+  updateRoleSwitchVisibility();
+  viewStack = [];
+  goView('home', false);
+  if(!silent) showToast('Connected to your lolboost.gg account ✅', ICONS.check);
+  liveLoadOrders().then(()=>{ if(currentView==='home') renderHome(); if(currentView==='orders') renderOrdersList(); });
+  liveLoadNotifications().then(()=>{ if(currentView==='notifications') renderNotifs(); renderTabbar(); });
+  if(role==='client') liveLoadChatsList().then(()=>{ if(currentView==='chats') renderChatsList(); });
+}
+function updateRoleSwitchVisibility(){
+  const el = document.querySelector('.drawer-role-switch');
+  if(!el) return;
+  el.style.display = (!IS_LIVE || liveHasBothRoles) ? '' : 'none';
+}
+
+// NOTE: there is intentionally no silent "restore session on page load" here.
+// The app always starts on the login screen — even if a lolboost.gg session
+// cookie already exists — and only proceeds once the person explicitly signs
+// in, continues as guest, or uses a social login button on this screen.
+
+function updateModeBanner(){
+  const el = document.getElementById('modeBanner');
+  if(!el) return;
+  if(IS_LIVE){
+    el.style.display = 'none';
+  } else {
+    el.style.display = 'block';
+    el.style.background = 'var(--accent-soft)'; el.style.color = '#b3b5ff'; el.style.borderColor = '#33336b';
+    el.textContent = '🧪 Demo mode — this preview is not running on lolboost.gg, so it shows sample data. Host this file on your domain to connect your real account.';
+  }
+}
+
+/* =================== NAVIGATION =================== */
+const TABS = [
+  {key:'home', label:'Home', icon:'home'},
+  {key:'chats', label:'Chats', icon:'chat'},
+  {key:'orders', label:'Orders', icon:'orders'},
+  {key:'notifications', label:'Alerts', icon:'bell'},
+  {key:'settings', label:'Settings', icon:'settings'}
+];
+const DETAIL_VIEWS = ['chatDetail','orderDetail'];
+
+function renderTabbar(){
+  const tb = document.getElementById('tabbar');
+  tb.innerHTML = TABS.map(t=>{
+    const active = currentView===t.key ? 'active':'';
+    const showDot = t.key==='notifications' && notifState[role].some(n => n.seen === false || n.seen === undefined);
+    return `<div class="tab ${active}" onclick="goView('${t.key}')">
+      ${ICONS[t.icon]}
+      ${showDot?'<span class="dot"></span>':''}
+      <span>${t.label}</span>
+    </div>`;
+  }).join('');
+}
+
+function renderDrawerNav(){
+  const nav = document.getElementById('drawerNav');
+  nav.innerHTML = TABS.map(t=>{
+    const active = currentView===t.key ? 'active':'';
+    return `<div class="drawer-link ${active}" onclick="goView('${t.key}'); closeDrawer();">${ICONS[t.icon]} ${t.label}</div>`;
+  }).join('');
+}
+
+function goView(name, push){
+  // Hard gate: nothing except the login screen is reachable until the
+  // person has actually signed in (covers direct calls, drawer links,
+  // tab taps — not just the initial page load).
+  if(name !== 'login' && !appUnlocked){
+    name = 'login';
+    push = false;
+    closeDrawer();
+  }
+  if(push !== false){ viewStack.push(currentView); }
+  currentView = name;
+  document.querySelectorAll('.view').forEach(v=>{
+    v.classList.toggle('active', v.dataset.view===name);
+  });
+  const isLogin = name === 'login';
+  const isDetail = DETAIL_VIEWS.includes(name);
+  document.getElementById('appbarMain').style.display = (isDetail || isLogin) ? 'none' : 'flex';
+  document.getElementById('appbarDetail').style.display = (isDetail && !isLogin) ? 'flex' : 'none';
+  document.getElementById('tabbar').classList.toggle('hidden', isDetail || isLogin);
+  document.getElementById('homeIndicator').style.display = isLogin ? 'none' : 'block';
+  document.getElementById('content').scrollTop = 0;
+
+  if(name==='home') renderHome();
+  if(name==='chats') renderChatsList();
+  if(name==='orders') renderOrdersList();
+  if(name==='notifications') renderNotifs();
+  if(name==='settings') renderSettings();
+  if(name==='chatDetail') renderChatDetail();
+  if(name==='orderDetail') renderOrderDetail();
+
+  renderTabbar();
+  renderDrawerNav();
+
+  // Refresh from the live backend in the background, then re-render quietly.
+  if(IS_LIVE && liveLoggedIn){
+    if(name==='home') liveLoadOrders().then(()=>{ if(currentView==='home') renderHome(); });
+    if(name==='orders') liveLoadOrders().then(()=>{ if(currentView==='orders') renderOrdersList(); });
+    if(name==='chats') liveLoadChatsList().then(()=>{ if(currentView==='chats') renderChatsList(); });
+    if(name==='notifications') liveLoadNotifications().then(()=>{ if(currentView==='notifications'){ renderNotifs(); renderTabbar(); } });
+  }
+}
+function goBack(){
+  const prev = viewStack.pop() || 'home';
+  goView(prev, false);
+}
+function openDrawer(){
+  if(!appUnlocked) return;
+  document.getElementById('drawer').classList.add('show');
+  document.getElementById('drawerOverlay').classList.add('show');
+}
+function closeDrawer(){
+  document.getElementById('drawer').classList.remove('show');
+  document.getElementById('drawerOverlay').classList.remove('show');
+}
+
+/* =================== LOGIN =================== */
+function selectLoginRole(btn, r){
+  document.querySelectorAll('#loginSeg button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  role = r;
+}
+function doLogin(){
+  if(IS_LIVE){
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value;
+    if(!email || !password){ showToast('Enter your email and password'); return; }
+    showToast('Signing in…');
+    api('auth_unified_login', {email, password}).then(res => {
+      if(res.validationErrors){
+        showToast(Object.values(res.validationErrors)[0] || 'Login failed');
+        return;
+      }
+      const redirect = res.redirectUrl || '';
+      role = redirect.includes('booster-area') ? 'booster' : (redirect.includes('seller-area') ? 'seller' : 'client');
+      if(role==='seller'){ showToast('Seller accounts use the full seller dashboard on lolboost.gg, not this app yet.'); return; }
+      afterLiveLogin(false);
+    }).catch(()=> showToast('Network error — could not reach lolboost.gg'));
+    return;
+  }
+  applyPersona();
+  appUnlocked = true;
+  viewStack = [];
+  goView('home', false);
+  showToast(role==='client' ? 'Welcome back, Mira!' : 'Welcome back, ShadowEcho!', ICONS.check);
+}
+function doGuestLogin(){
+  if(IS_LIVE){
+    const email = document.getElementById('loginEmail').value.trim();
+    if(!email){ showToast('Enter your email to continue as guest'); return; }
+    showToast('Creating guest session…');
+    api('auth_client_guest_login', {email, tos:1}).then(res => {
+      if(res.validationErrors){ showToast(Object.values(res.validationErrors)[0] || 'Could not continue as guest'); return; }
+      role = 'client';
+      afterLiveLogin(false);
+    }).catch(()=> showToast('Network error — could not reach lolboost.gg'));
+    return;
+  }
+  doLogin();
+}
+function socialLogin(provider){
+  if(IS_LIVE){
+    showToast('Redirecting to ' + provider + '…');
+    setTimeout(()=>{ window.location.href = 'https://lolboost.gg/auth/' + provider; }, 400);
+    return;
+  }
+  doLogin();
+}
+function logout(){
+  closeDrawer();
+  viewStack = [];
+  liveLoggedIn = false;
+  appUnlocked = false;
+  clearInterval(chatPollTimer);
+  goView('login', false);
+}
+function setRole(r){
+  if(IS_LIVE && liveLoggedIn && !liveHasBothRoles){
+    showToast('This account only has a ' + role + ' login.');
+    return;
+  }
+  role = r;
+  applyPersona();
+  goView(currentView==='login' ? 'home' : currentView, false);
+  showToast('Switched to ' + (r==='client'?'Client':'Booster') + ' dashboard', ICONS.bolt);
+  if(IS_LIVE && liveLoggedIn){
+    lbRealtime.resetForRoleChange();
+    liveLoadOrders().then(()=>{ if(currentView==='home') renderHome(); if(currentView==='orders') renderOrdersList(); });
+    liveLoadNotifications().then(()=>{ if(currentView==='notifications') renderNotifs(); renderTabbar(); });
+    if(r==='client') liveLoadChatsList().then(()=>{ if(currentView==='chats') renderChatsList(); });
+  }
+}
+function applyPersona(){
+  const p = PERSONAS[role];
+  ['drawerAvatar','topAvatar','settingsAvatar'].forEach(id=>{
+    const el = document.getElementById(id);
+    el.style.background = p.color;
+    el.innerHTML = avatarMarkup(p.name, p.icon);
+  });
+  document.getElementById('drawerName').textContent = p.name;
+  document.getElementById('drawerEmail').textContent = p.email;
+  document.getElementById('settingsName').textContent = p.name;
+  document.getElementById('settingsEmail').textContent = p.email;
+  document.getElementById('settingsRoleTag').textContent = role==='client' ? 'Client account' : 'Booster account';
+  document.getElementById('becomeBoosterRow').style.display = role==='client' ? 'flex' : 'none';
+  document.getElementById('drawerSegClient')?.classList.toggle('active', role==='client');
+  document.getElementById('drawerSegBooster')?.classList.toggle('active', role==='booster');
+}
+
+/* =================== HOME =================== */
+function renderHome(){
+  const greet = document.getElementById('homeGreeting');
+  const sub = document.getElementById('homeSub');
+  const body = document.getElementById('homeBody');
+  const p = PERSONAS[role];
+  greet.innerHTML = `Good afternoon, ${p.name.split(' ')[0]} <span class="wave">👋</span>`;
+
+  if(role==='client'){
+    sub.textContent = "Here's what's happening with your boosts.";
+    const active = ORDERS.filter(o=>o.status!=='completed' && o.status!=='cancelled');
+    body.innerHTML = `
+      <div class="stat-strip">
+        <div class="stat-chip"><div class="num">${active.length}</div><div class="lbl">Active orders</div></div>
+        <div class="stat-chip"><div class="num">312</div><div class="lbl">LB Coins</div></div>
+        <div class="stat-chip"><div class="num">$4.18</div><div class="lbl">Cashback</div></div>
+      </div>
+
+      <div class="section-title">Active Orders <a href="javascript:void(0)" onclick="goView('orders')">See all</a></div>
+      <div class="hscroll">${active.map(o=>orderCardHTML(o)).join('') || emptyOrdersHTML()}</div>
+
+      <div class="section-title">Loyalty</div>
+      <div class="promo-card promo-cashback">
+        <div class="icon-wrap">${ICONS.cashback}</div>
+        <div><div class="big">$4.18 cashback</div><div class="small">Earn 2% cashback on every order (5% for members).</div></div>
+      </div>
+      <div class="promo-card promo-coins">
+        <div class="icon-wrap">${ICONS.coin}</div>
+        <div><div class="big">312 LB Coins</div><div class="small">Redeem for gaming gear, vouchers &amp; discounts.</div></div>
+      </div>
+
+      <div class="section-title">Quick links</div>
+      <div class="quicklinks">
+        <div class="quicklink" onclick="window.open('https://lolboost.gg/lol/rank-boost','_blank')">
+          <div class="qi" style="background:var(--accent-soft);color:#a5a8ff;">${ICONS.bolt}</div>
+          <div class="txt"><div class="ttl">Start a new boost</div><div class="sub">Browse LoL, Valorant &amp; TFT services</div></div>
+          ${ICONS.chevron}
+        </div>
+        <div class="quicklink" onclick="window.open('https://lolboost.gg/discord','_blank')">
+          <div class="qi" style="background:#1c1c33;color:#9aa0ff;">${ICONS.chat}</div>
+          <div class="txt"><div class="ttl">Join our Discord</div><div class="sub">Get live updates &amp; community offers</div></div>
+          ${ICONS.chevron}
+        </div>
+      </div>
+    `;
+  } else {
+    sub.textContent = "Here's your booster overview for today.";
+    const available = ORDERS.filter(o=>!o.assigned && o.status==='placed');
+    const myJobs = ORDERS.filter(o=>o.assigned && o.status!=='completed');
+    body.innerHTML = `
+      <div class="avail-toggle">
+        <div class="lbl-wrap">
+          <div class="avail-dot" id="availDot"></div>
+          <div><div style="font-weight:700;font-size:13.5px;">Available for orders</div><div class="faint" style="font-size:11.5px;">Clients can match with you now</div></div>
+        </div>
+        <div class="switch on" id="availSwitch" onclick="toggleAvailability()"><div class="knob"></div></div>
+      </div>
+
+      <div class="stat-strip">
+        <div class="stat-chip"><div class="num">$214.60</div><div class="lbl">This week</div></div>
+        <div class="stat-chip"><div class="num">12</div><div class="lbl">Completed</div></div>
+        <div class="stat-chip"><div class="num">4.9★</div><div class="lbl">Rating</div></div>
+      </div>
+
+      <div class="section-title">My Active Jobs</div>
+      ${myJobs.length ? `<div class="hscroll">${myJobs.map(o=>orderCardHTML(o)).join('')}</div>` : emptyOrdersHTML('No active jobs right now. Accept one below to get started.')}
+
+      <div class="section-title">Available Orders <a href="javascript:void(0)" onclick="goView('orders')">See all</a></div>
+      ${available.map(o=>orderRowHTML(o)).join('') || emptyOrdersHTML('No matching orders at the moment.')}
+    `;
+  }
+}
+function toggleAvailability(){
+  const sw = document.getElementById('availSwitch');
+  const dot = document.getElementById('availDot');
+  const on = sw.classList.toggle('on');
+  dot.classList.toggle('off', !on);
+  showToast(on ? "You're visible to clients" : "You're now hidden from clients");
+}
+function emptyOrdersHTML(msg){
+  return `<div class="empty-state" style="width:100%;"><div class="ic">🛰️</div><div class="t">Nothing here yet</div><div class="d">${msg||'New orders will show up here as soon as they come in.'}</div></div>`;
+}
+
+function orderCardHTML(o){
+  return `<div class="card order-card" onclick="openOrder('${o.id}')">
+    <div class="row between top-row">
+      ${gameBadge(o.game)}
+      ${statusPill(o.status)}
+    </div>
+    <div class="price">${fmtMoney(o.price, o.currency)}</div>
+    <div class="title-line">${o.title}</div>
+    <div class="sub-line">${o.subtitle}</div>
+    ${(o.status==='in_progress' && typeof o.progress==='number') ? `<div class="progress-bar"><div style="width:${o.progress}%"></div></div>` : ''}
+    <div class="meta"><span>#${orderDisplayId(o)}</span><span>${o.eta}</span></div>
+  </div>`;
+}
+
+function orderRowHTML(o){
+  const isAvailableForBooster = role==='booster' && !o.assigned;
+  return `<div class="order-row" onclick="${isAvailableForBooster?'':`openOrder('${o.id}')`}">
+    <div class="hd">
+      ${gameBadge(o.game)}
+      <div>
+        <div class="id">#${orderDisplayId(o)}</div>
+        <div class="faint" style="font-size:11.5px;">${o.title}</div>
+      </div>
+      <div class="price">${fmtMoney(o.price, o.currency)}</div>
+    </div>
+    <div class="body-row"><span class="k">Service</span><span class="v">${o.subtitle}</span></div>
+    <div class="body-row"><span class="k">Server</span><span class="v">${o.server}</span></div>
+    <div class="ft">
+      ${statusPill(o.status)}
+      ${isAvailableForBooster
+        ? `<button class="accept-btn" onclick="event.stopPropagation(); acceptOrder('${o.id}')">Accept job</button>`
+        : `<span class="faint" style="font-size:11.5px;display:flex;align-items:center;gap:4px;">View details ${ICONS.chevron}</span>`}
+    </div>
+  </div>`;
+}
+
+function acceptOrder(id){
+  if(IS_LIVE && liveLoggedIn){
+    showToast('Claiming order…');
+    api('booster_claim_order', {order_id:id}).then(res => {
+      if(res && res.blocked){ showToast(res.message || 'Claim restricted by admin'); return; }
+      if(res && res.success===false){ showToast((res.sendToast && res.sendToast.message) || res.message || 'Could not claim order'); }
+      else showToast('Order #' + id + ' accepted ✅', ICONS.check);
+      liveLoadOrders().then(()=> goView(currentView, false));
+    }).catch(()=> showToast('Network error — could not claim order'));
+    return;
+  }
+  const o = getOrder(id);
+  o.assigned = true;
+  o.status = 'in_progress';
+  o.progress = 5;
+  o.eta = 'Just started';
+  o.counterpart = {role:'client', name:'Mira K.', initials:'MK', rating:'New client', online:true};
+  showToast('Order #' + id + ' accepted ✅', ICONS.check);
+  goView(currentView, false);
+}
+
+/* =================== ORDERS LIST =================== */
+let orderFilter = 'all';
+function renderOrdersList(){
+  const filterRow = document.getElementById('ordersFilterRow');
+  const filters = role==='client'
+    ? [['all','All'],['in_progress','Boosts'],['account','Accounts'],['item','Items'],['completed','Completed']]
+    : [['all','All'],['placed','Available'],['in_progress','Active jobs'],['completed','Completed']];
+  filterRow.innerHTML = filters.map(([key,label])=>
+    `<div class="chip ${orderFilter===key?'active':''}" onclick="setOrderFilter('${key}')">${label}</div>`
+  ).join('');
+
+  let list = ORDERS;
+  if(role==='booster'){
+    if(orderFilter==='placed') list = ORDERS.filter(o=>!o.assigned && o.status==='placed');
+    else if(orderFilter==='in_progress') list = ORDERS.filter(o=>o.assigned && o.status==='in_progress');
+    else if(orderFilter==='completed') list = ORDERS.filter(o=>o.status==='completed');
+  } else {
+    if(orderFilter==='account' || orderFilter==='item') list = ORDERS.filter(o=>o.appKind===orderFilter);
+    else if(orderFilter==='in_progress') list = ORDERS.filter(o=>o.appKind==='boost' && o.status==='in_progress');
+    else if(orderFilter!=='all') list = ORDERS.filter(o=>o.status===orderFilter);
+  }
+
+  document.getElementById('ordersList').innerHTML = list.map(o=>orderRowHTML(o)).join('') || (
+    (IS_LIVE && liveLoggedIn && !liveHasOrdersBackend)
+      ? emptyOrdersHTML('Add the 3 backend snippets (see the PHP file I sent) to core/ajax.php to enable live orders here.')
+      : emptyOrdersHTML()
+  );
+}
+function setOrderFilter(f){ orderFilter = f; renderOrdersList(); }
+
+/* =================== ORDER DETAIL =================== */
+async function loadLiveProductOrderDetails(id){
+  const o = getOrder(id);
+  if(!o || !IS_LIVE || !liveLoggedIn || !['account','item'].includes(o.appKind)) return o;
+  try{
+    const res = await api('client_app_product_detail_json', {
+      order_id: o.id,
+      type: o.legacyChatType || o.accountType || o.appKind,
+      ref_id: o.refId || o.numericId || o.numeric_id || ''
+    });
+    if(res && res.success && res.order){
+      const fresh = mapApiOrder(res.order, true);
+      const idx = ORDERS.findIndex(x => String(x.id) === String(id));
+      if(idx >= 0){
+        ORDERS[idx] = Object.assign({}, ORDERS[idx], fresh, {details: fresh.details || ORDERS[idx].details});
+        return ORDERS[idx];
+      }
+    }
+  }catch(e){}
+  return o;
+}
+
+function openOrder(id){
+  activeOrderId = id;
+  const o = getOrder(id);
+  goView('orderDetail');
+  if(o && IS_LIVE && liveLoggedIn && ['account','item'].includes(o.appKind)){
+    loadLiveProductOrderDetails(id).then(fresh => {
+      if(fresh && fresh.id && currentView === 'orderDetail' && String(activeOrderId) === String(id)){
+        activeOrderId = fresh.id;
+        renderOrderDetail();
+      }
+    }).catch(()=>{});
+  }
+}
+function renderOrderDetail(){
+  const o = getOrder(activeOrderId);
+  document.getElementById('detailTitle').textContent = '#' + orderDisplayId(o);
+  document.getElementById('detailAction').style.visibility = 'hidden';
+  document.getElementById('detailAvatar').style.display = 'none';
+  const cp = o.counterpart;
+  const cpRoleLabel = o.appKind === 'account' || o.appKind === 'item' ? 'Seller' : (role==='client' ? 'Booster' : 'Client');
+
+  document.getElementById('orderDetailBody').innerHTML = `
+    <div class="row between" style="margin:14px 0 4px;">
+      <div></div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-family:'Sora';font-weight:800;font-size:17px;">${fmtMoney(o.price, o.currency)}</span>
+        ${statusPill(o.status)}
+      </div>
+    </div>
+    <div class="detail-hero">
+      ${gameBadge(o.game)}
+      <div><h2>${escHtml(o.title)}</h2><div class="sub">${escHtml(o.subtitle)}</div></div>
+    </div>
+
+    ${cp ? `
+    <div class="section-title">${cpRoleLabel}</div>
+    <div class="card kv-card">
+      <div class="person-card">
+        <div class="avatar" style="background:linear-gradient(135deg,#6366f1,#22c55e);width:46px;height:46px;font-size:13px;position:relative;">${avatarMarkup(cp.name, cp.icon)}${cp.online?'<span class=\"online-dot\" style=\"position:absolute;bottom:-1px;right:-1px;\"></span>':''}</div>
+        <div class="info"><div class="nm">${escHtml(cp.name)}</div><div class="rt">${escHtml(cp.rating)}</div></div>
+      </div>
+      <div class="person-actions">
+        ${o.chatId ? `<button class="btn btn-primary btn-sm" style="flex:1;" onclick="openChatFromOrder('${o.id}')">Chat</button>` : `<button class="btn btn-ghost btn-sm" style="flex:1;" disabled>Awaiting match</button>`}
+        ${o.sourceUrl ? `<button class="btn btn-ghost btn-sm" style="flex:1;" onclick="window.open('${o.sourceUrl}','_blank')">Open</button>` : `<button class="btn btn-ghost btn-sm" style="flex:1;">Notify ${cpRoleLabel}</button>`}
+      </div>
+    </div>` : `
+    <div class="card" style="margin-bottom:14px;text-align:center;color:var(--text-dim);font-size:13px;">
+      We're matching this order with a ${role==='client'?'booster':'client'} now — you'll be notified the moment it's picked up.
+    </div>`}
+
+    ${(['account','item'].includes(o.appKind) && accountCredentialRows(o.details).length) ? `
+    <div class="section-title">Your Credentials</div>
+    <div class="card kv-card credential-card">
+      ${detailRowsHtml(accountCredentialRows(o.details))}
+    </div>` : ''}
+
+    <div class="section-title">Order Details</div>
+    <div class="card kv-card">
+      ${detailRowsHtml(['account','item'].includes(o.appKind) ? accountInfoRows(o.details) : o.details)}
+    </div>
+
+    <div class="section-title">Order Info</div>
+    <div class="card kv-card">
+      <div class="kv-row"><span class="k">Request date</span><span class="v">${o.requestDate}</span></div>
+      <div class="kv-row"><span class="k">Platform</span><span class="v">${o.platform}</span></div>
+      <div class="kv-row"><span class="k">Payment method</span><span class="v">${o.payment}</span></div>
+      <div class="kv-row"><span class="k">ETA</span><span class="v">${o.eta}</span></div>
+    </div>
+
+    ${(o.live && o.appKind === 'boost' && role==='client' && ['IN_PROGRESS','PAID','PAUSED'].includes(o.rawStatus)) ? `
+    <button class="btn ${o.rawStatus==='PAUSED'?'btn-primary':'btn-ghost'}" style="margin-top:4px;" onclick="toggleOrderPause('${o.id}','${o.rawStatus==='PAUSED'?'resume':'pause'}')">
+      ${o.rawStatus==='PAUSED' ? 'Resume order' : 'Pause order'}
+    </button>` : ''}
+    <div style="height:6px;"></div>
+  `;
+}
+function toggleOrderPause(orderId, action){
+  showToast(action==='pause' ? 'Pausing order…' : 'Resuming order…');
+  api(action==='pause' ? 'client_pause_order' : 'client_resume_order', {order_id:orderId}).then(res => {
+    showToast((res && res.sendToast && res.sendToast.message) || (action==='pause' ? 'Order paused' : 'Order resumed'));
+    liveLoadOrders().then(()=> goView(currentView, false));
+  }).catch(()=> showToast('Network error'));
+}
+function openChatFromOrder(orderId){
+  const o = getOrder(orderId);
+  if(!o.chatId) return;
+  activeChatId = ensureLiveChatForOrder(o);
+  goView('chatDetail');
+}
+function ensureLiveChatForOrder(o){
+  if(!o.live) return o.chatId;
+  if(o.isProductChat || o.isSellerChat || ['account','item'].includes(o.appKind)){
+    let c = CHATS[role].find(x => x.id === o.chatId || (!x.isOrderChat && String(x.refType)===String(o.refType) && Number(x.refId)===Number(o.refId) && String(x.legacyChatType || '') === String(o.legacyChatType || '')));
+    if(!c){
+      c = {
+        id:o.chatId, orderId:null, chatKey:'', isOrderChat:false,
+        sellerId:o.sellerId, refType:o.refType, refId:o.refId, legacyChatType:o.legacyChatType || null,
+        name: o.counterpart ? o.counterpart.name : (o.legacyChatType === 'premium_account' ? 'Support' : 'Seller'),
+        icon: o.counterpart ? o.counterpart.icon : null,
+        initials: o.counterpart ? o.counterpart.initials : '??',
+        online:false, tag:(o.appKind === 'item' ? 'Item Order' : 'Account Order') + ' #' + orderDisplayId(o),
+        live:true, loaded:false, sig:'',
+        messages:[{from:'them', text:'Loading…', time:''}]
+      };
+      CHATS[role].push(c);
+    }
+    return c.id;
+  }
+  // Match by numeric order id, not by exact id-string.
+  let c = CHATS[role].find(x => x.isOrderChat && Number(x.orderId) === Number(o.id));
+  if(!c){
+    c = {
+      id:o.chatId, orderId:o.id, chatKey:'', isOrderChat:true,
+      name: o.counterpart ? o.counterpart.name : 'Conversation',
+      icon: o.counterpart ? o.counterpart.icon : null,
+      initials: o.counterpart ? o.counterpart.initials : '??',
+      online:true, tag:'#'+o.id+' · '+statusLabel(o.status),
+      live:true, loaded:false, sig:'',
+      messages:[{from:'them', text:'Loading…', time:''}]
+    };
+    CHATS[role].push(c);
+  }
+  return c.id;
+}
+
+/* =================== CHATS =================== */
+function renderChatsList(){
+  const list = CHATS[role];
+  document.getElementById('chatsList').innerHTML = list.map(c=>{
+    const last = c.messages[c.messages.length-1];
+    return `<div class="chat-row" onclick="openChat('${c.id}')">
+      <div class="av">
+        <div class="avatar" style="background:${c.id==='c3'||c.id==='c5'?'linear-gradient(135deg,#6366f1,#8b5cf6)':'linear-gradient(135deg,#22c55e,#0ea5e9)'};width:44px;height:44px;font-size:13px;position:relative;">${avatarMarkup(c.name, c.icon)}</div>
+        ${c.online ? '<span class="online-dot" style="position:absolute;bottom:0;right:0;"></span>' : ''}
+      </div>
+      <div class="content2">
+        <div class="top"><span class="nm">${escHtml(decodeHtmlEntities(c.name))}</span><span class="time">${escHtml(last.time || '')}</span></div>
+        <div class="preview">${last.from==='me'?'You: ':''}${escHtml(decodeHtmlEntities(last.text || ''))}</div>
+        <div class="tag">${escHtml(decodeHtmlEntities(c.tag || ''))}</div>
+      </div>
+    </div>`;
+  }).join('') || emptyOrdersHTML('No conversations yet.');
+}
+let chatPollTimer = null;
+function startChatFallbackPoll(chatId){
+  clearInterval(chatPollTimer);
+  chatPollTimer = null;
+  if(!IS_LIVE || !liveLoggedIn || lbRealtime.connected || !lbPageVisible) return;
+  chatPollTimer = setInterval(()=>{
+    if(!lbPageVisible || lbRealtime.connected){ clearInterval(chatPollTimer); chatPollTimer = null; return; }
+    if(currentView==='chatDetail' && activeChatId===chatId) liveOpenChatThread(chatId);
+  }, 30000);
+}
+function openChat(id){
+  activeChatId = id;
+  goView('chatDetail');
+}
+function renderChatDetail(){
+  const c = getChat(activeChatId);
+  document.getElementById('detailTitle').textContent = c.name || 'Conversation';
+  document.getElementById('detailAction').style.visibility = c.orderId ? 'visible' : 'hidden';
+  const avEl = document.getElementById('detailAvatar');
+  avEl.style.display = 'flex';
+  avEl.innerHTML = avatarMarkup(c.name, c.icon);
+
+  const order = c.orderId ? getOrder(c.orderId) : null;
+  document.getElementById('chatScreenBody').innerHTML = `
+    ${order ? `<div class="order-context" onclick="openOrder('${order.id}')">
+      ${gameBadge(order.game)}
+      <div class="txt"><b>#${orderDisplayId(order)}</b> · ${escHtml(order.title)}<br><span class="faint">${statusLabel(order.status)} · ${fmtMoney(order.price, order.currency)}</span></div>
+      ${ICONS.chevron}
+    </div>` : ''}
+    <div class="chat-thread" id="chatThread"></div>
+    <div class="chat-input-bar">
+      <input id="chatInput" placeholder="Type a message…" onkeydown="if(event.key==='Enter') sendMessage();">
+      <button class="send-btn" onclick="sendMessage()">${ICONS.send}</button>
+    </div>
+  `;
+  renderChatThread();
+  clearInterval(chatPollTimer);
+  chatPollTimer = null;
+  if(c.live){
+    liveOpenChatThread(c.id);
+    startChatFallbackPoll(c.id);
+  }
+}
+function escapeHTML(v){
+  return String(v ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
+}
+function isImageUrl(v){
+  const s = String(v || '').trim();
+  return /^(https?:)?\/\//i.test(s) && /\.(png|jpe?g|gif|webp|avif)(\?.*)?$/i.test(s);
+}
+function renderMessageContent(m){
+  const type = String(m.type || '').toLowerCase();
+  const image = (m.image || '').trim();
+  const text = String(m.text || '').trim();
+  const htmlImg = text.match(/<img[^>]+src=["']([^"']+)["']/i);
+  const src = image || (htmlImg ? htmlImg[1] : '') || ((type === 'image' || isImageUrl(text)) ? text : '');
+  if(src){
+    const caption = image && text && text !== image ? `<div class="chat-caption">${escapeHTML(text)}</div>` : '';
+    return {html:`<img class="chat-media-img" src="${escapeHTML(src)}" alt="Chat image" loading="lazy">${caption}`, media:true};
+  }
+  return {html:escapeHTML(text).replace(/\n/g,'<br>'), media:false};
+}
+function renderChatThread(){
+  const c = getChat(activeChatId);
+  const thread = document.getElementById('chatThread');
+  thread.innerHTML = c.messages.map(m=>{
+    const rendered = renderMessageContent(m);
+    return `
+      <div class="bubble-row ${m.from==='me'?'me':'them'}">
+        <div>
+          <div class="bubble ${rendered.media?'has-media':''}">${rendered.html}</div>
+          <div class="bubble-time">${escapeHTML(m.time || '')}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+  thread.scrollTop = thread.scrollHeight;
+}
+function nowTimeLabel(){
+  const now = new Date();
+  return now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0');
+}
+function sendMessage(){
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if(!text) return;
+  const c = getChat(activeChatId);
+
+  if(c.live){
+    input.value = '';
+    const optimistic = {from:'me', text, time:'Sending…'};
+    c.messages.push(optimistic);
+    renderChatThread();
+
+    // Pause the background poll briefly so it can't race with this send
+    // and overwrite/duplicate the bubble we just optimistically added.
+    clearInterval(chatPollTimer);
+
+    let sendAction, sendParams;
+    if(c.legacyChatType === 'premium_account'){
+      sendAction = 'client_premium_account_chat_send';
+      sendParams = {account_id: c.refId, message: text};
+    } else if(c.legacyChatType === 'marketplace_account'){
+      sendAction = 'client_account_chat_send';
+      sendParams = {account_id: c.refId, message: text};
+    } else if(c.isOrderChat && role === 'client'){
+      const orderId = c.orderId || 0;
+      sendAction = (c.chatKey && !(orderId > 0)) ? 'client_raw_booster_chat_send' : 'client_order_chat_send';
+      sendParams = {order_id: orderId, chat_key: c.chatKey || '', message: text};
+    } else if(c.isOrderChat){
+      sendAction = 'booster_order_chat_send';
+      sendParams = {order_id: c.orderId, message: text};
+    } else {
+      sendAction = 'client_seller_chat_send';
+      sendParams = {seller_id: c.sellerId, ref_type: c.refType, ref_id: c.refId, message: text};
+    }
+    const send = api(sendAction, sendParams);
+
+    send.then(res => {
+      if(res && (res.success===false || res.validationErrors)){
+        optimistic.time = 'Failed to send';
+        showToast((res.sendToast && res.sendToast.message) || res.message || 'Message could not be sent.');
+      } else {
+        optimistic.time = nowTimeLabel();
+        renderChatsList();
+      }
+      renderChatThread();
+    }).catch(()=>{
+      optimistic.time = 'Failed to send';
+      renderChatThread();
+      showToast('Network error — message not sent');
+    }).finally(()=>{
+      // Resync once, then let WebSocket events drive updates. If the socket is
+      // unavailable, a slow visible-tab fallback keeps the thread fresh.
+      setTimeout(()=>{ if(currentView==='chatDetail' && activeChatId===c.id) liveOpenChatThread(c.id); }, 900);
+      startChatFallbackPoll(c.id);
+    });
+    return;
+  }
+
+  const time = nowTimeLabel();
+  c.messages.push({from:'me', text, time});
+  input.value='';
+  renderChatThread();
+  renderChatsList();
+  setTimeout(()=>{
+    const replies = ["Got it, thanks for the update!","Sounds good 👍","On it right now.","Noted — I'll keep you posted!"];
+    c.messages.push({from:'them', text: replies[Math.floor(Math.random()*replies.length)], time:'now'});
+    renderChatThread();
+  }, 1000);
+}
+
+/* =================== NOTIFICATIONS =================== */
+function renderNotifs(){
+  const list = notifState[role];
+  document.getElementById('notifList').innerHTML = list.map((n,i)=>{
+    if(n.subtitle !== undefined){
+      return `<div class="notif-row" style="cursor:pointer;" onclick="openNotif(${i})">
+        <div class="ic" style="background:var(--accent-soft);color:#b3b5ff;"><i class="${n.icon}"></i></div>
+        <div style="flex:1;min-width:0;">
+          <div class="notif-top">
+            <span class="nt">${n.title}${n.seen ? '' : ' <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent-2);margin-left:5px;vertical-align:middle;"></span>'}</span>
+            <span class="ntime">${n.time}</span>
+          </div>
+          <div class="nd">${n.subtitle}${n.cta ? ' · ' + n.cta : ''}</div>
+        </div>
+      </div>`;
+    }
+    const c = COLOR_MAP[n.color] || COLOR_MAP.indigo;
+    return `<div class="notif-row">
+      <div class="ic" style="background:${c.bg};color:${c.fg};">${ICONS[n.ic]||ICONS.bell}</div>
+      <div style="flex:1;">
+        <div class="notif-top"><span class="nt">${n.title}</span><span class="ntime">${n.time}</span></div>
+        <div class="nd">Tap to view details</div>
+      </div>
+    </div>`;
+  }).join('') || emptyOrdersHTML('You\'re all caught up.');
+}
+function openNotif(i){
+  const n = notifState[role][i];
+  if(!n) return;
+  if(IS_LIVE && liveLoggedIn && n._id && !n.seen){
+    api('notifications_mark_read', {id:n._id}).catch(()=>{});
+  }
+  n.seen = true;
+  renderNotifs();
+  renderTabbar();
+  if(n.orderId){
+    openOrderById(n.orderId);
+  } else if(n.url){
+    window.open(n.url, '_blank'); // only used for things with no in-app screen yet (e.g. billing)
+  }
+}
+async function openOrderById(orderId){
+  let o = getOrder(orderId);
+  if(!o && IS_LIVE && liveLoggedIn){
+    showToast('Opening order…');
+    try{
+      const res = await api('order_detail_json', {order_id: orderId});
+      if(res && res.success && res.order){
+        o = mapApiOrder(res.order, true);
+        ORDERS.push(o);
+      }
+    } catch(e){}
+  }
+  if(o){
+    activeOrderId = o.id;
+    goView('orderDetail');
+  } else {
+    showToast('Could not open that order.');
+  }
+}
+function markAllNotifsRead(){
+  notifState[role].forEach(n => { n.seen = true; });
+  renderNotifs();
+  renderTabbar();
+  showToast('All notifications marked as read');
+  if(IS_LIVE && liveLoggedIn){
+    api('notifications_mark_all_read').catch(()=>{});
+  }
+}
+
+/* =================== SETTINGS =================== */
+const CLIENT_ACCOUNT_LINKS = [
+  {icon:'fa-solid fa-user-pen', label:'Edit Profile & Password', url:'https://lolboost.gg/profile/settings'},
+  {icon:'fa-solid fa-receipt', label:'My Orders', url:'https://lolboost.gg/profile/orders'},
+  {icon:'fa-solid fa-file-invoice-dollar', label:'Billing & Invoices', url:'https://lolboost.gg/profile/billing'},
+  {icon:'fa-solid fa-gamepad', label:'Game Accounts', url:'https://lolboost.gg/profile/accounts'},
+  {icon:'fa-solid fa-gift', label:'Referral Program', url:'https://lolboost.gg/profile/referrals'},
+];
+const BOOSTER_ACCOUNT_LINKS = [
+  {icon:'fa-solid fa-id-badge', label:'Booster Profile', url:'https://lolboost.gg/booster-area/profile'},
+  {icon:'fa-solid fa-wallet', label:'Payout Method', url:'https://lolboost.gg/booster-area/payout'},
+  {icon:'fa-solid fa-money-bill-transfer', label:'Payout Requests', url:'https://lolboost.gg/booster-area/payout-requests'},
+  {icon:'fa-solid fa-receipt', label:'Earnings & Payments', url:'https://lolboost.gg/booster-area/payments'},
+  {icon:'fa-solid fa-chart-line', label:'Performance', url:'https://lolboost.gg/booster-area/performance'},
+  {icon:'fa-solid fa-ranking-star', label:'Leaderboard', url:'https://lolboost.gg/booster-area/leaderboard'},
+  {icon:'fa-solid fa-scale-balanced', label:'Rules & Fines', url:'https://lolboost.gg/booster-area/rules-and-fines'},
+];
+function renderSettings(){
+  applyPersona();
+  const links = role==='booster' ? BOOSTER_ACCOUNT_LINKS : CLIENT_ACCOUNT_LINKS;
+  const linkRows = links.map(l => `
+    <div class="list-item" onclick="window.open('${l.url}','_blank')">
+      <div class="li-ic"><i class="${l.icon}"></i></div>
+      <div class="li-txt">${l.label}</div>
+      <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:11px;color:var(--text-faint);"></i>
+    </div>`).join('');
+  const soundRow = `
+    <div class="list-item">
+      <div class="li-ic"><i class="fa-solid fa-volume-high"></i></div>
+      <div class="li-txt">Sound on new messages</div>
+      <div class="switch ${soundNotificationsEnabled?'on':''}" onclick="toggleSoundNotifications()"><div class="knob"></div></div>
+    </div>`;
+  document.getElementById('settingsAccountList').innerHTML = linkRows + soundRow;
+}
+function toggleSoundNotifications(){
+  soundNotificationsEnabled = !soundNotificationsEnabled;
+  renderSettings();
+  showToast(soundNotificationsEnabled ? 'Sound notifications on 🔔' : 'Sound notifications off');
+}
+
+/* =================== CLOCK =================== */
+function tickClock(){
+  const now = new Date();
+  document.getElementById('clock').textContent = now.getHours().toString().padStart(2,'0')+':'+now.getMinutes().toString().padStart(2,'0');
+}
+tickClock();
+setInterval(tickClock, 15000);
+
+/* =================== INIT =================== */
+applyPersona();
+updateModeBanner();
+if(IS_LIVE){
+  document.getElementById('loginSeg').style.display = 'none';
+  document.getElementById('loginSubtext').textContent = 'Sign in with your real lolboost.gg account.';
+}
+updateRoleSwitchVisibility(); // hidden until login determines whether both roles exist
+goView('login', false); // applies the locked-down chrome (no tab bar / no menu) on first paint
+</script>
+</body>
+</html>

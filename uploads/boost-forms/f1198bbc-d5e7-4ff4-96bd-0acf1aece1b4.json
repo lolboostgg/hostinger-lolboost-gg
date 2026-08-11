@@ -1,0 +1,35 @@
+{
+    "main": {
+        "summoners_rift": {
+            "eu": 253,
+            "na": 291
+        },
+        "aram": {
+            "eu": 235,
+            "na": 271
+        },
+        "featured": {
+            "eu": 235,
+            "na": 271
+        }
+    },
+    "extra": {
+        "champions": "0.10",
+        "is_duo": "0.25",
+        "is_coaching": "0.20",
+        "is_priority": "0.25",
+        "is_streaming": "0.15",
+        "is_solo_only": "0.20",
+        "is_hidden_duo": "0.40"
+    },
+    "options": {
+        "opt-duo": "is_duo",
+        "opt-champions": "champions",
+        "opt-priority": "is_priority",
+        "opt-coaching": "is_coaching",
+        "opt-streaming": "is_streaming",
+        "opt-solo-only": "is_solo_only",
+        "opt-hidden-duo": "is_hidden_duo"
+    },
+    "completion_time": 1.5
+}

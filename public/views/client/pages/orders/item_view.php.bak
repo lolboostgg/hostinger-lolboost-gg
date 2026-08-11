@@ -1,0 +1,209 @@
+<?= $this->layout('client/layouts/main', ['meta' => $meta]) ?>
+<?php
+$purchase         = $purchase ?? [];
+$seller           = $seller ?? null;
+$details          = $details ?? [];
+$remaining        = $remaining ?? null;
+$can_review       = $can_review ?? false;
+$already_reviewed = $already_reviewed ?? false;
+$is_completed     = strtolower($purchase['status'] ?? '') === 'completed';
+$seller_id_rv     = (int)($purchase['seller_id'] ?? 0);
+$purchase_id_rv   = (int)($purchase['id'] ?? 0);
+$seller_name_rv   = htmlspecialchars($seller['username'] ?? 'the seller');
+?>
+<div class="content container-fluid">
+    <div class="page-header"><div class="row align-items-center"><div class="col"><h1 class="page-header-title">Item Order #<?= (int)$purchase['id'] ?></h1></div></div></div>
+    <div class="row g-4">
+        <div class="col-xl-4">
+            <div class="card"><div class="card-body">
+                <div class="mb-3"><div class="small text-muted">Item</div><div class="fw-semibold"><?= htmlspecialchars($purchase['item_title'] ?? 'Item') ?></div></div>
+                <div class="mb-3"><div class="small text-muted">Seller</div><div class="fw-semibold"><?= htmlspecialchars($seller['username'] ?? 'Seller') ?></div></div>
+                <div class="mb-3"><div class="small text-muted">Wanted gift</div><div class="fw-semibold"><?= htmlspecialchars($details['wanted_gift'] ?? '—') ?></div></div>
+                <div class="mb-3"><div class="small text-muted">Riot ID</div><div class="fw-semibold"><?= htmlspecialchars(($details['riot_game_name'] ?? '—') . (!empty($details['riot_tagline']) ? '#' . $details['riot_tagline'] : '')) ?></div></div>
+                <div class="mb-3"><div class="small text-muted">Status</div><span class="badge bg-soft-primary text-primary"><?= htmlspecialchars($purchase['status']) ?></span></div>
+                <?php if (!empty($purchase['friendship_confirmed_at'])): ?>
+                    <div class="alert alert-soft-primary mb-0">
+                        <div class="fw-semibold">Friendship confirmed by seller</div>
+                        <div class="small">Ready at: <?= !empty($purchase['friendship_ready_at']) ? date('d.m.Y H:i', strtotime($purchase['friendship_ready_at'])) : '—' ?></div>
+                        <div class="small" id="friendshipCountdown" data-ready-at="<?= htmlspecialchars($purchase['friendship_ready_at'] ?? '') ?>"><?= $remaining !== null && $remaining > 0 ? '' : 'Gifting is now available.' ?></div>
+                    </div>
+                <?php else: ?>
+                    <div class="alert alert-soft-secondary mb-0">Waiting for seller to confirm friendship.</div>
+                <?php endif; ?>
+            </div></div>
+        </div>
+        <div class="col-xl-8">
+            <div class="card">
+                <div class="card-header"><h4 class="card-header-title">Seller Chat</h4></div>
+                <div class="card-body">
+                    <div id="itemChatMessages" style="max-height:520px;overflow:auto;display:flex;flex-direction:column;gap:10px;padding-right:4px;"></div>
+                    <form class="ajax-form mt-3" action="<?= AJAX_URL ?>" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="action" value="client_item_chat_send">
+                        <input type="hidden" name="purchase_id" value="<?= (int)$purchase['id'] ?>">
+                        <div class="row g-2">
+                            <div class="col"><textarea class="form-control" name="message" rows="3" placeholder="Write a message..."></textarea></div>
+                            <div class="col-12 col-md-auto"><input type="file" class="form-control" name="chat_image" accept="image/*"></div>
+                            <div class="col-12 col-md-auto"><button type="submit" class="btn btn-primary h-100">Send</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?= $this->start('scripts') ?>
+<?php if ($is_completed && $can_review && !$already_reviewed): ?>
+<!-- ── Seller Review Modal ── -->
+<style>
+.sr-modal-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+.sr-modal-overlay.is-open{opacity:1;pointer-events:all;}
+.sr-modal{background:linear-gradient(160deg,#1a0d2e,#0f1a30);border:1px solid rgba(168,85,247,.25);border-radius:20px;padding:2rem;width:100%;max-width:440px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.6);transform:translateY(20px) scale(.97);transition:transform .25s ease;}
+.sr-modal-overlay.is-open .sr-modal{transform:translateY(0) scale(1);}
+.sr-stars{display:flex;justify-content:center;gap:.5rem;margin:1.25rem 0;}
+.sr-star{background:none;border:none;cursor:pointer;font-size:2.4rem;color:rgba(255,255,255,.2);transition:color .12s,transform .1s;line-height:1;padding:0;}
+.sr-star:hover,.sr-star.hovered,.sr-star.selected{color:#f59e0b;transform:scale(1.15);}
+.sr-dismiss{background:none;border:none;color:rgba(255,255,255,.35);font-size:.8rem;cursor:pointer;margin-top:1rem;text-decoration:underline;}
+.sr-dismiss:hover{color:rgba(255,255,255,.6);}
+</style>
+
+<div class="sr-modal-overlay" id="srOverlay">
+  <div class="sr-modal">
+    <div style="font-size:2.2rem;margin-bottom:.5rem;">⭐</div>
+    <h3 style="color:#fff;font-size:1.05rem;font-weight:800;margin:0 0 .3rem;">How was <?= $seller_name_rv ?>?</h3>
+    <p style="color:rgba(255,255,255,.5);font-size:.85rem;margin:0;">Your order is complete — tap a star to rate!</p>
+
+    <div class="sr-stars" id="srStars">
+      <?php for ($i = 1; $i <= 5; $i++): ?>
+        <button type="button" class="sr-star" data-val="<?= $i ?>" aria-label="<?= $i ?> stars">★</button>
+      <?php endfor; ?>
+    </div>
+
+    <p id="srMsg" style="color:#f87171;font-size:.82rem;margin:0;min-height:1.2em;"></p>
+    <button type="button" class="sr-dismiss" id="srDismiss">Not now</button>
+  </div>
+</div>
+<?php endif; ?>
+
+<script>
+(function(){
+  const container = document.getElementById('itemChatMessages');
+  const purchaseId = <?= (int)($purchase['id'] ?? 0) ?>;
+  if (container && purchaseId) {
+    function esc(str){ const d=document.createElement('div'); d.textContent = str || ''; return d.innerHTML; }
+    function render(messages){
+      container.innerHTML = '';
+      (messages || []).forEach(m => {
+        const wrap = document.createElement('div');
+        const mine = (m.sender === 'client');
+        wrap.style.maxWidth = '78%'; wrap.style.alignSelf = mine ? 'flex-end' : 'flex-start';
+        wrap.innerHTML = '<div style="font-size:12px;color:rgba(255,255,255,.45);margin-bottom:4px;">'+esc(m.sender_name || m.sender || '')+' • '+(m.time ? new Date(m.time * 1000).toLocaleString() : '')+'</div>'+
+          '<div style="padding:10px 12px;border-radius:12px;background:'+(mine?'rgba(99,102,241,.2)':'rgba(255,255,255,.06)')+';">'+(m.message_type === 'image' ? m.content : esc(m.content || ''))+'</div>';
+        container.appendChild(wrap);
+      });
+      container.scrollTop = container.scrollHeight;
+    }
+    function load(){ $.post(AJAX_URL, {action:'item_chat_load', purchase_id:purchaseId}, function(resp){ try{ if(typeof resp==='string') resp=JSON.parse(resp); if(resp && resp.success) render(resp.messages||[]);}catch(e){} }); }
+    load(); setInterval(load, 5000);
+  }
+  const cd = document.getElementById('friendshipCountdown');
+  if (cd && cd.dataset.readyAt) {
+    function tick(){ const ready = new Date(cd.dataset.readyAt.replace(' ','T')).getTime(); const diff = ready - Date.now(); if (isNaN(ready)) return; if (diff <= 0) { cd.textContent = 'Gifting is now available.'; return; } const d = Math.floor(diff / 86400000), h = Math.floor((diff % 86400000) / 3600000), m = Math.floor((diff % 3600000) / 60000); cd.textContent = d + 'd ' + h + 'h ' + m + 'm remaining'; }
+    tick(); setInterval(tick, 60000);
+  }
+
+  // ── Review popup ──────────────────────────────────────────────
+  (function(){
+    const overlay  = document.getElementById('srOverlay');
+    if (!overlay) return;
+
+    const SELLER_ID   = <?= $seller_id_rv ?>;
+    const PURCHASE_ID = <?= $purchase_id_rv ?>;
+    const key         = 'lb_item_review_' + PURCHASE_ID;
+
+    const isDismissed = () => { try { return localStorage.getItem(key) === '1'; } catch(e) { return false; } };
+    const markDismissed = () => { try { localStorage.setItem(key, '1'); } catch(e) {} };
+
+    if (isDismissed()) return;
+
+    // Auto-open after short delay
+    setTimeout(function() {
+      overlay.classList.add('is-open');
+    }, 800);
+
+    // Dismiss button
+    const dismissBtn = document.getElementById('srDismiss');
+    if (dismissBtn) dismissBtn.addEventListener('click', function() {
+      markDismissed();
+      overlay.classList.remove('is-open');
+    });
+
+    // Click outside
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        markDismissed();
+        overlay.classList.remove('is-open');
+      }
+    });
+
+    // Star rating + submit
+    const stars = Array.from(document.querySelectorAll('.sr-star'));
+    const msg   = document.getElementById('srMsg');
+    let selected = 0;
+
+    stars.forEach(function(s) {
+      s.addEventListener('mouseover', function() {
+        const v = parseInt(this.dataset.val);
+        stars.forEach(function(x) { x.classList.toggle('hovered', parseInt(x.dataset.val) <= v); });
+      });
+      s.addEventListener('mouseout', function() {
+        stars.forEach(function(x) { x.classList.remove('hovered'); });
+      });
+      s.addEventListener('click', function() {
+        selected = parseInt(this.dataset.val);
+        stars.forEach(function(x) { x.classList.toggle('selected', parseInt(x.dataset.val) <= selected); });
+        // Auto-submit on click
+        submitReview(selected);
+      });
+    });
+
+    function submitReview(rating) {
+      stars.forEach(function(s) { s.disabled = true; });
+      if (dismissBtn) dismissBtn.style.display = 'none';
+
+      var fd = new FormData();
+      fd.append('action',      'submit_seller_review');
+      fd.append('seller_id',   SELLER_ID);
+      fd.append('purchase_id', PURCHASE_ID);
+      fd.append('rating',      rating);
+      fd.append('comment',     rating >= 4 ? 'Great seller!' : rating >= 3 ? 'Good seller.' : 'Could be better.');
+
+      fetch(typeof AJAX_URL !== 'undefined' ? AJAX_URL : '/ajax', {
+        method: 'POST', body: fd, credentials: 'same-origin'
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(res) {
+        var t = res.sendToast || {};
+        if (t.type === 'success' || t.type === 'warning') {
+          markDismissed();
+          overlay.querySelector('.sr-modal').innerHTML =
+            '<div style="font-size:2.5rem;margin-bottom:.75rem;">✅</div>' +
+            '<h3 style="color:#fff;font-size:1.05rem;font-weight:800;margin:0 0 .4rem;">Thanks for your feedback!</h3>' +
+            '<p style="color:rgba(255,255,255,.5);font-size:.85rem;margin:0 0 1.25rem;">Your review will appear after approval.</p>' +
+            '<button onclick="document.getElementById(\'srOverlay\').classList.remove(\'is-open\')" style="background:rgba(168,85,247,.2);border:1px solid rgba(168,85,247,.35);color:#c4b5fd;border-radius:10px;padding:.5rem 1.25rem;cursor:pointer;font-weight:700;">Close</button>';
+          setTimeout(function() { overlay.classList.remove('is-open'); }, 3000);
+        } else {
+          if (msg) msg.textContent = t.message || 'Something went wrong.';
+          stars.forEach(function(s) { s.disabled = false; });
+          if (dismissBtn) dismissBtn.style.display = '';
+        }
+      })
+      .catch(function() {
+        if (msg) msg.textContent = 'Could not submit. Try again.';
+        stars.forEach(function(s) { s.disabled = false; });
+        if (dismissBtn) dismissBtn.style.display = '';
+      });
+    }
+  })();
+})();
+</script>
+<?= $this->end() ?>

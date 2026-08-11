@@ -1,0 +1,43 @@
+{
+    "main": {
+        "1": {
+            "eu": 237,
+            "na": 320
+        },
+        "2": {
+            "eu": 342,
+            "na": 420
+        },
+        "3": {
+            "eu": 423,
+            "na": 500
+        },
+        "4": {
+            "eu": 450,
+            "na": 550
+        },
+        "5": {
+            "eu": 523,
+            "na": 630
+        }
+    },
+    "extra": {
+        "champions": "0.15",
+        "is_duo": "0.50",
+        "is_coaching": "0.20",
+        "is_priority": "0.25",
+        "is_streaming": "0.15",
+        "is_solo_only": "0.20",
+        "is_hidden_duo": "0.40"
+    },
+    "options": {
+        "opt-duo": "is_duo",
+        "opt-champions": "champions",
+        "opt-priority": "is_priority",
+        "opt-coaching": "is_coaching",
+        "opt-streaming": "is_streaming",
+        "opt-solo-only": "is_solo_only",
+        "opt-hidden-duo": "is_hidden_duo"
+    },
+    "completion_time": 1
+}

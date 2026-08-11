@@ -1,0 +1,15 @@
+{
+    "main": {
+        "Co-Pilot": 2000,
+        "VOD-Review": 2000,
+        "copilot": 0,
+        "vodreview": 0
+    },
+    "extra": {
+        "agents": "0.00"
+    },
+    "options": {
+        "opt-agents": "agents"
+    },
+    "completion_time": 1
+}

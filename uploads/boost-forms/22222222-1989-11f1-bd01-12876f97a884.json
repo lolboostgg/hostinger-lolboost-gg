@@ -1,0 +1,316 @@
+{
+    "completion_time": 1,
+    "points_label": "LP",
+    "points_min": 0,
+    "points_step": 1,
+    "main": {
+        "1": {
+            "1": {
+                "eu": 164,
+                "na": 189
+            },
+            "2": {
+                "eu": 164,
+                "na": 189
+            },
+            "3": {
+                "eu": 164,
+                "na": 189
+            },
+            "4": {
+                "eu": 164,
+                "na": 189
+            }
+        },
+        "2": {
+            "1": {
+                "eu": 170,
+                "na": 194
+            },
+            "2": {
+                "eu": 170,
+                "na": 194
+            },
+            "3": {
+                "eu": 211,
+                "na": 241
+            },
+            "4": {
+                "eu": 229,
+                "na": 261
+            }
+        },
+        "3": {
+            "1": {
+                "eu": 174,
+                "na": 201
+            },
+            "2": {
+                "eu": 174,
+                "na": 201
+            },
+            "3": {
+                "eu": 259,
+                "na": 296
+            },
+            "4": {
+                "eu": 293,
+                "na": 337
+            }
+        },
+        "4": {
+            "1": {
+                "eu": 329,
+                "na": 377
+            },
+            "2": {
+                "eu": 340,
+                "na": 391
+            },
+            "3": {
+                "eu": 387,
+                "na": 446
+            },
+            "4": {
+                "eu": 469,
+                "na": 540
+            }
+        },
+        "5": {
+            "1": {
+                "eu": 574,
+                "na": 661
+            },
+            "2": {
+                "eu": 587,
+                "na": 674
+            },
+            "3": {
+                "eu": 634,
+                "na": 729
+            },
+            "4": {
+                "eu": 693,
+                "na": 797
+            }
+        },
+        "6": {
+            "1": {
+                "eu": 799,
+                "na": 919
+            },
+            "2": {
+                "eu": 964,
+                "na": 1064
+            },
+            "3": {
+                "eu": 1064,
+                "na": 1264
+            },
+            "4": {
+                "eu": 1064,
+                "na": 1264
+            }
+        },
+        "7": {
+            "100": {
+                "eu": 1064,
+                "na": 1264
+            },
+            "200": {
+                "eu": 1064,
+                "na": 1264
+            },
+            "300": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "400": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "500": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "600": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "700": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "800": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "900": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "1000": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "1100": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "1200": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "1300": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "1400": {
+                "eu": 1264,
+                "na": 1264
+            },
+            "1500": {
+                "eu": 1264,
+                "na": 1264
+            }
+        }
+    },
+    "extra": {
+        "is_duo": 0.5,
+        "is_priority": 0.25,
+        "is_streaming": 0.15,
+        "is_solo_only": 0.3,
+        "is_hidden_duo": 0.5,
+        "is_coaching": 0.2
+    },
+    "rank_names": [
+        "Unranked",
+        "Salt",
+        "Wood",
+        "Silver",
+        "Gold",
+        "Platinum",
+        "Diamond",
+        "Legend"
+    ],
+    "division_count": 4,
+    "server_options": {
+        "eu": "Europe",
+        "na": "North America"
+    },
+    "platform_options": {
+        "pc": "PC"
+    },
+    "queue_options": {
+        "solo_\/_duo": "Ranked Solo\/Duo",
+        "flexq": "Ranked Flex Queue"
+    },
+    "lp_gain_options": {
+        "30+": "30+ LP \/ Win",
+        "25-29": "25-29 LP \/ Win",
+        "20-24": "20-24 LP \/ Win",
+        "10-19": "10-19 LP \/ Win"
+    },
+    "points_options": {
+        "0-20": "0-20 LP",
+        "21-40": "21-40 LP",
+        "41-60": "41-60 LP",
+        "61-80": "61-80 LP",
+        "81-100": "81-100 LP"
+    },
+    "form_config": {
+        "show_server": true,
+        "show_platform": false,
+        "show_current_points": true,
+        "show_lp_gain": true,
+        "show_queue_type": false,
+        "show_solo_duo": true,
+        "div_order": "desc",
+        "ranks": [
+            "Unranked",
+            "Salt",
+            "Wood",
+            "Silver",
+            "Gold",
+            "Platinum",
+            "Diamond",
+            "Legend"
+        ],
+        "rank_divs": [
+            0,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            0
+        ],
+        "divisions": 4
+    },
+    "lp_gain": {
+        "30+": 0.07,
+        "25-29": 0,
+        "20-24": 0,
+        "10-19": -0.03
+    },
+    "extra_config": {
+        "is_duo": {
+            "label": "Duo Queue",
+            "icon": "fa-users",
+            "def": 0.5,
+            "enabled": true,
+            "class": ""
+        },
+        "is_priority": {
+            "label": "Priority Boost",
+            "icon": "fa-bolt",
+            "def": 0.25,
+            "enabled": true,
+            "class": ""
+        },
+        "is_streaming": {
+            "label": "Stream Games",
+            "icon": "fa-video",
+            "def": 0.15,
+            "enabled": true,
+            "class": ""
+        },
+        "is_solo_only": {
+            "label": "Solo Only Queue",
+            "icon": "fa-user",
+            "def": 0.3,
+            "enabled": true,
+            "class": ""
+        },
+        "is_hidden_duo": {
+            "label": "Hidden Duo",
+            "icon": "fa-eye-slash",
+            "def": 0.5,
+            "enabled": true,
+            "class": ""
+        },
+        "is_champions_roles": {
+            "label": "Heroes \/ Roles Selection",
+            "icon": "fa-chess-knight",
+            "def": 0.1,
+            "enabled": false,
+            "class": ""
+        },
+        "bonus_win_extra_fee": {
+            "label": "+1 Bonus Win",
+            "icon": "fa-trophy",
+            "def": 0.1,
+            "enabled": false,
+            "class": ""
+        },
+        "is_coaching": {
+            "label": "Coaching Add-on",
+            "icon": "fa-headset",
+            "def": 0.2,
+            "enabled": true,
+            "class": ""
+        }
+    },
+    "apex_from": 7
+}
