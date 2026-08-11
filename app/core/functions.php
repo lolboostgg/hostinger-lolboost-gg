@@ -10640,6 +10640,33 @@ function _booster_cut_resolve(array $order): array
     ];
 }
 
+if (!function_exists('lb_fixed_booster_cut_percent')) {
+    /**
+     * Booster-specific cut overrides for single-owner orders.
+     * Multi-booster orders keep their team payout rules.
+     */
+    function lb_fixed_booster_cut_percent(array $order, ?int $boosterId = null): ?int
+    {
+        $boosterId = $boosterId ?? (int)($order['booster_id'] ?? 0);
+        if ($boosterId !== 201) {
+            return null;
+        }
+
+        $formId = (int)($order['form_id'] ?? 0);
+        if ($formId === 29) {
+            return null;
+        }
+
+        if (in_array($formId, [4, 19], true) && !empty($order['id'])
+            && function_exists('lb_multi_booster_required_count')
+            && lb_multi_booster_required_count((int)$order['id']) > 1) {
+            return null;
+        }
+
+        return 60;
+    }
+}
+
 
 if (!function_exists('lb_ranked_5s_fixed_cut_percent')) {
     function lb_ranked_5s_fixed_cut_percent(): int
@@ -10701,6 +10728,15 @@ function calculate_booster_cut($order, $return_type = 'amount')
         return lb_ranked_5s_booster_earning_cents($order);
     }
 
+    $fixed_cut = lb_fixed_booster_cut_percent($order);
+    if ($fixed_cut !== null) {
+        if ($return_type === 'percent') {
+            return $fixed_cut;
+        }
+
+        return (int) floor(((int)($order['price'] ?? 0) * $fixed_cut) / 100);
+    }
+
     $price_cents = (int) ($order['price'] ?? 0);
     $r = _booster_cut_resolve($order);
     $cut_percent = $r['cut_percent'];
@@ -10721,6 +10757,11 @@ function calculate_effective_booster_cut_percent($order): float
     $order = (array)$order;
     if ((int)($order['form_id'] ?? 0) === 29) {
         return (float)lb_ranked_5s_fixed_cut_percent();
+    }
+
+    $fixed_cut = lb_fixed_booster_cut_percent($order);
+    if ($fixed_cut !== null) {
+        return (float)$fixed_cut;
     }
 
     $r = _booster_cut_resolve($order);
@@ -10759,6 +10800,15 @@ function calculate_booster_cut_meta($order): array
     if ((int)($order['form_id'] ?? 0) === 29) {
         return [
             'percent' => lb_ranked_5s_fixed_cut_percent(),
+            'next_change_in' => null,
+            'is_max' => true,
+        ];
+    }
+
+    $fixed_cut = lb_fixed_booster_cut_percent($order);
+    if ($fixed_cut !== null) {
+        return [
+            'percent' => $fixed_cut,
             'next_change_in' => null,
             'is_max' => true,
         ];
