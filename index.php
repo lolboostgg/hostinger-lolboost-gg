@@ -19,15 +19,6 @@ const LB_TURNSTILE_SECRET_KEY = '0x4AAAAAADgwAcobKsilBwnIT748SNv7ZPU';
 const LB_SECURITY_COOKIE      = 'lb_security_verified';
 const LB_SECURITY_COOKIE_TTL  = 7200;
 const LB_SECURITY_FLAG_FILE   = __DIR__ . '/security_under_attack.flag';
-const LB_SECURITY_DATA_DIR    = __DIR__ . '/security_data';
-const LB_SECURITY_AUTO_ENABLED = true;
-const LB_SECURITY_AUTO_CHECK_INTERVAL = 20;
-const LB_SECURITY_AUTO_WINDOW_MINUTES = 5;
-const LB_SECURITY_AUTO_REQUEST_LIMIT = 15000;
-const LB_SECURITY_AUTO_UNIQUE_IP_LIMIT = 1000;
-const LB_SECURITY_AUTO_COOLDOWN_REQUEST_LIMIT = 1500;
-const LB_SECURITY_AUTO_COOLDOWN_UNIQUE_IP_LIMIT = 180;
-const LB_SECURITY_AUTO_MIN_ACTIVE_SECONDS = 1800;
 
 function lb_security_current_path(): string {
     $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
@@ -74,13 +65,6 @@ function lb_security_cookie_params(): array {
 }
 
 
-function lb_security_data_dir(): string {
-    if (!is_dir(LB_SECURITY_DATA_DIR)) {
-        @mkdir(LB_SECURITY_DATA_DIR, 0755, true);
-    }
-    return LB_SECURITY_DATA_DIR;
-}
-
 function lb_security_client_ip(): string {
     $headers = [
         'HTTP_CF_CONNECTING_IP',
@@ -100,217 +84,6 @@ function lb_security_client_ip(): string {
     }
 
     return 'unknown';
-}
-
-function lb_security_json_read(string $file, array $fallback = []): array {
-    if (!is_file($file)) {
-        return $fallback;
-    }
-    $raw = @file_get_contents($file);
-    if (!is_string($raw) || $raw === '') {
-        return $fallback;
-    }
-    $data = json_decode($raw, true);
-    return is_array($data) ? $data : $fallback;
-}
-
-function lb_security_json_write(string $file, array $data): void {
-    @file_put_contents($file, json_encode($data, JSON_UNESCAPED_SLASHES), LOCK_EX);
-}
-
-function lb_security_bucket_file(?int $minute = null): string {
-    $minute = $minute ?? (int)floor(time() / 60);
-    return lb_security_data_dir() . '/traffic_' . gmdate('YmdHi', $minute * 60) . '.json';
-}
-
-function lb_security_prune_buckets(): void {
-    $dir = lb_security_data_dir();
-    $keepAfter = time() - 7200;
-    foreach (glob($dir . '/traffic_*.json') ?: [] as $file) {
-        if (@filemtime($file) < $keepAfter) {
-            @unlink($file);
-        }
-    }
-}
-
-function lb_security_increment_metric(string $metric): void {
-    $file = lb_security_data_dir() . '/metrics.json';
-    $lockFile = lb_security_data_dir() . '/metrics.lock';
-    $lock = @fopen($lockFile, 'c');
-    if ($lock && @flock($lock, LOCK_EX | LOCK_NB)) {
-        $data = lb_security_json_read($file, []);
-        $today = gmdate('Y-m-d');
-        if (($data['date'] ?? '') !== $today) {
-            $data = ['date' => $today, 'challenges' => 0, 'verified' => 0, 'auto_activations' => 0];
-        }
-        $data[$metric] = (int)($data[$metric] ?? 0) + 1;
-        $data['updated_at'] = time();
-        lb_security_json_write($file, $data);
-        @flock($lock, LOCK_UN);
-        @fclose($lock);
-        return;
-    }
-    if ($lock) {
-        @fclose($lock);
-    }
-}
-
-function lb_security_track_request(string $path): void {
-    if (PHP_SAPI === 'cli') {
-        return;
-    }
-
-    // Internal areas, polling, assets and machine endpoints must not fill traffic buckets.
-    if (lb_security_is_internal_path($path)) {
-        return;
-    }
-
-    foreach (['/ajax', '/public', '/assets', '/webhook', '/payment', '/callback', '/cron', '/api'] as $skip) {
-        if (lb_security_path_matches_prefix($path, $skip)) {
-            return;
-        }
-    }
-
-    $dir = lb_security_data_dir();
-    $bucketFile = lb_security_bucket_file();
-    $lockFile = $dir . '/traffic.lock';
-    $lock = @fopen($lockFile, 'c');
-    if (!$lock || !@flock($lock, LOCK_EX | LOCK_NB)) {
-        if ($lock) @fclose($lock);
-        return;
-    }
-
-    $data = lb_security_json_read($bucketFile, [
-        'minute' => (int)floor(time() / 60),
-        'requests' => 0,
-        'ips' => [],
-        'countries' => [],
-        'paths' => [],
-    ]);
-
-    $ip = lb_security_client_ip();
-    $country = strtoupper(substr((string)($_SERVER['HTTP_CF_IPCOUNTRY'] ?? 'XX'), 0, 2));
-    $cleanPath = substr($path ?: '/', 0, 160);
-
-    $data['requests'] = (int)($data['requests'] ?? 0) + 1;
-    if (count($data['ips'] ?? []) < 1500 || isset($data['ips'][$ip])) {
-        $data['ips'][$ip] = (int)($data['ips'][$ip] ?? 0) + 1;
-    }
-    $data['countries'][$country] = (int)($data['countries'][$country] ?? 0) + 1;
-    if (count($data['paths'] ?? []) < 250 || isset($data['paths'][$cleanPath])) {
-        $data['paths'][$cleanPath] = (int)($data['paths'][$cleanPath] ?? 0) + 1;
-    }
-    $data['updated_at'] = time();
-
-    lb_security_json_write($bucketFile, $data);
-    @flock($lock, LOCK_UN);
-    @fclose($lock);
-
-    if (random_int(1, 250) === 1) {
-        lb_security_prune_buckets();
-    }
-}
-
-function lb_security_traffic_summary(int $minutes = 5): array {
-    $requests = 0;
-    $ips = [];
-    $countries = [];
-    $paths = [];
-    $currentMinute = (int)floor(time() / 60);
-
-    for ($i = 0; $i < $minutes; $i++) {
-        $data = lb_security_json_read(lb_security_bucket_file($currentMinute - $i), []);
-        $requests += (int)($data['requests'] ?? 0);
-        foreach (($data['ips'] ?? []) as $ip => $count) {
-            $ips[$ip] = ($ips[$ip] ?? 0) + (int)$count;
-        }
-        foreach (($data['countries'] ?? []) as $country => $count) {
-            $countries[$country] = ($countries[$country] ?? 0) + (int)$count;
-        }
-        foreach (($data['paths'] ?? []) as $path => $count) {
-            $paths[$path] = ($paths[$path] ?? 0) + (int)$count;
-        }
-    }
-
-    arsort($countries);
-    arsort($ips);
-    arsort($paths);
-
-    return [
-        'requests' => $requests,
-        'unique_ips' => count($ips),
-        'countries' => array_slice($countries, 0, 8, true),
-        'ips' => array_slice($ips, 0, 8, true),
-        'paths' => array_slice($paths, 0, 8, true),
-    ];
-}
-
-function lb_security_auto_protection(): void {
-    if (!LB_SECURITY_AUTO_ENABLED) {
-        return;
-    }
-
-    $marker = lb_security_data_dir() . '/auto_check.ts';
-    $lastCheck = @filemtime($marker);
-    if ($lastCheck !== false && (time() - $lastCheck) < LB_SECURITY_AUTO_CHECK_INTERVAL) {
-        return;
-    }
-
-    $markerLock = @fopen(lb_security_data_dir() . '/auto_check.lock', 'c');
-    if (!$markerLock || !@flock($markerLock, LOCK_EX | LOCK_NB)) {
-        if ($markerLock) {
-            @fclose($markerLock);
-        }
-        return;
-    }
-
-    clearstatcache(true, $marker);
-    $lastCheck = @filemtime($marker);
-    if ($lastCheck !== false && (time() - $lastCheck) < LB_SECURITY_AUTO_CHECK_INTERVAL) {
-        @flock($markerLock, LOCK_UN);
-        @fclose($markerLock);
-        return;
-    }
-
-    @touch($marker);
-    @flock($markerLock, LOCK_UN);
-    @fclose($markerLock);
-
-    $summary = lb_security_traffic_summary(LB_SECURITY_AUTO_WINDOW_MINUTES);
-    $requests = (int)$summary['requests'];
-    $uniqueIps = (int)$summary['unique_ips'];
-    $flagActive = is_file(LB_SECURITY_FLAG_FILE);
-    $flagContent = $flagActive ? (string)@file_get_contents(LB_SECURITY_FLAG_FILE) : '';
-    $autoOwned = str_contains($flagContent, '[AUTO]');
-
-    if (!$flagActive && ($requests >= LB_SECURITY_AUTO_REQUEST_LIMIT || $uniqueIps >= LB_SECURITY_AUTO_UNIQUE_IP_LIMIT)) {
-        $content = '[AUTO] LoLBoost Security Mode active since ' . date('Y-m-d H:i:s') . ' because traffic reached ' . $requests . ' requests and ' . $uniqueIps . ' unique IPs in ' . LB_SECURITY_AUTO_WINDOW_MINUTES . ' minutes.' . PHP_EOL;
-        @file_put_contents(LB_SECURITY_FLAG_FILE, $content, LOCK_EX);
-        lb_security_increment_metric('auto_activations');
-        lb_security_json_write(lb_security_data_dir() . '/auto_state.json', [
-            'active_since' => time(),
-            'reason' => 'traffic_spike',
-            'requests' => $requests,
-            'unique_ips' => $uniqueIps,
-        ]);
-        return;
-    }
-
-    if ($flagActive && $autoOwned) {
-        $state = lb_security_json_read(lb_security_data_dir() . '/auto_state.json', []);
-        $activeSince = (int)($state['active_since'] ?? @filemtime(LB_SECURITY_FLAG_FILE) ?: time());
-        $longEnough = (time() - $activeSince) >= LB_SECURITY_AUTO_MIN_ACTIVE_SECONDS;
-        $trafficNormal = $requests <= LB_SECURITY_AUTO_COOLDOWN_REQUEST_LIMIT && $uniqueIps <= LB_SECURITY_AUTO_COOLDOWN_UNIQUE_IP_LIMIT;
-        if ($longEnough && $trafficNormal) {
-            @unlink(LB_SECURITY_FLAG_FILE);
-            lb_security_json_write(lb_security_data_dir() . '/auto_state.json', [
-                'last_disabled_at' => time(),
-                'reason' => 'traffic_normal',
-                'requests' => $requests,
-                'unique_ips' => $uniqueIps,
-            ]);
-        }
-    }
 }
 
 function lb_security_safe_redirect(string $redirect): string {
@@ -440,7 +213,6 @@ function lb_security_render_page(string $redirect, string $error = ''): void {
         ? '<div class="lb-sec-alert">Turnstile Site Key und Secret Key müssen noch in index.php eingetragen werden.</div>'
         : '';
 
-    lb_security_increment_metric('challenges');
     http_response_code(403);
     header('Content-Type: text/html; charset=UTF-8');
     echo <<<HTML
@@ -499,8 +271,6 @@ HTML;
 }
 
 $lbSecurityPath = lb_security_current_path();
-lb_security_track_request($lbSecurityPath);
-lb_security_auto_protection();
 
 if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && isset($_POST['cf-turnstile-response'])) {
     $redirect = lb_security_safe_redirect((string)($_POST['redirect'] ?? '/'));
@@ -509,7 +279,6 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && isset($_POST['cf-turnsti
     if (lb_security_verify_turnstile($turnstileToken)) {
         $cookieValue = lb_security_cookie_signature();
         setcookie(LB_SECURITY_COOKIE, $cookieValue, lb_security_cookie_params());
-        lb_security_increment_metric('verified');
         header('Location: ' . $redirect, true, 302);
         exit;
     }

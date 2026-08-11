@@ -6,71 +6,6 @@ $updated = $updated ?? '';
 $statusText = $active ? 'ACTIVE' : 'INACTIVE';
 $statusClass = $active ? 'is-active' : 'is-inactive';
 
-$securityRoot = rtrim((string)($_SERVER['DOCUMENT_ROOT'] ?? dirname(__DIR__, 4)), '/');
-$securityDataDir = $securityRoot . '/security_data';
-
-$readJson = static function (string $file, array $fallback = []): array {
-    if (!is_file($file)) {
-        return $fallback;
-    }
-    $raw = @file_get_contents($file);
-    if (!is_string($raw) || $raw === '') {
-        return $fallback;
-    }
-    $data = json_decode($raw, true);
-    return is_array($data) ? $data : $fallback;
-};
-
-$trafficSummary = static function (string $dir, int $minutes) use ($readJson): array {
-    $requests = 0;
-    $ips = [];
-    $countries = [];
-    $paths = [];
-    $currentMinute = (int)floor(time() / 60);
-
-    for ($i = 0; $i < $minutes; $i++) {
-        $file = $dir . '/traffic_' . gmdate('YmdHi', ($currentMinute - $i) * 60) . '.json';
-        $data = $readJson($file, []);
-        $requests += (int)($data['requests'] ?? 0);
-        foreach (($data['ips'] ?? []) as $ip => $count) {
-            $ips[$ip] = ($ips[$ip] ?? 0) + (int)$count;
-        }
-        foreach (($data['countries'] ?? []) as $country => $count) {
-            $countries[$country] = ($countries[$country] ?? 0) + (int)$count;
-        }
-        foreach (($data['paths'] ?? []) as $path => $count) {
-            $paths[$path] = ($paths[$path] ?? 0) + (int)$count;
-        }
-    }
-
-    arsort($countries);
-    arsort($ips);
-    arsort($paths);
-
-    return [
-        'requests' => $requests,
-        'unique_ips' => count($ips),
-        'countries' => array_slice($countries, 0, 8, true),
-        'ips' => array_slice($ips, 0, 8, true),
-        'paths' => array_slice($paths, 0, 8, true),
-    ];
-};
-
-$traffic5 = $trafficSummary($securityDataDir, 5);
-$traffic60 = $trafficSummary($securityDataDir, 60);
-$metrics = $readJson($securityDataDir . '/metrics.json', ['challenges' => 0, 'verified' => 0, 'auto_activations' => 0]);
-$autoState = $readJson($securityDataDir . '/auto_state.json', []);
-$autoThresholdRequests = 15000;
-$autoThresholdIps = 1000;
-$threatLevel = 'Normal';
-$threatClass = 'normal';
-if (($traffic5['requests'] ?? 0) >= $autoThresholdRequests || ($traffic5['unique_ips'] ?? 0) >= $autoThresholdIps) {
-    $threatLevel = 'High';
-    $threatClass = 'high';
-} elseif (($traffic5['requests'] ?? 0) >= (int)($autoThresholdRequests * .55) || ($traffic5['unique_ips'] ?? 0) >= (int)($autoThresholdIps * .55)) {
-    $threatLevel = 'Elevated';
-    $threatClass = 'elevated';
-}
 ?>
 
 <style>
@@ -519,84 +454,12 @@ if (($traffic5['requests'] ?? 0) >= $autoThresholdRequests || ($traffic5['unique
         <div class="security-hero-header">
             <div>
                 <h2>LoLBoost Security Mode</h2>
-                <p>Track live traffic and control your custom Turnstile powered browser verification globally.</p>
+                <p>Control your custom Turnstile powered browser verification globally.</p>
             </div>
             <span class="security-status <?= $statusClass ?>"><span class="security-dot"></span><?= $statusText ?></span>
         </div>
 
         <div class="security-body">
-
-            <div class="security-live-grid">
-                <div class="security-live-card">
-                    <span>Requests, last 5 minutes</span>
-                    <strong><?= number_format((int)$traffic5['requests']) ?></strong>
-                    <small>Auto activates at <?= number_format($autoThresholdRequests) ?></small>
-                </div>
-                <div class="security-live-card">
-                    <span>Unique IPs, last 5 minutes</span>
-                    <strong><?= number_format((int)$traffic5['unique_ips']) ?></strong>
-                    <small>Auto activates at <?= number_format($autoThresholdIps) ?></small>
-                </div>
-                <div class="security-live-card security-threat <?= $threatClass ?>">
-                    <span>Traffic status</span>
-                    <strong><?= $threatLevel ?></strong>
-                    <small>Measured directly on your website</small>
-                </div>
-                <div class="security-live-card">
-                    <span>Requests, last 60 minutes</span>
-                    <strong><?= number_format((int)$traffic60['requests']) ?></strong>
-                    <small><?= number_format((int)$traffic60['unique_ips']) ?> unique IPs</small>
-                </div>
-                <div class="security-live-card">
-                    <span>Challenges today</span>
-                    <strong><?= number_format((int)($metrics['challenges'] ?? 0)) ?></strong>
-                    <small><?= number_format((int)($metrics['verified'] ?? 0)) ?> successful verifications</small>
-                </div>
-                <div class="security-live-card">
-                    <span>Auto activations today</span>
-                    <strong><?= number_format((int)($metrics['auto_activations'] ?? 0)) ?></strong>
-                    <small><?= !empty($autoState['reason']) ? esc((string)$autoState['reason']) : 'No auto action yet' ?></small>
-                </div>
-            </div>
-
-            <div class="security-table-grid">
-                <div class="security-mini-table">
-                    <h3>Top countries, last 5 minutes</h3>
-                    <table>
-                        <?php if (!empty($traffic5['countries'])): ?>
-                            <?php foreach ($traffic5['countries'] as $country => $count): ?>
-                                <tr><td><?= esc((string)$country) ?></td><td><?= number_format((int)$count) ?></td></tr>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <tr><td class="security-empty-row" colspan="2">No traffic recorded yet.</td></tr>
-                        <?php endif; ?>
-                    </table>
-                </div>
-                <div class="security-mini-table">
-                    <h3>Top IPs, last 5 minutes</h3>
-                    <table>
-                        <?php if (!empty($traffic5['ips'])): ?>
-                            <?php foreach ($traffic5['ips'] as $ip => $count): ?>
-                                <tr><td><?= esc((string)$ip) ?></td><td><?= number_format((int)$count) ?></td></tr>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <tr><td class="security-empty-row" colspan="2">No IP data recorded yet.</td></tr>
-                        <?php endif; ?>
-                    </table>
-                </div>
-                <div class="security-mini-table">
-                    <h3>Top paths, last 5 minutes</h3>
-                    <table>
-                        <?php if (!empty($traffic5['paths'])): ?>
-                            <?php foreach ($traffic5['paths'] as $path => $count): ?>
-                                <tr><td><?= esc((string)$path) ?></td><td><?= number_format((int)$count) ?></td></tr>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <tr><td class="security-empty-row" colspan="2">No path data recorded yet.</td></tr>
-                        <?php endif; ?>
-                    </table>
-                </div>
-            </div>
 
             <div class="security-stats-grid">
                 <div class="security-stat-card">
@@ -629,7 +492,7 @@ if (($traffic5['requests'] ?? 0) >= $autoThresholdRequests || ($traffic5['unique
                 <div class="security-control-top">
                     <div>
                         <h3>Mode controls</h3>
-                        <p>Switch the security check on or off instantly. Auto Protection also activates it when traffic spikes are detected.</p>
+                        <p>Switch the security check on or off manually. Cloudflare handles automated DDoS protection.</p>
                     </div>
                     <span class="security-status <?= $statusClass ?>"><span class="security-dot"></span><?= $statusText ?></span>
                 </div>
